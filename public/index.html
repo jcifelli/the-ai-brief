@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Feb 17, 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .trending-topics {
+    margin-top: 16px;
+  }
+  .trending-topics h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .topic-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 600;
+    background: #f5f0eb;
+    border: 1px solid #d4c9b8;
+    color: #444;
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin: 0 6px 8px 0;
+  }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Tuesday, February 17, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">What you need to know right now</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening, <strong>Johnny</strong>. Seven frontier models in one month, a $30B mega-round, and Hollywood lawyering up over AI video. Here's tonight's rundown.
+  </div>
+
+  <!-- HEADLINES UP FRONT -->
+  <div class="headlines-block">
+    <div class="headlines-label">Tonight's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Seven frontier AI models launch in February — the biggest model rush in history <span class="src"><a href="https://jangwook.net/en/blog/en/ai-model-rush-february-2026/">Source</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Anthropic closes $30B Series G at $380B valuation — second-largest VC deal ever <span class="src"><a href="https://techcrunch.com/2026/02/12/anthropic-raises-another-30-billion-in-series-g-with-a-new-value-of-380-billion/">Source</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">ByteDance's Seedance 2.0 goes viral, Hollywood fires back with cease-and-desists <span class="src"><a href="https://techcrunch.com/2026/02/15/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/">Source</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">OpenAI launches Frontier — an enterprise agent platform gunning for Anthropic <span class="src"><a href="https://techcrunch.com/2026/02/05/openai-launches-a-way-for-enterprises-to-build-and-manage-ai-agents/">Source</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Cohere ships Tiny Aya: open multilingual AI for 70+ languages that runs on your laptop <span class="src"><a href="https://techcrunch.com/2026/02/17/cohere-launches-a-family-of-open-multilingual-models/">Source</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">MIT names mechanistic interpretability a 2026 breakthrough technology <span class="src"><a href="https://www.technologyreview.com/2026/01/12/1130003/mechanistic-interpretability-ai-research-models-2026-breakthrough-technologies/">Source</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">Lead Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>The Great Model Rush of February 2026</h2>
+    <div class="byline">Sources: <a href="https://jangwook.net/en/blog/en/ai-model-rush-february-2026/">AI Model Rush Analysis</a> · <a href="https://techstartups.com/2026/02/16/alibaba-launches-qwen-3-5-says-new-agentic-ai-model-outperforms-gpt-5-2-claude-and-gemini/">TechStartups</a> · <a href="https://www.trendforce.com/news/2026/01/30/news-bytedance-alibaba-deepseek-reportedly-ready-february-model-launches-fueling-chinas-ai-race/">TrendForce</a></div>
+
+    <p>Seven frontier models are launching this month — Gemini 3 Pro, Sonnet 5, GPT-5.3, Qwen 3.5, GLM 5, DeepSeek v4, and Grok 4.20. Nothing like this has happened before. The gap between open and closed models is effectively gone.</p>
+
+    <div class="pull-quote">When seven state-of-the-art models drop in a single month, the moat shifts from raw capability to product, distribution, and ecosystem.</div>
+
+    <p>Alibaba's <a href="https://techstartups.com/2026/02/16/alibaba-launches-qwen-3-5-says-new-agentic-ai-model-outperforms-gpt-5-2-claude-and-gemini/">Qwen 3.5</a> (released yesterday) claims to outperform GPT-5.2 and Claude Opus 4.5 on several benchmarks — and it's open-weight under Apache 2.0, supporting 201 languages. It's 60% cheaper to run than its predecessor. Meanwhile, Zhipu AI's <a href="https://www.euronews.com/next/2026/02/17/these-are-chinas-new-ai-models-that-have-just-been-released-ahead-of-the-lunar-new-year">GLM-5</a> was trained entirely on Huawei Ascend chips — no U.S. semiconductor hardware at all.</p>
+
+    <p>Three of the seven models are Chinese-developed. The U.S.-China AI competition is now playing out at the frontier model level in earnest, and the open-source ecosystem led by DeepSeek, Qwen, and Meta is delivering results at fractions of the cost of closed systems.</p>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Anthropic Raises $30B at $380B Valuation</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/02/12/anthropic-raises-another-30-billion-in-series-g-with-a-new-value-of-380-billion/">TechCrunch</a> · <a href="https://www.axios.com/2026/02/12/anthropic-raises-30b-at-380b-valuation">Axios</a> · <a href="https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation">Anthropic</a></div>
+      <p>The Series G — led by GIC and Coatue, with D.E. Shaw, Founders Fund, and 30+ others participating — is the second-largest venture deal of all time, behind only OpenAI's $40B round in 2025. Anthropic has now raised nearly $64B total since its 2021 founding.</p>
+      <p>Revenue run-rate sits at $14B (10x annual growth for three straight years). Claude Code alone generates $2.5B+ in run-rate revenue. Customers spending $100K+ annually grew 7x last year.</p>
+      <div class="so-what">So what? This is no longer a research lab raising money — it's an enterprise juggernaut. The $380B valuation puts Anthropic in the same league as the largest software companies on Earth.</div>
+    </div>
+
+    <div class="story-block">
+      <h3>Seedance 2.0 Terrifies Hollywood</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/02/15/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/">TechCrunch</a> · <a href="https://futurism.com/artificial-intelligence/seedance-ai-video-generator-scaring-hollywood">Futurism</a> · <a href="https://www.nbcnews.com/tech/tech-news/seedance-2-bytedance-copyright-infringement-concerns-hollywood-rcna259173">NBC News</a></div>
+      <p>ByteDance's Seedance 2.0 dropped February 10 and went instantly viral. It generates ~20 seconds of coherent video (up from 5-8 seconds), accepts text + image + video + audio as simultaneous inputs, and produces physically plausible motion. The step up from v1 is enormous.</p>
+      <p>Then the backlash hit. Users generated Spider-Man, Darth Vader, and Baby Yoda videos. Disney, Paramount, and the Motion Picture Association all fired cease-and-desists. Screenwriter Rhett Reese posted that he's "terrified" about AI's encroachment on creative work.</p>
+      <div class="so-what">So what? This is the first AI video model that genuinely scares the entertainment industry — not as a novelty, but as a production-grade threat. The copyright battle here will set precedent for years.</div>
+    </div>
+
+    <div class="story-block">
+      <h3>OpenAI Bets on Agents with Frontier Platform</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/02/05/openai-launches-a-way-for-enterprises-to-build-and-manage-ai-agents/">TechCrunch</a> · <a href="https://fortune.com/2026/02/05/openai-frontier-ai-agent-platform-enterprises-challenges-saas-salesforce-workday/">Fortune</a> · <a href="https://openai.com/index/introducing-openai-frontier/">OpenAI Blog</a></div>
+      <p>Launched February 5, Frontier is OpenAI's play to become the operating system for enterprise AI. It's vendor-agnostic (you can manage agents from Google and Anthropic too), connects to your CRM, ticketing, and data systems, and treats AI agents as first-class employees with identity and access controls.</p>
+      <p>Early adopters include Intuit, Uber, State Farm, and Thermo Fisher. One financial services firm reported getting 90% more time back for client-facing teams.</p>
+      <div class="so-what">So what? OpenAI is shifting from "we sell models" to "we run your agent workforce." It's a direct response to Anthropic's Cowork and Google's enterprise relationships.</div>
+    </div>
+
+    <div class="story-block">
+      <h3>Cohere Ships Tiny Aya — AI for the Other 7 Billion</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/02/17/cohere-launches-a-family-of-open-multilingual-models/">TechCrunch</a> · <a href="https://theaiinsider.tech/2026/02/17/cohere-launches-tiny-aya-multilingual-ai-models-for-on-device-applications/">AI Insider</a> · <a href="https://betakit.com/from-amharic-to-zulu-coheres-new-multilingual-ai-model-supports-more-than-70-languages/">BetaKit</a></div>
+      <p>Launched today at the India AI Summit, Tiny Aya is a 3.35B-parameter open-weight model family covering 70+ languages — including Bengali, Hindi, Tamil, Urdu, and many African languages. It runs offline on a laptop. Trained on just 64 H100 GPUs.</p>
+      <p>Regional variants include TinyAya-Global, TinyAya-Earth (Africa), TinyAya-Fire (South Asia), and TinyAya-Water (Asia-Pacific/Europe). Available now on HuggingFace, Kaggle, and Ollama.</p>
+      <div class="so-what">So what? Most frontier AI only works well in English and a handful of other languages. This is AI that works for the majority of the world's population — offline, on cheap hardware.</div>
+    </div>
+
+    <div class="story-block">
+      <h3>Looking Inside the Black Box: Mechanistic Interpretability Hits the Big Time</h3>
+      <div class="story-source"><a href="https://www.technologyreview.com/2026/01/12/1130003/mechanistic-interpretability-ai-research-models-2026-breakthrough-technologies/">MIT Technology Review</a> · <a href="https://www.technologyreview.com/2026/01/12/1129782/ai-large-language-models-biology-alien-autopsy/">MIT (Deep Dive)</a></div>
+      <p>MIT Technology Review named mechanistic interpretability one of its 10 Breakthrough Technologies for 2026. The field maps internal circuits inside AI models to understand why they behave the way they do — and sometimes deceive us.</p>
+      <p>Anthropic used it in pre-deployment safety checks for Claude Sonnet 4.5. Goodfire, a startup in the space, just closed a $150M Series B at a $1.25B valuation after using interpretability methods to discover novel Alzheimer's biomarkers — the first major scientific finding from reverse-engineering a foundation model.</p>
+      <div class="so-what">So what? We're building X-ray machines for AI brains. This could become the foundation for evidence-based AI regulation — and it's already producing real scientific discoveries.</div>
+    </div>
+  </div>
+
+  <!-- NUMBERS BAR -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">$30B</span>
+      <span class="num-label">Anthropic's Series G round</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/02/12/anthropic-raises-another-30-billion-in-series-g-with-a-new-value-of-380-billion/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">7</span>
+      <span class="num-label">Frontier models launching in Feb</span>
+      <span class="num-src"><a href="https://jangwook.net/en/blog/en/ai-model-rush-february-2026/">Analysis</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">201</span>
+      <span class="num-label">Languages supported by Qwen 3.5</span>
+      <span class="num-src"><a href="https://techstartups.com/2026/02/16/alibaba-launches-qwen-3-5-says-new-agentic-ai-model-outperforms-gpt-5-2-claude-and-gemini/">TechStartups</a></span>
+    </div>
+  </div>
+
+  <!-- ON THE RADAR -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>OpenAI IPO Prep Accelerates</h3>
+      <p>OpenAI is in informal talks with Wall Street banks for a Q4 2026 listing. Current private valuation sits around $500B; with an additional $100B raise in the works, it could debut at $830B–$1T. Revenue hit $13B but profitability isn't expected until 2030. Estimated burn rate: $4B/month.</p>
+      <div class="watch-src">Sources: <a href="https://fortune.com/2026/01/30/openai-ipo-ai-bubble-investor-tolerance-for-cash-burn-unprofitable/">Fortune</a> · <a href="https://finance.yahoo.com/news/openai-ipo-know-most-anticipated-174800027.html">Yahoo Finance</a> · <a href="https://marketwise.com/investing/openai-ipo-2026-chatgpt-maker-go-public/">MarketWise</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Colorado AI Act Takes Effect June 30</h3>
+      <p>The first comprehensive U.S. state AI law goes live this summer — requiring "reasonable care" against algorithmic discrimination for high-risk AI systems. Delayed from February 1 after industry pushback and 150+ lobbyists descended on Denver. The Trump administration's executive order to preempt state AI laws adds another wildcard.</p>
+      <div class="watch-src">Sources: <a href="https://www.clarkhill.com/news-events/news/colorados-ai-law-delayed-until-june-2026-what-the-latest-setback-means-for-businesses/">Clark Hill</a> · <a href="https://drata.com/blog/artificial-intelligence-regulations-state-and-federal-ai-laws-2026">Drata</a> · <a href="https://www.du.edu/news/colorado-pumping-brakes-first-its-kind-ai-regulation-find-practical-path-forward">Univ. of Denver</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>DeepSeek v4 Imminent</h3>
+      <p>Recent GitHub updates revealed a new architecture identifier ("MODEL1") widely seen as the foundation for DeepSeek v4. Could drop any day. If it matches the hype, it would be another open-source model competing head-to-head with the best closed models — at a fraction of the cost.</p>
+      <div class="watch-src">Sources: <a href="https://www.trendforce.com/news/2026/01/30/news-bytedance-alibaba-deepseek-reportedly-ready-february-model-launches-fueling-chinas-ai-race/">TrendForce</a> · <a href="https://o-mega.ai/articles/top-10-open-source-llms-the-deepseek-revolution-2026">o-mega</a></div>
+    </div>
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Seedance: Polarized</span>
+      <span class="sentiment-tag buzz">Model Rush: High Excitement</span>
+      <span class="sentiment-tag split">AI Jobs: Anxious</span>
+      <span class="sentiment-tag cool">Open Source: Bullish</span>
+    </div>
+
+    <!-- TOP POSTS -->
+    <div class="tweet-block">
+      <div class="tweet-author">Rhett Reese <span class="tweet-handle">Deadpool screenwriter</span></div>
+      <div class="tweet-text">"I hate to say it. It's likely over for us."</div>
+      <div class="tweet-meta">On Seedance 2.0's Cruise vs. Pitt deepfake (3.2M+ views) · <a href="https://techcrunch.com/2026/02/15/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/">via TechCrunch</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Elon Musk <span class="tweet-handle">@elonmusk</span></div>
+      <div class="tweet-text">"It's happening fast."</div>
+      <div class="tweet-meta">Responding to Seedance 2.0 demos · <a href="https://www.mensjournal.com/news/bytedance-seedance-2-0-ai-video-viral-elon-musk-reaction">via Men's Journal</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Peter Yang <span class="tweet-handle">Roblox Product Manager</span></div>
+      <div class="tweet-text">"Everything I've seen from this model is a copyright violation."</div>
+      <div class="tweet-meta">Re-posting the viral Cruise vs. Pitt clip · <a href="https://deadline.com/2026/02/cruise-vs-pitt-seedance-viral-ai-hollywood-videos-1236717127/">via Deadline</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Mark Gadala-Maria <span class="tweet-handle">AI creator</span></div>
+      <div class="tweet-text">"90% of ad agencies will be out of business by the end of the year."</div>
+      <div class="tweet-meta">After a Seedance-generated shampoo ad went viral · <a href="https://www.techspot.com/news/111338-bytedance-seedance-20-ai-video-generator-sparks-hollywood.html">via TechSpot</a></div>
+    </div>
+
+    <!-- TRENDING TOPICS -->
+    <div class="trending-topics">
+      <h4>Trending AI Topics Across X, Reddit, HN</h4>
+      <span class="topic-tag">#Seedance2</span>
+      <span class="topic-tag">#Qwen3.5</span>
+      <span class="topic-tag">Vibe Coding</span>
+      <span class="topic-tag">AI Copyright</span>
+      <span class="topic-tag">Open Source vs Closed</span>
+      <span class="topic-tag">DeepSeek v4 Hype</span>
+      <span class="topic-tag">AI Job Displacement</span>
+      <span class="topic-tag">#AnthropicSeriesG</span>
+    </div>
+
+    <!-- COMMENTARY SYNTHESIS -->
+    <div class="commentary-block">
+      <h4>What the Internet is Saying</h4>
+
+      <p><strong>X/Twitter:</strong> The Seedance 2.0 discourse completely dominated the platform this week. The Tom Cruise vs. Brad Pitt deepfake fight racked up 3.2M+ views and became a lightning rod — tech optimists calling it a revolution, creatives calling it an existential threat. Beijing Daily ran a hashtag on Weibo reading "from DeepSeek to Seedance, China's AI has succeeded" that hit tens of millions of impressions. ByteDance has since pledged to <a href="https://www.cnbc.com/2026/02/16/bytedance-safegaurds-seedance-ai-copyright-disney-mpa-netflix-paramount-sony-universal.html">strengthen safeguards</a> after Disney and the MPA sent cease-and-desists.</p>
+
+      <p><strong>Hacker News:</strong> The developer crowd is split between awe and skepticism. The biggest thread this week: Anthropic revealed Claude Opus 4.6 has discovered 500+ previously unknown high-severity security flaws in open-source libraries. Meanwhile, in the "Ask HN: What are you working on?" thread, a counter-narrative emerged — developers pushing back against AI bloat and calling for "just plain, simple software." The vibe coding debate is heating up after Spotify's Q4 earnings call revealed their top devs haven't manually written code in 2026.</p>
+
+      <p><strong>Reddit:</strong> r/MachineLearning and r/LocalLLaMA are buzzing about the open-source model wave. Qwen 3.5 going Apache 2.0 with 201-language support has the self-hosting community excited. The cybersecurity subs are more nervous — AI-powered phishing and deepfake-enabled social engineering are dominating the conversation, with practitioners worried about <a href="https://elnion.com/2026/01/27/from-phishing-to-ai-chaos-what-my-analysis-of-all-reddit-cybersecurity-discussions-so-far-in-2026-revealed/">misconfigured AI agents and data leakage</a>.</p>
+
+      <p><strong>The vibe check:</strong> Excitement and anxiety in equal measure. The open-source community is energized by the model rush. Creative professionals are genuinely scared. Enterprise workers are feeling the pressure as 2026 performance reviews now factor in AI adoption. And everyone — literally everyone — has an opinion about that Cruise vs. Pitt video.</p>
+
+      <div class="comm-src">Sources: <a href="https://techcrunch.com/2026/02/15/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/">TechCrunch</a> · <a href="https://deadline.com/2026/02/cruise-vs-pitt-seedance-viral-ai-hollywood-videos-1236717127/">Deadline</a> · <a href="https://whatever.scalzi.com/2026/02/14/10-thoughts-on-ai-february-2026-edition/">Whatever (Scalzi)</a> · <a href="https://elnion.com/2026/01/27/from-phishing-to-ai-chaos-what-my-analysis-of-all-reddit-cybersecurity-discussions-so-far-in-2026-revealed/">Elnion</a> · <a href="https://www.cnbc.com/2026/02/16/bytedance-safegaurds-seedance-ai-copyright-disney-mpa-netflix-paramount-sony-universal.html">CNBC</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">That's the evening wrap. Sleep well — the models certainly won't.</div>
+    <div class="meta">The AI Brief &middot; Curated for Johnny &middot; See you at 8am</div>
+  </div>
+
+</div>
+</body>
+</html>
