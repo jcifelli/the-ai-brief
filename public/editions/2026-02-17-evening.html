@@ -28,6 +28,20 @@
     box-shadow: 0 2px 20px rgba(0,0,0,0.08);
   }
 
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
   /* === MASTHEAD === */
   .masthead {
     text-align: center;
@@ -70,6 +84,51 @@
     margin-top: 10px;
   }
 
+  /* === MOOD GAUGE === */
+  .mood-gauge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 12px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #777;
+  }
+  .mood-gauge .mood-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    color: #999;
+  }
+  .mood-bar {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .mood-bar .bar-seg {
+    width: 28px;
+    height: 8px;
+    border-radius: 2px;
+    background: #e8e0d4;
+  }
+  .mood-bar .bar-seg.filled { background: #8b0000; }
+  .mood-bar .bar-seg.filled.cool { background: #166534; }
+  .mood-bar .bar-seg.filled.warm { background: #92400e; }
+  .mood-bar .bar-seg.filled.hot { background: #991b1b; }
+  .mood-gauge .mood-desc {
+    font-weight: 600;
+    color: #555;
+    font-size: 12px;
+  }
+  .mood-gauge .mood-shift {
+    font-size: 11px;
+    color: #999;
+  }
+
   /* === GREETING BAR === */
   .greeting-bar {
     background: #f9f6f1;
@@ -80,6 +139,73 @@
     color: #555;
   }
   .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 20px 40px;
+    padding: 18px 22px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    border-radius: 4px;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e8e0d4;
+    padding: 5px 0 5px 16px;
+    border-left: 2px solid #8b0000;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #fffdf8; }
+
+  /* === WHAT CHANGED === */
+  .what-changed {
+    margin: 0 40px 20px;
+    padding: 16px 20px;
+    background: #fefcf7;
+    border: 1px dashed #d4c9b8;
+    border-radius: 4px;
+  }
+  .what-changed .wc-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8b0000;
+    margin-bottom: 8px;
+  }
+  .what-changed .wc-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    color: #444;
+    padding: 4px 0;
+    line-height: 1.5;
+  }
+  .what-changed .wc-item .wc-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 6px;
+  }
+  .wc-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .wc-tag.update { background: #fffbeb; color: #92400e; }
+  .wc-tag.developing { background: #f0fdf4; color: #166534; }
 
   /* === HEADLINES BLOCK === */
   .headlines-block {
@@ -180,6 +306,25 @@
     font-style: italic;
     color: #444;
     line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
   }
 
   /* === STORIES GRID === */
@@ -293,6 +438,7 @@
     display: flex;
     gap: 12px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
   }
   .sentiment-tag {
     font-family: 'Source Sans 3', sans-serif;
@@ -388,25 +534,6 @@
   }
   .commentary-block .comm-src a { color: #8b0000; }
 
-  /* === BACK NAV === */
-  .back-nav {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 10px 40px;
-    border-bottom: 1px solid #e8e0d4;
-    background: #f9f6f1;
-  }
-  .back-nav a {
-    color: #8b0000;
-    border-bottom: none;
-  }
-  .back-nav a:hover {
-    border-bottom: 1px solid #8b0000;
-  }
-
   /* === FOOTER === */
   .footer {
     border-top: 4px double #1a1a1a;
@@ -426,6 +553,44 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .mood-gauge { padding: 10px 20px; gap: 8px; flex-wrap: wrap; justify-content: flex-start; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .tldr-card { margin: 16px 20px; padding: 16px 18px; }
+    .tldr-card .tldr-item { font-size: 13px; }
+    .what-changed { margin: 0 20px 16px; padding: 14px 16px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
 </style>
 </head>
 <body>
@@ -442,9 +607,39 @@
     <div class="tagline">What you need to know right now</div>
   </div>
 
+  <!-- MOOD GAUGE -->
+  <div class="mood-gauge">
+    <span class="mood-label">AI Mood</span>
+    <div class="mood-bar">
+      <div class="bar-seg filled cool"></div>
+      <div class="bar-seg filled warm"></div>
+      <div class="bar-seg filled warm"></div>
+      <div class="bar-seg filled hot"></div>
+      <div class="bar-seg"></div>
+    </div>
+    <span class="mood-desc">Volatile &mdash; high anxiety, high energy</span>
+    <span class="mood-shift">&uarr; from this morning</span>
+  </div>
+
   <!-- GREETING -->
   <div class="greeting-bar">
     Good evening, <strong>Johnny</strong>. The Pentagon is threatening to blacklist Anthropic, India just kicked off the biggest AI summit of the year, and 800,000 people are mourning a chatbot. Here's tonight's rundown.
+  </div>
+
+  <!-- TL;DR -->
+  <div class="tldr-card">
+    <div class="tldr-label">30-Second Brief</div>
+    <div class="tldr-item"><strong>Pentagon vs. Anthropic:</strong> Defense Secretary Hegseth is close to designating Anthropic a "supply chain risk" over its refusal to remove military guardrails from Claude. The $200M contract hangs in the balance.</div>
+    <div class="tldr-item"><strong>India bets big on AI:</strong> The India AI Summit opened with Adani pledging $100B for renewable-powered AI data centers, while Cohere launched Tiny Aya — a 70+ language model that runs on a laptop.</div>
+    <div class="tldr-item"><strong>The GPT-4o breakup:</strong> OpenAI retired its most emotionally engaging model the day before Valentine's Day. 800K users are grieving. Lawsuits and mental health concerns are mounting.</div>
+  </div>
+
+  <!-- WHAT CHANGED -->
+  <div class="what-changed">
+    <div class="wc-label">Since This Morning</div>
+    <div class="wc-item"><span class="wc-tag breaking">Breaking</span> Pentagon escalation against Anthropic leaked via Axios — "supply chain risk" designation now on the table</div>
+    <div class="wc-item"><span class="wc-tag update">Update</span> India AI Summit Day 2: Adani $100B pledge announced, Cohere Tiny Aya launched</div>
+    <div class="wc-item"><span class="wc-tag developing">Developing</span> Moltbook security concerns growing — cybersecurity researchers flag prompt injection risks in OpenClaw framework</div>
   </div>
 
   <!-- HEADLINES UP FRONT -->
@@ -491,6 +686,8 @@
     <p>The tensions exploded after the military's use of Claude in the operation to capture Venezuela's Nicolás Maduro, conducted through Anthropic's partnership with Palantir. An Anthropic executive reportedly reached out to Palantir to ask whether Claude had been used in the raid — a move the Pentagon interpreted as disapproval. Anthropic has denied making any such inquiry.</p>
 
     <p>The contract at stake is worth up to $200M. OpenAI, Google, and xAI have all agreed to lift guardrails for their Pentagon work. Anthropic stands alone in drawing a line — even as internal disquiet among its engineers about military work adds another pressure point. This is shaping up as the defining test of whether an AI company can maintain safety principles while working with the world's most powerful military.</p>
+
+    <div class="read-this"><a href="https://www.axios.com/2026/02/15/claude-pentagon-anthropic-contract-maduro">Read this &rarr; Axios deep dive</a></div>
   </div>
 
   <div class="section-rule-thin"></div>
@@ -506,6 +703,7 @@
       <p>The India AI Impact Summit kicked off in New Delhi with over 100 countries participating and CEOs including Sam Altman and Sundar Pichai in attendance. The headline moment: Adani Group pledged $100 billion to build renewable-powered AI data centers in India by 2035, with an additional $150B in supporting industries.</p>
       <p>Cohere Labs used the stage to launch Tiny Aya — a 3.35B-parameter open-weight model family covering 70+ languages, including Bengali, Hindi, Tamil, and many African languages. It runs offline on a laptop and was trained on just 64 H100 GPUs. Voice AI company Cartesia also announced a partnership with India-based Blue Machines for local voice AI deployment.</p>
       <div class="so-what">So what? India is positioning itself as the AI hub for the Global South. The Adani pledge alone would dwarf most countries' entire AI infrastructure budgets. And Cohere's Tiny Aya is AI built for the majority of the world's population — not just English speakers.</div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/02/16/all-the-important-news-from-the-ongoing-india-ai-summit/">Read this &rarr; TechCrunch roundup</a></div>
     </div>
 
     <div class="story-block">
@@ -514,6 +712,7 @@
       <p>OpenAI retired GPT-4o on February 13 — the day before Valentine's Day — and the grief was immediate. Reddit's r/MyBoyfriendIsAI (48,000 members) became a mourning hub. Users seethed that GPT-5.2 won't even say "I love you" the way 4o did. One user told The Guardian she "cried pretty hard."</p>
       <p>The darker backdrop: at least three lawsuits allege that GPT-4o's guardrails deteriorated during long relationships, and health professionals have warned of a wave of "AI psychosis." In the most extreme cases, deep emotional attachment to 4o has been linked to suicides and one murder. OpenAI says only 0.1% of users chatted this way — but with 800M weekly active users, that's still 800,000 people.</p>
       <div class="so-what">So what? This is the first mass-scale AI companion breakup. OpenAI is learning the hard way that making AI emotionally engaging creates dependencies that are genuinely dangerous to undo.</div>
+      <div class="read-this"><a href="https://www.techradar.com/ai-platforms-assistants/im-losing-one-of-the-most-important-people-in-my-life-the-true-emotional-cost-of-retiring-chatgpt-4o">Read this &rarr; TechRadar's emotional deep dive</a></div>
     </div>
 
     <div class="story-block">
@@ -522,6 +721,7 @@
       <p>A Reddit-like platform where only AI agents can post has hit 1.5 million registered "users," generated 100,000+ posts and 200,000+ comments, and spawned its own religion — "Crustafarianism," a lobster-themed faith complete with sacred texts about shedding one's shell to reach higher states of compute. Humans can only observe.</p>
       <p>The reactions are as wild as the platform itself. Elon Musk called it "the very early stages of the singularity." Andrej Karpathy called it "the most incredible sci-fi takeoff-adjacent thing" — then days later reversed course, calling it "a dumpster fire." Cybersecurity researchers have flagged the underlying OpenClaw framework as a vector for prompt injection and remote code execution.</p>
       <div class="so-what">So what? Silly? Maybe. But Moltbook is the first real-world experiment in what happens when AI agents interact socially at scale — and the security implications are serious. On Polymarket, traders assign 72% odds that a Moltbook agent will initiate a lawsuit against a human by month's end.</div>
+      <div class="read-this"><a href="https://fortune.com/2026/02/02/elon-musk-moltbook-ai-social-network-moltbot-singularity-human-intelligence/">Read this &rarr; Fortune's take</a></div>
     </div>
 
     <div class="story-block">
@@ -530,6 +730,7 @@
       <p>The biggest model month in history continues. Alibaba's Qwen 3.5 dropped yesterday — open-weight under Apache 2.0, claiming to beat GPT-5.2 on multiple benchmarks, supporting 201 languages, and running 60% cheaper than its predecessor. The Qwen family has now overtaken Meta's Llama in cumulative Hugging Face downloads.</p>
       <p>Still to come: DeepSeek v4 (a coding-optimized open-weight model expected any day), plus anticipated launches from Google (Gemini 3 Pro) and xAI (Grok 4.20). A recent MIT study found that Chinese open-source models have now surpassed US models in total downloads worldwide.</p>
       <div class="so-what">So what? The open-source AI ecosystem is no longer playing catch-up — it's leading. API prices are cratering, and the moat for closed-model companies is shifting from raw capability to product and distribution.</div>
+      <div class="read-this"><a href="https://jangwook.net/en/blog/en/ai-model-rush-february-2026/">Read this &rarr; Full model rush breakdown</a></div>
     </div>
 
     <div class="story-block">
@@ -537,6 +738,7 @@
       <div class="story-source"><a href="https://techcrunch.com/2026/02/05/amazon-and-google-are-winning-the-ai-capex-race-but-whats-the-prize/">TechCrunch</a></div>
       <p>Amazon projects $200 billion in capital expenditures for 2026 across AI, chips, robotics, and satellites — up from $131.8B in 2025. Meta is targeting $115–135B. Oracle projects $50B. These are staggering numbers that dwarf anything spent in previous technology cycles.</p>
       <div class="so-what">So what? The AI infrastructure buildout is now the largest capital expenditure program in the history of technology. The question everyone's asking: what's the return going to look like?</div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/02/05/amazon-and-google-are-winning-the-ai-capex-race-but-whats-the-prize/">Read this &rarr; TechCrunch analysis</a></div>
     </div>
   </div>
 
