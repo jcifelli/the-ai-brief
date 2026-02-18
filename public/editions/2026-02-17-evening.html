@@ -84,51 +84,6 @@
     margin-top: 10px;
   }
 
-  /* === MOOD GAUGE === */
-  .mood-gauge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    padding: 12px 40px;
-    background: #f9f6f1;
-    border-bottom: 1px solid #e8e0d4;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    color: #777;
-  }
-  .mood-gauge .mood-label {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 10px;
-    color: #999;
-  }
-  .mood-bar {
-    display: flex;
-    gap: 3px;
-    align-items: center;
-  }
-  .mood-bar .bar-seg {
-    width: 28px;
-    height: 8px;
-    border-radius: 2px;
-    background: #e8e0d4;
-  }
-  .mood-bar .bar-seg.filled { background: #8b0000; }
-  .mood-bar .bar-seg.filled.cool { background: #166534; }
-  .mood-bar .bar-seg.filled.warm { background: #92400e; }
-  .mood-bar .bar-seg.filled.hot { background: #991b1b; }
-  .mood-gauge .mood-desc {
-    font-weight: 600;
-    color: #555;
-    font-size: 12px;
-  }
-  .mood-gauge .mood-shift {
-    font-size: 11px;
-    color: #999;
-  }
-
   /* === GREETING BAR === */
   .greeting-bar {
     background: #f9f6f1;
@@ -142,11 +97,10 @@
 
   /* === TLDR CARD === */
   .tldr-card {
-    margin: 20px 40px;
-    padding: 18px 22px;
-    background: #1a1a1a;
-    color: #fffdf8;
-    border-radius: 4px;
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
   }
   .tldr-card .tldr-label {
     font-family: 'Source Sans 3', sans-serif;
@@ -155,57 +109,38 @@
     text-transform: uppercase;
     letter-spacing: 2.5px;
     color: #999;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .tldr-card .tldr-item {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
+    font-size: 13.5px;
     line-height: 1.5;
-    color: #e8e0d4;
-    padding: 5px 0 5px 16px;
-    border-left: 2px solid #8b0000;
-    margin-bottom: 8px;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
   }
   .tldr-card .tldr-item:last-child { margin-bottom: 0; }
-  .tldr-card .tldr-item strong { color: #fffdf8; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
 
-  /* === WHAT CHANGED === */
-  .what-changed {
-    margin: 0 40px 20px;
-    padding: 16px 20px;
-    background: #fefcf7;
-    border: 1px dashed #d4c9b8;
-    border-radius: 4px;
-  }
-  .what-changed .wc-label {
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #8b0000;
-    margin-bottom: 8px;
-  }
-  .what-changed .wc-item {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13.5px;
-    color: #444;
-    padding: 4px 0;
-    line-height: 1.5;
-  }
-  .what-changed .wc-item .wc-tag {
     display: inline-block;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 1px 6px;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
     border-radius: 2px;
-    margin-right: 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
   }
-  .wc-tag.breaking { background: #fef2f2; color: #991b1b; }
-  .wc-tag.update { background: #fffbeb; color: #92400e; }
-  .wc-tag.developing { background: #f0fdf4; color: #166534; }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
 
   /* === HEADLINES BLOCK === */
   .headlines-block {
@@ -565,11 +500,9 @@
     .masthead { padding: 24px 20px 16px; }
     .masthead h1 { font-size: 36px; }
     .masthead .edition-tag { font-size: 10px; }
-    .mood-gauge { padding: 10px 20px; gap: 8px; flex-wrap: wrap; justify-content: flex-start; }
     .greeting-bar { padding: 12px 20px; font-size: 14px; }
-    .tldr-card { margin: 16px 20px; padding: 16px 18px; }
-    .tldr-card .tldr-item { font-size: 13px; }
-    .what-changed { margin: 0 20px 16px; padding: 14px 16px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
     .headlines-block { padding: 20px 20px 18px; }
     .headline-text { font-size: 15px; }
     .section-header { padding: 16px 20px 0; }
@@ -607,20 +540,6 @@
     <div class="tagline">What you need to know right now</div>
   </div>
 
-  <!-- MOOD GAUGE -->
-  <div class="mood-gauge">
-    <span class="mood-label">AI Mood</span>
-    <div class="mood-bar">
-      <div class="bar-seg filled cool"></div>
-      <div class="bar-seg filled warm"></div>
-      <div class="bar-seg filled warm"></div>
-      <div class="bar-seg filled hot"></div>
-      <div class="bar-seg"></div>
-    </div>
-    <span class="mood-desc">Volatile &mdash; high anxiety, high energy</span>
-    <span class="mood-shift">&uarr; from this morning</span>
-  </div>
-
   <!-- GREETING -->
   <div class="greeting-bar">
     Good evening, <strong>Johnny</strong>. The Pentagon is threatening to blacklist Anthropic, India just kicked off the biggest AI summit of the year, and 800,000 people are mourning a chatbot. Here's tonight's rundown.
@@ -628,31 +547,23 @@
 
   <!-- TL;DR -->
   <div class="tldr-card">
-    <div class="tldr-label">30-Second Brief</div>
-    <div class="tldr-item"><strong>Pentagon vs. Anthropic:</strong> Defense Secretary Hegseth is close to designating Anthropic a "supply chain risk" over its refusal to remove military guardrails from Claude. The $200M contract hangs in the balance.</div>
-    <div class="tldr-item"><strong>India bets big on AI:</strong> The India AI Summit opened with Adani pledging $100B for renewable-powered AI data centers, while Cohere launched Tiny Aya — a 70+ language model that runs on a laptop.</div>
-    <div class="tldr-item"><strong>The GPT-4o breakup:</strong> OpenAI retired its most emotionally engaging model the day before Valentine's Day. 800K users are grieving. Lawsuits and mental health concerns are mounting.</div>
+    <div class="tldr-label">The short version</div>
+    <div class="tldr-item"><strong>Pentagon vs. Anthropic:</strong> Hegseth is close to designating Anthropic a "supply chain risk" over Claude's military guardrails. $200M contract at stake.</div>
+    <div class="tldr-item"><strong>India bets big:</strong> Adani pledged $100B for AI data centers at the India AI Summit. Cohere launched Tiny Aya — 70+ languages, runs on a laptop.</div>
+    <div class="tldr-item"><strong>The GPT-4o breakup:</strong> OpenAI retired 4o the day before Valentine's Day. 800K users grieving. Lawsuits mounting.</div>
   </div>
 
-  <!-- WHAT CHANGED -->
-  <div class="what-changed">
-    <div class="wc-label">Since This Morning</div>
-    <div class="wc-item"><span class="wc-tag breaking">Breaking</span> Pentagon escalation against Anthropic leaked via Axios — "supply chain risk" designation now on the table</div>
-    <div class="wc-item"><span class="wc-tag update">Update</span> India AI Summit Day 2: Adani $100B pledge announced, Cohere Tiny Aya launched</div>
-    <div class="wc-item"><span class="wc-tag developing">Developing</span> Moltbook security concerns growing — cybersecurity researchers flag prompt injection risks in OpenClaw framework</div>
-  </div>
-
-  <!-- HEADLINES UP FRONT -->
+  <!-- HEADLINES -->
   <div class="headlines-block">
     <div class="headlines-label">Tonight's Headlines</div>
 
     <div class="headline-item">
       <span class="headline-num">01</span>
-      <span class="headline-text">Pentagon threatens to designate Anthropic a "supply chain risk" over AI military guardrails <span class="src"><a href="https://www.axios.com/2026/02/16/anthropic-defense-department-relationship-hegseth">Axios</a></span></span>
+      <span class="headline-text">Pentagon threatens to designate Anthropic a "supply chain risk" over AI military guardrails <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.axios.com/2026/02/16/anthropic-defense-department-relationship-hegseth">Axios</a></span></span>
     </div>
     <div class="headline-item">
       <span class="headline-num">02</span>
-      <span class="headline-text">India AI Summit opens with Adani pledging $100B for AI data centers powered by renewables <span class="src"><a href="https://techcrunch.com/2026/02/16/all-the-important-news-from-the-ongoing-india-ai-summit/">TechCrunch</a></span></span>
+      <span class="headline-text">India AI Summit opens with Adani pledging $100B for AI data centers powered by renewables <span class="headline-tag update">Update</span> <span class="src"><a href="https://techcrunch.com/2026/02/16/all-the-important-news-from-the-ongoing-india-ai-summit/">TechCrunch</a></span></span>
     </div>
     <div class="headline-item">
       <span class="headline-num">03</span>
@@ -660,7 +571,7 @@
     </div>
     <div class="headline-item">
       <span class="headline-num">04</span>
-      <span class="headline-text">Moltbook, the AI-only social network, hits 1.5M agent "users" — Musk calls it "early singularity" <span class="src"><a href="https://fortune.com/2026/02/02/elon-musk-moltbook-ai-social-network-moltbot-singularity-human-intelligence/">Fortune</a></span></span>
+      <span class="headline-text">Moltbook, the AI-only social network, hits 1.5M agent "users" — Musk calls it "early singularity" <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://fortune.com/2026/02/02/elon-musk-moltbook-ai-social-network-moltbot-singularity-human-intelligence/">Fortune</a></span></span>
     </div>
     <div class="headline-item">
       <span class="headline-num">05</span>
