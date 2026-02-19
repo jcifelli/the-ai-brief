@@ -68,38 +68,34 @@ document.fonts.ready.then(function() {
   ctx.font = '700 12px "Source Sans 3", sans-serif';
   ctx.fillText('MORNING EDITION', W / 2, 136);
 
-  // --- HEADLINE — big, centered, multi-line ---
+  // --- HEADLINE — centered, readable at thumbnail size ---
   ctx.fillStyle = '#fffdf8';
-  ctx.font = '900 52px "Source Serif 4", Georgia, serif';
+  ctx.font = '900 44px "Source Serif 4", Georgia, serif';
 
-  // Wrap headline text for readability
   var headline = 'The Pentagon Wants AI Without Guardrails. Anthropic Said No.';
-  var lines = wrapText(ctx, headline, W - 160, 52);
-  var lineHeight = 64;
-  var headlineStartY = 210;
+  var lines = wrapText(ctx, headline, W - 200, 44);
+  var lineHeight = 56;
+  var headlineStartY = 220;
   lines.forEach(function(line, i) {
     ctx.fillText(line, W / 2, headlineStartY + i * lineHeight);
   });
 
   // Subhead — smaller, muted
-  var subY = headlineStartY + lines.length * lineHeight + 20;
-  ctx.fillStyle = '#999';
-  ctx.font = '400 24px "Source Serif 4", Georgia, serif';
-  ctx.fillText('Three companies cooperated. One drew the line.', W / 2, subY);
+  var subY = headlineStartY + lines.length * lineHeight + 24;
+  ctx.fillStyle = '#888';
+  ctx.font = '400 22px "Source Serif 4", Georgia, serif';
+  ctx.fillText('Plus: India\'s $67B AI summit, safety researchers quitting,', W / 2, subY);
+  ctx.fillText('and more in today\'s briefing.', W / 2, subY + 30);
 
-  // --- STORY COUNT at bottom ---
+  // --- BOTTOM ---
   // Thin separator
   ctx.fillStyle = '#333';
-  ctx.fillRect(80, H - 120, W - 160, 1);
+  ctx.fillRect(80, H - 90, W - 160, 1);
 
-  ctx.fillStyle = '#666';
-  ctx.font = '600 18px "Source Sans 3", sans-serif';
-  ctx.fillText('6 stories  ·  13 profession perspectives  ·  Feb 19, 2026', W / 2, H - 80);
-
-  // URL
+  // Date + URL
   ctx.fillStyle = '#555';
   ctx.font = '600 15px "Source Sans 3", sans-serif';
-  ctx.fillText('THE-AI-BRIEF-LILAC.VERCEL.APP', W / 2, H - 45);
+  ctx.fillText('February 19, 2026  ·  the-ai-brief-lilac.vercel.app', W / 2, H - 50);
 });
 
 function wrapText(ctx, text, maxWidth, fontSize) {
