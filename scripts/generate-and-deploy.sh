@@ -57,7 +57,7 @@ TONE & VOICE:
 - Every story must end with a highlighted box using the CSS class \"so-what\"
 - The label inside must read: \"What does it mean for me?\"
 - Each box must contain 9 variants wrapped in <span class=\"so-what-text\" data-profession=\"X\"> tags
-- The 12 professions are: general, engineer, teacher, healthcare, finance, legal, business, marketing, student, trades, firstresponder, consultant
+- The 13 professions are: general, engineer, teacher, healthcare, finance, legal, business, marketing, student, trades, firstresponder, consultant, artist
 - The \"general\" variant is visible by default; all others have style=\"display:none\"
 - Each variant should speak directly to that profession's real-world concerns in 2-3 sentences
 - Address the reader directly (\"you\", \"your\") — plain English, no jargon
@@ -76,6 +76,7 @@ Structure for EACH so-what box:
     <span class=\"so-what-text\" data-profession=\"trades\" style=\"display:none\">Trades text...</span>
     <span class=\"so-what-text\" data-profession=\"firstresponder\" style=\"display:none\">First responder text...</span>
     <span class=\"so-what-text\" data-profession=\"consultant\" style=\"display:none\">Management consultant text...</span>
+    <span class=\"so-what-text\" data-profession=\"artist\" style=\"display:none\">Artist text...</span>
   </div>
 
 SHARE LINK — place inside the greeting bar as a float-right link:
@@ -97,6 +98,7 @@ PERSONALIZE BAR — include between the greeting bar and the headlines block:
       <option value=\"trades\">electrician</option>
       <option value=\"firstresponder\">firefighter</option>
       <option value=\"consultant\">management consultant</option>
+      <option value=\"artist\">artist</option>
     </select>
     <span class=\"personalize-prompt\">— show me why each story matters for my field.</span>
   </div>
@@ -108,13 +110,13 @@ DYNAMIC SO-WHAT LABELS — the label text changes based on profession, with the 
   general → me | engineer → software engineers | teacher → teachers | healthcare → nurses
   finance → investment managers | legal → lawyers | business → business owners
   marketing → marketers | student → students | trades → electricians
-  firstresponder → firefighters | consultant → consultants
+  firstresponder → firefighters | consultant → consultants | artist → artists
 
-CSS FOR PROFESSION BADGE — include in the <style> block:
+CSS FOR PROFESSION BADGE — include in the <style> block (subtle warm tone, NOT the same red as links):
   .profession-badge {
     display: inline-block;
-    background: #8b0000;
-    color: #fffdf8;
+    background: #f5ebe0;
+    color: #6b4c3b;
     padding: 1px 7px;
     border-radius: 3px;
     font-size: 10px;
@@ -122,12 +124,13 @@ CSS FOR PROFESSION BADGE — include in the <style> block:
     letter-spacing: 1px;
     text-transform: uppercase;
     vertical-align: baseline;
+    border: 1px solid #d4c0a8;
   }
 
 JAVASCRIPT — include at the end of <body>, before </body>:
   <script>
   (function() {
-    var profWords = { general:'me', engineer:'software engineers', teacher:'teachers', healthcare:'nurses', finance:'investment managers', legal:'lawyers', business:'business owners', marketing:'marketers', student:'students', trades:'electricians', firstresponder:'firefighters', consultant:'consultants' };
+    var profWords = { general:'me', engineer:'software engineers', teacher:'teachers', healthcare:'nurses', finance:'investment managers', legal:'lawyers', business:'business owners', marketing:'marketers', student:'students', trades:'electricians', firstresponder:'firefighters', consultant:'consultants', artist:'artists' };
     var select = document.getElementById('profession-select');
     var allText = document.querySelectorAll('.so-what-text');
     var allLabels = document.querySelectorAll('.so-what-label');
