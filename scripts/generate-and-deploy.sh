@@ -103,31 +103,39 @@ PERSONALIZE BAR — include between the greeting bar and the headlines block:
 
 The SMS body should be a URL-encoded single-topic teaser — one punchy sentence about the lead story, then \"This morning's AI Brief has the full story:\" followed by the edition URL ($SITE_URL/editions/$FILENAME). Keep it to one killer hook, not a summary of everything.
 
-DYNAMIC SO-WHAT LABELS — the label text changes based on profession:
-  general → \"What does it mean for me?\"
-  engineer → \"What does it mean for software engineers?\"
-  teacher → \"What does it mean for teachers?\"
-  healthcare → \"What does it mean for nurses?\"
-  finance → \"What does it mean for investment managers?\"
-  legal → \"What does it mean for lawyers?\"
-  business → \"What does it mean for business owners?\"
-  marketing → \"What does it mean for marketers?\"
-  student → \"What does it mean for students?\"
-  trades → \"What does it mean for electricians?\"
-  firstresponder → \"What does it mean for firefighters?\"
-  consultant → \"What does it mean for consultants?\"
+DYNAMIC SO-WHAT LABELS — the label text changes based on profession, with the profession word styled as a badge:
+  The label format is: \"What does it mean for <span class=\\\"profession-badge\\\">WORD</span>?\"
+  general → me | engineer → software engineers | teacher → teachers | healthcare → nurses
+  finance → investment managers | legal → lawyers | business → business owners
+  marketing → marketers | student → students | trades → electricians
+  firstresponder → firefighters | consultant → consultants
+
+CSS FOR PROFESSION BADGE — include in the <style> block:
+  .profession-badge {
+    display: inline-block;
+    background: #8b0000;
+    color: #fffdf8;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+  }
 
 JAVASCRIPT — include at the end of <body>, before </body>:
   <script>
   (function() {
-    var labels = { general:'What does it mean for me?', engineer:'What does it mean for software engineers?', teacher:'What does it mean for teachers?', healthcare:'What does it mean for nurses?', finance:'What does it mean for investment managers?', legal:'What does it mean for lawyers?', business:'What does it mean for business owners?', marketing:'What does it mean for marketers?', student:'What does it mean for students?', trades:'What does it mean for electricians?', firstresponder:'What does it mean for firefighters?', consultant:'What does it mean for consultants?' };
+    var profWords = { general:'me', engineer:'software engineers', teacher:'teachers', healthcare:'nurses', finance:'investment managers', legal:'lawyers', business:'business owners', marketing:'marketers', student:'students', trades:'electricians', firstresponder:'firefighters', consultant:'consultants' };
     var select = document.getElementById('profession-select');
     var allText = document.querySelectorAll('.so-what-text');
     var allLabels = document.querySelectorAll('.so-what-label');
     var saved = localStorage.getItem('ai-brief-profession') || 'general';
     function setProfession(prof) {
+      var word = profWords[prof] || profWords.general;
       allText.forEach(function(el) { el.style.display = el.dataset.profession === prof ? '' : 'none'; });
-      allLabels.forEach(function(el) { el.textContent = labels[prof] || labels.general; });
+      allLabels.forEach(function(el) { el.innerHTML = 'What does it mean for <span class=\\\"profession-badge\\\">' + word + '</span>?'; });
       select.value = prof;
       localStorage.setItem('ai-brief-profession', prof);
     }
