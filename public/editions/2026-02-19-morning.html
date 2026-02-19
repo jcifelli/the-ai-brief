@@ -328,79 +328,67 @@
   }
   .so-what-text { display: block; }
 
-  /* === TOOLBAR (PICKER + SHARE) === */
-  .toolbar {
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
     background: #f9f6f1;
     border-bottom: 1px solid #e8e0d4;
-    padding: 12px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  .toolbar-left {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .picker-label {
+    padding: 14px 40px;
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #999;
-    white-space: nowrap;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
   }
   .profession-select {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: #1a1a1a;
     background: #fffdf8;
     border: 1px solid #d4c9b8;
-    padding: 6px 32px 6px 12px;
+    padding: 3px 28px 3px 8px;
     border-radius: 3px;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 10px center;
+    background-position: right 8px center;
+    vertical-align: baseline;
   }
   .profession-select:hover { border-color: #8b0000; }
   .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
-  .picker-hint {
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 12px;
-    color: #999;
-    font-style: italic;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    float: right;
     margin-top: 2px;
   }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
 
-  /* === SMS SHARE === */
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
   .share-sms a {
     font-family: 'Source Sans 3', sans-serif;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #fffdf8;
-    background: #8b0000;
-    padding: 6px 16px;
-    border-radius: 3px;
+    color: #8b0000;
     border-bottom: none;
-    white-space: nowrap;
   }
-  .share-sms a:hover { background: #6b0000; border-bottom: none; }
-  .share-icon {
-    width: 14px;
-    height: 14px;
-    fill: #fffdf8;
-  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
 
   /* === NUMBERS BAR === */
   .numbers-bar {
@@ -599,9 +587,8 @@
     .masthead h1 { font-size: 36px; }
     .masthead .edition-tag { font-size: 10px; }
     .greeting-bar { padding: 12px 20px; font-size: 14px; }
-    .toolbar { padding: 10px 20px; flex-wrap: wrap; gap: 10px; }
-    .toolbar-left { flex: 1; min-width: 0; }
-    .profession-select { width: 100%; max-width: 200px; font-size: 12px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
     .tldr-card { padding: 14px 20px; }
     .tldr-card .tldr-item { font-size: 12.5px; }
     .headlines-block { padding: 20px 20px 18px; }
@@ -643,34 +630,27 @@
 
   <!-- GREETING -->
   <div class="greeting-bar">
+    <span class="share-link"><a id="sms-share" href="sms:?&body=The%20Pentagon%20is%20threatening%20to%20blacklist%20Anthropic%20for%20refusing%20to%20remove%20AI%20safety%20guardrails.%20This%20morning's%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-19-morning.html">Share this edition &rarr;</a></span>
     Good morning. The Pentagon is threatening to blacklist Anthropic for refusing to remove AI safety guardrails. India opened the largest AI summit ever held in the developing world. And the people hired to keep AI safe are quitting en masse. Here's your Thursday briefing.
   </div>
 
-  <!-- TOOLBAR: PERSONALIZE + SHARE -->
-  <div class="toolbar">
-    <div class="toolbar-left">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="picker-label">Read as:</span>
-        <select id="profession-select" class="profession-select">
-          <option value="general">General reader</option>
-          <option value="engineer">Engineer</option>
-          <option value="teacher">Teacher</option>
-          <option value="healthcare">Healthcare professional</option>
-          <option value="finance">Finance professional</option>
-          <option value="legal">Legal professional</option>
-          <option value="business">Business owner</option>
-          <option value="marketing">Marketing professional</option>
-          <option value="student">Student</option>
-        </select>
-      </div>
-      <div class="picker-hint">Tailors the "what does it mean" sections to your field.</div>
-    </div>
-    <div class="share-sms">
-      <a id="sms-share" href="sms:?&body=The%20Pentagon%20is%20threatening%20to%20blacklist%20Anthropic%20for%20refusing%20to%20remove%20AI%20safety%20guardrails.%20This%20morning's%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-19-morning.html">
-        <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/></svg>
-        Share this brief
-      </a>
-    </div>
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
   </div>
 
   <!-- HEADLINES -->
@@ -726,6 +706,8 @@
       <span class="so-what-text" data-profession="business" style="display:none">If Anthropic gets blacklisted, every defense contractor using Claude will need to switch providers — creating both disruption and opportunity. More broadly, this shows that AI vendor selection now carries geopolitical risk. If your business relies on any AI provider, the political landscape just became a factor in your technology decisions.</span>
       <span class="so-what-text" data-profession="marketing" style="display:none">Brand positioning in AI is about to become fraught. Anthropic just ran a Super Bowl ad touting safety — while the Pentagon threatens to cut them off for that very stance. If you market AI-powered products, the "responsible AI" narrative now carries real commercial risk alongside its brand value.</span>
       <span class="so-what-text" data-profession="student" style="display:none">This is the kind of real-world ethics case that shows up in job interviews and graduate school applications. It touches AI governance, national security, corporate responsibility, and whistleblowing — all in one story. Understanding the tradeoffs here will serve you regardless of which field you enter.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">Defense contracts fund a massive amount of construction, electrical, and mechanical work. If Anthropic gets blacklisted, every defense contractor has to rip out and replace AI systems — and that means new infrastructure, new wiring, new data centers. Disruption at the Pentagon level creates work on the ground.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">The military is testing AI for surveillance, threat detection, and decision-making under pressure — the same capabilities that will eventually reach police departments, fire agencies, and EMS systems. Whether those tools come with safety guardrails or without them is being decided right now in this standoff.</span>
     </div>
 
     <div class="read-this"><a href="https://www.axios.com/2026/02/19/anthropic-pentagon-ai-fight-openai-google-xai">Read this &rarr; Axios exclusive</a></div>
@@ -752,6 +734,8 @@
         <span class="so-what-text" data-profession="business" style="display:none">AI tools and services built for the Indian market will be optimized for cost and scale in ways that benefit small businesses globally. When Google and Microsoft build affordable AI infrastructure for Indian firms, that technology eventually becomes available — and affordable — everywhere.</span>
         <span class="so-what-text" data-profession="marketing" style="display:none">India is now OpenAI's second-largest market, with 100 million weekly users generating content in dozens of languages. AI-generated marketing content in Hindi, Tamil, and Bengali is about to become mainstream — and the playbooks developed there will reshape multilingual marketing strategies worldwide.</span>
         <span class="so-what-text" data-profession="student" style="display:none">If you're planning a career in tech or AI, the job market just became meaningfully more global. India is producing AI talent at scale, and Western companies are hiring there directly. Understanding the global AI landscape — not just Silicon Valley — is now a competitive advantage.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">$67 billion in AI infrastructure investment means physical data centers, power plants, fiber networks, and cooling systems — all of which need electricians, HVAC techs, plumbers, and construction crews. The AI boom is creating a massive wave of skilled trades work, and India is just the latest proof.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">India is deploying AI at a scale that will generate real-world data on emergency response, disaster management, and public safety applications. AI tools tested in a country with 1.4 billion people and extreme weather events will produce lessons — and eventually products — that reach fire and EMS agencies globally.</span>
       </div>
       <div class="read-this"><a href="https://www.washingtontimes.com/news/2026/feb/19/modi-pitches-india-global-artificial-intelligence-hub-ai-conference/">Read this &rarr; Washington Times report</a></div>
     </div>
@@ -770,6 +754,8 @@
         <span class="so-what-text" data-profession="business" style="display:none">If you're integrating AI into your business, the safety guarantees you were implicitly relying on are getting weaker. Fewer safety researchers means more risk that AI tools produce harmful, biased, or unreliable outputs. Vet your AI vendors' safety practices — don't assume the defaults are sufficient.</span>
         <span class="so-what-text" data-profession="marketing" style="display:none">OpenAI is introducing ads in ChatGPT while its safety team walks out the door. If your brand is advertising alongside or through AI tools, the reputational risk of appearing next to harmful AI-generated content just increased. Brand safety in AI environments needs the same scrutiny as social media.</span>
         <span class="so-what-text" data-profession="student" style="display:none">AI safety is an emerging field with massive demand and a shrinking talent pool — the people leaving major labs need to land somewhere. If you're considering a career direction, AI safety, governance, and policy roles are about to be in high demand across industry, government, and nonprofits.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">AI is starting to show up in building inspections, code compliance checks, and job estimation tools. If the people responsible for making sure those systems work correctly are leaving the companies that build them, expect more errors and unreliable outputs. Don't trust AI tools for safety-critical work without verifying the results yourself.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">AI tools for dispatch, incident prediction, and resource allocation are being piloted in fire and EMS agencies across the country. When the safety teams at the companies building this technology walk out, it raises the question: who's making sure these tools don't send the wrong crew to the wrong call?</span>
       </div>
       <div class="read-this"><a href="https://edition.cnn.com/2026/02/11/business/openai-anthropic-departures-nightcap">Read this &rarr; CNN report</a></div>
     </div>
@@ -788,6 +774,8 @@
         <span class="so-what-text" data-profession="business" style="display:none">If your team runs Windows, you're about to get AI research and document summarization built into every workstation at no additional cost. The practical question is whether it saves enough time to justify the learning curve — and whether your data policies allow OS-level AI processing.</span>
         <span class="so-what-text" data-profession="marketing" style="display:none">An AI assistant in the Windows search bar means Microsoft is training users to start tasks with AI by default. If people begin researching products through Copilot instead of Google, it reshapes SEO and discovery strategies. How your brand surfaces in AI-generated summaries matters more every day.</span>
         <span class="so-what-text" data-profession="student" style="display:none">A built-in AI research assistant on every Windows PC makes AI tools unavoidable in daily computing — no downloads, no subscriptions, just there. Learning to use it effectively (and knowing when not to trust it) is a practical skill that will follow you into any career.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">If you use a Windows laptop for estimates, permits, or scheduling, an AI assistant in the search bar could help you look up building codes, calculate material quantities, or draft client emails — without installing anything new. Worth trying once it rolls out, especially for the paperwork side of the job.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">AI agents on station workstations could speed up report writing, incident documentation, and equipment inventory. But if your department runs Windows on sensitive networks, IT will need to evaluate whether Microsoft's AI is processing data in ways that comply with department policy — especially for incident records.</span>
       </div>
       <div class="read-this"><a href="https://www.windowslatest.com/2026/02/19/microsoft-shows-off-ai-running-on-the-windows-11-taskbar-and-file-explorer/">Read this &rarr; Windows Latest report</a></div>
     </div>
@@ -806,6 +794,8 @@
         <span class="so-what-text" data-profession="business" style="display:none">When AI companies go public, they gain both resources and pressure to expand aggressively. Expect more aggressive pricing, more sales outreach, and more AI tools aimed directly at small and mid-size businesses. The flip side: public companies are less likely to offer the steep startup discounts you may enjoy now.</span>
         <span class="so-what-text" data-profession="marketing" style="display:none">Anthropic's Super Bowl ad already signaled that AI companies are moving into consumer brand-building. Post-IPO, marketing spend from AI companies will explode — creating opportunities for agencies and media companies, while also flooding the market with competing AI product messaging.</span>
         <span class="so-what-text" data-profession="student" style="display:none">Two of the most important AI companies going public means they'll need to hire rapidly across every function — not just engineering. Finance, legal, marketing, operations, and policy roles at AI companies are about to scale dramatically. These IPOs expand the AI career landscape well beyond technical roles.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">AI companies with $380B valuations need physical infrastructure: data centers, power systems, cooling, office buildouts. When these companies go public and raise billions more, that capital translates into construction projects. The AI gold rush is already one of the biggest drivers of commercial construction in the country.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">When AI companies hit this scale, they start selling to government at every level — including cities and counties. Post-IPO, expect more aggressive pitches for AI-powered dispatch, predictive policing, fire risk mapping, and EMS optimization tools. Your department will likely be evaluating these products within the year.</span>
       </div>
       <div class="read-this"><a href="https://www.cnbc.com/2026/02/19/openai-sam-altman-anthropic-dario-amodei-india-ai-summit.html">Read this &rarr; CNBC report</a></div>
     </div>
@@ -824,6 +814,8 @@
         <span class="so-what-text" data-profession="business" style="display:none">The bottom line for small businesses: AI tools can now do work that previously required hiring specialists — from writing marketing copy to analyzing financial data to automating customer service. The 60% productivity gain cited in the report translates directly to cost savings if you adopt the right tools.</span>
         <span class="so-what-text" data-profession="marketing" style="display:none">Content creation and ad targeting are among the most AI-automated marketing functions, and the trend is accelerating. The report's productivity data suggests that marketing teams using AI tools are producing significantly more output per person — which means clients will expect more for less.</span>
         <span class="so-what-text" data-profession="student" style="display:none">This is the most important career planning data point of the year. AI is disrupting software engineering first — the very field building it. Whatever career you're pursuing, your value will come from the judgment, creativity, and interpersonal skills that AI can't replicate. Build those now.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">Here's the good news: AI is hitting desk jobs first, not hands-on work. You can't send a chatbot to fix a leaking pipe or wire a breaker panel. Skilled trades are among the most AI-resistant careers out there — and as white-collar roles shrink, demand for people who can physically build and fix things is only going up.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">AI can assist with dispatch routing and risk prediction, but it can't enter a burning building or perform CPR. The Deutsche Bank report targets knowledge work — not the physical, high-stakes judgment calls that define first responder work. Your skills are among the hardest to automate, and that's not changing soon.</span>
       </div>
       <div class="read-this"><a href="https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/">Read this &rarr; Fortune report</a></div>
     </div>
@@ -876,11 +868,8 @@
   <!-- FOOTER -->
   <div class="footer">
     <div class="signoff">The people building the brakes are quitting. The people buying the cars want them removed. And the cars keep getting faster. Have a good Thursday — see you tonight.</div>
-    <div class="share-sms" style="margin-top: 14px; margin-bottom: 14px;">
-      <a href="sms:?&body=The%20Pentagon%20is%20threatening%20to%20blacklist%20Anthropic%20for%20refusing%20to%20remove%20AI%20safety%20guardrails.%20This%20morning's%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-19-morning.html">
-        <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/></svg>
-        Share this brief
-      </a>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=The%20Pentagon%20is%20threatening%20to%20blacklist%20Anthropic%20for%20refusing%20to%20remove%20AI%20safety%20guardrails.%20This%20morning's%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-19-morning.html">Share this edition &rarr;</a>
     </div>
     <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
   </div>
@@ -891,14 +880,16 @@
 (function() {
   var labels = {
     general: 'What does it mean for me?',
-    engineer: 'What does it mean for engineers?',
+    engineer: 'What does it mean for software engineers?',
     teacher: 'What does it mean for teachers?',
-    healthcare: 'What does it mean for healthcare?',
-    finance: 'What does it mean for finance?',
-    legal: 'What does it mean for legal?',
+    healthcare: 'What does it mean for nurses?',
+    finance: 'What does it mean for investment managers?',
+    legal: 'What does it mean for lawyers?',
     business: 'What does it mean for business owners?',
-    marketing: 'What does it mean for marketing?',
-    student: 'What does it mean for students?'
+    marketing: 'What does it mean for marketers?',
+    student: 'What does it mean for students?',
+    trades: 'What does it mean for electricians?',
+    firstresponder: 'What does it mean for firefighters?'
   };
 
   var select = document.getElementById('profession-select');

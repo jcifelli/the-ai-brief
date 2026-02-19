@@ -57,7 +57,7 @@ TONE & VOICE:
 - Every story must end with a highlighted box using the CSS class \"so-what\"
 - The label inside must read: \"What does it mean for me?\"
 - Each box must contain 9 variants wrapped in <span class=\"so-what-text\" data-profession=\"X\"> tags
-- The 9 professions are: general, engineer, teacher, healthcare, finance, legal, business, marketing, student
+- The 11 professions are: general, engineer, teacher, healthcare, finance, legal, business, marketing, student, trades, firstresponder
 - The \"general\" variant is visible by default; all others have style=\"display:none\"
 - Each variant should speak directly to that profession's real-world concerns in 2-3 sentences
 - Address the reader directly (\"you\", \"your\") — plain English, no jargon
@@ -73,52 +73,51 @@ Structure for EACH so-what box:
     <span class=\"so-what-text\" data-profession=\"business\" style=\"display:none\">Business owner text...</span>
     <span class=\"so-what-text\" data-profession=\"marketing\" style=\"display:none\">Marketing text...</span>
     <span class=\"so-what-text\" data-profession=\"student\" style=\"display:none\">Student text...</span>
+    <span class=\"so-what-text\" data-profession=\"trades\" style=\"display:none\">Trades text...</span>
+    <span class=\"so-what-text\" data-profession=\"firstresponder\" style=\"display:none\">First responder text...</span>
   </div>
 
-TOOLBAR — include this HTML between the greeting bar and the headlines block (dropdown + share button):
-  <div class=\"toolbar\">
-    <div class=\"toolbar-left\">
-      <div style=\"display:flex;align-items:center;gap:10px;\">
-        <span class=\"picker-label\">Read as:</span>
-        <select id=\"profession-select\" class=\"profession-select\">
-          <option value=\"general\">General reader</option>
-          <option value=\"engineer\">Engineer</option>
-          <option value=\"teacher\">Teacher</option>
-          <option value=\"healthcare\">Healthcare professional</option>
-          <option value=\"finance\">Finance professional</option>
-          <option value=\"legal\">Legal professional</option>
-          <option value=\"business\">Business owner</option>
-          <option value=\"marketing\">Marketing professional</option>
-          <option value=\"student\">Student</option>
-        </select>
-      </div>
-      <div class=\"picker-hint\">Tailors the \"what does it mean\" sections to your field.</div>
-    </div>
-    <div class=\"share-sms\">
-      <a id=\"sms-share\" href=\"sms:?&body=[URL-encoded teaser: 2-sentence summary of top stories + edition URL]\">
-        <svg class=\"share-icon\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z\"/></svg>
-        Share this brief
-      </a>
-    </div>
+SHARE LINK — place inside the greeting bar as a float-right link:
+  <span class=\"share-link\"><a id=\"sms-share\" href=\"sms:?&body=[URL-encoded single-topic teaser + edition URL]\">Share this edition &rarr;</a></span>
+
+PERSONALIZE BAR — include between the greeting bar and the headlines block:
+  <div class=\"personalize-bar\">
+    <span class=\"personalize-prompt\">I'm a</span>
+    <select id=\"profession-select\" class=\"profession-select\">
+      <option value=\"general\">general reader</option>
+      <option value=\"engineer\">software engineer</option>
+      <option value=\"teacher\">teacher</option>
+      <option value=\"healthcare\">nurse</option>
+      <option value=\"finance\">investment manager</option>
+      <option value=\"legal\">lawyer</option>
+      <option value=\"business\">business owner</option>
+      <option value=\"marketing\">marketer</option>
+      <option value=\"student\">student</option>
+      <option value=\"trades\">electrician</option>
+      <option value=\"firstresponder\">firefighter</option>
+    </select>
+    <span class=\"personalize-prompt\">— show me why each story matters for my field.</span>
   </div>
 
 The SMS body should be a URL-encoded single-topic teaser — one punchy sentence about the lead story, then \"This morning's AI Brief has the full story:\" followed by the edition URL ($SITE_URL/editions/$FILENAME). Keep it to one killer hook, not a summary of everything.
 
 DYNAMIC SO-WHAT LABELS — the label text changes based on profession:
   general → \"What does it mean for me?\"
-  engineer → \"What does it mean for engineers?\"
+  engineer → \"What does it mean for software engineers?\"
   teacher → \"What does it mean for teachers?\"
-  healthcare → \"What does it mean for healthcare?\"
-  finance → \"What does it mean for finance?\"
-  legal → \"What does it mean for legal?\"
+  healthcare → \"What does it mean for nurses?\"
+  finance → \"What does it mean for investment managers?\"
+  legal → \"What does it mean for lawyers?\"
   business → \"What does it mean for business owners?\"
-  marketing → \"What does it mean for marketing?\"
+  marketing → \"What does it mean for marketers?\"
   student → \"What does it mean for students?\"
+  trades → \"What does it mean for electricians?\"
+  firstresponder → \"What does it mean for firefighters?\"
 
 JAVASCRIPT — include at the end of <body>, before </body>:
   <script>
   (function() {
-    var labels = { general:'What does it mean for me?', engineer:'What does it mean for engineers?', teacher:'What does it mean for teachers?', healthcare:'What does it mean for healthcare?', finance:'What does it mean for finance?', legal:'What does it mean for legal?', business:'What does it mean for business owners?', marketing:'What does it mean for marketing?', student:'What does it mean for students?' };
+    var labels = { general:'What does it mean for me?', engineer:'What does it mean for software engineers?', teacher:'What does it mean for teachers?', healthcare:'What does it mean for nurses?', finance:'What does it mean for investment managers?', legal:'What does it mean for lawyers?', business:'What does it mean for business owners?', marketing:'What does it mean for marketers?', student:'What does it mean for students?', trades:'What does it mean for electricians?', firstresponder:'What does it mean for firefighters?' };
     var select = document.getElementById('profession-select');
     var allText = document.querySelectorAll('.so-what-text');
     var allLabels = document.querySelectorAll('.so-what-label');
