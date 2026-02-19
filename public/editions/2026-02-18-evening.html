@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Feb 18, 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .trending-topics {
+    margin-top: 16px;
+  }
+  .trending-topics h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .topic-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 600;
+    background: #f5f0eb;
+    border: 1px solid #d4c9b8;
+    color: #444;
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin: 0 6px 8px 0;
+  }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Wednesday, February 18, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">What you need to know right now</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening, <strong>Johnny</strong>. Markets had a rough Wednesday as agentic AI triggered a violent sell-off in white-collar sectors, Fei-Fei Li's World Labs pulled in $1B for 3D spatial intelligence, and Alibaba dropped a monster open-weight model with 210+ language support. The day the AI disruption story went from theoretical to very, very real.
+  </div>
+
+  <!-- TL;DR -->
+  <div class="tldr-card">
+    <div class="tldr-label">The short version</div>
+    <div class="tldr-item"><strong>AI Scare Trade:</strong> Markets rotated violently today as agentic AI triggered panic in wealth management, insurance, and commercial real estate — CBRE fell 16%, Raymond James 8%. The disruption is no longer theoretical.</div>
+    <div class="tldr-item"><strong>World Labs $1B:</strong> Fei-Fei Li's spatial intelligence startup raised $1 billion — including $200M from Autodesk — to build 3D world models for robotics, creativity, and scientific discovery.</div>
+    <div class="tldr-item"><strong>Qwen3.5 drops:</strong> Alibaba released a 397B-parameter MoE model with 210+ language support and 60% cost reduction, benchmarking on par with GPT-5.2 and Claude 4.5 Opus on key tasks.</div>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">Tonight's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">"AI Scare Trade" triggers violent market rotation — wealth management, insurance, and CRE stocks crater <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-2-18-the-ai-scare-trade-february-18-2026-marks-a-violent-rotation-in-global-markets">MarketMinute</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Fei-Fei Li's World Labs raises $1B at ~$5B valuation for spatial AI — Autodesk leads with $200M <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/02/18/world-labs-lands-200m-from-autodesk-to-bring-world-models-into-3d-workflows/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Alibaba's Qwen3.5 lands with 397B parameters, 210+ languages, and 60% cost savings over prior gen <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://siliconangle.com/2026/02/16/alibaba-releases-multimodal-qwen3-5-mixture-experts-model/">SiliconANGLE</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">Ineffable Intelligence — led by AlphaGo's David Silver — reportedly raising $1B at $4B valuation <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://siliconangle.com/2026/02/18/new-ai-startup-ineffable-intelligence-reportedly-raising-1b-funding-round/">SiliconANGLE</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">India AI Impact Summit closes tomorrow — final sessions on governance, data, and AI for the Global South <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.aljazeera.com/news/2026/2/16/india-hosts-ai-impact-summit-drawing-world-leaders-tech-giants">Al Jazeera</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">Anthropic's $30B Series G officially closes — $380B valuation, $14B run-rate revenue, 7x enterprise growth <span class="headline-tag update">Update</span> <span class="src"><a href="https://news.crunchbase.com/ai/anthropic-raises-30b-second-largest-deal-all-time/">Crunchbase</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">Lead Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>The "AI Scare Trade" Hits Wall Street — White-Collar Jobs Just Got a Lot More Expensive to Defend</h2>
+    <div class="byline">Sources: <a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-2-18-the-ai-scare-trade-february-18-2026-marks-a-violent-rotation-in-global-markets">MarketMinute</a> · <a href="https://www.cnn.com/2026/02/16/business/ai-disruption-fears-us-stocks">CNN Business</a> · <a href="https://www.bloomberg.com/news/newsletters/2026-02-13/is-the-ai-scare-trade-driven-more-by-fear-of-disruption-or-value-rotation">Bloomberg</a> · <a href="https://kesq.com/money/cnn-business-consumer/2026/02/18/why-the-ai-scare-trade-might-not-be-done/">KESQ</a></div>
+
+    <p>It wasn't a crash. But it was a reckoning. On Wednesday, February 18, markets experienced one of the sharpest AI-driven rotations in recent memory — a phenomenon analysts are calling the "AI Scare Trade." The trigger: Altruist, a fintech custodian for independent advisors, unveiled "Hazel," an AI platform capable of generating complex tax and estate strategies without human intervention. Within hours, wealth management stocks were in freefall. Raymond James dropped 8%. LPL Financial tumbled more than 8%. Charles Schwab fell over 7%. St. James's Place in London crashed 20%.</p>
+
+    <div class="pull-quote">In four sessions, the "AI scare trade" evolved from a narrow disruption story into a broad referendum on the future of white-collar intermediaries.</div>
+
+    <p>But the contagion didn't stop at financial advisors. Commercial real estate brokerage was next. CBRE Group fell 16% over two days — its steepest decline since the financial crisis — as markets extrapolated: if AI could displace financial intermediaries, it could displace any high-fee, labor-intensive profession that sits between buyers and sellers extracting value for expertise. Freight and logistics followed, with truck-broker RXO dropping 20% after an AI optimization demo.</p>
+
+    <p>The winners tell the other side of the story. Cadence Design Systems surged 9% after releasing what it calls the world's first agentic AI solution for chip design, claiming 10x engineering productivity gains. Nvidia gained 2.3%. Data center operator Equinix jumped 10%. The market's message: it still believes in the AI buildout — it just repriced who benefits and who gets disrupted. UBS analyst Brian Meredith called the wealth management sell-off "meaningfully overdone," but the fear has structural logic. When an AI agent can generate a tax strategy in seconds that previously took an advisor hours, the math for labor-intensive knowledge work gets uncomfortable fast.</p>
+
+    <div class="read-this"><a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-2-18-the-ai-scare-trade-february-18-2026-marks-a-violent-rotation-in-global-markets">Read this &rarr; Full market analysis</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Fei-Fei Li's World Labs Raises $1B to Teach AI to Understand 3D Space</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/02/18/world-labs-lands-200m-from-autodesk-to-bring-world-models-into-3d-workflows/">TechCrunch</a> · <a href="https://www.pymnts.com/artificial-intelligence-2/2026/world-labs-raises-1-billion-to-scale-spatial-ai/">PYMNTS</a> · <a href="https://the-decoder.com/fei-fei-lis-world-labs-raises-one-billion-dollars-for-spatial-intelligence/">The Decoder</a></div>
+      <p>World Labs, the spatial intelligence startup founded by ImageNet pioneer Fei-Fei Li, raised $1 billion in new funding today, with Autodesk leading at $200 million. Andreessen Horowitz, Nvidia, AMD, Emerson Collective, and Fidelity also participated. Bloomberg had reported the company was in talks at roughly a $5 billion valuation. The company launched its first product, Marble, which creates navigable 3D worlds from images, video, or text prompts.</p>
+      <p>"If AI is to be truly useful, it must understand worlds, not just words," Li said in a statement. "Worlds are governed by geometry, physics, and dynamics, and reconciling the semantic, spatial, and physical is the next great frontier of AI." The Autodesk partnership will focus first on entertainment applications, exploring how World Labs' world models can work alongside Autodesk's design tools. The longer-term targets are robotics and scientific discovery — fields where 3D spatial reasoning is foundational.</p>
+      <div class="so-what">So what? The current AI wave has been built almost entirely on text and 2D images. World models that reason about 3D space are the prerequisite for robots that can actually navigate the physical world. Fei-Fei Li is betting that "spatial intelligence" is the next frontier — and the $1B raise suggests serious investors agree.</div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/02/18/world-labs-lands-200m-from-autodesk-to-bring-world-models-into-3d-workflows/">Read this &rarr; TechCrunch on World Labs and Autodesk</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Alibaba's Qwen3.5: 397 Billion Parameters, 210 Languages, 60% Cheaper</h3>
+      <div class="story-source"><a href="https://siliconangle.com/2026/02/16/alibaba-releases-multimodal-qwen3-5-mixture-experts-model/">SiliconANGLE</a> · <a href="https://www.eweek.com/news/alibaba-qwen35-ai-model-launch/">eWeek</a> · <a href="https://www.marktechpost.com/2026/02/16/alibaba-qwen-team-releases-qwen3-5-397b-moe-model-with-17b-active-parameters-and-1m-token-context-for-ai-agents/">MarkTechPost</a></div>
+      <p>Alibaba released Qwen3.5 on Sunday night — timed to the eve of Chinese New Year and designed for maximum impact in the ongoing model rush. The flagship open-weight version packs 397 billion total parameters using a mixture-of-experts architecture (only 17 billion active per prompt), supports 210+ languages and dialects (up from 82 in its predecessor), and runs with a 262,144-token context window expandable to roughly 1 million tokens in the hosted version. It's also built for agentic AI workflows — designed not just to answer questions but to act across applications independently.</p>
+      <p>The efficiency story is striking: Alibaba claims 60% cost reductions and 8x throughput improvements versus prior generations. On benchmarks, Qwen3.5 outscored Claude 4.5 Opus on IFBench (instruction following) and matched or exceeded GPT-5.2 on several reasoning tasks, though those comparisons haven't been independently verified. Regardless, the model's language breadth — spanning languages that most Western frontier models barely recognize — is a genuine competitive differentiator for global enterprise customers.</p>
+      <div class="so-what">So what? The "open source is always behind" assumption is no longer safe. When Alibaba ships a 397B-parameter model available for free download that matches frontier closed-source performance on key benchmarks, it compresses the moat of Western AI incumbents — fast. The 210-language support also signals where global AI adoption is actually headed.</div>
+      <div class="read-this"><a href="https://siliconangle.com/2026/02/16/alibaba-releases-multimodal-qwen3-5-mixture-experts-model/">Read this &rarr; SiliconANGLE deep dive</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>The AlphaGo Guy Wants $1B: David Silver's Ineffable Intelligence Raises at $4B</h3>
+      <div class="story-source"><a href="https://siliconangle.com/2026/02/18/new-ai-startup-ineffable-intelligence-reportedly-raising-1b-funding-round/">SiliconANGLE</a> · <a href="https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/">TechCrunch</a></div>
+      <p>Ineffable Intelligence — a new AI startup led by David Silver, the former Google DeepMind principal research scientist who co-created AlphaGo and AlphaZero — is reportedly raising $1 billion in funding with Sequoia Capital leading. Alphabet (DeepMind's parent), Nvidia, and Microsoft are expected participants, with the round valuing the company at roughly $4 billion. Details about what Ineffable Intelligence is actually building remain sparse, but Silver's track record on reinforcement learning and self-improving AI systems has been enough for Sequoia to lead before seeing a product.</p>
+      <div class="so-what">So what? When the person most responsible for demonstrating that AI can teach itself to play games at superhuman levels raises $1B before announcing a product, the market is betting on the pedigree. This is peak founder-market fit in the AI fundraising era — résumé as pitch deck.</div>
+      <div class="read-this"><a href="https://siliconangle.com/2026/02/18/new-ai-startup-ineffable-intelligence-reportedly-raising-1b-funding-round/">Read this &rarr; SiliconANGLE report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Anthropic's $30B Series G Is Official — The Numbers Are Staggering</h3>
+      <div class="story-source"><a href="https://news.crunchbase.com/ai/anthropic-raises-30b-second-largest-deal-all-time/">Crunchbase</a> · <a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-close-to-finalizing-fundraising-deal-at-350-billion-valuation/">PYMNTS</a></div>
+      <p>Anthropic's $30 billion Series G is now confirmed closed — the second-largest venture deal of all time, trailing only OpenAI's $40B round in 2025. GIC and Coatue led, with co-investment from D.E. Shaw, Dragoneer, Founders Fund, Iconiq Capital, MGX, Microsoft, and Nvidia. The round values Anthropic at $380 billion post-money. And the revenue metrics that justified the valuation: over $14 billion annual run rate, more than 10x growth for three consecutive years, and a 7x year-over-year increase in customers spending over $100,000 annually. Anthropic has now raised roughly $64 billion since its 2021 founding.</p>
+      <div class="so-what">So what? This is the final confirmation that AI has moved past speculative investment into revenue-justified growth. $14B in annual run rate at 10x growth pace is a real business — not a bet. And with an IPO reportedly in planning, Anthropic is on a trajectory that will make its current $380B valuation look either prescient or restrained within two years.</div>
+      <div class="read-this"><a href="https://news.crunchbase.com/ai/anthropic-raises-30b-second-largest-deal-all-time/">Read this &rarr; Crunchbase on the deal</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>AI Copilot and Grok Used as C2 Proxies — A New Security Threat Category Emerges</h3>
+      <div class="story-source"><a href="https://techmaniacs.com/2026/02/18/ai-security-daily-briefing-february-18-2026/">TechManiacs</a> · <a href="https://techcrunch.com/2026/01/19/rogue-agents-and-shadow-ai-why-vcs-are-betting-big-on-ai-security/">TechCrunch</a></div>
+      <p>Check Point researchers disclosed today that AI assistants with web-browsing capabilities — specifically Microsoft Copilot and xAI's Grok — are being actively exploited as bidirectional command-and-control proxies. By embedding "summarization prompts" in attacker-controlled URLs, malware can receive operator commands and exfiltrate data while disguising traffic as legitimate HTTPS requests to an AI provider, evading traditional network security filters. The 2026 API ThreatStats Report notes that 36% of all AI-related vulnerabilities involve direct overlap with API security flaws, and APIs are now the most exploited surface in CISA's Known Exploited Vulnerabilities dataset.</p>
+      <div class="so-what">So what? Every AI agent interaction runs through an API. As agentic AI proliferates across enterprises, the attack surface grows proportionally. The security industry hasn't caught up — and today's disclosure suggests sophisticated threat actors already have. AI security is quietly becoming the next trillion-dollar market.</div>
+      <div class="read-this"><a href="https://techmaniacs.com/2026/02/18/ai-security-daily-briefing-february-18-2026/">Read this &rarr; AI Security Daily Briefing</a></div>
+    </div>
+
+  </div>
+
+  <!-- NUMBERS BAR -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">-16%</span>
+      <span class="num-label">CBRE's two-day drop amid the AI Scare Trade — worst since 2008</span>
+      <span class="num-src"><a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-2-18-the-ai-scare-trade-february-18-2026-marks-a-violent-rotation-in-global-markets">MarketMinute</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">$1B</span>
+      <span class="num-label">World Labs raise — Fei-Fei Li's spatial AI startup, with $200M from Autodesk</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/02/18/world-labs-lands-200m-from-autodesk-to-bring-world-models-into-3d-workflows/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">210+</span>
+      <span class="num-label">Languages supported by Alibaba's new Qwen3.5 open-weight model</span>
+      <span class="num-src"><a href="https://siliconangle.com/2026/02/16/alibaba-releases-multimodal-qwen3-5-mixture-experts-model/">SiliconANGLE</a></span>
+    </div>
+  </div>
+
+  <!-- ON THE RADAR -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>The AI Scare Trade: Is It Done?</h3>
+      <p>CNN's markets desk is asking whether the AI scare trade has run its course — or whether it's just getting started. The structural argument for more pain: the sectors getting hit (financial advice, commercial real estate brokerage, freight logistics) are still priced for human-labor economics. If agentic AI can automate 30-50% of their core value proposition, current valuations are still wrong. The counter: many of these businesses rely on relationship trust and regulatory licensure that AI can't replicate. Watch how management teams respond at earnings — their capex plans for AI adoption will tell the real story.</p>
+      <div class="watch-src">Sources: <a href="https://www.cnn.com/2026/02/16/business/ai-disruption-fears-us-stocks">CNN Business</a> · <a href="https://kesq.com/money/cnn-business-consumer/2026/02/18/why-the-ai-scare-trade-might-not-be-done/">KESQ</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>OpenAI and Anthropic Dual IPO Race</h3>
+      <p>With Anthropic's $30B round confirmed and OpenAI reportedly preparing a $100 billion raise of its own, both companies are now openly discussed as IPO candidates for 2026. Sequoia is backing both simultaneously. If both go public in the same window, it would be the most consequential pair of tech IPOs since the dotcom era — and a genuine test of whether public markets can absorb this much AI optimism at frontier valuations. Anthropic's $380B valuation would make it one of the largest IPOs in history if it sticks.</p>
+      <div class="watch-src">Sources: <a href="https://news.crunchbase.com/ai/anthropic-raises-30b-second-largest-deal-all-time/">Crunchbase</a> · <a href="https://techcrunch.com/2026/02/09/anthropic-closes-in-on-20b-round/">TechCrunch</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Federal vs. State AI Regulation — Clash Coming</h3>
+      <p>Colorado's AI Act delay (pushed from February 1 to June 30) bought time, but the collision between state AI laws and Trump's federal preemption executive order is still on track. The FTC has until March 11 to issue guidance on how federal law applies to AI. California's SB 53 is already live. Texas's TRAIGA took effect January 1. New York's RAISE Act threatens $30M fines for repeat violations. The AG's AI litigation task force is expected to file its first challenge to a state law this quarter. This regulatory war will define where AI development is legally permissible to push hardest.</p>
+      <div class="watch-src">Sources: <a href="https://drata.com/blog/artificial-intelligence-regulations-state-and-federal-ai-laws-2026">Drata</a> · <a href="https://www.kslaw.com/news-and-insights/new-state-ai-laws-are-effective-on-january-1-2026-but-a-new-executive-order-signals-disruption">King &amp; Spalding</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Markets: Spooked</span>
+      <span class="sentiment-tag buzz">Spatial AI: Emerging</span>
+      <span class="sentiment-tag split">Open Source: Ascending</span>
+      <span class="sentiment-tag cool">AI Security: Alarmed</span>
+    </div>
+
+    <!-- TOP POSTS -->
+    <div class="tweet-block">
+      <div class="tweet-author">Fei-Fei Li <span class="tweet-handle">World Labs founder</span></div>
+      <div class="tweet-text">"If AI is to be truly useful, it must understand worlds, not just words. Worlds are governed by geometry, physics, and dynamics, and reconciling the semantic, spatial, and physical is the next great frontier of AI."</div>
+      <div class="tweet-meta">On World Labs' $1B raise and spatial intelligence mission · <a href="https://the-decoder.com/fei-fei-lis-world-labs-raises-one-billion-dollars-for-spatial-intelligence/">via The Decoder</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">UBS Analyst Brian Meredith <span class="tweet-handle">UBS Research</span></div>
+      <div class="tweet-text">"The sell-off was meaningfully overdone. Insurance brokers remain essential intermediaries for household financial decisions — it is unlikely AI will ultimately upend the industry."</div>
+      <div class="tweet-meta">On the AI Scare Trade wealth management sell-off · <a href="https://kesq.com/money/cnn-business-consumer/2026/02/18/why-the-ai-scare-trade-might-not-be-done/">via KESQ</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Hacker News community <span class="tweet-handle">news.ycombinator.com</span></div>
+      <div class="tweet-text">"Qwen3.5 benchmarks are wild. When a 397B MoE model from Alibaba is free to download and matches GPT-5.2 on instruction following, the closed-source moat is officially gone."</div>
+      <div class="tweet-meta">Trending discussion on the Qwen3.5 release · <a href="https://whatllm.org/blog/best-open-source-models-february-2026">via WhatLLM</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Check Point Research <span class="tweet-handle">Security disclosure</span></div>
+      <div class="tweet-text">"AI assistants with browsing capabilities are being weaponized as C2 proxies — malicious traffic disguised as HTTPS calls to an AI provider bypasses traditional network security filters entirely."</div>
+      <div class="tweet-meta">From today's AI security threat disclosure · <a href="https://techmaniacs.com/2026/02/18/ai-security-daily-briefing-february-18-2026/">via TechManiacs</a></div>
+    </div>
+
+    <!-- TRENDING TOPICS -->
+    <div class="trending-topics">
+      <h4>Trending AI Topics Across X, Reddit, HN</h4>
+      <span class="topic-tag">AI Scare Trade</span>
+      <span class="topic-tag">World Labs $1B</span>
+      <span class="topic-tag">Qwen3.5 Open Source</span>
+      <span class="topic-tag">Spatial Intelligence</span>
+      <span class="topic-tag">David Silver Ineffable</span>
+      <span class="topic-tag">AI C2 Proxies</span>
+      <span class="topic-tag">Anthropic $380B</span>
+      <span class="topic-tag">White-Collar Disruption</span>
+    </div>
+
+    <!-- COMMENTARY SYNTHESIS -->
+    <div class="commentary-block">
+      <h4>What the Internet is Saying</h4>
+
+      <p><strong>X/Twitter:</strong> The AI Scare Trade dominated financial Twitter all day — a mix of alarm, dark humor, and genuine fear from people in the affected sectors. Insurance brokers and financial planners are sharing threads about how AI will or won't replace them. The World Labs raise generated significant excitement in the 3D/gaming/robotics communities. Fei-Fei Li's quote about worlds vs. words is getting traction as the pithy encapsulation of where AI goes next. The Qwen3.5 drop earned immediate attention from the open-source developer community, with early benchmark comparisons running hot. <a href="https://siliconangle.com/2026/02/16/alibaba-releases-multimodal-qwen3-5-mixture-experts-model/">SiliconANGLE</a> and <a href="https://www.eweek.com/news/alibaba-qwen35-ai-model-launch/">eWeek</a> had good early coverage.</p>
+
+      <p><strong>Hacker News:</strong> The AI Scare Trade story generated a sprawling thread on whether the market is correctly pricing disruption risk. The consensus split: the disruption is real, but markets are pricing it on a one-to-five year horizon that's probably too fast. A separate thread on Qwen3.5 turned into a detailed technical breakdown of the MoE architecture — and whether 17B active parameters at inference meaningfully competes with dense models at similar sizes. The Check Point C2-via-AI disclosure got serious attention from security engineers who noted this attack vector has been discussed in theory for over a year. <a href="https://news.ycombinator.com/item?id=47030183">HN</a></p>
+
+      <p><strong>Reddit:</strong> r/investing and r/stocks are in full AI rotation mode — threads debating whether to buy the CBRE dip or whether commercial real estate brokerage is structurally impaired. r/LocalLLaMA is celebrating the Qwen3.5 release as confirmation that open-source has caught up. r/MachineLearning is dissecting the World Labs spatial intelligence approach and debating whether "world models" are the actual path to AGI or just a clever rebranding of 3D computer vision. The David Silver / Ineffable Intelligence news got bemused reaction — "raising $1B on a vibe and a CV" was the leading comment. <a href="https://www.pymnts.com/artificial-intelligence-2/2026/world-labs-raises-1-billion-to-scale-spatial-ai/">PYMNTS</a></p>
+
+      <div class="comm-src">Sources: <a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-2-18-the-ai-scare-trade-february-18-2026-marks-a-violent-rotation-in-global-markets">MarketMinute</a> · <a href="https://the-decoder.com/fei-fei-lis-world-labs-raises-one-billion-dollars-for-spatial-intelligence/">The Decoder</a> · <a href="https://siliconangle.com/2026/02/16/alibaba-releases-multimodal-qwen3-5-mixture-experts-model/">SiliconANGLE</a> · <a href="https://techmaniacs.com/2026/02/18/ai-security-daily-briefing-february-18-2026/">TechManiacs</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Today the market finally priced in what everyone in AI already knew: the disruption isn't coming — it's here. Sleep well.</div>
+    <div class="meta">The AI Brief &middot; Curated for Johnny &middot; See you at 8am</div>
+  </div>
+
+</div>
+</body>
+</html>
