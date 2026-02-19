@@ -48,54 +48,40 @@ document.fonts.ready.then(function() {
   ctx.fillStyle = '#8b0000';
   ctx.fillRect(0, H - 6, W, 6);
 
-  // --- BRANDING at top ---
   ctx.textAlign = 'center';
 
-  // "The AI Brief" logo
+  // "The AI Brief" — big, dominant logo
   ctx.fillStyle = '#1a1a1a';
-  ctx.font = '900 54px "Source Serif 4", Georgia, serif';
-  ctx.fillText('The AI Brief', W / 2, 80);
+  ctx.font = '900 96px "Source Serif 4", Georgia, serif';
+  ctx.fillText('The AI Brief', W / 2, 220);
 
   // Red rule under logo
   ctx.fillStyle = '#8b0000';
-  ctx.fillRect(W / 2 - 80, 100, 160, 3);
+  ctx.fillRect(W / 2 - 100, 250, 200, 4);
 
   // MORNING EDITION badge
   ctx.fillStyle = '#1a1a1a';
-  roundRect(ctx, W / 2 - 100, 118, 200, 26, 3);
+  roundRect(ctx, W / 2 - 120, 275, 240, 32, 3);
   ctx.fill();
   ctx.fillStyle = '#fffdf8';
-  ctx.font = '700 12px "Source Sans 3", sans-serif';
-  ctx.fillText('MORNING EDITION', W / 2, 136);
+  ctx.font = '700 14px "Source Sans 3", sans-serif';
+  ctx.fillText('MORNING EDITION', W / 2, 296);
 
-  // --- HEADLINE — centered, readable at thumbnail size ---
-  ctx.fillStyle = '#1a1a1a';
-  ctx.font = '900 44px "Source Serif 4", Georgia, serif';
-
-  var headline = 'The Pentagon Wants AI Without Guardrails. Anthropic Said No.';
-  var lines = wrapText(ctx, headline, W - 200, 44);
-  var lineHeight = 56;
-  var headlineStartY = 220;
-  lines.forEach(function(line, i) {
-    ctx.fillText(line, W / 2, headlineStartY + i * lineHeight);
-  });
-
-  // Subhead — smaller, muted
-  var subY = headlineStartY + lines.length * lineHeight + 24;
-  ctx.fillStyle = '#777';
-  ctx.font = '400 22px "Source Serif 4", Georgia, serif';
-  ctx.fillText('Plus: India\'s $67B AI summit, safety researchers quitting,', W / 2, subY);
-  ctx.fillText('and more in today\'s briefing.', W / 2, subY + 30);
-
-  // --- BOTTOM ---
-  // Thin separator
-  ctx.fillStyle = '#d4c9b8';
-  ctx.fillRect(80, H - 90, W - 160, 1);
-
-  // Date + URL
+  // Date
   ctx.fillStyle = '#999';
+  ctx.font = '600 18px "Source Sans 3", sans-serif';
+  ctx.fillText('FEBRUARY 19, 2026', W / 2, 345);
+
+  // Teaser subhead
+  ctx.fillStyle = '#555';
+  ctx.font = '400 26px "Source Serif 4", Georgia, serif';
+  ctx.fillText('The Pentagon wants AI without guardrails.', W / 2, 430);
+  ctx.fillText('Anthropic said no.', W / 2, 466);
+
+  // URL at bottom
+  ctx.fillStyle = '#bbb';
   ctx.font = '600 15px "Source Sans 3", sans-serif';
-  ctx.fillText('February 19, 2026  ·  the-ai-brief-lilac.vercel.app', W / 2, H - 50);
+  ctx.fillText('the-ai-brief-lilac.vercel.app', W / 2, H - 40);
 });
 
 function wrapText(ctx, text, maxWidth, fontSize) {
