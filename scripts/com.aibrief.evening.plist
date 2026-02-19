@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.aibrief.evening</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-l</string>
+        <string>/Users/johncifelli/the-ai-brief/scripts/generate-and-deploy.sh</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>21</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/johncifelli/the-ai-brief/scripts/launchd-evening.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/johncifelli/the-ai-brief/scripts/launchd-evening-error.log</string>
+    <key>WorkingDirectory</key>
+    <string>/Users/johncifelli/the-ai-brief</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/johncifelli</string>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+        <key>ANTHROPIC_API_KEY</key>
+        <string>YOUR_ANTHROPIC_API_KEY</string>
+        <key>VERCEL_TOKEN</key>
+        <string>YOUR_VERCEL_TOKEN</string>
+        <key>TWILIO_ACCOUNT_SID</key>
+        <string>YOUR_TWILIO_ACCOUNT_SID</string>
+        <key>TWILIO_AUTH_TOKEN</key>
+        <string>YOUR_TWILIO_AUTH_TOKEN</string>
+        <key>TWILIO_FROM_NUMBER</key>
+        <string>+1XXXXXXXXXX</string>
+    </dict>
+</dict>
+</plist>
