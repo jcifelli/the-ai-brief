@@ -328,69 +328,79 @@
   }
   .so-what-text { display: block; }
 
-  /* === PROFESSION PICKER === */
-  .profession-picker {
+  /* === TOOLBAR (PICKER + SHARE) === */
+  .toolbar {
     background: #f9f6f1;
     border-bottom: 1px solid #e8e0d4;
-    padding: 14px 40px;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .toolbar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
   }
   .picker-label {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: #999;
-    margin-bottom: 10px;
+    white-space: nowrap;
   }
-  .picker-pills {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 4px;
-  }
-  .picker-pills::-webkit-scrollbar { display: none; }
-  .pill {
+  .profession-select {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 12.5px;
+    font-size: 13px;
     font-weight: 600;
+    color: #1a1a1a;
     background: #fffdf8;
     border: 1px solid #d4c9b8;
-    color: #555;
-    padding: 5px 14px;
+    padding: 6px 32px 6px 12px;
     border-radius: 3px;
     cursor: pointer;
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: all 0.15s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
   }
-  .pill:hover { border-color: #8b0000; color: #8b0000; }
-  .pill.active {
-    background: #1a1a1a;
-    color: #fffdf8;
-    border-color: #1a1a1a;
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+  .picker-hint {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+    margin-top: 2px;
   }
 
   /* === SMS SHARE === */
-  .share-sms {
-    margin-top: 14px;
-  }
   .share-sms a {
     font-family: 'Source Sans 3', sans-serif;
-    display: inline-block;
-    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #fffdf8;
     background: #8b0000;
-    padding: 8px 20px;
+    padding: 6px 16px;
     border-radius: 3px;
     border-bottom: none;
+    white-space: nowrap;
   }
   .share-sms a:hover { background: #6b0000; border-bottom: none; }
+  .share-icon {
+    width: 14px;
+    height: 14px;
+    fill: #fffdf8;
+  }
 
   /* === NUMBERS BAR === */
   .numbers-bar {
@@ -589,8 +599,9 @@
     .masthead h1 { font-size: 36px; }
     .masthead .edition-tag { font-size: 10px; }
     .greeting-bar { padding: 12px 20px; font-size: 14px; }
-    .profession-picker { padding: 12px 20px; }
-    .picker-pills { gap: 6px; }
+    .toolbar { padding: 10px 20px; flex-wrap: wrap; gap: 10px; }
+    .toolbar-left { flex: 1; min-width: 0; }
+    .profession-select { width: 100%; max-width: 200px; font-size: 12px; }
     .tldr-card { padding: 14px 20px; }
     .tldr-card .tldr-item { font-size: 12.5px; }
     .headlines-block { padding: 20px 20px 18px; }
@@ -635,19 +646,30 @@
     Good morning. The Pentagon is threatening to blacklist Anthropic for refusing to remove AI safety guardrails. India opened the largest AI summit ever held in the developing world. And the people hired to keep AI safe are quitting en masse. Here's your Thursday briefing.
   </div>
 
-  <!-- PROFESSION PICKER -->
-  <div class="profession-picker">
-    <div class="picker-label">Personalize this edition:</div>
-    <div class="picker-pills">
-      <button class="pill active" data-profession="general">General</button>
-      <button class="pill" data-profession="engineer">Engineer</button>
-      <button class="pill" data-profession="teacher">Teacher</button>
-      <button class="pill" data-profession="healthcare">Healthcare</button>
-      <button class="pill" data-profession="finance">Finance</button>
-      <button class="pill" data-profession="legal">Legal</button>
-      <button class="pill" data-profession="business">Business Owner</button>
-      <button class="pill" data-profession="marketing">Marketing</button>
-      <button class="pill" data-profession="student">Student</button>
+  <!-- TOOLBAR: PERSONALIZE + SHARE -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="picker-label">Read as:</span>
+        <select id="profession-select" class="profession-select">
+          <option value="general">General reader</option>
+          <option value="engineer">Engineer</option>
+          <option value="teacher">Teacher</option>
+          <option value="healthcare">Healthcare professional</option>
+          <option value="finance">Finance professional</option>
+          <option value="legal">Legal professional</option>
+          <option value="business">Business owner</option>
+          <option value="marketing">Marketing professional</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+      <div class="picker-hint">Tailors the "what does it mean" sections to your field.</div>
+    </div>
+    <div class="share-sms">
+      <a id="sms-share" href="sms:?&body=The%20Pentagon%20is%20threatening%20to%20blacklist%20Anthropic%20for%20refusing%20to%20remove%20AI%20safety%20guardrails.%20This%20morning's%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-19-morning.html">
+        <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/></svg>
+        Share this brief
+      </a>
     </div>
   </div>
 
@@ -854,37 +876,51 @@
   <!-- FOOTER -->
   <div class="footer">
     <div class="signoff">The people building the brakes are quitting. The people buying the cars want them removed. And the cars keep getting faster. Have a good Thursday — see you tonight.</div>
-    <div class="share-sms"><a id="sms-share" href="sms:?&body=Check%20out%20today's%20AI%20Brief%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-19-morning.html">Share via text &rarr;</a></div>
+    <div class="share-sms" style="margin-top: 14px; margin-bottom: 14px;">
+      <a href="sms:?&body=The%20Pentagon%20is%20threatening%20to%20blacklist%20Anthropic%20for%20refusing%20to%20remove%20AI%20safety%20guardrails.%20This%20morning's%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-19-morning.html">
+        <svg class="share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/></svg>
+        Share this brief
+      </a>
+    </div>
     <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
   </div>
 
 </div>
 
 <script>
-// Profession picker logic
 (function() {
-  var saved = localStorage.getItem('ai-brief-profession') || 'general';
-  var pills = document.querySelectorAll('.pill');
+  var labels = {
+    general: 'What does it mean for me?',
+    engineer: 'What does it mean for engineers?',
+    teacher: 'What does it mean for teachers?',
+    healthcare: 'What does it mean for healthcare?',
+    finance: 'What does it mean for finance?',
+    legal: 'What does it mean for legal?',
+    business: 'What does it mean for business owners?',
+    marketing: 'What does it mean for marketing?',
+    student: 'What does it mean for students?'
+  };
+
+  var select = document.getElementById('profession-select');
   var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
 
   function setProfession(prof) {
-    pills.forEach(function(p) {
-      p.classList.toggle('active', p.dataset.profession === prof);
-    });
     allText.forEach(function(el) {
       el.style.display = el.dataset.profession === prof ? '' : 'none';
     });
+    allLabels.forEach(function(el) {
+      el.textContent = labels[prof] || labels.general;
+    });
+    select.value = prof;
     localStorage.setItem('ai-brief-profession', prof);
   }
 
-  // Init from saved preference
   setProfession(saved);
 
-  // Click handlers
-  pills.forEach(function(pill) {
-    pill.addEventListener('click', function() {
-      setProfession(pill.dataset.profession);
-    });
+  select.addEventListener('change', function() {
+    setProfession(select.value);
   });
 })();
 </script>

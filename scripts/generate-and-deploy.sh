@@ -75,38 +75,62 @@ Structure for EACH so-what box:
     <span class=\"so-what-text\" data-profession=\"student\" style=\"display:none\">Student text...</span>
   </div>
 
-PROFESSION PICKER — include this HTML between the greeting bar and the headlines block:
-  <div class=\"profession-picker\">
-    <div class=\"picker-label\">Personalize this edition:</div>
-    <div class=\"picker-pills\">
-      <button class=\"pill active\" data-profession=\"general\">General</button>
-      <button class=\"pill\" data-profession=\"engineer\">Engineer</button>
-      <button class=\"pill\" data-profession=\"teacher\">Teacher</button>
-      <button class=\"pill\" data-profession=\"healthcare\">Healthcare</button>
-      <button class=\"pill\" data-profession=\"finance\">Finance</button>
-      <button class=\"pill\" data-profession=\"legal\">Legal</button>
-      <button class=\"pill\" data-profession=\"business\">Business Owner</button>
-      <button class=\"pill\" data-profession=\"marketing\">Marketing</button>
-      <button class=\"pill\" data-profession=\"student\">Student</button>
+TOOLBAR — include this HTML between the greeting bar and the headlines block (dropdown + share button):
+  <div class=\"toolbar\">
+    <div class=\"toolbar-left\">
+      <div style=\"display:flex;align-items:center;gap:10px;\">
+        <span class=\"picker-label\">Read as:</span>
+        <select id=\"profession-select\" class=\"profession-select\">
+          <option value=\"general\">General reader</option>
+          <option value=\"engineer\">Engineer</option>
+          <option value=\"teacher\">Teacher</option>
+          <option value=\"healthcare\">Healthcare professional</option>
+          <option value=\"finance\">Finance professional</option>
+          <option value=\"legal\">Legal professional</option>
+          <option value=\"business\">Business owner</option>
+          <option value=\"marketing\">Marketing professional</option>
+          <option value=\"student\">Student</option>
+        </select>
+      </div>
+      <div class=\"picker-hint\">Tailors the \"what does it mean\" sections to your field.</div>
+    </div>
+    <div class=\"share-sms\">
+      <a id=\"sms-share\" href=\"sms:?&body=[URL-encoded teaser: 2-sentence summary of top stories + edition URL]\">
+        <svg class=\"share-icon\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z\"/></svg>
+        Share this brief
+      </a>
     </div>
   </div>
 
-SMS SHARE BUTTON — include in the footer before the meta line:
-  <div class=\"share-sms\"><a id=\"sms-share\" href=\"sms:?&body=Check%20out%20today's%20AI%20Brief%3A%20$SITE_URL%2Feditions%2F$FILENAME\">Share via text &rarr;</a></div>
+The SMS body should be a URL-encoded single-topic teaser — one punchy sentence about the lead story, then \"This morning's AI Brief has the full story:\" followed by the edition URL ($SITE_URL/editions/$FILENAME). Keep it to one killer hook, not a summary of everything.
+
+DYNAMIC SO-WHAT LABELS — the label text changes based on profession:
+  general → \"What does it mean for me?\"
+  engineer → \"What does it mean for engineers?\"
+  teacher → \"What does it mean for teachers?\"
+  healthcare → \"What does it mean for healthcare?\"
+  finance → \"What does it mean for finance?\"
+  legal → \"What does it mean for legal?\"
+  business → \"What does it mean for business owners?\"
+  marketing → \"What does it mean for marketing?\"
+  student → \"What does it mean for students?\"
 
 JAVASCRIPT — include at the end of <body>, before </body>:
   <script>
   (function() {
-    var saved = localStorage.getItem('ai-brief-profession') || 'general';
-    var pills = document.querySelectorAll('.pill');
+    var labels = { general:'What does it mean for me?', engineer:'What does it mean for engineers?', teacher:'What does it mean for teachers?', healthcare:'What does it mean for healthcare?', finance:'What does it mean for finance?', legal:'What does it mean for legal?', business:'What does it mean for business owners?', marketing:'What does it mean for marketing?', student:'What does it mean for students?' };
+    var select = document.getElementById('profession-select');
     var allText = document.querySelectorAll('.so-what-text');
+    var allLabels = document.querySelectorAll('.so-what-label');
+    var saved = localStorage.getItem('ai-brief-profession') || 'general';
     function setProfession(prof) {
-      pills.forEach(function(p) { p.classList.toggle('active', p.dataset.profession === prof); });
       allText.forEach(function(el) { el.style.display = el.dataset.profession === prof ? '' : 'none'; });
+      allLabels.forEach(function(el) { el.textContent = labels[prof] || labels.general; });
+      select.value = prof;
       localStorage.setItem('ai-brief-profession', prof);
     }
     setProfession(saved);
-    pills.forEach(function(pill) { pill.addEventListener('click', function() { setProfession(pill.dataset.profession); }); });
+    select.addEventListener('change', function() { setProfession(select.value); });
   })();
   </script>
 
