@@ -36,23 +36,23 @@ document.fonts.ready.then(function() {
   var ctx = c.getContext('2d');
   var W = 1200, H = 630;
 
-  // Full dark background
-  ctx.fillStyle = '#1a1a1a';
+  // Cream background — matches the newsletter
+  ctx.fillStyle = '#fffdf8';
   ctx.fillRect(0, 0, W, H);
 
   // Top red accent bar
   ctx.fillStyle = '#8b0000';
-  ctx.fillRect(0, 0, W, 8);
+  ctx.fillRect(0, 0, W, 6);
 
   // Bottom red accent bar
   ctx.fillStyle = '#8b0000';
-  ctx.fillRect(0, H - 8, W, 8);
+  ctx.fillRect(0, H - 6, W, 6);
 
   // --- BRANDING at top ---
   ctx.textAlign = 'center';
 
-  // "The AI Brief" logo — large
-  ctx.fillStyle = '#fffdf8';
+  // "The AI Brief" logo
+  ctx.fillStyle = '#1a1a1a';
   ctx.font = '900 54px "Source Serif 4", Georgia, serif';
   ctx.fillText('The AI Brief', W / 2, 80);
 
@@ -61,7 +61,7 @@ document.fonts.ready.then(function() {
   ctx.fillRect(W / 2 - 80, 100, 160, 3);
 
   // MORNING EDITION badge
-  ctx.fillStyle = '#8b0000';
+  ctx.fillStyle = '#1a1a1a';
   roundRect(ctx, W / 2 - 100, 118, 200, 26, 3);
   ctx.fill();
   ctx.fillStyle = '#fffdf8';
@@ -69,7 +69,7 @@ document.fonts.ready.then(function() {
   ctx.fillText('MORNING EDITION', W / 2, 136);
 
   // --- HEADLINE — centered, readable at thumbnail size ---
-  ctx.fillStyle = '#fffdf8';
+  ctx.fillStyle = '#1a1a1a';
   ctx.font = '900 44px "Source Serif 4", Georgia, serif';
 
   var headline = 'The Pentagon Wants AI Without Guardrails. Anthropic Said No.';
@@ -82,18 +82,18 @@ document.fonts.ready.then(function() {
 
   // Subhead — smaller, muted
   var subY = headlineStartY + lines.length * lineHeight + 24;
-  ctx.fillStyle = '#888';
+  ctx.fillStyle = '#777';
   ctx.font = '400 22px "Source Serif 4", Georgia, serif';
   ctx.fillText('Plus: India\'s $67B AI summit, safety researchers quitting,', W / 2, subY);
   ctx.fillText('and more in today\'s briefing.', W / 2, subY + 30);
 
   // --- BOTTOM ---
   // Thin separator
-  ctx.fillStyle = '#333';
+  ctx.fillStyle = '#d4c9b8';
   ctx.fillRect(80, H - 90, W - 160, 1);
 
   // Date + URL
-  ctx.fillStyle = '#555';
+  ctx.fillStyle = '#999';
   ctx.font = '600 15px "Source Sans 3", sans-serif';
   ctx.fillText('February 19, 2026  ·  the-ai-brief-lilac.vercel.app', W / 2, H - 50);
 });
