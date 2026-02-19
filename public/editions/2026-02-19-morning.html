@@ -326,6 +326,71 @@
     color: #8b0000;
     margin-bottom: 4px;
   }
+  .so-what-text { display: block; }
+
+  /* === PROFESSION PICKER === */
+  .profession-picker {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+  }
+  .picker-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .picker-pills {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .picker-pills::-webkit-scrollbar { display: none; }
+  .pill {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    color: #555;
+    padding: 5px 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+  }
+  .pill:hover { border-color: #8b0000; color: #8b0000; }
+  .pill.active {
+    background: #1a1a1a;
+    color: #fffdf8;
+    border-color: #1a1a1a;
+  }
+
+  /* === SMS SHARE === */
+  .share-sms {
+    margin-top: 14px;
+  }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 8px 20px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .share-sms a:hover { background: #6b0000; border-bottom: none; }
 
   /* === NUMBERS BAR === */
   .numbers-bar {
@@ -524,6 +589,8 @@
     .masthead h1 { font-size: 36px; }
     .masthead .edition-tag { font-size: 10px; }
     .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .profession-picker { padding: 12px 20px; }
+    .picker-pills { gap: 6px; }
     .tldr-card { padding: 14px 20px; }
     .tldr-card .tldr-item { font-size: 12.5px; }
     .headlines-block { padding: 20px 20px 18px; }
@@ -566,6 +633,22 @@
   <!-- GREETING -->
   <div class="greeting-bar">
     Good morning. The Pentagon is threatening to blacklist Anthropic for refusing to remove AI safety guardrails. India opened the largest AI summit ever held in the developing world. And the people hired to keep AI safe are quitting en masse. Here's your Thursday briefing.
+  </div>
+
+  <!-- PROFESSION PICKER -->
+  <div class="profession-picker">
+    <div class="picker-label">Personalize this edition:</div>
+    <div class="picker-pills">
+      <button class="pill active" data-profession="general">General</button>
+      <button class="pill" data-profession="engineer">Engineer</button>
+      <button class="pill" data-profession="teacher">Teacher</button>
+      <button class="pill" data-profession="healthcare">Healthcare</button>
+      <button class="pill" data-profession="finance">Finance</button>
+      <button class="pill" data-profession="legal">Legal</button>
+      <button class="pill" data-profession="business">Business Owner</button>
+      <button class="pill" data-profession="marketing">Marketing</button>
+      <button class="pill" data-profession="student">Student</button>
+    </div>
   </div>
 
   <!-- HEADLINES -->
@@ -611,7 +694,17 @@
 
     <p>The dispute escalated when an Anthropic executive contacted defense partner Palantir to ask whether Claude had been used during a military raid to capture Venezuelan President Maduro — a raid that involved gunfire and casualties. The Pentagon interpreted the inquiry as a tech company second-guessing active military operations. Defense Secretary Hegseth is now threatening to designate Anthropic a "supply chain risk," a classification normally reserved for foreign adversaries like Chinese chipmakers. The designation would force every defense contractor to sever ties with Anthropic entirely.</p>
 
-    <div class="so-what"><span class="so-what-label">What does it mean for me?</span> This standoff will set a precedent. If the Pentagon can compel AI companies to strip all safety restrictions for military use, every lab will face the same choice: comply or lose access to one of the world's largest technology buyers. The outcome determines how much control AI companies retain over how their products are used.</div>
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">This standoff will set a precedent. If the Pentagon can compel AI companies to strip all safety restrictions for military use, every lab will face the same choice: comply or lose access to one of the world's largest technology buyers. The outcome determines how much control AI companies retain over how their products are used.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">If you build with AI APIs, watch closely. A Pentagon blacklisting of Anthropic could reshape which models are available for government-adjacent contracts — and set a precedent for how much say developers have over the guardrails on their own systems. It may also accelerate demand for open-source alternatives with no corporate restrictions.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">The debate over who controls AI safety guardrails extends directly to the classroom. If the military can demand unrestricted AI, questions about content filters in educational tools won't be far behind. This is a case study worth assigning — it forces students to grapple with the tension between innovation, ethics, and national security.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">The principle at stake — whether AI companies can enforce ethical limits on how their products are used — has direct parallels in medicine. If military users can demand unfiltered AI, expect similar pressure on clinical AI tools to relax safety constraints for speed and cost savings. The precedent matters.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">Anthropic just closed a $30B round at a $380B valuation. A Pentagon blacklisting — normally reserved for sanctioned foreign entities — could crater that overnight. If you hold exposure to AI companies through funds or direct investment, this is a material risk factor that didn't exist a week ago.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">This case is a goldmine of novel legal questions: Can the government classify a domestic AI company as a "supply chain risk"? What liability does an AI company carry if its model is used in a military operation that causes civilian casualties? And does Anthropic's inquiry to Palantir constitute interference with military operations? Expect litigation.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If Anthropic gets blacklisted, every defense contractor using Claude will need to switch providers — creating both disruption and opportunity. More broadly, this shows that AI vendor selection now carries geopolitical risk. If your business relies on any AI provider, the political landscape just became a factor in your technology decisions.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">Brand positioning in AI is about to become fraught. Anthropic just ran a Super Bowl ad touting safety — while the Pentagon threatens to cut them off for that very stance. If you market AI-powered products, the "responsible AI" narrative now carries real commercial risk alongside its brand value.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">This is the kind of real-world ethics case that shows up in job interviews and graduate school applications. It touches AI governance, national security, corporate responsibility, and whistleblowing — all in one story. Understanding the tradeoffs here will serve you regardless of which field you enter.</span>
+    </div>
 
     <div class="read-this"><a href="https://www.axios.com/2026/02/19/anthropic-pentagon-ai-fight-openai-google-xai">Read this &rarr; Axios exclusive</a></div>
   </div>
@@ -627,7 +720,17 @@
       <h3>India Opens the Biggest AI Summit the Developing World Has Ever Hosted</h3>
       <div class="story-source"><a href="https://www.washingtontimes.com/news/2026/feb/19/modi-pitches-india-global-artificial-intelligence-hub-ai-conference/">Washington Times</a> · <a href="https://www.bloomberg.com/news/newsletters/2026-02-19/modi-mukesh-ambani-google-ceo-and-sam-altman-speak-at-india-ai-summit">Bloomberg</a></div>
       <p>Prime Minister Modi inaugurated the India AI Impact Summit in New Delhi today — the first global AI summit held outside the U.S. or Europe. The investment commitments were staggering: Microsoft pledged $17.5 billion over four years, Google committed $15 billion over five, and Amazon announced $35 billion by 2030, all targeting AI infrastructure in India. Over 20 heads of state attended, alongside French President Macron and UN Secretary-General Guterres. India is now OpenAI's second-largest market with 100 million weekly ChatGPT users, and both OpenAI and Anthropic announced new offices in the country this week. Bill Gates was scheduled to deliver a keynote but <a href="https://www.aljazeera.com/news/2026/2/19/epsteins-shadow-why-bill-gates-pulled-out-of-modis-ai-summit">withdrew at the last minute</a> amid renewed Epstein scrutiny.</p>
-      <div class="so-what"><span class="so-what-label">What does it mean for me?</span> AI is no longer a story confined to Silicon Valley. When $67 billion in investment lands in India in a single week, it signals that the technology — and the jobs and economic power that follow it — is going global fast.</div>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">AI is no longer a story confined to Silicon Valley. When $67 billion in investment lands in India in a single week, it signals that the technology — and the jobs and economic power that follow it — is going global fast.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">India already produces more software engineers annually than any other country, and now it's getting $67B in AI infrastructure. Expect a surge in Indian AI talent competing for — and filling — the same roles. Remote engineering teams will increasingly include developers trained on India-based AI infrastructure.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">India has 250 million students. AI tools localized for Indian languages and curricula will be tested at a scale no Western country can match. The pedagogical experiments happening there — what works and what doesn't — will shape how AI is deployed in classrooms everywhere.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">India faces a physician shortage of over 600,000 doctors. AI-powered diagnostics and telemedicine deployed at this scale will generate unprecedented real-world data on what AI healthcare looks like in practice. Those lessons — and those datasets — will influence clinical AI tools globally.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">$67 billion in committed AI investment to a single country in one week is a number worth tracking. Microsoft, Google, and Amazon are making decade-long bets on Indian AI infrastructure — signaling that the next phase of AI revenue growth may be emerging-market driven rather than U.S.-centric.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">India is drafting its own AI regulatory framework — and with 100 million ChatGPT users, it has the leverage to enforce it. Any company operating AI globally will need to comply with Indian rules alongside the EU AI Act and whatever the U.S. produces. Cross-border AI compliance just got more complex.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">AI tools and services built for the Indian market will be optimized for cost and scale in ways that benefit small businesses globally. When Google and Microsoft build affordable AI infrastructure for Indian firms, that technology eventually becomes available — and affordable — everywhere.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">India is now OpenAI's second-largest market, with 100 million weekly users generating content in dozens of languages. AI-generated marketing content in Hindi, Tamil, and Bengali is about to become mainstream — and the playbooks developed there will reshape multilingual marketing strategies worldwide.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">If you're planning a career in tech or AI, the job market just became meaningfully more global. India is producing AI talent at scale, and Western companies are hiring there directly. Understanding the global AI landscape — not just Silicon Valley — is now a competitive advantage.</span>
+      </div>
       <div class="read-this"><a href="https://www.washingtontimes.com/news/2026/feb/19/modi-pitches-india-global-artificial-intelligence-hub-ai-conference/">Read this &rarr; Washington Times report</a></div>
     </div>
 
@@ -635,7 +738,17 @@
       <h3>The People Hired to Keep AI Safe Are Quitting — All at Once</h3>
       <div class="story-source"><a href="https://edition.cnn.com/2026/02/11/business/openai-anthropic-departures-nightcap">CNN</a> · <a href="https://uk.finance.yahoo.com/news/ai-safety-expert-quits-anthropic-125648967.html">Yahoo Finance</a></div>
       <p>In the span of one week, senior safety researchers at three major AI companies — OpenAI, Anthropic, and xAI — all resigned with public warnings. Anthropic's Mrinank Sharma posted an open letter stating "the world is in peril." OpenAI's Zoë Hitzig published a New York Times essay comparing ChatGPT's ad strategy to Facebook's worst mistakes. OpenAI separately fired safety executive Ryan Beiermeister after she opposed a new "adult mode" permitting explicit content. Meanwhile, OpenAI disbanded its seven-person mission alignment team and removed the word "safely" from its corporate mission statement.</p>
-      <div class="so-what"><span class="so-what-label">What does it mean for me?</span> When the people whose job is to make AI safe start quitting en masse and warning the public, it warrants attention. The guardrails on the most powerful AI systems are being loosened at precisely the moment those systems are becoming more capable.</div>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">When the people whose job is to make AI safe start quitting en masse and warning the public, it warrants attention. The guardrails on the most powerful AI systems are being loosened at precisely the moment those systems are becoming more capable.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you work at an AI company — or use AI APIs in production — the safety teams are the ones who catch the failure modes before they reach users. Fewer safety researchers means more edge cases in production, more unpredictable model behavior, and more responsibility shifting to application developers to build their own guardrails.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">AI tools are already in students' hands. The people responsible for making sure those tools don't generate harmful content, enable cheating at scale, or manipulate young users are leaving. Educators will increasingly need to serve as the safety layer that the companies themselves are deprioritizing.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Clinical AI relies on safety testing to prevent dangerous hallucinations — a misdiagnosis suggestion, a wrong drug interaction. The erosion of internal safety teams at major AI labs raises the stakes for any healthcare system deploying these tools. Independent validation just became non-optional.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Safety departures are a leading indicator of organizational risk. When key personnel quit publicly and warn the public, it's the kind of signal that precedes regulatory action, lawsuits, or reputational damage. Factor this into your risk assessment of AI-exposed holdings.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Every public resignation letter is a potential exhibit in future litigation. When safety researchers document that their warnings were ignored and guardrails were removed, they're building the evidentiary foundation for negligence claims, regulatory enforcement, and congressional subpoenas.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If you're integrating AI into your business, the safety guarantees you were implicitly relying on are getting weaker. Fewer safety researchers means more risk that AI tools produce harmful, biased, or unreliable outputs. Vet your AI vendors' safety practices — don't assume the defaults are sufficient.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">OpenAI is introducing ads in ChatGPT while its safety team walks out the door. If your brand is advertising alongside or through AI tools, the reputational risk of appearing next to harmful AI-generated content just increased. Brand safety in AI environments needs the same scrutiny as social media.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">AI safety is an emerging field with massive demand and a shrinking talent pool — the people leaving major labs need to land somewhere. If you're considering a career direction, AI safety, governance, and policy roles are about to be in high demand across industry, government, and nonprofits.</span>
+      </div>
       <div class="read-this"><a href="https://edition.cnn.com/2026/02/11/business/openai-anthropic-departures-nightcap">Read this &rarr; CNN report</a></div>
     </div>
 
@@ -643,7 +756,17 @@
       <h3>Microsoft Embeds AI Agents Into the Windows 11 Search Bar</h3>
       <div class="story-source"><a href="https://www.windowslatest.com/2026/02/19/microsoft-shows-off-ai-running-on-the-windows-11-taskbar-and-file-explorer/">Windows Latest</a> · <a href="https://windowsreport.com/microsoft-unveils-ask-copilot-for-windows-11-with-ai-agents-and-file-explorer-integration/">Windows Report</a></div>
       <p>Microsoft demonstrated "Ask Copilot," a feature that replaces the standard Windows search bar with an AI-powered assistant. Users type "@" to summon specialized agents — including a "Researcher" that runs background tasks for ten minutes or longer, with progress tracked in the taskbar. Copilot is also being embedded into File Explorer for on-the-spot document summaries. The broader vision is Windows as an "agentic OS" — an operating system where AI handles research, file management, and multi-step tasks in the background. Microsoft is simultaneously pulling back on Copilot features in Notepad and Paint that failed to gain traction.</p>
-      <div class="so-what"><span class="so-what-label">What does it mean for me?</span> If you use a Windows PC, AI is about to become a more visible part of your daily computing — an always-available research assistant in the search bar. Whether that proves useful or intrusive will depend on how well Microsoft executes the rollout.</div>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you use a Windows PC, AI is about to become a more visible part of your daily computing — an always-available research assistant in the search bar. Whether that proves useful or intrusive will depend on how well Microsoft executes the rollout.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Microsoft embedding agents into the OS shell is a platform play. If you build desktop or enterprise software, Copilot agents will soon compete for the same user attention. It also signals that agentic AI — background processes that run for minutes, not milliseconds — is becoming a first-class OS concept.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Every student with a Windows laptop is about to have an AI research assistant built into their taskbar. This changes the homework equation again: students can now get AI help without even opening a browser. Classroom policies on AI use will need to account for OS-level integration.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">AI in the Windows search bar means clinicians on hospital workstations could query patient data or research medical literature through Copilot — but it also means PHI could inadvertently flow through Microsoft's AI systems. IT security teams in healthcare should be assessing this now.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Copilot agents that run background research for 10+ minutes could transform analyst workflows — automated data gathering, report drafting, and market monitoring from the taskbar. But any financial institution needs to evaluate data leakage risks before enabling AI agents with access to proprietary data.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">An AI agent embedded in the OS raises data privacy questions that existing frameworks weren't designed to handle. If Copilot processes documents in File Explorer, does that data reach Microsoft's servers? Attorney-client privilege, work product doctrine, and data residency requirements all need re-examination.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your team runs Windows, you're about to get AI research and document summarization built into every workstation at no additional cost. The practical question is whether it saves enough time to justify the learning curve — and whether your data policies allow OS-level AI processing.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">An AI assistant in the Windows search bar means Microsoft is training users to start tasks with AI by default. If people begin researching products through Copilot instead of Google, it reshapes SEO and discovery strategies. How your brand surfaces in AI-generated summaries matters more every day.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">A built-in AI research assistant on every Windows PC makes AI tools unavoidable in daily computing — no downloads, no subscriptions, just there. Learning to use it effectively (and knowing when not to trust it) is a practical skill that will follow you into any career.</span>
+      </div>
       <div class="read-this"><a href="https://www.windowslatest.com/2026/02/19/microsoft-shows-off-ai-running-on-the-windows-11-taskbar-and-file-explorer/">Read this &rarr; Windows Latest report</a></div>
     </div>
 
@@ -651,7 +774,17 @@
       <h3>Anthropic Closes $30B Round at $380B Valuation — Both AI Giants Eye IPOs</h3>
       <div class="story-source"><a href="https://www.cnbc.com/2026/02/19/openai-sam-altman-anthropic-dario-amodei-india-ai-summit.html">CNBC</a> · <a href="https://fortune.com/2026/02/17/anthropic-ceo-dario-amodei-balancing-safety-commercial-pressure-ai-race-openai/">Fortune</a></div>
       <p>Anthropic confirmed it has closed a $30 billion funding round at a $380 billion post-money valuation — more than doubling its worth in five months. Annual revenue now stands at a $14 billion run rate, with 10x year-over-year growth for three consecutive years. OpenAI is assembling a $100 billion mega-round of its own. Both companies are reportedly preparing IPOs as early as this summer, with Sequoia Capital backing both — a remarkable hedge by one of Silicon Valley's most prominent firms.</p>
-      <div class="so-what"><span class="so-what-label">What does it mean for me?</span> These will likely be among the largest tech IPOs in history — the kind that end up in index funds and retirement portfolios. Whether they represent sound investment or peak froth depends on whether AI revenue growth can sustain its current pace.</div>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">These will likely be among the largest tech IPOs in history — the kind that end up in index funds and retirement portfolios. Whether they represent sound investment or peak froth depends on whether AI revenue growth can sustain its current pace.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">IPOs bring public market scrutiny — quarterly earnings calls, margin pressure, and shareholder demands. If you work at an AI company approaching IPO, expect the culture to shift toward revenue metrics. The scrappy research lab phase is ending; the enterprise software phase is beginning.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">When AI companies go public at $380B valuations, education becomes a massive addressable market. Expect aggressive sales pushes for AI classroom tools backed by venture-scale marketing budgets. Schools will face increasing pressure to adopt — and increasing need to evaluate — AI products.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">A $380B valuation on $14B in revenue means investors expect AI revenue to keep growing at 10x. Healthcare is one of the largest untapped markets for AI. Post-IPO, expect both Anthropic and OpenAI to aggressively pursue clinical partnerships and FDA approvals for medical AI tools.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Sequoia backing both OpenAI and Anthropic is the ultimate hedge in a two-horse race. At $380B, Anthropic trades at ~27x revenue — rich but not absurd for a company growing 10x annually. These IPOs will define a new asset class and likely enter major indices within months of listing.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">IPOs trigger disclosure requirements that will force AI companies to quantify risks they've so far discussed only vaguely — copyright liability, regulatory exposure, safety incidents, and government contract disputes. The S-1 filings will be the most revealing documents these companies have ever produced.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">When AI companies go public, they gain both resources and pressure to expand aggressively. Expect more aggressive pricing, more sales outreach, and more AI tools aimed directly at small and mid-size businesses. The flip side: public companies are less likely to offer the steep startup discounts you may enjoy now.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Anthropic's Super Bowl ad already signaled that AI companies are moving into consumer brand-building. Post-IPO, marketing spend from AI companies will explode — creating opportunities for agencies and media companies, while also flooding the market with competing AI product messaging.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">Two of the most important AI companies going public means they'll need to hire rapidly across every function — not just engineering. Finance, legal, marketing, operations, and policy roles at AI companies are about to scale dramatically. These IPOs expand the AI career landscape well beyond technical roles.</span>
+      </div>
       <div class="read-this"><a href="https://www.cnbc.com/2026/02/19/openai-sam-altman-anthropic-dario-amodei-india-ai-summit.html">Read this &rarr; CNBC report</a></div>
     </div>
 
@@ -659,7 +792,17 @@
       <h3>Deutsche Bank Asked AI Which Jobs It Plans to Replace First</h3>
       <div class="story-source"><a href="https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/">Fortune</a></div>
       <p>A new Deutsche Bank report asked AI systems directly which industries they are most likely to disrupt. The answer: software development and IT — the very fields building AI. The report found that 85% of developers already use AI coding assistants daily, with productivity gains of up to 60%. The implication is that AI won't just automate routine tasks — it will reshape the knowledge work that created it. The same dynamic is beginning to spread into law, finance, and accounting.</p>
-      <div class="so-what"><span class="so-what-label">What does it mean for me?</span> Nobody is being replaced overnight, but the direction is clear: professionals who learn to work alongside AI tools will have a meaningful advantage over those who don't. That holds true regardless of your industry.</div>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">Nobody is being replaced overnight, but the direction is clear: professionals who learn to work alongside AI tools will have a meaningful advantage over those who don't. That holds true regardless of your industry.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">You're in the crosshairs. 85% of developers already use AI coding assistants, and the report says software is the industry AI will disrupt first. The good news: demand for engineers who can build, fine-tune, and deploy AI systems is surging. The risk is for those who resist the tools entirely.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">The report confirms that AI will reshape the job market your students are preparing to enter. Teaching students how to work alongside AI — not just how to use it — is becoming as fundamental as digital literacy was a decade ago. Career counseling needs to account for which roles are augmented vs. automated.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Healthcare wasn't at the top of the disruption list, but it's coming. AI diagnostic tools, automated chart summarization, and predictive analytics are already in use at major hospitals. The Deutsche Bank report suggests the wave hits knowledge work broadly — clinical decision-making included.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Deutsche Bank is essentially reporting on its own disruption. AI is already automating equity research, compliance monitoring, and risk modeling. The report's finding that AI targets knowledge work first applies directly to finance — the firms adopting AI tools fastest will have a structural cost advantage.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Law is explicitly named in the report as one of the next fields to face AI disruption. Document review, contract analysis, and legal research are already being automated. The profession won't disappear, but the ratio of lawyers to AI-assisted paralegals is going to shift significantly.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The bottom line for small businesses: AI tools can now do work that previously required hiring specialists — from writing marketing copy to analyzing financial data to automating customer service. The 60% productivity gain cited in the report translates directly to cost savings if you adopt the right tools.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Content creation and ad targeting are among the most AI-automated marketing functions, and the trend is accelerating. The report's productivity data suggests that marketing teams using AI tools are producing significantly more output per person — which means clients will expect more for less.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is the most important career planning data point of the year. AI is disrupting software engineering first — the very field building it. Whatever career you're pursuing, your value will come from the judgment, creativity, and interpersonal skills that AI can't replicate. Build those now.</span>
+      </div>
       <div class="read-this"><a href="https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/">Read this &rarr; Fortune report</a></div>
     </div>
   </div>
@@ -711,9 +854,39 @@
   <!-- FOOTER -->
   <div class="footer">
     <div class="signoff">The people building the brakes are quitting. The people buying the cars want them removed. And the cars keep getting faster. Have a good Thursday — see you tonight.</div>
+    <div class="share-sms"><a id="sms-share" href="sms:?&body=Check%20out%20today's%20AI%20Brief%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-19-morning.html">Share via text &rarr;</a></div>
     <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
   </div>
 
 </div>
+
+<script>
+// Profession picker logic
+(function() {
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+  var pills = document.querySelectorAll('.pill');
+  var allText = document.querySelectorAll('.so-what-text');
+
+  function setProfession(prof) {
+    pills.forEach(function(p) {
+      p.classList.toggle('active', p.dataset.profession === prof);
+    });
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  // Init from saved preference
+  setProfession(saved);
+
+  // Click handlers
+  pills.forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      setProfession(pill.dataset.profession);
+    });
+  });
+})();
+</script>
 </body>
 </html>
