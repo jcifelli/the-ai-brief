@@ -57,7 +57,7 @@ TONE & VOICE:
 - Every story must end with a highlighted box using the CSS class \"so-what\"
 - The label inside must read: \"What does it mean for me?\"
 - Each box must contain 9 variants wrapped in <span class=\"so-what-text\" data-profession=\"X\"> tags
-- The 11 professions are: general, engineer, teacher, healthcare, finance, legal, business, marketing, student, trades, firstresponder
+- The 12 professions are: general, engineer, teacher, healthcare, finance, legal, business, marketing, student, trades, firstresponder, consultant
 - The \"general\" variant is visible by default; all others have style=\"display:none\"
 - Each variant should speak directly to that profession's real-world concerns in 2-3 sentences
 - Address the reader directly (\"you\", \"your\") — plain English, no jargon
@@ -75,6 +75,7 @@ Structure for EACH so-what box:
     <span class=\"so-what-text\" data-profession=\"student\" style=\"display:none\">Student text...</span>
     <span class=\"so-what-text\" data-profession=\"trades\" style=\"display:none\">Trades text...</span>
     <span class=\"so-what-text\" data-profession=\"firstresponder\" style=\"display:none\">First responder text...</span>
+    <span class=\"so-what-text\" data-profession=\"consultant\" style=\"display:none\">Management consultant text...</span>
   </div>
 
 SHARE LINK — place inside the greeting bar as a float-right link:
@@ -95,6 +96,7 @@ PERSONALIZE BAR — include between the greeting bar and the headlines block:
       <option value=\"student\">student</option>
       <option value=\"trades\">electrician</option>
       <option value=\"firstresponder\">firefighter</option>
+      <option value=\"consultant\">management consultant</option>
     </select>
     <span class=\"personalize-prompt\">— show me why each story matters for my field.</span>
   </div>
@@ -113,11 +115,12 @@ DYNAMIC SO-WHAT LABELS — the label text changes based on profession:
   student → \"What does it mean for students?\"
   trades → \"What does it mean for electricians?\"
   firstresponder → \"What does it mean for firefighters?\"
+  consultant → \"What does it mean for consultants?\"
 
 JAVASCRIPT — include at the end of <body>, before </body>:
   <script>
   (function() {
-    var labels = { general:'What does it mean for me?', engineer:'What does it mean for software engineers?', teacher:'What does it mean for teachers?', healthcare:'What does it mean for nurses?', finance:'What does it mean for investment managers?', legal:'What does it mean for lawyers?', business:'What does it mean for business owners?', marketing:'What does it mean for marketers?', student:'What does it mean for students?', trades:'What does it mean for electricians?', firstresponder:'What does it mean for firefighters?' };
+    var labels = { general:'What does it mean for me?', engineer:'What does it mean for software engineers?', teacher:'What does it mean for teachers?', healthcare:'What does it mean for nurses?', finance:'What does it mean for investment managers?', legal:'What does it mean for lawyers?', business:'What does it mean for business owners?', marketing:'What does it mean for marketers?', student:'What does it mean for students?', trades:'What does it mean for electricians?', firstresponder:'What does it mean for firefighters?', consultant:'What does it mean for consultants?' };
     var select = document.getElementById('profession-select');
     var allText = document.querySelectorAll('.so-what-text');
     var allLabels = document.querySelectorAll('.so-what-label');

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700;8..60,900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #888; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 40px; }
+  .card {
+    width: 1200px; height: 630px; background: #fffdf8; position: relative; overflow: hidden;
+    font-family: 'Source Serif 4', Georgia, serif; display: flex;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  }
+  .accent-top { position: absolute; top: 0; left: 0; right: 0; height: 6px; background: #8b0000; }
+  .accent-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 6px; background: #8b0000; }
+  .left-panel {
+    width: 380px; background: #1a1a1a; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; padding: 40px; position: relative;
+  }
+  .logo { font-size: 72px; font-weight: 900; color: #fffdf8; line-height: 1.1; text-align: center; letter-spacing: -1px; }
+  .logo-line { width: 240px; height: 3px; background: #8b0000; margin: 25px 0 20px; }
+  .edition-badge {
+    font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700;
+    letter-spacing: 2px; background: #8b0000; color: #fffdf8; padding: 6px 24px; border-radius: 2px;
+  }
+  .date {
+    font-family: 'Source Sans 3', sans-serif; font-size: 16px; font-weight: 600;
+    color: #888; letter-spacing: 2px; margin-top: 20px;
+  }
+  .tagline {
+    font-style: italic; font-size: 16px; color: #666; margin-top: 80px;
+  }
+  .right-panel { flex: 1; padding: 40px 50px; display: flex; flex-direction: column; }
+  .top-label {
+    font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 700;
+    color: #8b0000; letter-spacing: 3px; margin-bottom: 12px;
+  }
+  .top-rule { height: 2px; background: #1a1a1a; margin-bottom: 24px; }
+  .headline { font-size: 36px; font-weight: 900; color: #1a1a1a; line-height: 1.25; margin-bottom: 16px; }
+  .subhead { font-size: 18px; color: #555; line-height: 1.6; margin-bottom: 20px; }
+  .mini-rule { width: 60px; height: 2px; background: #8b0000; margin-bottom: 24px; }
+  .also-label {
+    font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700;
+    color: #999; letter-spacing: 2px; margin-bottom: 14px;
+  }
+  .also-item {
+    font-family: 'Source Sans 3', sans-serif; font-size: 17px; font-weight: 600;
+    color: #333; padding: 10px 0; border-bottom: 1px solid #e8e0d4;
+  }
+  .also-item:last-child { border-bottom: none; }
+  .bottom-url {
+    font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600;
+    color: #999; letter-spacing: 1px; margin-top: auto; padding-top: 16px;
+    border-top: 1px solid #d4c9b8;
+  }
+  p.instructions {
+    font-family: sans-serif; color: #fff; text-align: center; margin-top: 20px;
+    font-size: 14px; opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+<div>
+  <div class="card">
+    <div class="accent-top"></div>
+    <div class="left-panel">
+      <div class="logo">The AI<br>Brief</div>
+      <div class="logo-line"></div>
+      <div class="edition-badge">MORNING EDITION</div>
+      <div class="date">FEBRUARY 19, 2026</div>
+      <div class="tagline">What you need to know right now</div>
+    </div>
+    <div class="right-panel">
+      <div class="top-label">TODAY'S TOP STORY</div>
+      <div class="top-rule"></div>
+      <div class="headline">The Pentagon Wants AI Without Guardrails. Anthropic Said No.</div>
+      <div class="subhead">Three AI companies cooperated. One drew the line.<br>Now the Pentagon is threatening to blacklist them.</div>
+      <div class="mini-rule"></div>
+      <div class="also-label">ALSO IN THIS EDITION</div>
+      <div class="also-item">India hosts largest-ever AI summit — $67B pledged</div>
+      <div class="also-item">AI safety researchers quit OpenAI, Anthropic, xAI</div>
+      <div class="also-item">Microsoft puts AI agents in the Windows search bar</div>
+      <div class="also-item">Anthropic closes $30B round at $380B valuation</div>
+      <div class="bottom-url">THE-AI-BRIEF-LILAC.VERCEL.APP</div>
+    </div>
+    <div class="accent-bottom"></div>
+  </div>
+  <p class="instructions">Screenshot this at 1200×630 and save as og-image.png</p>
+</div>
+</body>
+</html>
