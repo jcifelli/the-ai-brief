@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Morning Edition — Feb 20, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Morning Edition — February 20, 2026">
+  <meta property="og:description" content="ByteDance's Seedance 2.0 can generate Hollywood-quality video in minutes — and the studios are panicking.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-02-20-morning.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Morning Edition — February 20, 2026">
+  <meta name="twitter:description" content="ByteDance's Seedance 2.0 can generate Hollywood-quality video in minutes — and the studios are panicking.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="ByteDance's Seedance 2.0 can generate Hollywood-quality video in minutes — and the studios are panicking.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Friday, February 20, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Morning Edition</span>
+    <div class="tagline">What happened while you were sleeping</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good morning. A Chinese AI tool made a fake Tom Cruise fistfight so realistic that Hollywood sent cease-and-desist letters. The CEOs of OpenAI and Anthropic literally couldn't bring themselves to hold hands on stage. And McKinsey now requires job candidates to pass an AI test. Here's what you need to know this Friday morning. <span class="share-link"><a id="sms-share" href="sms:?&body=A%20Chinese%20AI%20tool%20just%20made%20a%20fake%20Tom%20Cruise%20fight%20scene%20so%20real%20that%20Hollywood%20sent%20cease-and-desist%20letters.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-20-morning.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Morning's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">ByteDance's Seedance 2.0 generates Hollywood-quality video in minutes — studios fire off cease-and-desists <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.cnn.com/2026/02/20/china/china-ai-seedance-intl-hnk-dst">CNN</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">OpenAI and Anthropic CEOs couldn't even hold hands at India's AI summit — the rivalry is personal <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.cnbc.com/2026/02/19/openai-sam-altman-anthropic-dario-amodei-india-ai-summit.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">McKinsey now tests job candidates on AI — and it has 20,000 AI "employees" of its own <span class="headline-tag update">Update</span> <span class="src"><a href="https://fortune.com/2026/01/14/how-to-get-hired-at-mckinsey-ai-tools-liberal-arts-creativity/">Fortune</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">New York introduces bill requiring disclaimers on AI-generated news content <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.niemanlab.org/2026/02/a-new-bill-in-new-york-would-require-disclaimers-on-ai-generated-news-content/">Nieman Lab</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Nature publishes claim that AI has reached human-level intelligence — "the evidence is clear" <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.nature.com/articles/d41586-026-00285-6">Nature</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">Samsung targets 800 million AI-powered devices by end of 2026, doubling its Gemini footprint <span class="headline-tag update">Update</span> <span class="src"><a href="https://finance.yahoo.com/news/exclusive-samsung-double-mobile-devices-030312758.html">Reuters</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>A Chinese AI Tool Made a Fake Tom Cruise Fight Scene So Real That Hollywood Lawyered Up</h2>
+    <div class="byline">Sources: <a href="https://www.cnn.com/2026/02/20/china/china-ai-seedance-intl-hnk-dst">CNN</a> · <a href="https://techcrunch.com/2026/02/15/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/">TechCrunch</a> · <a href="https://www.cnbc.com/2026/02/16/bytedance-safegaurds-seedance-ai-copyright-disney-mpa-netflix-paramount-sony-universal.html">CNBC</a> · <a href="https://www.aljazeera.com/news/2026/2/16/bytedance-pledges-fixes-to-seedance-2-0-after-hollywood-copyright-claims">Al Jazeera</a></div>
+
+    <p>Here's what happened: ByteDance — the Chinese company that owns TikTok — released a new AI video tool called Seedance 2.0. Within days, someone used it to generate a clip of Tom Cruise and Brad Pitt in a fistfight on a post-apocalyptic rooftop — verbally sparring about Jeffrey Epstein. That clip got 3.2 million views. It looked real. The characters moved like real people. And it took a two-line text prompt to create.</p>
+
+    <div class="pull-quote">"My glass half empty view is that Hollywood is about to be revolutionized/decimated." — Rhett Reese, writer and producer of the Deadpool franchise</div>
+
+    <p>Hollywood's response was immediate and furious. Disney, Netflix, Paramount, Warner Bros, and Universal all sent ByteDance cease-and-desist letters. The Motion Picture Association accused the tool of "unauthorized use of U.S. copyrighted works on a massive scale." SAG-AFTRA — the actors' union — condemned "the unauthorized use of our members' voices and likenesses" and called it a violation of "law, ethics, industry standards and basic principles of consent."</p>
+
+    <p>Seedance 2.0 is currently available in China through ByteDance's Jimeng app, but it's about to be integrated into CapCut — the popular video editing app for TikTok users worldwide. It generates 15-second clips now, with longer clips coming. One Chinese tech blogger discovered the tool could generate realistic audio of his voice based solely on a photo of him. ByteDance rolled that feature back after the backlash.</p>
+
+    <p>The bigger picture is striking. Chinese open-source AI models went from near-zero usage in mid-2024 to about a third of all AI use by late 2025. Hollywood is trying to use copyright law to rein in these tools, but the legal systems that govern copyright in the U.S. have no enforcement power in China. Entertainment lawyer Jonathan Handel told Al Jazeera the situation marks "the beginning of a difficult road" for the film industry, predicting that "in several years, full-length movies that are AI-generated" will be a reality.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">Anyone can now create realistic-looking video of real celebrities doing and saying things they never did — for free. That's going to make it harder to trust what you see online. It's also going to flood social media with fake clips that look real. When you see a wild celebrity video in the coming weeks, assume it's AI-generated until proven otherwise.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">Seedance 2.0 sets a new bar for video generation quality and accessibility. If you work in media tech, content moderation, or detection tools, the demand for video authenticity verification is about to spike. On the model side, ByteDance's approach — multimodal input (text, image, audio, video) into a single generation pipeline — is worth studying. The CapCut integration means mass consumer adoption is imminent.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">Your students now have access to a free tool that can make any public figure appear to say anything in a realistic video. Media literacy education just became urgently more important. If you teach any subject that touches on critical thinking, digital citizenship, or current events, you need a lesson plan for AI-generated video — and you need it before CapCut rolls this out globally.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">The immediate concern is misinformation. Realistic AI-generated video of doctors, health officials, or public figures giving fake medical advice is now trivially easy to produce. If a convincing but fabricated clip of a health authority goes viral, it could affect patient behavior and public health outcomes. Watch for this in your practice and be prepared to address AI-generated health misinformation with patients.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">ByteDance's Seedance 2.0 puts serious pressure on Western video generation companies and the studios relying on copyright enforcement that doesn't work across borders. The MPA's cease-and-desist letters are largely symbolic — they have no enforcement mechanism in China. For entertainment stocks, this is a structural threat to the value of intellectual property. For AI investment, Chinese open-source models just captured another category.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">The cease-and-desists from Disney, Netflix, Paramount, and Warner Bros will test whether existing IP frameworks can contain AI-generated content from foreign jurisdictions. SAG-AFTRA's complaint centers on likeness rights — a state-by-state patchwork in the U.S. and largely unenforceable in China. If you practice IP or entertainment law, this is going to generate case law for years. The core question: what's the legal remedy when the infringer is beyond reach?</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If your business uses video for marketing, training, or customer communication, tools like Seedance 2.0 will soon make professional-quality video production nearly free. That's an opportunity — but also a brand risk. Anyone can generate fake video of your products, your spokespeople, or your brand. Think about how you'll verify and authenticate your own video content going forward.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">AI video generation just crossed the quality threshold where produced content is nearly indistinguishable from real footage. For marketing teams, this radically lowers production costs — but it also means your competitors, and potentially bad actors, can produce the same quality for free. Brand trust depends on authenticity, and authenticity just got much harder to signal. Start thinking about verification and provenance now.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">A free tool can now generate realistic video of any public figure doing or saying anything. For your schoolwork, this means video sources require even more verification than before. For your career, this opens creative doors — but also means the video production skills you're learning are going to be supplemented (or replaced) by AI tools faster than expected. Learn to direct AI, not just operate cameras.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">This one is less about your daily work and more about what you see online. Realistic fake video is now free and easy to make. If you see a clip of a public figure saying something outrageous, or a product demo that seems too good to be true, it might be AI-generated. Apply the same skepticism you'd use for a too-good deal on materials — verify before you trust it.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">Realistic fake video of emergencies, public figures, and crisis situations is now trivially easy to generate. That creates new risks for misinformation during active incidents — fake footage of events that didn't happen, or manipulated footage of events that did. Your department should factor AI-generated video into its communication and verification protocols for public information during emergencies.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Seedance 2.0 just collapsed the cost of professional video production toward zero. Every client with a marketing, training, or content strategy will need to factor this in. More importantly, the IP enforcement gap — U.S. copyright law doesn't reach China — is a structural issue for any client whose value depends on intellectual property. Advise entertainment, media, and brand clients to start scenario planning for a world where anyone can generate video of their characters and likenesses.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">This is the video equivalent of what image generators did to illustrators two years ago — except it happened faster and the quality is higher. Seedance 2.0 generates realistic motion, character interaction, and even convincing voice from a text prompt. SAG-AFTRA is fighting for performers, but visual artists, animators, and cinematographers face the same displacement. If you work in video or motion, the economic model for your skills is changing right now.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.cnn.com/2026/02/20/china/china-ai-seedance-intl-hnk-dst">Read this &rarr; CNN's full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>The CEOs of OpenAI and Anthropic Stood Next to Each Other on Stage. They Couldn't Even Hold Hands.</h3>
+      <div class="story-source"><a href="https://www.cnbc.com/2026/02/19/openai-sam-altman-anthropic-dario-amodei-india-ai-summit.html">CNBC</a> · <a href="https://techcrunch.com/2026/02/19/altman-and-amodei-share-a-moment-of-awkwardness-at-indias-big-ai-summit/">TechCrunch</a> · <a href="https://fortune.com/2026/02/19/openai-anthropic-sam-altman-dario-amodei-refused-to-hold-hands-ai-super-bowl-ad-war-ceos-big-tech-conflict/">Fortune</a></div>
+      <p>At India's AI Impact Summit on Wednesday, Prime Minister Narendra Modi gathered 13 tech leaders on stage and beckoned them all to raise their clasped hands — the kind of triumphant group photo heads of state love. Everyone held hands. Except Sam Altman (OpenAI) and Dario Amodei (Anthropic), who were standing right next to each other. They both put up fists instead. The photo went viral instantly.</p>
+      <p>The backstory: Amodei was OpenAI's Vice President of Research before leaving in 2021 to co-found Anthropic, reportedly over disagreements with Altman about safety and commercialization. The rivalry has escalated sharply in recent weeks. Anthropic ran Super Bowl ads explicitly taking shots at OpenAI's decision to introduce advertisements into ChatGPT. Altman fired back, calling Anthropic "dishonest" and "authoritarian." Now they're competing for the same customers, the same investors, and India's enormous market — and they couldn't fake cooperation for three seconds.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">The two most important AI companies in America are led by people who can't stand each other. That rivalry is driving both companies to move faster and compete harder — which means better products for you. But it also means the industry's approach to safety, pricing, and user rights is being shaped more by competitive spite than by coordination. Keep that context in mind when either company makes a promise.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The OpenAI-Anthropic split matters to you because both companies are racing to lock in developers. OpenAI just shipped GPT-5.3-Codex with enterprise tooling. Anthropic shipped Claude Opus 4.6 with a million-token context window. The competition is producing genuinely better tools for engineers — but switching costs are rising with each release. Choose your stack deliberately, not just by inertia.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">OpenAI and Anthropic both make products used in classrooms. Their rivalry means they're competing on features, pricing, and safety claims — all of which affect what your students can access and how it behaves. When either company markets its product as "safer" or "better for education," understand that it's also a competitive claim against the other. Evaluate both tools on their actual behavior, not their press releases.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Both OpenAI and Anthropic are building AI for clinical applications. Intense competition can produce better tools — but it can also produce rushed releases. As healthcare AI gets more capable, the rivalry between these companies means more products will hit the market faster, with less coordination on safety standards. Vet any clinical AI tool on its own merits, regardless of which company's name is on it.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">The Altman-Amodei rift is a material factor in how the AI market develops. OpenAI is pursuing advertising revenue; Anthropic positioned itself as the premium, ad-free alternative. Those are fundamentally different business models with different risk profiles. For portfolio exposure to AI, understanding the strategic divergence between these two companies matters more than their benchmark numbers.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The OpenAI-Anthropic rivalry has legal implications beyond optics. Anthropic was founded by former OpenAI employees, and both companies have exchanged pointed public accusations — "dishonest" and "authoritarian" are the kind of words that end up in filings. If this rivalry escalates further, expect IP disputes, talent poaching litigation, and potentially antitrust scrutiny as both companies pursue exclusive deals with major clients.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Competition between OpenAI and Anthropic is keeping prices down and quality up. That's good for you. But it also means the tools you integrate today may behave differently in six months as both companies chase differentiation. Build flexibility into your AI vendor relationships — don't bet everything on one provider when the competitive landscape is this volatile.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The Anthropic-OpenAI Super Bowl ad war is one of the most interesting brand positioning battles in tech right now. Anthropic is positioning as the "premium, ethical" choice. OpenAI is positioning as the mainstream default. Both positions are strategic, not principled. For marketers watching brand strategy in action, this rivalry is a masterclass in competitive positioning through values signaling.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">The two biggest AI companies are in an open feud. That means both are releasing tools faster, pricing them more aggressively, and offering more free tiers to capture users. Take advantage of it — try both ChatGPT and Claude for your schoolwork and learn the differences. The skills you build with AI now will be more valuable if you're fluent in multiple tools, not just one.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">The rivalry between these two companies is mostly inside baseball. What it means for you: they're competing on price and features, which keeps the AI tools you might use for estimates, scheduling, or customer management cheaper and better. Just don't get locked into one company's ecosystem — the competitive landscape is shifting fast.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">Both companies sell AI to government agencies, including public safety applications. When vendors are in open conflict with each other, procurement decisions get more complicated. If your department is evaluating AI tools from either company, be aware that product roadmaps may shift rapidly in response to competitive pressure — not just user needs.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The Altman-Amodei rivalry is creating two distinct AI ecosystems with different business models, different safety philosophies, and increasingly different customer bases. Clients choosing between them need strategic guidance that goes beyond feature comparison — it's a question of values alignment, vendor risk, and long-term platform stability. This is a growing advisory opportunity.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Both companies claim to care about creative rights, but their approaches differ. Anthropic has been more vocal about attribution and consent. OpenAI has been more aggressive about training on creative work. The rivalry may actually benefit artists — as each company tries to differentiate on ethics, the one that treats creators better gains a competitive advantage. Push for that advantage by being vocal about your expectations.</span>
+      </div>
+      <div class="read-this"><a href="https://www.cnbc.com/2026/02/19/openai-sam-altman-anthropic-dario-amodei-india-ai-summit.html">Read this &rarr; CNBC report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>McKinsey Now Tests Job Candidates on AI Skills. It Also Has 20,000 AI "Employees."</h3>
+      <div class="story-source"><a href="https://fortune.com/2026/01/14/how-to-get-hired-at-mckinsey-ai-tools-liberal-arts-creativity/">Fortune</a> · <a href="https://www.hrgrapevine.com/us/content/article/2026-01-15-mckinsey-goes-all-in-on-ai-with-interview-testing-workforce-of-20000-agents">HR Grapevine</a> · <a href="https://managementconsulted.com/mckinsey-ai-interview-now-a-part-of-final-round-making-ai-fluency-essential-for-u-s-candidates/">Management Consulted</a></div>
+      <p>McKinsey — the world's most influential consulting firm — has added an AI round to its famously grueling final interview process. Candidates now sit down with "Lilli," McKinsey's internal AI tool, and use it to solve a business problem in real time. The firm isn't testing whether you understand how AI works under the hood. It's testing whether you can use AI as a thinking partner: prompting it, evaluating its output, and exercising judgment when the AI gets something wrong.</p>
+      <p>The broader context is even more striking. McKinsey CEO Bob Sternfels revealed that the firm now has roughly 20,000 AI agents working alongside its 40,000 human employees. Eighteen months ago, it had 3,000. Lilli alone processes more than 500,000 prompts per month. The firm is also shifting its hiring criteria: candidates with liberal arts backgrounds, previously deprioritized, are now valued for what McKinsey calls "truly novel" thinking that complements AI's inability to make creative leaps. BCG and Bain are expected to follow with their own AI interview formats.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If one of the world's most prestigious employers now tests every candidate on their ability to work with AI, the rest of the corporate world will follow. This isn't about becoming a programmer — it's about learning to think alongside an AI tool: asking it the right questions, recognizing when it's wrong, and making decisions with its output. That's a skill set worth building now, whatever your field.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">McKinsey's AI interview evaluates prompt quality, output evaluation, and iterative reasoning — essentially the same skills you use with Copilot or Claude every day. The difference is that McKinsey is formalizing this as a hiring criterion. Expect your own employer to start measuring these skills explicitly. If you're already fluent in AI-assisted development, you're ahead. If not, this is the signal to get there.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">McKinsey hiring for AI fluency — not technical skill, but judgment and reasoning with AI — should shape how you think about preparing students for the workforce. The skill being tested isn't coding. It's critical thinking applied to AI output: knowing when to trust it, when to push back, and how to direct it toward better answers. That's teachable, and it belongs in your curriculum now.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">McKinsey consults for most major hospital systems and insurers. Their 20,000-agent AI workforce signals what's coming for healthcare administration. If McKinsey's own workflow runs on AI agents, the operational recommendations they make to your organization will assume AI integration. Be prepared for AI-driven consulting recommendations in your next strategic planning cycle.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">McKinsey's AI integration is a leading indicator for the entire professional services sector. A 500% increase in AI agents in 18 months, combined with hiring for AI fluency, suggests that the consulting industry's labor model is fundamentally changing. Watch for how this affects billable hours, staffing ratios, and pricing across the consulting firms your portfolio companies rely on.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">If McKinsey requires AI fluency for entry-level consultants, expect the same expectation at major law firms within two years. The skill isn't prompt engineering — it's judgment about AI output, which lawyers already practice when evaluating research. Firms that formalize AI-assisted workflows and hire for this skill will have a structural advantage in efficiency and cost.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">McKinsey's 20,000 AI agents represent a one-to-two ratio with human employees. That's a preview of what scaled AI adoption looks like inside a knowledge-work company. If you're a business owner wondering how far AI integration can go, McKinsey just showed you the upper bound of current practice — and they're still hiring humans, just different humans than before.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">McKinsey testing for AI fluency in hiring sends a message to every client it serves: AI skills are table stakes, not differentiators. Marketing teams that haven't integrated AI into their daily workflow are now visibly behind the standard being set by the firms advising their C-suite. Get fluent in AI tools for research, content, and analysis — or be the team McKinsey recommends replacing.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">If you're targeting consulting, finance, or any competitive corporate career, AI fluency is now a hiring criterion — not just at McKinsey, but everywhere McKinsey sets the standard. The good news: the skill being tested isn't technical. It's your ability to think with AI — ask good questions, evaluate outputs critically, and build on what it gives you. Practice this now with every school assignment.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">McKinsey's changes are mostly about white-collar hiring, but the signal matters: the biggest companies in the world now expect employees to work with AI tools as a core job skill. If you run your own business, the same logic applies to using AI for estimates, scheduling, and client communication. It's not about replacing what you do with your hands — it's about being smarter with everything around it.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">McKinsey consults for city and county governments on everything from budgets to operational efficiency. Their internal shift toward AI agents means the consulting recommendations your department receives will increasingly assume AI integration. Understanding how AI tools work at a basic level — even outside your primary role — positions you better for the organizational changes coming down the line.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">McKinsey formalizing AI fluency as a hiring criterion and scaling to 20,000 AI agents sets the competitive standard for the entire industry. If you're at a firm that hasn't integrated AI into both its workflow and its hiring process, you're already behind McKinsey's pace. BCG and Bain are following. The question isn't whether to adopt AI-assisted consulting — it's whether you're leading or catching up.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">McKinsey's shift is mostly about corporate work, but it signals a broader trend: the ability to direct AI — to guide it, evaluate its output, and shape it into something useful — is becoming a valued professional skill. For artists, that translates directly: learning to direct AI tools creatively, rather than dismissing them, positions you as someone who can do things neither humans nor AI can do alone.</span>
+      </div>
+      <div class="read-this"><a href="https://fortune.com/2026/01/14/how-to-get-hired-at-mckinsey-ai-tools-liberal-arts-creativity/">Read this &rarr; Fortune report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>New York Wants to Force News Organizations to Label AI-Generated Content</h3>
+      <div class="story-source"><a href="https://www.niemanlab.org/2026/02/a-new-bill-in-new-york-would-require-disclaimers-on-ai-generated-news-content/">Nieman Lab</a> · <a href="https://www.nysenate.gov/newsroom/press-releases/2026/patricia-fahy/fahy-rozic-introduce-ny-fair-news-act-protect">NY Senate</a> · <a href="https://www.cityandstateny.com/policy/2026/02/new-york-lawmakers-want-keep-ai-out-news/411111/">City & State NY</a></div>
+      <p>New York State lawmakers introduced the NY FAIR News Act — a bill that would require any news organization operating in the state to put clear disclaimers on content "substantially composed, authored, or created" by AI. It would also require that a human editor review AI-generated material before publication, protect journalist sources from being accessed by AI systems, and prohibit using AI in ways that displace journalists or reduce their wages. The bill has support from the Writers Guild, SAG-AFTRA, the Directors Guild, and the NewsGuild of New York. It does not yet have support from broadcasters or publishers.</p>
+      <p>The bill's sponsors cite two concerns: that AI-generated news content can be false or misleading, and that it "plagiarizes" by drawing from original reporting without permission. If passed, New York would become the first state to regulate AI use in newsrooms specifically.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If this bill passes, when you read a news article from a New York-based outlet, you'll know whether a human or an AI wrote it. That's a straightforward improvement in transparency. Whether it changes the broader trend of AI replacing human journalists is less clear — the bill protects workers but doesn't address the economics that are driving the shift.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you build or maintain content management systems, publishing tools, or any platform that serves news content, this bill creates a compliance requirement: content flagging, editorial workflow enforcement, and source access controls around AI systems. New York-based media companies will need technical solutions for these requirements. That's a product opportunity if you're in the space.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is an excellent teaching case for media literacy. The bill forces the question: if students are reading AI-generated news and can't tell, what are they actually learning from? Use this as a classroom exercise — have students find AI-generated and human-written articles and compare quality, sourcing, and accuracy. The bill makes the issue concrete and current.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Health journalism directly affects patient behavior. If AI-generated health articles become common and lack human editorial oversight, the risk of inaccurate medical information reaching the public increases. This bill's requirement for human review before publication is a meaningful safeguard for health-related content — worth advocating for in other states as well.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Financial news drives market decisions. AI-generated financial reporting without human oversight increases the risk of factual errors moving markets. If New York's bill passes and spreads to other states, media companies will face new compliance costs — and financial news services that rely heavily on AI generation will need to restructure their workflows.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The NY FAIR News Act raises First Amendment questions about compelled disclosure in journalism, plus labor law issues around the anti-displacement provisions. The copyright carve-out for AI-generated work adds another layer. This bill will face legal challenges, and the resulting case law will define the boundaries of AI regulation in media for years. Worth following closely if you practice media, labor, or tech law.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If you use AI to produce content for your business — blog posts, newsletters, product descriptions — watch this bill. While it currently targets news organizations, the disclosure and transparency requirements could expand to commercial content in future legislation. Consider proactively labeling AI-generated business content before regulation forces you to.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">This bill would set a precedent for mandatory AI content labeling. Even if it only applies to news organizations now, the concept of required disclosure for AI-generated content will spread to marketing and advertising. Getting ahead of this — being transparent about AI use in your content — positions your brand as trustworthy rather than scrambling to comply later.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This bill directly addresses something you deal with every day: knowing whether what you're reading was written by a human or a machine. If it passes, news articles will carry AI disclaimers — giving you a clearer basis for evaluating sources. It's also a preview of the kind of AI transparency requirements that will likely extend to academic work and professional settings.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This is mostly about media industry regulation, but the underlying principle affects you: transparency about when AI is doing the work. As AI-generated content becomes common across industries — from news to building inspections to permit applications — knowing what was produced by a human versus a machine helps you evaluate what to trust.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">Accurate news reporting matters during emergencies. AI-generated news that hasn't been fact-checked by a human can spread misinformation during active incidents. This bill's requirement for human editorial review before publication is a meaningful safeguard for public safety communication. Support similar requirements in your state if they're proposed.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The NY FAIR News Act is a template. If it passes, other states will follow — and the regulatory model could expand beyond news to any professional content production. Clients in media, marketing, and publishing need to start preparing compliance frameworks now. For consulting firms that produce client-facing reports and presentations using AI, this also raises the question of your own disclosure obligations.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The bill's union support — WGA, SAG-AFTRA, DGA, NewsGuild — reflects the same coalition fighting for creative workers' rights across industries. If the NY FAIR News Act establishes that AI-generated content must be labeled and can't displace human workers, it creates a legal precedent that artists' organizations can use in their own advocacy. Support it even if journalism isn't your field.</span>
+      </div>
+      <div class="read-this"><a href="https://www.niemanlab.org/2026/02/a-new-bill-in-new-york-would-require-disclaimers-on-ai-generated-news-content/">Read this &rarr; Nieman Lab analysis</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Nature Published a Paper Claiming AI Has Reached Human-Level Intelligence. Let's Talk About What That Actually Means.</h3>
+      <div class="story-source"><a href="https://www.nature.com/articles/d41586-026-00285-6">Nature</a></div>
+      <p>A paper in Nature — one of the most prestigious scientific journals in the world — argues that "the vision of human-level machine intelligence laid out by Alan Turing in the 1950s is now a reality." The researchers claim the evidence is clear: by what they call "inference to the best explanation," current AI systems have achieved artificial general intelligence (AGI) — the long-theorized point at which machines can perform any intellectual task a human can.</p>
+      <p>This is a significant claim from a significant journal. It's also a contested one. The paper uses a philosophical framework rather than a strict engineering benchmark to make its case. Whether you find it convincing depends heavily on how you define intelligence. What the paper does well is force the conversation: if the most capable AI systems can now pass medical licensing exams, write functional code, reason through novel problems, and explain their thinking — is the question "is this intelligent?" still the right one to ask, or should we be asking "what do we do about it?"</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">Whether or not you agree that AI is "human-level intelligent," the capabilities described are real. AI can already do things that used to require years of specialized training. The practical question isn't whether to call it intelligence — it's how your work, your education, and your rights are affected by systems this capable, regardless of the label.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The Nature paper uses a philosophical argument, not an engineering benchmark. The systems it describes are the same ones you use daily — you already know their capabilities and their failure modes. What matters for your work isn't the AGI label. It's that the gap between what AI can do and what humans are needed for is narrowing in specific domains. Focus on the capabilities, not the branding.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This paper will generate headlines that your students will ask about. "Has AI become as smart as humans?" is a great classroom discussion topic — especially because the answer depends on definitions. Use it to teach critical reading of scientific claims, the difference between narrow and general intelligence, and why definitions matter in any argument. The paper itself is accessible enough to assign.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The paper notes that current AI systems pass medical licensing exams and detect certain conditions more accurately than human clinicians in controlled studies. Whether that constitutes "intelligence" is a philosophical debate. Whether it changes clinical practice is a practical one. AI diagnostic tools are already in use — this paper adds urgency to the regulatory and ethical frameworks your profession needs around them.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">The AGI label, if widely accepted, will accelerate investment in AI companies and increase pressure to deploy AI across more industries. Markets respond to narratives, and "AI has achieved human-level intelligence" is a powerful one — regardless of whether the underlying research is definitive. Watch for a fresh wave of AI hype-driven valuations following this publication.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">If leading scientific journals declare that AI has achieved human-level intelligence, it strengthens arguments for stricter regulation, liability frameworks, and duty-of-care requirements. Courts and regulators take Nature seriously. This paper could be cited in arguments about whether AI systems should be treated as agents with measurable competence — and therefore held to standards. Watch for it in regulatory filings and judicial decisions.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Whether AI is truly "intelligent" matters less than what it can do for your business right now. The capabilities described in this paper — reasoning, coding, medical diagnosis, complex analysis — are already available through commercial tools. If you haven't evaluated how these capabilities apply to your operations, the Nature paper is a reminder that the technology has moved faster than most businesses have responded.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">"AI reaches human-level intelligence" is going to be the headline of the week. For marketers, this creates both opportunity and risk: AI capability claims will carry more weight in campaigns, but overpromising will face sharper skepticism. The most credible position is specific and demonstrable — show what AI does for your customers, not what a Nature paper says it is.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">A top scientific journal just claimed AI is as intelligent as humans. Read the actual paper, not just the headlines — it makes a philosophical argument, not an engineering proof. Learning to evaluate claims like this critically is exactly the skill that will set you apart. Ask: what's the definition being used? What evidence supports it? What's being left out? That's how you develop real expertise.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">Headlines about AI being "as smart as humans" sound alarming, but the reality is more nuanced. AI is very good at certain kinds of thinking — analyzing data, writing text, passing tests — and very bad at others, like hands-on problem solving in unpredictable environments. The skills you use every day require exactly the kind of judgment and physical adaptability that AI still can't replicate.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The Nature paper's claims about AI intelligence are mostly about test performance and reasoning tasks — not real-world decision-making under pressure. Emergency response requires split-second judgment, physical coordination, emotional resilience, and the ability to adapt to chaos. Those aren't the capabilities being measured. AI can support your work, but the core of what you do remains distinctly human.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The Nature paper gives your clients' executives a headline to react to — and they will. "AGI is here" accelerates every AI-related conversation: investment, adoption, risk management, workforce planning. Your value is in providing the nuance the headline strips away: what specifically can AI do that's relevant to this client, and what can't it do? The consulting opportunity is in the gap between the claim and the reality.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The claim that AI is "human-level intelligent" will be used to devalue human creativity — if machines can think like us, what makes human art special? The answer is that intelligence and creativity aren't the same thing. AI can generate technically proficient output, but art comes from experience, intention, and perspective that AI simulates without possessing. The stronger the AGI narrative gets, the more important it is for artists to articulate what makes human creative work irreplaceable.</span>
+      </div>
+      <div class="read-this"><a href="https://www.nature.com/articles/d41586-026-00285-6">Read this &rarr; Nature article</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">20,000</span>
+      <span class="num-label">AI agents now working alongside 40,000 human employees at McKinsey — up from 3,000 in 18 months</span>
+      <span class="num-src"><a href="https://www.hrgrapevine.com/us/content/article/2026-01-15-mckinsey-goes-all-in-on-ai-with-interview-testing-workforce-of-20000-agents">HR Grapevine</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">3.2M</span>
+      <span class="num-label">Views on the viral AI-generated Tom Cruise vs. Brad Pitt fight clip made with Seedance 2.0</span>
+      <span class="num-src"><a href="https://www.cnn.com/2026/02/20/china/china-ai-seedance-intl-hnk-dst">CNN</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">800M</span>
+      <span class="num-label">AI-powered devices Samsung aims to ship in 2026 — double last year's 400 million</span>
+      <span class="num-src"><a href="https://finance.yahoo.com/news/exclusive-samsung-double-mobile-devices-030312758.html">Reuters</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Samsung Wants to Put Google's AI in 800 Million Devices This Year</h3>
+      <p>Samsung announced plans to double its AI-powered device count to 800 million in 2026, up from 400 million last year. The AI features — powered by Google's Gemini model — include real-time translation, generative photo editing, and smart search. Co-CEO TM Roh told Reuters: "We will apply AI to all products, all functions, and all services as quickly as possible." The push extends beyond phones to TVs, tablets, and home appliances, with a target of 1 billion AI-powered devices in homes within three years. A global memory chip shortage may force Samsung to raise prices on some products.</p>
+      <div class="watch-src"><a href="https://finance.yahoo.com/news/exclusive-samsung-double-mobile-devices-030312758.html">Reuters</a> · <a href="https://www.androidheadlines.com/2026/01/samsung-gemini-ai-800m-galaxy-devices-2026.html">Android Headlines</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Deutsche Bank Asked Its Own AI How It Plans to Destroy Jobs. The AI Answered.</h3>
+      <p>Deutsche Bank ran an experiment using Google's Gemini 2.5 Pro to analyze which industries are most vulnerable to AI displacement. The AI predicted it would handle 75% of all customer service interactions by the end of this year, leaving humans only the most complex cases. Media and entertainment were flagged as "likely to be disrupted" as generative AI moves from analyzing content to producing it. The report is as notable for what it represents — a bank asking AI to predict its own impact on employment — as for any specific finding.</p>
+      <div class="watch-src"><a href="https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/">Fortune</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>University of Florida Researchers Showed They Can Bypass AI Safety Guardrails Systematically</h3>
+      <p>A team at the University of Florida published a paper demonstrating that the safety layers built into major AI platforms — the filters designed to prevent harmful outputs — can be systematically bypassed using a technique they call "nullspace steering." The paper, accepted at the 2026 International Conference on Learning Representations (ICLR), the premier deep-learning research venue, argues that current safety measures give a false sense of security. Professor Sumit Kumar Jha's concern: companies are shipping AI tools to millions of users with safety guardrails that a skilled attacker can consistently defeat.</p>
+      <div class="watch-src"><a href="https://news.ufl.edu/2026/02/breaking-ai/">University of Florida</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="tweet-block">
+      <div class="tweet-author">Rhett Reese <span class="tweet-handle">Writer/producer, Deadpool franchise</span></div>
+      <div class="tweet-text">"My glass half empty view is that Hollywood is about to be revolutionized/decimated." His post about Seedance 2.0 captured the industry's mood — awe at the technical achievement, dread about what it means for human creatives.</div>
+      <div class="tweet-meta">Via <a href="https://techcrunch.com/2026/02/15/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/">TechCrunch</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">The hand-holding photo <span class="tweet-handle">India AI Impact Summit, New Delhi</span></div>
+      <div class="tweet-text">"Everyone is holding hands except Altman and Amodei who are standing RIGHT NEXT TO EACH OTHER with fists up instead. This is the AI industry in one photograph." The image has become an instant meme — and an unexpectedly honest portrait of how the two most important AI companies relate to each other.</div>
+      <div class="tweet-meta">Via <a href="https://fortune.com/2026/02/19/openai-anthropic-sam-altman-dario-amodei-refused-to-hold-hands-ai-super-bowl-ad-war-ceos-big-tech-conflict/">Fortune</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">SAG-AFTRA <span class="tweet-handle">Official statement on Seedance 2.0</span></div>
+      <div class="tweet-text">"The infringement includes the unauthorized use of our members' voices and likenesses. This is unacceptable and undercuts the ability of human talent to earn a livelihood. Seedance 2.0 disregards law, ethics, industry standards and basic principles of consent."</div>
+      <div class="tweet-meta">Via <a href="https://www.cnbc.com/2026/02/16/bytedance-safegaurds-seedance-ai-copyright-disney-mpa-netflix-paramount-sony-universal.html">CNBC</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> Seedance 2.0 is dominating the platform. The Tom Cruise/Brad Pitt fight clip set off a chain reaction of people creating their own AI celebrity videos — many explicitly testing the limits of what the tool will allow. The Altman-Amodei handshake photo has been memed into oblivion, with the two men's fists being photoshopped into increasingly absurd contexts. Underneath the jokes, a real debate about whether the AI industry can self-govern when its leaders can't cooperate on a photo op.</p>
+
+      <p><strong>Hacker News:</strong> The Nature AGI paper is generating the sharpest debate — comment threads are split between researchers who find the philosophical framework insufficient and those who argue the capabilities speak for themselves. McKinsey's AI interview process is being dissected by job seekers and hiring managers alike. The UF jailbreaking paper is getting technically-focused discussion, with several commenters confirming the nullspace steering approach works against commercial models they've tested.</p>
+
+      <p><strong>Reddit:</strong> r/technology is focused on the Seedance 2.0 copyright implications, with particular attention to the enforcement gap between U.S. copyright law and Chinese AI companies. r/consulting is having a collective panic about the McKinsey AI interview. r/artificial has a long thread on the Nature AGI claim, running the gamut from celebration to deep skepticism. The NY FAIR News Act is getting discussion in r/journalism, with reporters split on whether regulation protects or constrains them.</p>
+
+      <div class="comm-src">Sources: <a href="https://www.cnn.com/2026/02/20/china/china-ai-seedance-intl-hnk-dst">CNN</a> · <a href="https://fortune.com/2026/02/19/openai-anthropic-sam-altman-dario-amodei-refused-to-hold-hands-ai-super-bowl-ad-war-ceos-big-tech-conflict/">Fortune</a> · <a href="https://www.nature.com/articles/d41586-026-00285-6">Nature</a> · <a href="https://managementconsulted.com/mckinsey-ai-interview-now-a-part-of-final-round-making-ai-fluency-essential-for-u-s-candidates/">Management Consulted</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">A fake Tom Cruise is fighting Brad Pitt on a rooftop. The heads of AI can't hold hands. And McKinsey wants to know if you can think alongside a machine. Happy Friday — the future is weird and moving fast. I'll see you tonight with the evening edition.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=A%20Chinese%20AI%20tool%20just%20made%20a%20fake%20Tom%20Cruise%20fight%20scene%20so%20real%20that%20Hollywood%20sent%20cease-and-desist%20letters.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-20-morning.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
