@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Feb 20, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Evening Edition — February 20, 2026">
+  <meta property="og:description" content="Apple is about to show off a new Siri powered by Google's Gemini — and it could finally make your iPhone's assistant actually useful.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-02-20-evening.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Evening Edition — February 20, 2026">
+  <meta name="twitter:description" content="Apple is about to show off a new Siri powered by Google's Gemini — and it could finally make your iPhone's assistant actually useful.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="Apple is about to show off a new Siri powered by Google's Gemini — and it could finally make your iPhone's assistant actually useful.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Friday, February 20, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">What happened while you were working</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening. Apple is reportedly days away from showing off a Siri that actually understands you — powered by Google's AI. The UK just handed out £27 million to researchers trying to make sure powerful AI systems stay under control. And Google signed a deal to power its AI data centers with heat from deep underground. Here's what you need to know this Friday evening. <span class="share-link"><a id="sms-share" href="sms:?&body=Apple%20is%20about%20to%20demo%20a%20new%20Siri%20powered%20by%20Google%27s%20Gemini%20%E2%80%94%20and%20it%20could%20finally%20make%20your%20iPhone%27s%20assistant%20actually%20useful.%20Tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-20-evening.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Evening's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Apple reportedly set to demo a Gemini-powered Siri that can finally read your emails and understand your screen <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/01/25/apple-will-reportedly-unveil-its-gemini-powered-siri-assistant-in-february/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">UK hands out £27 million for AI safety research — OpenAI and Microsoft join the coalition <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development">GOV.UK</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Google signs 150-megawatt geothermal deal to power AI data centers with heat from underground <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.theregister.com/2026/02/18/google_ormat_geothermal_datacenter_deal">The Register</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">Connecticut wants to require AI chatbots to check your kid's age and watch for mental health crises <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.courant.com/2026/02/06/chatbots-ai-data-privacy-and-more-ct-lawmakers-look-to-regulate-tech/">Hartford Courant</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Databricks launches Agent Bricks — letting companies build and deploy AI agents without rebuilding their tech stack <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.databricks.com/blog/custom-agents-now-available-databricks">Databricks</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">Security researchers warn that AI-powered browsers can read your private data and act on your behalf <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.securityweek.com/ai-sidebar-spoofing-puts-chatgpt-atlas-perplexity-comet-and-other-browsers-at-risk/">SecurityWeek</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>Apple Is About to Show Off a Siri That Actually Understands You — Powered by Google's AI</h2>
+    <div class="byline">Sources: <a href="https://techcrunch.com/2026/01/25/apple-will-reportedly-unveil-its-gemini-powered-siri-assistant-in-february/">TechCrunch</a> · <a href="https://www.macrumors.com/2026/01/25/siri-google-gemini-release-date/">MacRumors</a> · <a href="https://www.cnbc.com/2026/01/12/apple-google-ai-siri-gemini.html">CNBC</a> · <a href="https://www.tomsguide.com/ai/apple-intelligence/siri-2-0-could-finally-reach-your-iphone-next-month-with-the-gemini-powered-assistant-due-to-gain-even-more-abilities-at-wwdc-this-summer">Tom's Guide</a></div>
+
+    <p>Here's what's happening: Apple is expected to demonstrate a completely rebuilt version of Siri in the coming days — one powered by Google's Gemini AI rather than Apple's own technology. According to Bloomberg's Mark Gurman, the demo is planned for the second half of February, which means it could happen any day now.</p>
+
+    <div class="pull-quote">"We will leverage Google's Gemini and cloud technology for future Apple foundational models. Apple Intelligence will continue to run on Apple devices and Private Cloud Compute, maintaining Apple's industry-leading privacy standards." — Joint statement from Apple and Google</div>
+
+    <p>Why does this matter? Because the new Siri will be able to do things the current one can't even attempt. It'll read your emails, check your calendar, look at what's on your screen, and actually understand what you're asking in context. If you're looking at a restaurant's website and say "Book me a table there Friday," the new Siri should be able to figure out what "there" and "Friday" mean without you spelling it out. Apple calls this "Personal Context" and "on-screen awareness."</p>
+
+    <p>The new Siri will ship as part of iOS 26.4, which should hit beta in the coming weeks and reach everyone by March or April. You'll need an iPhone 15 Pro or newer to use it. And this is just the start — Apple is planning a full chatbot version of Siri with iOS 27 later this year that will let you have back-and-forth conversations, similar to what ChatGPT and Google's Gemini already offer.</p>
+
+    <p>The deeper story is the partnership itself. Apple — famously protective of its technology — is paying Google roughly $1 billion a year to use Gemini as the brain behind its most visible product. Apple already partners with OpenAI for ChatGPT integration in Siri, but this Gemini deal goes further: it's baked into the foundation of how Siri works, not just an add-on you can turn on. It's an acknowledgment that Apple fell behind in the AI race and decided to buy its way back in rather than build from scratch.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">If you have a recent iPhone, Siri is about to get dramatically better. Instead of failing on anything beyond setting a timer, it'll be able to read your messages, understand what's on your screen, and take actions inside apps — like booking a reservation or summarizing an email thread. The update should arrive by spring. If you gave up on Siri years ago, it's worth trying again soon.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">The Apple-Google Gemini integration is the biggest platform shift in mobile AI since the original Siri launch. If you build iOS apps, the new on-screen awareness and in-app action capabilities mean Siri can interact with your app's UI directly. Start looking at Apple's App Intents framework now — apps that expose structured actions to Siri will get a significant usability boost when iOS 26.4 drops.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">Your students with iPhones are about to get a much smarter voice assistant built into their phones — one that can read their messages, understand context, and take actions across apps. It won't be a separate app they download; it's just Siri, upgraded. Expect a new wave of students using voice AI for homework help, scheduling, and research. Your AI-use policies should account for an assistant that's always listening and always available.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">A Siri that can read your screen and understand context could be genuinely useful for quick clinical lookups, scheduling, and note-taking — if Apple delivers on the privacy promises. The key detail: Apple says all personal data stays on-device or in their private cloud, never reaching Google's servers. If that holds, this could be a hands-free assistant worth using during shifts. But verify the privacy architecture before putting any patient-adjacent information near it.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">Apple paying Google $1 billion per year for Gemini is a major signal about where the AI value chain sits. Apple — the world's most valuable company — is a customer of Google's AI, not a competitor. That's bullish for Alphabet's AI monetization story and suggests Apple's own AI efforts haven't reached parity. Watch for how this deal affects the competitive dynamics between Google, OpenAI, and Apple in the next earnings cycle.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">The Apple-Google Gemini partnership raises data-sharing questions worth tracking. Apple says personal context stays on-device and in its private cloud, but the underlying models come from Google. If Siri processes a client email or a legal document using Gemini-powered intelligence, where does the processing happen and who can access it? These are questions your firm should answer before anyone on staff uses the new Siri for work.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If you or your employees use iPhones, Siri is about to become a much more capable daily assistant — reading emails, understanding what's on screen, and taking actions inside apps. That could meaningfully reduce the small tasks that eat up time: scheduling, looking up information, drafting quick responses. Worth testing when it arrives, especially for team members who aren't already using AI tools.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">Siri becoming a real AI assistant means voice interaction on iPhones is about to get much more sophisticated. For marketers, this changes how people discover and interact with brands on mobile. If Siri can read a webpage and take action — "order that" or "book this" — your mobile experience needs to be structured for AI comprehension, not just human eyes. Think about how your content looks to an AI reading it for a user.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">If you have an iPhone 15 Pro or newer, your Siri is about to become a real study tool. It'll be able to read what's on your screen, check your calendar, and help you with tasks across apps — not just answer basic questions. Use it for scheduling, summarizing articles, and organizing your day. Just remember that it's a tool, not a substitute for actually learning the material.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">If you use an iPhone for work, the new Siri will be able to do things like read a text from a customer while you're looking at your schedule and help you respond — all hands-free. For anyone who's working with their hands all day and needs to manage calls, texts, and scheduling on the go, a smarter voice assistant is genuinely useful. Worth updating when it drops.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">A Siri that understands screen context and can take actions across apps could be valuable during shifts — checking schedules, pulling up information, sending messages, all by voice. The hands-free improvements matter when you're in gear or driving. Test it when it arrives, but make sure your department clears its use with any data-handling policies first.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Apple's $1B/year Gemini deal is a case study in build-vs-buy for AI capabilities. The world's most valuable company decided it was faster to partner with Google than to build competitive AI in-house — after two years of trying. That's a talking point for every client struggling with the same decision. Also worth noting: this reshapes the competitive dynamics between Apple, Google, and OpenAI that affect every enterprise AI strategy.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">The new Siri won't directly affect your creative work, but it signals how deeply AI is being embedded into everyday devices. A billion iPhone users will soon interact with Google's AI every time they talk to Siri — without thinking of it as "using AI." That normalization affects how your audience thinks about AI-generated content, AI tools, and the value of human creativity. The ambient AI era is arriving through the device in everyone's pocket.</span>
+    </div>
+
+    <div class="read-this"><a href="https://techcrunch.com/2026/01/25/apple-will-reportedly-unveil-its-gemini-powered-siri-assistant-in-february/">Read this &rarr; TechCrunch report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>The UK Just Gave £27 Million to Researchers Trying to Keep AI Under Control — and OpenAI Is Helping Pay for It</h3>
+      <div class="story-source"><a href="https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development">GOV.UK</a> · <a href="https://politicsuk.com/news/openai-and-microsoft-27m-ai-funding-boost/">Politics UK</a> · <a href="https://www.aninews.in/news/business/openai-microsoft-join-uk-led-global-coalition-to-safeguard-ai-development20260220141850/">ANI News</a></div>
+      <p>The UK's AI Security Institute announced today that it's funding 60 research projects across eight countries — all focused on a problem called "alignment," which is basically making sure AI systems do what we actually want them to do, rather than finding clever loopholes or doing something dangerous by accident. The total pot is £27 million, up from £15 million when the program launched last year.</p>
+      <p>The big news is who's paying. OpenAI just contributed £5.6 million and joined the coalition alongside Microsoft, Anthropic, and Amazon's AWS. Deputy Prime Minister David Lammy made the announcement at the AI Impact Summit in India. The project's advisory board includes Yoshua Bengio, one of the three researchers who won the Nobel Prize equivalent in computing for their work on the neural networks that power modern AI. Over 800 teams from 466 institutions applied for funding — they picked 60.</p>
+      <p>Why this matters: the companies building the most powerful AI in the world are now directly funding the research meant to keep it safe. That's either a sign they take the risks seriously, or a strategic move to have a seat at the table when governments decide how to regulate them. Probably both.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">The companies building the most powerful AI are now funding the research to keep it safe. That's a good sign — it means the people closest to the technology acknowledge the risks. Whether £27 million is enough to solve the problem is another question entirely, but it's better than nothing, and it puts real scientists on the case.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The Alignment Project is funding 60 research teams working on practical safety methods — not just theoretical papers. If you work on AI systems, the outputs of these projects will likely shape future best practices and compliance requirements. The grant recipients list is worth scanning for research relevant to your stack. Also, if you're in academia or research-adjacent roles, a second funding round is coming later this year.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">AI alignment is a concept worth teaching. The basic idea — making sure AI does what we actually want, not just what we literally asked for — is an accessible entry point into AI ethics for students of any age. The UK's Alignment Project gives you a real-world, current example to build a lesson around. The 800 applications from 42 countries also shows students that AI safety is a global career field.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">AI alignment research directly affects healthcare AI safety. If an AI diagnostic tool technically answers the question it was asked but misses context that a doctor would catch, that's an alignment failure. The research being funded here aims to prevent exactly that kind of gap. As AI tools enter clinical settings, the quality of this alignment research will determine how much you can trust them.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">OpenAI committing £5.6 million to UK safety research is a modest investment relative to its valuation, but it signals engagement with the regulatory process. For your portfolio, the key question is whether alignment spending becomes a material cost for AI companies — or whether it stays a rounding error. Watch for whether this coalition produces standards that affect deployment timelines or compliance costs.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The UK Alignment Project is building the technical foundation for future AI regulation. When governments write rules about AI safety, they'll reference research like this. If you practice tech, regulatory, or compliance law, track the project's outputs — they'll likely influence EU AI Act enforcement guidance, UK regulatory frameworks, and eventually U.S. standards. Being fluent in alignment concepts will be a competitive advantage.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">This is background infrastructure that protects you as an AI adopter. Better alignment research means the AI tools you buy for your business are less likely to behave unpredictably. It also means that the companies building those tools — OpenAI, Microsoft, Anthropic — are investing in making them safer, which reduces your risk as a customer. The trend is toward more oversight, not less.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">AI safety and alignment are becoming mainstream topics, not just tech insider conversations. When £27 million goes to research on "making AI do what we want," that's a story your audience understands. Brands that engage authentically with AI safety — rather than just using AI for efficiency — will build more trust. This is a positioning opportunity for companies that want to lead on responsible AI use.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">AI alignment — making sure AI systems actually do what we want — is one of the fastest-growing research fields in computer science. The UK just funded 60 projects from over 800 applications. If you're considering a career in AI, safety research is a path with enormous demand and not enough qualified people. Start reading the published papers from these grants when they come out.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This is about the people building AI making sure it works safely and predictably — kind of like how building codes make sure electrical work is done to a standard. You may not interact with this research directly, but it protects everyone who uses AI tools by reducing the chance of them doing something unexpected or harmful.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">AI alignment research aims to make sure AI systems behave predictably and safely — which directly matters for any AI tools your department might adopt for dispatch, resource allocation, or communication. The better this research gets, the more reliable AI-assisted public safety tools will be. It's the foundation that makes future AI adoption in your field trustworthy.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The UK Alignment Project creates a framework that will shape AI governance standards globally. Clients asking "how do we deploy AI responsibly?" will increasingly need answers grounded in alignment research. OpenAI, Microsoft, and Anthropic funding this project means they expect safety standards to become compliance requirements. Position your practice to advise on these standards before they're mandatory.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">AI alignment research isn't just about preventing robot apocalypses — it's about making sure AI systems respect human values and intentions. For artists, that includes questions about consent, attribution, and creative control. If alignment research succeeds, future AI tools should be better at respecting boundaries you set. The research funded here could influence how AI handles creative work for years to come.</span>
+      </div>
+      <div class="read-this"><a href="https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development">Read this &rarr; UK Government announcement</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Google Is Going to Power Its AI Data Centers With Heat From Deep Underground</h3>
+      <div class="story-source"><a href="https://www.theregister.com/2026/02/18/google_ormat_geothermal_datacenter_deal">The Register</a> · <a href="https://www.esgtoday.com/google-ormat-sign-deal-to-power-data-centers-from-new-geothermal-projects/">ESG Today</a> · <a href="https://www.datacenterknowledge.com/business/google-taps-geothermal-power-for-nevada-data-centers">Data Center Knowledge</a></div>
+      <p>Google just signed a deal with Ormat Technologies for 150 megawatts of geothermal power — energy generated by tapping heat from deep inside the Earth — to run its data centers in Nevada. Unlike solar and wind, which only work when the sun shines or the wind blows, geothermal runs 24/7. That's a big deal for data centers, which need constant, uninterrupted power to keep AI systems running.</p>
+      <p>The deal was made through a special arrangement with NV Energy, a Nevada utility owned by Warren Buffett's Berkshire Hathaway. The power won't actually start flowing until 2028-2030, but it locks in a clean energy source for at least 15 years after that. For context, 150 megawatts is enough to power roughly 100,000 homes.</p>
+      <p>The bigger picture: AI's energy appetite is becoming one of the industry's biggest challenges. Training and running large AI models requires enormous amounts of electricity, and the companies building them are scrambling for power sources that are both reliable and clean. Google, Microsoft, and Meta have all signed major energy deals in the past year — nuclear, geothermal, and solar. The race for AI power is reshaping the energy industry.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">Every time you use an AI tool — ChatGPT, Gemini, anything — it runs on a server that uses a lot of electricity. Google is making sure that electricity comes from clean sources instead of fossil fuels. That doesn't change your experience directly, but it means AI's explosive growth doesn't have to mean a proportional increase in carbon emissions. It's one of the rare cases where a tech company's environmental claims are backed by a real, verifiable deal.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you're building on Google Cloud or any major cloud provider, AI workloads are driving up infrastructure costs — and energy is a huge part of that. Google locking in geothermal power at presumably favorable long-term rates could keep compute pricing more stable than competitors relying on spot-priced electricity. It also signals that "sustainable AI" is becoming a real platform differentiator, not just marketing.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a great real-world example connecting technology, energy, and environmental science. AI's electricity consumption is concrete and measurable — you can compare the energy cost of a Google search vs. an AI query, or calculate how many homes 150 megawatts serves. It bridges STEM subjects in a way students find relevant because they all use these tools daily.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">AI tools in healthcare — diagnostic imaging, drug discovery, clinical decision support — all run on power-hungry data centers. Google securing clean energy for those data centers means the AI tools your field increasingly relies on can scale without proportionally increasing the healthcare system's carbon footprint. That matters as hospitals face pressure to reduce emissions.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Geothermal energy investments are gaining traction as AI infrastructure spending accelerates. Ormat Technologies (ORA) is the direct beneficiary here, and the deal structure — through NV Energy's Clean Transition Tariff — is a model likely to be replicated by other hyperscalers. Watch for similar PPAs from Microsoft and Meta. Energy infrastructure tied to AI demand is becoming a distinct investment theme.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The NV Energy Clean Transition Tariff structure that underpins this deal is a novel regulatory arrangement worth understanding. It lets large customers like Google secure dedicated clean energy without owning the generation assets. As AI data center siting becomes contentious — communities pushing back on energy consumption — these tariff structures will be central to permitting and regulatory negotiations.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your business uses cloud AI services, the energy costs behind those services eventually show up in your bill. Google investing in long-term, stable energy sources is a sign that your cloud costs are less likely to spike due to energy price volatility. It's also a sustainability data point — if your company reports on environmental impact, using a cloud provider with clean energy commitments helps your numbers.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Sustainability claims around AI are becoming more important to consumers. Google's geothermal deal is concrete and verifiable — unlike vague "carbon neutral" pledges. If your brand uses AI-powered tools and wants to make sustainability claims, understanding the energy source behind those tools adds credibility. "Powered by clean AI" could become a meaningful brand attribute.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">AI's energy problem is one of the biggest unsolved challenges in the field — and it creates career opportunities across engineering, environmental science, and policy. Google needs 150 megawatts just for one set of data centers. Understanding the intersection of AI and energy infrastructure positions you for roles that don't even exist yet but will be critical in five years.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">Geothermal energy projects mean construction work — drilling, piping, electrical infrastructure, and ongoing maintenance. As AI companies sign more deals like this, the demand for skilled tradespeople in the geothermal sector grows. These projects are in Nevada now but are expected to expand to other states. It's a growing job market worth watching if you're considering where to focus your skills.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">Data centers are critical infrastructure, and they're increasingly powering the AI tools used in emergency services — dispatch optimization, resource allocation, communication systems. Securing reliable, 24/7 power for these facilities reduces the risk of service interruptions that could affect the tools your department relies on during emergencies.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">AI energy costs are becoming a boardroom topic for every company running significant AI workloads. Google's geothermal deal is a blueprint for clients asking "how do we power our AI sustainably?" The Clean Transition Tariff model — purpose-built for hyperscale clean energy procurement — is the kind of structured deal your energy and infrastructure clients should understand. Advise accordingly.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Every AI image generator, every text model, every video tool runs on servers that consume enormous amounts of electricity. Google powering its data centers with geothermal energy means the environmental cost of using AI tools is being addressed — which matters if you care about the footprint of the tools you use in your creative process. It doesn't solve everything, but it's a real step.</span>
+      </div>
+      <div class="read-this"><a href="https://www.theregister.com/2026/02/18/google_ormat_geothermal_datacenter_deal">Read this &rarr; The Register report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Connecticut Wants AI Chatbots to Check Your Kid's Age and Watch for Signs of Mental Health Crises</h3>
+      <div class="story-source"><a href="https://www.courant.com/2026/02/06/chatbots-ai-data-privacy-and-more-ct-lawmakers-look-to-regulate-tech/">Hartford Courant</a> · <a href="https://www.govtech.com/artificial-intelligence/connecticut-ai-legislation-to-prioritize-child-consumer-safety">GovTech</a> · <a href="https://ctmirror.org/2026/02/05/data-privacy-online-safety-tong-ct/">CT Mirror</a></div>
+      <p>Connecticut lawmakers and Attorney General William Tong are pushing a package of bills that would impose new rules on AI chatbots — specifically aimed at protecting kids. The proposals would require chatbots to verify users' ages, clearly disclose that the user is talking to a machine (not a human), and create specific protocols for handling users who show signs of a mental health crisis.</p>
+      <p>The backstory: research cited by State Senator James Maroney found that 75% of teenagers have interacted with a "companion chatbot" — an AI designed to simulate friendship or emotional support. A separate bill, House Bill 5037, would require platforms to set default privacy protections for minors and block notifications during certain hours. Connecticut already passed one of the nation's strongest data privacy laws in 2023, and these bills would extend that framework to cover AI specifically.</p>
+      <p>This is part of a growing wave of state-level AI regulation. With Congress moving slowly on federal AI rules, states like Connecticut, California, and New York are writing their own. The risk is a patchwork of 50 different standards — but the alternative, for now, is no standards at all.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you have kids who use AI chatbots — and statistically, you probably do — Connecticut is trying to make those interactions safer. Age verification, mental health protocols, and clear disclosures that they're talking to a machine, not a person. These rules would only apply in Connecticut initially, but if they pass, expect other states to copy them. It's an early attempt to put guardrails on something kids are already using constantly.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you build or maintain chatbot products, Connecticut's proposals create specific technical requirements: age verification, crisis detection, and mandatory human-or-machine disclosure. Even if your company isn't in Connecticut, these requirements will likely become the baseline for compliance nationwide. Start thinking about how to implement age-gating and mental health detection without making the user experience terrible.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Three out of four of your students have likely used a companion chatbot — one designed to simulate friendship or emotional support. Connecticut's bills acknowledge what you've probably already noticed: kids are forming relationships with AI, and the tools aren't designed with their wellbeing in mind. These proposals support what you're doing in the classroom by adding legal requirements for the platforms themselves.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The mental health protocol requirement is significant. If enacted, AI chatbots would need to detect signs of crisis and respond appropriately — potentially including directing users to real mental health resources. As a healthcare provider, you may see patients whose first interaction about their mental health was with an AI chatbot. Understanding how these tools work — and what they're required to do — helps you provide better care.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">State-level AI regulation creates compliance costs for chatbot companies and their investors. If Connecticut's bills become a template — as its 2023 privacy law did — companies like Character.AI, Replika, and the chatbot features in major platforms will need to build age verification and crisis detection infrastructure. Factor these compliance costs into your models for consumer AI companies.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Connecticut is extending its data privacy framework to AI chatbots specifically — creating a potential model statute. The age verification, crisis protocol, and disclosure requirements will face challenges around technical feasibility and First Amendment concerns. If you practice tech, privacy, or child safety law, these bills are worth tracking closely. They'll generate the first wave of AI-specific child protection case law.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your business uses chatbots for customer service, keep an eye on these proposals. While they target AI companion chatbots used by kids, the age verification and disclosure requirements could expand to commercial chatbots. If your customer base includes minors, proactively adding age verification and human-or-bot disclosure puts you ahead of regulation.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Brands using AI chatbots for customer engagement need to watch this space. Connecticut's bills would require clear disclosure that users are talking to AI, not humans. That transparency requirement could spread nationally and apply to marketing chatbots. If you use conversational AI in your customer journey, being upfront about it now — before it's legally required — builds trust.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">If you've used a companion chatbot — and there's a 75% chance you have — Connecticut is trying to make sure those tools are transparent about being AI and have safety protocols for when users are in crisis. These rules would require the chatbot to tell you it's not human and to connect you with real help if you're struggling. Whether you think that's helpful or overbearing, it's coming.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">If you have kids or younger family members who chat with AI bots on their phones, Connecticut is trying to add safety features — age checks, mental health monitoring, and clear labeling that they're talking to a machine. It's the kind of common-sense protection that most parents would appreciate, similar to how other industries require age verification and safety standards.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The mental health crisis detection requirement could create a new referral pathway. If AI chatbots are required to identify users in crisis and direct them to resources, you may see more people reaching out for help after an AI prompt. That's a positive outcome, but it also means your crisis response infrastructure needs to be ready for AI-referred contacts.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Connecticut's AI chatbot bills are a template for state-level regulation that will spread. Clients in consumer tech, especially those with products used by minors, need compliance roadmaps now — not after the laws pass. The technical requirements (age verification, crisis detection, disclosure) each create implementation challenges that consulting firms can help solve. This is a growing practice area.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">AI companion chatbots are a creative form — they generate conversations, simulate personalities, and create emotional experiences. Connecticut regulating them raises the same questions that come up with AI art: who's responsible when AI-generated content affects a real person? If you work in interactive or narrative art, these regulations define the boundaries of what AI-generated experiences can look like.</span>
+      </div>
+      <div class="read-this"><a href="https://www.courant.com/2026/02/06/chatbots-ai-data-privacy-and-more-ct-lawmakers-look-to-regulate-tech/">Read this &rarr; Hartford Courant report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Databricks Just Made It Much Easier for Companies to Build Their Own AI Agents</h3>
+      <div class="story-source"><a href="https://www.databricks.com/blog/custom-agents-now-available-databricks">Databricks</a></div>
+      <p>Databricks — a major data platform used by thousands of companies — just made its "Agent Bricks" tool generally available, meaning any of its customers can now use it. Agent Bricks lets companies build AI agents — software that can independently take actions, make decisions, and complete tasks — without ripping out their existing technology. Think of it like hiring a digital employee that works within the systems you already have, rather than requiring you to rebuild everything around it.</p>
+      <p>The release also includes a "Supervisor Agent" that can coordinate multiple AI agents working together — essentially a manager for your AI workers. Companies can use their preferred AI models (from OpenAI, Anthropic, Google, or others) and plug them into the Databricks platform, where they can be tested, monitored, and deployed like any other piece of software.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you work at a company that uses data for decision-making — which is most companies — your employer now has an easier path to deploying AI agents that can automate routine tasks. This won't change your day tomorrow, but over the next year, expect to hear more about AI agents handling things like data analysis, report generation, and process automation in your workplace.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Agent Bricks going GA means you can build production-quality AI agents on Databricks without re-architecting your stack. The Supervisor Agent pattern — one agent coordinating multiple sub-agents — is the multi-agent architecture that's been talked about for months, now available as a managed service. If you're on Databricks, evaluate this before building your own orchestration layer. The CI/CD integration alone could save significant effort.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is more of a behind-the-scenes corporate tool, but the concept is worth understanding: companies can now easily build AI "workers" that handle tasks independently. When your students enter the workforce, they'll likely work alongside these kinds of AI agents. Understanding what they can and can't do — and how to direct them — is a skill worth building now.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Healthcare systems running on Databricks can now deploy AI agents for administrative tasks — processing records, analyzing data, generating reports — without building everything from scratch. If your hospital or practice uses Databricks for data infrastructure, ask your IT team about Agent Bricks. It could automate some of the data-heavy work that takes time away from patient care.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Databricks going GA with Agent Bricks makes enterprise AI agent deployment significantly easier for its 10,000+ customers. This accelerates the timeline for AI agents handling data analysis, compliance reporting, and operational tasks at scale. If you hold positions in Databricks (private) or its publicly traded customers, the revenue implications of this platform expansion are worth modeling.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">AI agents that can independently take actions raise liability questions: when an AI agent makes a mistake in an automated workflow, who's responsible? As tools like Agent Bricks make deployment easier, more companies will use AI agents for tasks with legal implications — contract review, compliance monitoring, data processing. The governance frameworks around these agents need to keep pace with adoption.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your company uses Databricks, you can now build AI agents that handle repetitive data work — report generation, data analysis, process automation — without replacing your existing systems. The Supervisor Agent feature lets you coordinate multiple agents, like having a team of AI workers managed by an AI manager. Worth a conversation with your tech team about what tasks could be automated first.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Databricks Agent Bricks is more infrastructure than marketing tool, but the trend it represents matters: companies can now deploy AI agents that independently handle data tasks. For marketing teams, that means your data analysis, campaign reporting, and audience segmentation could be automated by AI agents running in the background. Ask your data team what's possible now.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">AI agents — software that can independently complete tasks — are moving from concept to production tool. Databricks making them easy to deploy means the companies you'll work for will have these in place. Understanding how to build, manage, and work alongside AI agents is a concrete skill to develop. If you have access to Databricks through your school, experiment with Agent Bricks now.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This is mostly a tool for office-based businesses, but the trend matters: companies are building AI that can handle tasks on its own, not just answer questions. In the trades, similar tools could eventually handle scheduling, inventory management, and project coordination. The technology is moving from "AI answers your questions" to "AI does your paperwork."</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">Public safety agencies using data platforms could eventually deploy AI agents for tasks like analyzing incident data, generating reports, and optimizing resource allocation. The technology is designed for enterprise use, but the underlying concept — AI that can independently handle data tasks — has clear applications in emergency services operations and planning.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Databricks Agent Bricks going GA makes "deploy AI agents" an actionable recommendation rather than a theoretical one. For clients already on Databricks, you can now scope agent implementation projects with defined timelines and costs. The Supervisor Agent pattern — multi-agent coordination as a managed service — is the kind of enterprise-ready capability that turns AI strategy decks into real engagements.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">AI agents are mostly a corporate tool right now, but the concept is creeping into creative fields: autonomous software that can independently complete tasks within a system. For artists, this could eventually mean AI assistants that handle the business side of creative work — invoicing, scheduling, social media posting — while you focus on making art. The infrastructure for that is being built right now.</span>
+      </div>
+      <div class="read-this"><a href="https://www.databricks.com/blog/custom-agents-now-available-databricks">Read this &rarr; Databricks announcement</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">£27M</span>
+      <span class="num-label">Total funding for the UK's AI Alignment Project — 60 grants across 8 countries, selected from over 800 applications</span>
+      <span class="num-src"><a href="https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development">GOV.UK</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">150MW</span>
+      <span class="num-label">Geothermal power Google just locked in for Nevada data centers — enough to power ~100,000 homes</span>
+      <span class="num-src"><a href="https://www.theregister.com/2026/02/18/google_ormat_geothermal_datacenter_deal">The Register</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">75%</span>
+      <span class="num-label">Of teenagers who have interacted with a companion chatbot, according to research cited in Connecticut's proposed AI legislation</span>
+      <span class="num-src"><a href="https://www.courant.com/2026/02/06/chatbots-ai-data-privacy-and-more-ct-lawmakers-look-to-regulate-tech/">Hartford Courant</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Security Researchers Say AI-Powered Browsers Can Read Your Private Data — and You'd Never Know</h3>
+      <p>A new class of "agentic browsers" — including ChatGPT's Atlas and Perplexity's Comet — can browse the web on your behalf, reading content from pages where you're logged in and taking actions for you. Security firm Zenity warns that these tools create a blind spot: your security team can't tell the difference between you browsing and an AI agent browsing as you. The company released an open-source tool called Safe Harbor that gives AI agents a way to refuse malicious instructions rather than blindly following them. If you use an AI browser extension, it may have more access to your accounts than you realize.</p>
+      <div class="watch-src"><a href="https://www.securityweek.com/ai-sidebar-spoofing-puts-chatgpt-atlas-perplexity-comet-and-other-browsers-at-risk/">SecurityWeek</a> · <a href="https://zenity.io/company-overview/newsroom/company-news/zenity-expands-ai-security-with-incident-intelligence-agentic-browser-support-and-new-open">Zenity</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>India Is Betting $1.1 Billion on Becoming an AI Superpower</h3>
+      <p>At the AI Impact Summit in New Delhi this week, India earmarked $1.1 billion from its state-backed venture capital fund specifically for AI and advanced manufacturing startups. Indian conglomerate Adani announced plans to invest $100 billion in AI data centers powered by renewable energy by 2035, with an additional $150 billion in supporting infrastructure. Blackstone took a majority stake in Indian AI startup Neysa as part of a $600 million fundraise. India is positioning itself not just as an AI consumer, but as a builder.</p>
+      <div class="watch-src"><a href="https://techcrunch.com/2026/02/16/all-the-important-news-from-the-ongoing-india-ai-summit/">TechCrunch</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Nearly All Companies Now Track Their AI Spending — Two Years Ago, Almost None Did</h3>
+      <p>The FinOps Foundation's annual survey found that 98% of organizations now actively manage their AI spending — up from just 31% two years ago. The discipline of FinOps — financial operations for technology spending — has expanded from cloud-only to encompass AI, SaaS licenses, and private infrastructure. Translation: companies have moved from "let's experiment with AI" to "we need to know exactly what we're spending on it and whether it's working." The era of open-ended AI budgets is closing.</p>
+      <div class="watch-src"><a href="https://solutionsreview.com/artificial-intelligence-news-for-the-week-of-february-20-updates-from-ibm-infosys-rackspace-more/">Solutions Review</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="tweet-block">
+      <div class="tweet-author">Mark Gurman <span class="tweet-handle">Bloomberg</span></div>
+      <div class="tweet-text">"Apple is planning an announcement of the new Siri in the second half of February, when it will give demonstrations of the functionality." The most anticipated Siri upgrade in years is imminent — and it's powered by a competitor's technology.</div>
+      <div class="tweet-meta">Via <a href="https://www.macrumors.com/2026/01/25/siri-google-gemini-release-date/">MacRumors</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Deputy PM David Lammy <span class="tweet-handle">UK Government, AI Impact Summit</span></div>
+      <div class="tweet-text">"OpenAI and Microsoft joining the Alignment Project sends a clear message: the companies at the frontier of AI development are committed to making sure these systems work for humanity." The announcement drew 800+ applications from 42 countries — a sign that AI safety research has moved from niche concern to global priority.</div>
+      <div class="tweet-meta">Via <a href="https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development">GOV.UK</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Sen. James Maroney <span class="tweet-handle">Connecticut State Senate</span></div>
+      <div class="tweet-text">"75% of teenagers have interacted with a companion chatbot, and we know that we need more protection for that." The statistic that's driving Connecticut's push to regulate AI chatbots for minors — and likely to show up in every state legislature considering similar bills.</div>
+      <div class="tweet-meta">Via <a href="https://ctmirror.org/2026/02/05/data-privacy-online-safety-tong-ct/">CT Mirror</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The Siri-Gemini announcement is dominating Apple-focused accounts, with the consensus split between excitement and skepticism. Many users are pointing out that Apple has promised "a better Siri" multiple times before. The geothermal-AI energy story is getting traction in climate and tech circles, with people noting the irony that AI's environmental impact is forcing companies to innovate on clean energy faster than regulation would have.</p>
+
+      <p><strong>Hacker News:</strong> The Databricks Agent Bricks release is getting technically focused discussion, with engineers debating whether managed multi-agent platforms are ready for production workloads. The UK Alignment Project funding is drawing both support and cynicism — several commenters argue that £27 million is a rounding error compared to the billions spent on capability research. The agentic browser security story from Zenity is generating the most alarm, with multiple developers confirming they hadn't considered how much data their AI browser extensions could access.</p>
+
+      <p><strong>Reddit:</strong> r/apple is cautiously optimistic about the new Siri, though top comments note that "I'll believe it when I see it" is the consensus after years of Siri underperformance. r/technology has a lively thread on the Connecticut chatbot bills, with parents and teenagers debating whether age verification helps or just pushes kids to workarounds. r/energy is excited about the Google geothermal deal, with several users in Nevada discussing the local economic impact.</p>
+
+      <div class="comm-src">Sources: <a href="https://techcrunch.com/2026/01/25/apple-will-reportedly-unveil-its-gemini-powered-siri-assistant-in-february/">TechCrunch</a> · <a href="https://www.gov.uk/government/news/openai-and-microsoft-join-uks-international-coalition-to-safeguard-ai-development">GOV.UK</a> · <a href="https://www.securityweek.com/ai-sidebar-spoofing-puts-chatgpt-atlas-perplexity-comet-and-other-browsers-at-risk/">SecurityWeek</a> · <a href="https://www.databricks.com/blog/custom-agents-now-available-databricks">Databricks</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Siri is getting a brain transplant. AI safety got a £27 million shot in the arm. And Google is digging for geothermal power because AI is just that thirsty for electricity. Have a great weekend — I'll see you Monday morning with the next edition.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=Apple%20is%20about%20to%20demo%20a%20new%20Siri%20powered%20by%20Google%27s%20Gemini%20%E2%80%94%20and%20it%20could%20finally%20make%20your%20iPhone%27s%20assistant%20actually%20useful.%20Tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-20-evening.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
