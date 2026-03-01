@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Morning Edition — Feb 26, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Morning Edition — February 26, 2026">
+  <meta property="og:description" content="Nvidia just posted $68 billion in quarterly revenue — up 73% from a year ago — and its next-quarter forecast blew past Wall Street's expectations, signaling the AI boom is far from over.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-02-26-morning.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Morning Edition — February 26, 2026">
+  <meta name="twitter:description" content="Nvidia just posted $68 billion in quarterly revenue — up 73% from a year ago — and its next-quarter forecast blew past Wall Street's expectations, signaling the AI boom is far from over.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="Nvidia just posted $68 billion in quarterly revenue — up 73% from a year ago — and its next-quarter forecast blew past Wall Street's expectations, signaling the AI boom is far from over.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Thursday, February 26, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Morning Edition</span>
+    <div class="tagline">Your morning briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good morning. Nvidia just reported $68 billion in quarterly revenue — up 73% from a year ago — and told Wall Street to expect even more next quarter, putting to rest any lingering doubts about whether the AI spending boom is real. Meanwhile, Anthropic launched a major upgrade to Claude Cowork that plugs AI directly into the office tools millions of people use every day, Samsung unveiled its Galaxy S26 with AI that can act on your behalf, and a viral "doomsday memo" predicting mass white-collar job losses by 2028 rattled markets and sparked a fierce debate about what AI is really doing to jobs. Here's your Thursday morning briefing. <span class="share-link"><a id="sms-share" href="sms:?&body=Nvidia%20just%20posted%20%2468%20billion%20in%20one%20quarter%20%E2%80%94%20the%20AI%20chip%20boom%20isn%E2%80%99t%20slowing%20down.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-26-morning.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Morning's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Nvidia posts $68 billion quarter, crushes guidance — CEO says "the agentic AI inflection point has arrived" <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.cnbc.com/2026/02/25/nvidia-nvda-earnings-report-q4-2026.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Anthropic plugs Claude Cowork into Google Drive, Gmail, DocuSign, and more — office AI just got real <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/02/24/anthropic-launches-new-push-for-enterprise-agents-with-plugins-for-finance-engineering-and-design/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Samsung unveils Galaxy S26 with "agentic AI" that acts on your behalf — schedules, researches, and nudges you in real time <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://news.samsung.com/global/galaxy-unpacked-2026-highlights-from-galaxy-unpacked-the-beginning-of-truly-agentic-ai">Samsung</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">A viral "AI doomsday" memo predicting 10% unemployment by 2028 spooked markets and sparked a national debate <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.euronews.com/next/2026/02/26/ai-doomsday-new-thought-experiment-warns-of-social-and-economic-upheaval-by-2028">Euronews</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Nvidia reveals Vera Rubin, its next-gen AI platform — 10x more efficient than Blackwell, shipping late 2026 <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.cnbc.com/2026/02/25/first-look-at-nvidias-ai-system-vera-rubin-and-how-it-beats-blackwell.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">Companies are blaming AI for layoffs — economists aren't so sure that's the real reason <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.cbsnews.com/news/ai-layoffs-2026-artificial-intelligence-amazon-pinterest/">CBS News</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>Nvidia Just Posted $68 Billion in a Single Quarter — and Says Next Quarter Will Be Even Bigger</h2>
+    <div class="byline">Sources: <a href="https://www.cnbc.com/2026/02/25/nvidia-nvda-earnings-report-q4-2026.html">CNBC</a> · <a href="https://fortune.com/2026/02/25/nvidia-nvda-earnings-q4-results-jensen-huang/">Fortune</a> · <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026">Nvidia Newsroom</a></div>
+
+    <p>Nvidia, the company that makes the specialized chips powering nearly every major AI system in the world, reported last night that it earned $68.1 billion in revenue in its most recent quarter — up 73% from the same period a year ago. That number alone would be impressive for any company's full-year revenue. Nvidia did it in three months.</p>
+
+    <p>But the number that really matters is the forecast. Nvidia told investors to expect $78 billion in revenue next quarter, which is $5 billion higher than what Wall Street's most optimistic analysts had predicted. That gap between what experts expected and what Nvidia is projecting tells you something important: the companies buying AI chips — think Google, Microsoft, Amazon, Meta — are spending even faster than the people whose job it is to track spending thought they would.</p>
+
+    <div class="pull-quote">"Computing demand is growing exponentially — the agentic AI inflection point has arrived." — Jensen Huang, Nvidia CEO</div>
+
+    <p>For the full year, Nvidia pulled in $215.9 billion in total revenue, up 65% from the prior year. Its data center business — the division that sells AI chips to cloud providers and tech companies — accounted for over 91% of all revenue, at $62.3 billion for the quarter alone. A year ago, people were debating whether AI spending was a bubble. Nvidia's results suggest the opposite: the biggest tech companies in the world are accelerating their investments, not pulling back.</p>
+
+    <p>Nvidia also gave the public its first detailed look at Vera Rubin, its next-generation AI chip platform that will ship in the second half of 2026. Vera Rubin promises to deliver 10 times more performance per watt than the current Blackwell chips — meaning AI companies could train and run the same models using a fraction of the energy and cost. The system is built from 1.3 million components, is 100% liquid-cooled (a first for Nvidia), and will be deployed by AWS, Google Cloud, Microsoft, and others upon launch.</p>
+
+    <p>The bottom line: the company that supplies the picks and shovels for the AI gold rush just told you the gold rush is getting bigger, not smaller. And the next generation of tools is already on the way.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">Nvidia's earnings are the clearest signal that the AI boom is real and accelerating. The companies building the AI tools you use every day — ChatGPT, Claude, Google's Gemini — are spending more money on Nvidia's chips than anyone expected. That means AI tools will keep getting faster, cheaper, and more capable. If you've been wondering whether AI is a fad, Nvidia just answered that question with $68 billion.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">Nvidia's data center revenue hit $62.3 billion in one quarter, with guidance suggesting even more compute coming online. For you, this means more available infrastructure for AI workloads, likely better pricing on cloud GPU instances as supply catches up to demand, and the Vera Rubin platform promising 10x efficiency gains by late 2026. If you're building AI-powered features, the cost curve is bending in your favor. Start planning for what you'd build with 10x cheaper inference.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">The AI tools your students use are about to get significantly more powerful and cheaper. Nvidia's results show that tech companies are investing more in AI infrastructure, not less — which means faster, more capable AI tools coming to education. The next generation of chips promises 10x efficiency improvements, which could make AI tutoring and personalized learning tools affordable enough for schools that currently can't budget for them.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">Nvidia's chips power the AI systems being developed for medical imaging, drug discovery, and clinical decision support. The 73% revenue growth and the upcoming Vera Rubin platform — which delivers 10x more efficiency — mean these AI healthcare tools will become faster and cheaper to run. Expect AI-assisted diagnostics and documentation tools to improve noticeably over the next year as more computing power comes online.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">Nvidia beat revenue estimates by $2 billion and guided $5 billion above consensus for Q1. Data center revenue grew 75% year-over-year. The key takeaway: AI capex is accelerating, not plateauing. For portfolio positioning, the hyperscaler spending cycle has legs. Watch the Vera Rubin transition in H2 2026 — its 10x efficiency gains could shift the economics of AI inference and reshape the margins of companies that depend on Nvidia compute.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">Nvidia's dominance raises antitrust questions that are becoming harder to ignore — over 91% of its revenue comes from data center AI chips, and every major cloud provider depends on them. If you work in competition law, watch for regulatory scrutiny of Nvidia's market position. For all lawyers, the broader signal is that AI tools are getting cheaper and more powerful, which will accelerate AI adoption in legal workflows — from contract review to discovery to research.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">Here's what Nvidia's numbers mean for your business: the AI tools you're paying for are going to get better and cheaper. When Nvidia ships its next-generation Vera Rubin chips later this year, they'll deliver 10x more efficiency — which means the cloud providers that run your AI services can offer more for less. If you've been waiting for AI costs to come down before adopting, that moment is getting closer fast.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">More AI computing power means better and cheaper AI marketing tools. The AI systems you use for content creation, audience segmentation, and campaign analytics all run on Nvidia chips, and Nvidia just said demand is accelerating. Expect the AI tools in your marketing stack to get noticeably more capable in the next 6–12 months — better at writing, better at personalization, and better at crunching data across campaigns.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">Nvidia just confirmed that AI is the biggest growth story in technology right now. If you're choosing a career path, skills that intersect with AI — whether that's engineering, data science, product management, or even AI policy — will be in high demand. The company's 73% revenue growth shows that every major tech company is investing heavily in AI infrastructure, which means AI-related jobs will keep growing across every industry.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">Nvidia's next-generation AI platform, Vera Rubin, is 100% liquid-cooled — a first for the company. That's significant for trades because every AI data center needs HVAC technicians, electricians, and plumbers who understand liquid cooling systems. As AI companies build more of these facilities across the U.S., demand for skilled trades who can install and maintain this specialized infrastructure is growing. These are high-paying, specialized jobs.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">The main impact for you is indirect but real. As AI companies build more data centers — and Nvidia's results show they're building a lot of them — communities near these facilities face increased demand on power grids and emergency services. Each facility draws massive amounts of electricity and requires specialized hazmat and cooling system knowledge. If a data center project is planned near your jurisdiction, start preparing now for the infrastructure demands.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Nvidia's $78 billion guidance for next quarter is your strongest proof point for client conversations about AI investment. The biggest companies in the world are increasing AI spending, not cutting it. If you're advising clients on digital transformation or technology strategy, you can point to Nvidia's numbers and say: "This is how much the market is investing. The question isn't whether to adopt AI — it's how fast you need to move to stay competitive."</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">More computing power means more capable AI creative tools — and eventually cheaper ones. The AI image, video, and music generators that are changing the creative landscape all run on Nvidia chips, and Nvidia says demand is growing faster than expected. The next generation promises 10x efficiency, which could make high-quality AI creative tools accessible to solo artists who can't afford enterprise subscriptions today.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.cnbc.com/2026/02/25/nvidia-nvda-earnings-report-q4-2026.html">Read this &rarr; CNBC's full earnings breakdown</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Anthropic Plugs Claude Into Your Actual Work Tools — Google Drive, Gmail, DocuSign, and More</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/02/24/anthropic-launches-new-push-for-enterprise-agents-with-plugins-for-finance-engineering-and-design/">TechCrunch</a> · <a href="https://www.cnbc.com/2026/02/24/anthropic-claude-cowork-office-worker.html">CNBC</a> · <a href="https://venturebeat.com/orchestration/anthropic-says-claude-code-transformed-programming-now-claude-cowork-is">VentureBeat</a></div>
+      <p>Anthropic, the company behind Claude, just upgraded its office productivity tool called Cowork with something that could change how you actually do your job. Starting this week, organizations can connect Claude directly to the tools their employees already use — Google Drive, Gmail, Google Calendar, DocuSign, WordPress, and more — through 13 new plug-ins. Instead of copying and pasting between your AI chatbot and your real work, Claude can now reach into your files, emails, and documents and do things there.</p>
+      <p>Here's what that looks like in practice: you could ask Claude to pull data from a spreadsheet in Google Drive, run an analysis in Excel, and then build a presentation in PowerPoint — all in one go, without you switching between apps or re-explaining what you need at each step. Company admins can also build their own private "plug-in marketplaces" — essentially custom versions of Claude tailored to specific departments, like a "Claude for Legal" that knows your firm's document templates, or a "Claude for HR" that understands your onboarding workflows.</p>
+      <p>Anthropic is also rolling out prebuilt templates for HR, design, engineering, financial analysis, investment banking, and other roles. The message is clear: Anthropic doesn't just want Claude to be the chatbot you talk to — it wants Claude to be the coworker who handles tasks across every tool on your desktop.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">AI is moving from "a tool you talk to" to "a tool that does things for you." If your company uses Google Workspace or similar tools, Claude can now reach directly into your files, email, and calendar to get work done — no copy-pasting required. This is a preview of what office work is going to look like: you describe what you need, and AI handles the busywork across your apps.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Anthropic shipped 13 MCP connectors — Google Drive, Gmail, Calendar, DocuSign, FactSet, and others. If your company is evaluating AI coding assistants, note that Anthropic is positioning Claude Cowork as the full-stack office AI, not just a code tool. The engineering-specific templates and the ability to build custom plug-in marketplaces mean you could create department-specific AI workflows that integrate with your existing toolchain.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Claude can now connect to Google Drive and Google Calendar — two tools most schools already use. Imagine an AI that could pull student data from a shared drive, draft a progress report, and schedule a parent conference, all in one step. This isn't available in schools yet, but the technology is now here. Start thinking about how AI-integrated office tools could reduce your administrative workload.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The Cowork plug-ins now include DocuSign and document management tools. For healthcare administration, this could mean AI that drafts consent forms, pulls patient intake documents, and routes them for e-signatures — all without a human touching each step. If your health system adopts this, the paperwork burden that eats into your patient care time could shrink significantly.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Claude Cowork now connects to FactSet and includes prebuilt templates for financial analysis, investment banking, equity research, and wealth management. That's Anthropic going directly after the finance workflow — pulling market data, running analysis, and building client presentations in one AI-driven pipeline. If you haven't evaluated Claude for financial workflows, this update makes it worth a serious look.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Claude now integrates with DocuSign and LegalZoom, and Anthropic offers prebuilt legal templates. The ability for a firm to build a private "Claude for Legal" that knows your document formats and workflows is significant. For contract review, due diligence, and document drafting, this could dramatically reduce the time associates spend on routine tasks. Evaluate the data privacy and confidentiality implications before adopting.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your business runs on Google Workspace, Claude can now plug directly into your Drive, Gmail, and Calendar. That means you could ask AI to pull a sales report from Drive, summarize it, and draft a client email — all in one step. The custom plug-in marketplace feature lets you build company-specific AI tools without hiring developers. For small and mid-size businesses, this is the most practical AI office tool yet.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Claude Cowork now connects to tools marketers actually use — Google Drive, Gmail, WordPress, and data platforms. Imagine asking Claude to pull last month's campaign data from a spreadsheet, write a performance summary, and publish a blog post about the results, all without you switching tabs. Anthropic also shipped marketing-specific templates. If you're still using AI as a standalone writing tool, this upgrade is a reason to rethink your workflow.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">Anthropic just made Claude much more useful for real-world work by connecting it to tools like Google Drive, Gmail, and spreadsheets. If you're doing internships or starting your career, learning how to use AI tools that integrate with actual office software will set you apart. This isn't just about chatting with AI anymore — it's about using AI to get things done across the tools your future employer already uses.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This update is mostly about office and desk work, but there's a practical angle for trades business owners. If you manage invoices, estimates, and client communications through Google Workspace or similar tools, Claude could now help you draft estimates from a template in Drive, send follow-up emails through Gmail, and schedule jobs on your calendar — all from one conversation. That's real time savings for running the business side of your trade.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The direct impact here is limited — Claude Cowork is designed for office and enterprise settings. But the underlying technology, AI that can connect to multiple systems and take actions across them, has obvious long-term applications for public safety. Imagine an AI that could pull incident data, draft after-action reports, and update scheduling systems in one step. That's where this technology is heading, even if it's not there for your field yet.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Anthropic just shipped the enterprise AI tool your clients have been asking for. Claude Cowork with plug-ins means your client's employees can connect AI to Google Drive, Gmail, DocuSign, and domain-specific data tools — with custom templates for finance, legal, HR, and more. The private plug-in marketplace feature is a direct engagement opportunity: help clients build and deploy their own tailored AI workflows. This is billable work, starting now.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">If you handle the business side of your art — contracts, invoices, client emails, scheduling — Claude can now connect to the tools you probably already use. Imagine asking AI to pull a contract template from Google Drive, fill in the details from your last email thread, send it through DocuSign for signature, and add the deadline to your calendar. For freelance artists juggling the admin side, this is a real time saver.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/02/24/anthropic-launches-new-push-for-enterprise-agents-with-plugins-for-finance-engineering-and-design/">Read this &rarr; TechCrunch report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Samsung's New Galaxy S26 Has AI That Acts on Your Behalf — Welcome to the "Agentic" Phone</h3>
+      <div class="story-source"><a href="https://news.samsung.com/global/galaxy-unpacked-2026-highlights-from-galaxy-unpacked-the-beginning-of-truly-agentic-ai">Samsung Newsroom</a> · <a href="https://www.engadget.com/mobile/samsung-galaxy-unpacked-2026-live-updates-from-the-galaxy-s26-launch-event-140007533.html">Engadget</a> · <a href="https://blog.google/products-and-platforms/platforms/android/samsung-unpacked-2026/">Google Blog</a></div>
+      <p>Samsung unveiled the Galaxy S26 at its Unpacked event yesterday, and the big pitch isn't the camera or the screen — it's AI that can do things for you. Samsung is calling it "agentic AI," which means the phone doesn't just answer questions when you ask. It watches what you're doing and jumps in to help — scheduling meetings, summarizing messages, researching topics, and flagging conflicts on your calendar, all on its own.</p>
+      <p>The standout feature is called Now Nudge. When a friend texts you about dinner plans, the phone automatically checks your calendar, notices you have a conflict, and pops up a suggestion right in your messaging app — no need to switch to your calendar and back. Circle to Search, Samsung's visual search tool, now lets you circle multiple things in a photo at once, like an outfit on a celebrity, and get shopping results for each piece. And the camera's AI can automatically flatten, clean, and convert a photo of a document into a shareable PDF.</p>
+      <p>Under the hood, the S26 runs a combination of Samsung's Bixby, Google's Gemini, and Perplexity's search AI — three different AI systems working together. Samsung is betting that the future of the smartphone isn't about apps you open — it's about an AI layer that quietly handles things in the background while you go about your day.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">Your next phone might not just respond when you ask — it could start doing things for you before you even think to ask. Samsung's Galaxy S26 can check your calendar, summarize your texts, and suggest solutions without being prompted. Whether you find that helpful or unsettling probably depends on how you feel about an AI that's always watching what you're doing. Either way, this is the direction all smartphones are heading.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Samsung is running three AI systems simultaneously — Bixby, Gemini, and Perplexity — which raises interesting questions about on-device AI orchestration, latency, and privacy. The "agentic" approach (AI that takes actions proactively rather than waiting for commands) is a design pattern that's moving from cloud services to mobile. If you build mobile apps, expect platform APIs for agentic interactions to become a major development surface over the next year.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Your students are about to have phones that proactively suggest, summarize, and act on their behalf. The document scanning AI alone — which can turn a phone photo into a clean PDF — will change how students submit work. The bigger question for educators: when a student's phone is constantly offering to summarize messages and research topics, how does that change how they learn? Time to think about classroom policies for the next generation of AI-powered phones.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The AI document scanning feature — which automatically flattens, cleans, and converts photos into shareable PDFs — could be genuinely useful for nurses and doctors who need to quickly digitize paper forms, prescriptions, or handwritten notes. The calendar awareness features could also help with shift scheduling and appointment management. These are small conveniences, but they add up in a fast-paced clinical environment.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Samsung integrating Perplexity (an AI search engine) directly into its flagship phone is a distribution play worth watching. For the broader market: "agentic AI" moving to consumer hardware means the addressable market for AI interactions is expanding from desktop to pocket. Every Samsung phone sold becomes a platform for AI-driven services — and that's a new revenue stream for the AI companies powering it.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">An AI phone that proactively reads your messages, checks your calendar, and suggests actions raises real privacy and data governance questions. If a client's phone is summarizing their conversations and storing that context, what are the implications for attorney-client privilege? For legal professionals, the document scanning AI is useful, but the broader trend of phones that passively monitor user activity deserves careful attention from a privacy law perspective.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Samsung's Galaxy S26 could make your team more productive without any new software purchases. The AI features — automatic calendar conflict detection, document scanning, and proactive suggestions — come built into the phone. If your employees already use Samsung devices, these capabilities arrive with the next upgrade cycle. For businesses that equip employees with phones, this changes the value calculation of which devices you buy.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Samsung's Circle to Search now lets users circle items in photos to shop for them — that's a new product discovery channel worth understanding. If you sell physical products, optimizing for visual AI search is going to matter. The broader shift to "agentic" phones that proactively surface information also means your brand's touchpoints with consumers will increasingly be mediated by AI that decides what to show and what to filter out.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">The Galaxy S26's AI features are basically a productivity assistant in your pocket. The document scanner can turn a photo of your notes into a clean PDF. Now Nudge can flag scheduling conflicts when friends text about plans. And the multi-element Circle to Search makes visual research faster. These tools are coming to the phone you might already carry. Learn how to use them well — they'll make school and eventually work more efficient.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">The document scanning feature on the Galaxy S26 could be genuinely useful on a job site. Snap a photo of a handwritten work order, permit, or invoice, and the phone automatically cleans it up and turns it into a shareable PDF. No scanner needed. The calendar AI that detects scheduling conflicts could also help if you're juggling multiple jobs and clients. These are practical, everyday tools that don't require any tech expertise.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The AI document scanning — snap a photo, get a clean PDF — could be useful for field reports and incident documentation. The calendar conflict detection could help with shift management. These are small features, but for first responders who are constantly moving between field work and paperwork, having a phone that handles the administrative friction could save real time during and after a shift.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Samsung positioning its flagship phone around "agentic AI" validates the concept you should be pitching to clients. When the world's largest smartphone maker bets its product launch on AI agents, it signals mainstream adoption. The multi-AI approach — Samsung running Bixby, Gemini, and Perplexity together — is also a case study in AI orchestration strategy that's relevant to enterprise deployments where clients may use multiple AI vendors.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The Galaxy S26's enhanced Circle to Search lets users identify and shop for items in photos — which could drive new discovery for visual artists and designers whose work appears online. The AI camera features, including document scanning and 8K video recording, also give mobile creators more professional-grade tools without extra equipment. If you create visual content, this phone is designed for how you work.</span>
+      </div>
+      <div class="read-this"><a href="https://news.samsung.com/global/galaxy-unpacked-2026-highlights-from-galaxy-unpacked-the-beginning-of-truly-agentic-ai">Read this &rarr; Samsung Galaxy Unpacked highlights</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>A Viral "Doomsday Memo" Predicting AI-Driven Mass Unemployment by 2028 Is Rattling Markets — and Starting a Real Conversation</h3>
+      <div class="story-source"><a href="https://www.euronews.com/next/2026/02/26/ai-doomsday-new-thought-experiment-warns-of-social-and-economic-upheaval-by-2028">Euronews</a> · <a href="https://www.entrepreneur.com/news-and-trends/the-dow-dropped-800-points-was-a-viral-ai-report-to-blame/502954">Entrepreneur</a> · <a href="https://www.citriniresearch.com/p/2028gic">Citrini Research</a></div>
+      <p>A fictional memo written as if from the year 2028, titled "The 2028 Global Intelligence Crisis," has gone viral and spooked financial markets. Written by James Van Geelen of Citrini Research and AI entrepreneur Alap Shah, the paper imagines looking back at how AI-driven layoffs created a cascade of economic damage — starting with white-collar job cuts in 2026, escalating into a full recession by 2027, and ending with 10% unemployment and a new mortgage crisis by 2028.</p>
+      <p>The scenario goes like this: companies start replacing workers with AI agents, each individual company's decision is rational, but the collective result is catastrophic. Displaced office workers flood into lower-paying jobs and blue-collar trades, wages stagnate across the board, consumer spending drops, and the economy tips over. The authors call this "ghost GDP" — where economic output keeps growing on paper because AI is producing more, but real household income is falling because fewer people are earning a paycheck.</p>
+      <p>The memo is a thought experiment, not a prediction — the authors are clear about that. But its timing was perfect. It went viral the same week that Amazon, Pinterest, and Expedia all announced layoffs partly attributed to AI, and economists are publicly debating whether companies are genuinely replacing workers with AI or simply using AI as a convenient excuse to cut costs. Either way, the conversation about what happens to workers in an AI-driven economy just moved from academic journals to the front page.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">This memo isn't a prediction — it's a warning about what could happen if AI replaces workers faster than the economy can absorb the change. The good news: it's a thought experiment, and we're not there yet. The practical takeaway: the workers who'll be most resilient are the ones who understand AI tools and can work alongside them. Don't panic, but do take AI skill-building seriously — the job market is shifting, and being prepared beats being surprised.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The "ghost GDP" concept in this memo is worth thinking about: AI increases output without proportionally increasing employment. As an engineer, you're in a strong position because the world needs people who build and maintain AI systems. But the memo's warning about cascading second-order effects — reduced consumer spending, housing instability — could affect the broader economy in ways that touch every industry, including tech hiring.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This viral memo is going to come up in your classroom, especially with older students worried about their future careers. It's a powerful teaching moment. Use it to discuss critical thinking (it's a thought experiment, not a study), economic cycles, the difference between correlation and causation, and how to evaluate scary headlines. Most importantly, help students understand that adaptability and AI literacy are the best career insurance.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Healthcare is one of the most AI-resistant fields because of the physical, emotional, and regulatory requirements of patient care. The memo's scenario of mass white-collar displacement actually reinforces the value of your skills — hands-on healthcare work isn't something an AI agent can replace. That said, a broader economic downturn would strain hospitals and health systems, so the second-order effects of widespread job losses could still reach your workplace.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">The Citrini memo moved markets — reports link it to an 800-point Dow drop. Whether you agree with the thesis or not, "ghost GDP" is now a concept your clients and colleagues will reference. For your analysis: the memo highlights a real risk in AI-heavy portfolios — if AI-driven productivity gains don't translate into consumer spending, the economic flywheel stalls. Factor the consumer spending side of the equation into your AI investment models.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">If the memo's scenario even partially materializes — mass white-collar layoffs attributed to AI — expect a wave of wrongful termination, discrimination, and labor law cases. Workers will argue their jobs were eliminated not because of genuine AI replacement but because companies used AI as a pretext for cost-cutting. The legal frameworks for AI-related workforce reduction are still undeveloped. This is an emerging practice area with significant demand ahead.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The memo is a thought experiment, but the underlying question is real: what happens when lots of companies replace workers with AI at the same time? For your business, the practical concern is customer demand. If your customers are workers whose jobs are being displaced, their spending drops. The smartest approach is to use AI to improve your operations while keeping an eye on whether your customer base is being squeezed by the same forces.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The "ghost GDP" concept in this memo should matter to marketers. If AI is boosting corporate output but reducing household income, consumer purchasing power drops — and that's what you sell into. Marketers need to watch not just company-level AI adoption but the broader economic effects on their target audiences. A consumer base with less money to spend changes your pricing strategy, messaging, and channel mix regardless of how efficient your AI tools make you.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This memo is scary, but it's a thought experiment — not a guarantee. The most useful thing you can take from it: the job market is going to change significantly because of AI, and the students who prepare for that change will have a major advantage. Focus on skills that AI can't easily replace — critical thinking, leadership, creativity, and the ability to work alongside AI systems. The memo's worst-case scenario is avoidable, but only if people adapt.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">Here's the silver lining in an otherwise alarming memo: the scenario it describes is about white-collar office work being displaced by AI agents. Skilled trades — electricians, plumbers, HVAC techs — are explicitly described as a destination for displaced office workers. That means demand for your skills could actually increase if this scenario plays out. Your physical, hands-on expertise is the kind of work AI agents simply can't do.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">If a significant economic downturn driven by AI-related job losses happens, first responders will feel the effects through increased calls for service, strained community resources, and tighter municipal budgets. Economic stress drives up mental health crises, substance abuse, and domestic incidents. The memo is hypothetical, but the pattern is well-documented: economic downturns increase demand on emergency services. Factor this into long-range planning discussions with your department.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The Citrini memo is going to be on every C-suite reading list this week. Your clients will ask you about it. Be ready with a nuanced take: the scenario is hypothetical but highlights real risks in how companies sequence AI-driven workforce changes. Your value proposition is helping clients adopt AI responsibly — managing the transition so they get efficiency gains without creating the kind of cascading job losses the memo warns about. This is the conversation your clients need to have.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The memo's scenario of AI replacing white-collar work doesn't directly target artists, but the second-order effects matter. If consumer spending drops because fewer people have good-paying jobs, discretionary spending on art, commissions, and creative services drops too. The practical takeaway: diversify your income streams and build direct relationships with your audience. An economic downturn makes the artists who connect directly with their fans more resilient than those who depend on corporate clients.</span>
+      </div>
+      <div class="read-this"><a href="https://www.citriniresearch.com/p/2028gic">Read this &rarr; The original Citrini Research memo</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">$68.1B</span>
+      <span class="num-label">Nvidia's quarterly revenue — up 73% year-over-year, with next-quarter guidance of $78B</span>
+      <span class="num-src"><a href="https://www.cnbc.com/2026/02/25/nvidia-nvda-earnings-report-q4-2026.html">CNBC</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">13</span>
+      <span class="num-label">New plug-ins Anthropic shipped for Claude Cowork, including Google Drive, Gmail, and DocuSign</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/02/24/anthropic-launches-new-push-for-enterprise-agents-with-plugins-for-finance-engineering-and-design/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">10x</span>
+      <span class="num-label">Performance-per-watt improvement of Nvidia's Vera Rubin over current Blackwell chips</span>
+      <span class="num-src"><a href="https://www.cnbc.com/2026/02/25/first-look-at-nvidias-ai-system-vera-rubin-and-how-it-beats-blackwell.html">CNBC</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Companies Are Blaming AI for Layoffs — But Is AI Really the Reason?</h3>
+      <p>Amazon cut 16,000 corporate jobs. Pinterest and Dow cited AI as a factor in their layoffs. Expedia is "realigning" its workforce around AI. On the surface, it looks like the AI job apocalypse is beginning. But economists are pushing back. Several analysts told CBS News and Bloomberg that companies may be using AI as a convenient narrative to justify cost-cutting that would have happened anyway — because "we're investing in AI" plays better on Wall Street than "we're cutting costs." The truth is probably somewhere in between: AI is changing some roles, companies are using it as cover for others, and telling the difference from the outside is nearly impossible.</p>
+      <div class="watch-src"><a href="https://www.cbsnews.com/news/ai-layoffs-2026-artificial-intelligence-amazon-pinterest/">CBS News</a> · <a href="https://abcnews.com/Business/wireStory/artificial-intelligence-drive-layoffs-amazon-firms-hard-129773731">ABC News</a> · <a href="https://www.bostonglobe.com/2026/02/02/business/ai-job-layoffs-impact/">Boston Globe</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Nvidia Unveils Vera Rubin: The Next Generation of AI Chips Arrives Late 2026</h3>
+      <p>Alongside its earnings, Nvidia gave the press its first hands-on look at Vera Rubin, the platform that will replace its current Blackwell chips. The numbers are staggering: 1.3 million components, 100% liquid-cooled (a first for Nvidia, and a big deal for data center energy consumption), and 10 times more efficient than Blackwell for running AI models. Vera Rubin will be the first Nvidia platform where all major cloud providers — AWS, Google Cloud, Microsoft Azure, and Oracle — will deploy it simultaneously at launch. The chip race isn't slowing down.</p>
+      <div class="watch-src"><a href="https://www.cnbc.com/2026/02/25/first-look-at-nvidias-ai-system-vera-rubin-and-how-it-beats-blackwell.html">CNBC</a> · <a href="https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer">Nvidia Newsroom</a> · <a href="https://www.business-standard.com/technology/tech-news/nvidia-vera-rubin-ai-computing-system-launch-grace-blackwell-performance-126022600444_1.html">Business Standard</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Google Releases Gemini 3.1 Pro — More Than Doubles Reasoning Performance</h3>
+      <p>Google quietly rolled out Gemini 3.1 Pro last week, and the benchmarks are turning heads. The model scored 77.1% on ARC-AGI-2 (a test of reasoning ability), more than doubling the score of the previous Gemini 3 Pro. It's available in the Gemini app, Google AI Studio, Vertex AI, and even GitHub Copilot. Google is calling it a "more capable baseline for complex problem-solving" — not a flashy consumer launch, but a meaningful upgrade under the hood for developers and enterprise users building with Google's AI.</p>
+      <div class="watch-src"><a href="https://9to5google.com/2026/02/19/google-announces-gemini-3-1-pro-for-complex-problem-solving/">9to5Google</a> · <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/">Google Blog</a> · <a href="https://www.theregister.com/2026/02/19/google_germinates_gemini_31_pro/">The Register</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="tweet-block">
+      <div class="tweet-author">Jensen Huang <span class="tweet-handle">Nvidia CEO, Q4 Earnings Call</span></div>
+      <div class="tweet-text">"Computing demand is growing exponentially — the agentic AI inflection point has arrived." Nvidia's CEO didn't just beat earnings estimates. He told investors the AI spending cycle is accelerating, not peaking — and backed it up with a $78 billion guidance number that floored Wall Street.</div>
+      <div class="tweet-meta">Via <a href="https://www.cnbc.com/2026/02/25/nvidia-nvda-earnings-report-q4-2026.html">CNBC</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Anthropic <span class="tweet-handle">Claude Cowork Announcement</span></div>
+      <div class="tweet-text">"Claude Code transformed programming. Now Claude Cowork is coming for the rest of the enterprise." Anthropic isn't being subtle — they want Claude embedded in every department at your company, plugged into every tool your employees use, doing the work that used to require switching between a dozen apps.</div>
+      <div class="tweet-meta">Via <a href="https://venturebeat.com/orchestration/anthropic-says-claude-code-transformed-programming-now-claude-cowork-is">VentureBeat</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Citrini Research <span class="tweet-handle">Viral Doomsday Memo</span></div>
+      <div class="tweet-text">"Each company's individual response was rational. The collective result was catastrophic." The most-shared line from the Citrini memo captures the core fear about AI and jobs: every company is making a smart decision, but the sum of all those smart decisions could be a disaster for workers.</div>
+      <div class="tweet-meta">Via <a href="https://www.citriniresearch.com/p/2028gic">Citrini Research</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> Nvidia's earnings are dominating tech Twitter. Jensen Huang's "agentic AI inflection point" quote is everywhere, with bulls celebrating the guidance beat and skeptics asking how long 73% year-over-year growth can last. The Citrini "doomsday memo" is splitting the timeline — some calling it irresponsible fear-mongering, others calling it the most honest analysis of AI's economic risks they've read. Samsung's "agentic AI phone" is generating curiosity but also unease about how much AI should be proactively doing on your phone without being asked.</p>
+
+      <p><strong>Hacker News:</strong> The Vera Rubin platform is the top story, with engineers debating the 10x efficiency claims and discussing what liquid-cooled data centers mean for infrastructure costs. Anthropic's Cowork plug-ins are generating mixed reactions — some see it as the most practical enterprise AI product yet, others worry about data security when Claude has direct access to Google Drive and Gmail. The Citrini memo has a surprisingly thoughtful thread, with commenters debating the "ghost GDP" concept and whether the economic models hold up.</p>
+
+      <p><strong>Reddit:</strong> r/technology is buzzing about Samsung's Now Nudge feature — some users love the idea of a phone that proactively helps, while others call it "surveillance with a smiley face." The AI layoffs debate is the hottest thread on r/economics, with the top comment being: "Companies have been laying people off forever. Now they just blame AI instead of 'market conditions.'" r/investing is focused entirely on Nvidia, with users trying to figure out if the stock is still a buy after another blowout quarter.</p>
+
+      <div class="comm-src">Sources: <a href="https://www.cnbc.com/2026/02/25/nvidia-nvda-earnings-report-q4-2026.html">CNBC</a> · <a href="https://techcrunch.com/2026/02/24/anthropic-launches-new-push-for-enterprise-agents-with-plugins-for-finance-engineering-and-design/">TechCrunch</a> · <a href="https://www.euronews.com/next/2026/02/26/ai-doomsday-new-thought-experiment-warns-of-social-and-economic-upheaval-by-2028">Euronews</a> · <a href="https://news.samsung.com/global/galaxy-unpacked-2026-highlights-from-galaxy-unpacked-the-beginning-of-truly-agentic-ai">Samsung</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Nvidia is printing money from the AI boom and says the best is yet to come. Anthropic just plugged Claude into the office tools you use every day. Samsung wants your phone to start doing things for you before you ask. And a viral thought experiment is forcing an honest conversation about what all this AI actually means for workers. It's a lot to take in before coffee — but now you're up to speed. I'll be back tonight with the evening edition. Have a great Thursday.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=Nvidia%20just%20posted%20%2468%20billion%20in%20one%20quarter%20%E2%80%94%20the%20AI%20chip%20boom%20isn%E2%80%99t%20slowing%20down.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-02-26-morning.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
