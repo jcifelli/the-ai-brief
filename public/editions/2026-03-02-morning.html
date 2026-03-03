@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Morning Edition — Mar 02, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Morning Edition — March 02, 2026">
+  <meta property="og:description" content="A million and a half people are canceling ChatGPT over OpenAI's Pentagon deal — and a protest is planned outside OpenAI's headquarters today.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-02-morning.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Morning Edition — March 02, 2026">
+  <meta name="twitter:description" content="A million and a half people are canceling ChatGPT over OpenAI's Pentagon deal — and a protest is planned outside OpenAI's headquarters today.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="A million and a half people are canceling ChatGPT over OpenAI's Pentagon deal — and a protest is planned outside OpenAI's headquarters today.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Monday, March 2, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Morning Edition</span>
+    <div class="tagline">Your morning briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good morning. The weekend's big story kept getting bigger overnight. Over a million and a half people have now signed up to cancel ChatGPT over OpenAI's Pentagon deal — Claude hit number one in the App Store on Saturday — and a protest is planned outside OpenAI's San Francisco headquarters this morning. Meanwhile, China's DeepSeek is expected to drop its next flagship AI model any day now, and Google just gave its Gemini assistant the ability to actually do things on your phone — book a ride, order dinner, complete tasks on your behalf. A full Monday morning's worth of news. Here's what you need to know. <span class="share-link"><a id="sms-share" href="sms:?&body=1.5%20million%20people%20are%20canceling%20ChatGPT%20%E2%80%94%20and%20a%20protest%20hits%20OpenAI%27s%20HQ%20this%20morning.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-02-morning.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Morning's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">"Cancel ChatGPT" goes mainstream — 1.5 million people boycotting OpenAI over its Pentagon deal, with a protest planned outside its HQ today <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.euronews.com/next/2026/03/02/cancel-chatgpt-ai-boycott-surges-after-openai-pentagon-military-deal">Euronews</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Claude hits No. 1 in the App Store as users flee ChatGPT — Anthropic says sign-ups have tripled since November <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.axios.com/2026/03/01/anthropic-claude-chatgpt-app-downloads-pentagon">Axios</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Bloomberg opinion: OpenAI actually crossed the red lines Anthropic refused to — despite Altman's claims to the contrary <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.bloomberg.com/opinion/articles/2026-03-02/openai-steps-over-a-red-line-anthropic-refused-to-cross">Bloomberg</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">DeepSeek V4 expected this week — China's AI lab is about to drop its biggest model yet, with images and video, built on Chinese chips <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Google's Gemini can now book rides and order food for you — the era of AI that acts on your behalf is here, on Android at least <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">HONOR debuts a "Robot Phone" at MWC — a smartphone with a motorized camera that physically nods and shakes its head in response to you <span class="headline-tag update">Update</span> <span class="src"><a href="https://technode.com/2026/03/02/mwc-2026-honor-unveils-robot-phone-with-embodied-ai-features/">TechNode</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>The "Cancel ChatGPT" Backlash Is Real — 1.5 Million People Are Out, and a Protest Hits OpenAI's HQ This Morning</h2>
+    <div class="byline">Sources: <a href="https://www.euronews.com/next/2026/03/02/cancel-chatgpt-ai-boycott-surges-after-openai-pentagon-military-deal">Euronews</a> · <a href="https://www.axios.com/2026/03/01/anthropic-claude-chatgpt-app-downloads-pentagon">Axios</a> · <a href="https://cybernews.com/ai-news/quitgpt-openai-boycott/">CyberNews</a> · <a href="https://www.bloomberg.com/opinion/articles/2026-03-02/openai-steps-over-a-red-line-anthropic-refused-to-cross">Bloomberg</a></div>
+
+    <p>If you missed Friday's story: the Trump administration banned Anthropic — the company behind Claude — from all government work after it refused to let the military use its AI without restrictions against mass surveillance or autonomous weapons. OpenAI swooped in with its own Pentagon deal, claiming it drew the same lines. That's what everyone was arguing about all weekend. And now the fallout has gotten loud.</p>
+
+    <p>A movement called QuitGPT claims that more than 1.5 million people have taken action — canceling subscriptions, sharing boycott messages, or signing a pledge at quitgpt.org. A "No killer robots, no AI surveillance" protest is planned at OpenAI's San Francisco headquarters this morning at 11 a.m. The group's argument is simple: OpenAI took a deal with the military, Anthropic didn't, and if you care about that, you should vote with your wallet. The recommended alternatives they're pointing people toward? Claude, Google's Gemini, and privacy-focused open-source options.</p>
+
+    <div class="pull-quote">"Claude hit No. 1 in the App Store on Saturday — Anthropic says daily sign-ups have tripled since November, free users are up 60%, and paying subscribers have more than doubled this year."</div>
+
+    <p>The numbers from Anthropic are striking. The company says it's breaking all-time records for new sign-ups every single day this week. Claude briefly overtook ChatGPT to claim the number-one spot in Apple's App Store on Saturday, with ChatGPT right behind it. Whether this is a lasting shift or a weekend protest bump, nobody knows yet — but the direction is clear.</p>
+
+    <p>And now comes a complication for OpenAI. A Bloomberg opinion piece published this morning argues that OpenAI didn't actually draw the same lines as Anthropic — it just said it did. The piece, by tech columnist Dave Lee, argues that the language in OpenAI's agreement with the Pentagon is vague enough to allow exactly what Anthropic refused: military use of AI that's effectively unsupervised. Sam Altman acknowledged over the weekend that the deal was "rushed" and the backlash was significant. The irony is that Anthropic — the company that got banned — is winning the public relations war decisively.</p>
+
+    <p>Here's where things stand this Monday morning: OpenAI has a Pentagon deal and a PR crisis. Anthropic has no government contract and a record number of new users. And on the internet, at least, refusing the government's demands turned out to be the better business move — at least for now.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">If you pay for ChatGPT and you're uncomfortable with OpenAI's military deal, this movement is telling you that switching is easier than ever — Claude is free to try, it's now the most-downloaded app in the country, and there's no penalty for testing it out. If you don't have strong feelings about the military stuff, ChatGPT works fine and the actual tools haven't changed. This is a values question as much as a technology one.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">If your team uses OpenAI's API, the Pentagon deal doesn't directly affect your product — but it's worth reading the Bloomberg critique of what OpenAI's "red lines" actually mean in the contract language. More practically: Anthropic's API traffic is surging, and their infrastructure will be stress-tested this week. If you're considering adding Claude as a fallback or primary model, monitor latency and uptime closely over the next few days before committing.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">A lot of students use ChatGPT. Some of them — and their parents — may be confused or upset by the news. It's worth being ready to discuss the story in terms students can understand: OpenAI made a deal with the military, some people think that's fine, others think it's not, and now people are choosing which AI tool to use based partly on values, not just capability. That's actually a great critical thinking conversation about technology, ethics, and consumer choice.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">From a practical standpoint, the clinical AI tools and hospital systems you use are unaffected — the controversy is about consumer and government products. But the broader pattern matters: AI companies are making major ethical commitments, then walking them back or obscuring them in contract language. When evaluating any AI tool for clinical use, demand transparency about how data is used and what the vendor has committed to government or third-party clients in writing.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">OpenAI's subscription churn is real but hard to quantify — 1.5 million pledge-signers doesn't equal 1.5 million actual cancellations. Watch for OpenAI's next subscriber count disclosure. More interesting: Anthropic breaking sign-up records without spending a dollar on marketing. This is free advertising worth billions, and it came from getting banned by the government. Investors should factor reputational upside into assessments of both companies.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">The Bloomberg analysis of OpenAI's Pentagon contract language is directly relevant to your work. If a client's agreement with a military or government agency uses similarly vague "safety principle" language, you need to nail down exactly what's enforceable. "We share the same principles" in a press statement is not the same as "these restrictions are contractually binding and subject to audit." If you're reviewing AI vendor contracts, this week's controversy is a masterclass in the gap between public claims and legal commitments.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If you use ChatGPT at work, the actual tool hasn't changed. But this is a good moment to audit which AI products your team relies on and what your contingency looks like if any of them becomes politically or reputationally toxic. Companies that appear to take sides in political controversies can create awkward situations for their business customers. Claude is a legitimate alternative — this week is actually a good time to test it alongside ChatGPT and see how it performs for your use cases.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">This story is a case study in viral brand repositioning — except nobody at Anthropic planned it. Anthropic got banned, said nothing particularly clever, and woke up as the most downloaded app in America. The lesson: authenticity and consistency on values can be more powerful than any campaign. For your own brand work, the question is whether your clients are prepared to handle a situation where taking a public ethical stand — or refusing to — suddenly becomes the biggest story in their industry.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">If you've been using ChatGPT for school, it still works fine — the military deal doesn't affect the product you use. But if you care about the ethics angle, now is a great time to try Claude. Anthropic's giving free accounts away right now, and it's actually very good. More broadly, this story is a live example of how consumers can use collective action to pressure tech companies — and how companies respond (or don't) to that pressure. Good stuff for a media studies or ethics paper.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">Whether you use ChatGPT or Claude for job site questions, quotes, or scheduling, neither tool has changed — the controversy is about government military use, not the apps you use day-to-day. If you were using the free version of ChatGPT and want to try the alternative that's suddenly popular, Claude has a free tier too and it's good for the same kinds of questions. But don't feel like you need to change anything unless you want to.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">The boycott and protest don't affect the AI tools your department might use — this is primarily a consumer and government contract dispute. But the underlying question — should AI companies have the right to restrict how governments use their technology, or should government access be unrestricted? — is one that will eventually reach public safety AI as well. Departments that adopt AI dispatch or analysis tools should be paying attention to what "restrictions" actually mean in those vendor contracts.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">This is a live crisis management case study unfolding in real time. OpenAI's "rushed deal" admission, the backlash, the Bloomberg contract analysis — your clients will want to discuss this. For tech clients: what does your crisis response playbook look like when a government deal creates user revolt? For all clients: the Anthropic example shows that being forced out of a government contract can sometimes be the best thing that ever happened to your brand. Context matters enormously in how these situations play out.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">The values question at the heart of this boycott — should AI companies be allowed to set limits on how governments use their technology? — is the same question that applies to how those companies treat your creative work. Companies that fold under government pressure on one issue are more likely to fold on others. Anthropic's stand is notable in part because it's the same company whose policies on creative content and copyright have generally been more cautious than its competitors. Whether that pattern holds matters for you.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.euronews.com/next/2026/03/02/cancel-chatgpt-ai-boycott-surges-after-openai-pentagon-military-deal">Read this &rarr; Euronews full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>DeepSeek V4 Is Coming This Week — China's AI Lab Is About to Drop Its Biggest Model Yet</h3>
+      <div class="story-source"><a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a> · <a href="https://www.cnbc.com/2026/02/23/deepseek-to-release-new-ai-model-a-rough-period-for-nasdaq-stocks-could-follow.html">CNBC</a> · <a href="https://kashmirreader.com/2026/03/02/deepseek-set-to-unveil-multimodal-v4-model-challenging-us-tech-dominance/">Kashmir Reader</a></div>
+      <p>DeepSeek — the Chinese AI lab that rattled markets in January 2025 when it released a model that matched American competitors at a fraction of the cost — is reportedly about to do it again. Sources told TechNode that the lab plans to release DeepSeek V4 this week, ahead of China's major annual parliamentary meetings that begin March 4.</p>
+      <p>V4 is a significant step up from anything DeepSeek has released before. It's "multimodal" — meaning it doesn't just handle text, it can understand and generate images and video too. That puts it in direct competition with OpenAI's GPT-4o and Google's Gemini 3.1 Pro, which have had multimodal capabilities for some time. DeepSeek has also optimized V4 to run on Chinese-made chips from Huawei and Cambricon, deliberately sidestepping the U.S. export controls that block China from buying Nvidia's most advanced processors. That's a big deal: it means this model was built without the hardware that American companies have always said was necessary.</p>
+      <p>The timing matters. Every time DeepSeek releases a powerful model, it spooks American tech stocks — because it suggests the AI race is closer than the U.S. industry wants to admit, and that expensive Nvidia chips might not be the only path forward. CNBC reported last week that another DeepSeek release could cause "a rough period for Nasdaq stocks." Whether V4 lives up to expectations — it's been teased since early February without arriving — will be the test. But if it performs anywhere close to what sources describe, it's going to be a busy week on Wall Street.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">A powerful new free AI model from China could show up in your app store any day now. If it's as good as DeepSeek's previous releases, it'll mean you have another strong free option for AI chat, image generation, and video — competing with tools you might be paying for. Keep an eye out. The practical impact is more choice and lower prices across the AI market.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If V4 benchmarks near GPT-4o or Gemini 3.1 Pro on multimodal tasks, you'll want to evaluate it immediately. DeepSeek's API pricing has historically been 10-20x cheaper than OpenAI's equivalents. The Huawei/Cambricon optimization is also technically significant — it suggests inference on non-Nvidia hardware is maturing faster than most Western estimates assumed. Watch the HuggingFace leaderboards on release day. If it scores well on MMMU or similar vision benchmarks, the cost-performance case is strong.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">A free multimodal AI model that can understand and generate images as well as text could be genuinely useful in classrooms — for creating visual aids, explaining concepts with diagrams, or helping students visualize abstract ideas. If DeepSeek V4 releases this week and is as capable as reported, it'll be worth testing for educational use. The fact that it's free matters a lot in schools with limited budgets for technology subscriptions.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Multimodal AI models that can interpret images are getting increasingly relevant to healthcare — think medical imaging analysis, dermatology screening, or reading X-rays. DeepSeek V4 isn't a clinical tool and hasn't been validated for medical use, but the broader trend it represents matters: capable AI that analyzes visual data is becoming freely available, which will eventually reshape what's expected of clinical AI tools. The regulatory and validation frameworks haven't caught up to the pace of the technology.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Watch Nvidia's stock and AI infrastructure names when DeepSeek V4 drops. The market pattern from the January 2025 DeepSeek R1 release — sharp sell-off in Nvidia and U.S. AI stocks — could repeat if V4 performs well on Chinese chips without Nvidia hardware. The geopolitical angle matters too: a model optimized for Huawei and Cambricon chips suggests U.S. export controls are less effective than hoped, which has implications for the entire U.S. chip restriction strategy.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">DeepSeek V4's use of Chinese chips to bypass U.S. export controls raises questions about the limits of those controls. If a Chinese company can build frontier AI without Nvidia hardware by using Huawei alternatives, the legal architecture of U.S. technology export restrictions needs reexamination. For clients doing business in both U.S. and Chinese AI markets, the question of which models are permissible to use — given their training provenance and hardware — is becoming a real compliance issue.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If DeepSeek V4 is as capable as described, it will likely offer multimodal AI at a fraction of what you're paying OpenAI or Google. For businesses using AI for image analysis, content creation involving visuals, or any task that involves understanding pictures alongside text, it's worth a test. Free and open-source models give you cost control and reduce vendor lock-in. The practical advice: monitor the release, run your own evals, and don't pay premium prices for capabilities you can get for free.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">A multimodal AI that can understand and generate both text and images is directly relevant to marketing work. If DeepSeek V4 performs well, it becomes a free alternative to the paid image-and-text tools you might use for content creation. The Chinese origin raises questions for some brands about whether using it creates any reputational issues — worth thinking through before adopting it for client-facing work. But for internal creative testing and ideation, a capable free multimodal model is a significant productivity tool.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">DeepSeek has a free app and website, and if V4 is as capable as claimed, it'll handle text, images, and video questions — all for free. That's useful for homework help, research, and studying. The caveat worth knowing: DeepSeek is a Chinese company, and its data practices and privacy policy differ from U.S. competitors. If you're using it for anything sensitive, read the terms. But for general research and learning? It's worth bookmarking for when it drops.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">A multimodal AI means you can take a photo of a wiring problem, a plumbing issue, or a structural question and ask the AI what's going on — and get an answer that actually looks at the image, not just text you type. DeepSeek's previous models were free and quite capable at technical questions. If V4 launches this week with solid image understanding, it could become a useful tool for quick on-site troubleshooting. Worth testing when it drops.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The broader relevance for first responders is that capable, free multimodal AI is becoming available to anyone — which means it will increasingly be used in the field, by civilians, and by departments that can't afford enterprise AI contracts. Understanding what DeepSeek and similar tools can and can't do is part of staying current with the technology landscape. The specific release this week is mainly a technology story, but its effects will eventually show up in the tools available to public safety.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Every time DeepSeek releases a capable model, clients who've made large commitments to OpenAI or Anthropic need a fresh conversation. V4 with multimodal capability — potentially free or very cheap via API — changes the cost calculus for clients doing image analysis, document processing, or visual content work. Prepare to field calls this week asking whether existing AI vendor relationships are still justified. The honest answer involves real evaluation, not loyalty to prior decisions.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">A free AI model that generates images and video is directly relevant to your creative toolkit. DeepSeek's previous releases have been legitimate competitors to paid tools, and V4's multimodal capabilities could expand that. The questions worth asking before you use it: what are its policies on training data and creative rights? Chinese AI companies operate under different regulatory frameworks than U.S. ones, and the answers matter for how comfortable you are using it as part of your creative process.</span>
+      </div>
+      <div class="read-this"><a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">Read this &rarr; TechNode's report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Google's Gemini Can Now Do Things on Your Android Phone — Book a Ride, Order Dinner, Navigate Apps for You</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/">TechCrunch</a> · <a href="https://9to5google.com/2026/02/25/gemini-automation-android/">9to5Google</a> · <a href="https://blog.google/innovation-and-ai/products/gemini-app/android-multi-step-tasks/">Google Blog</a></div>
+      <p>Google just unlocked something that AI companies have been promising for a long time: an assistant that doesn't just answer questions, but actually does things. The new version of Gemini on Android can now handle what Google calls "multi-step tasks" — meaning you can say "order me my usual from DoorDash" and Gemini will open the app, navigate to your order, and complete the purchase, all without you touching your phone.</p>
+      <p>At launch, it works with Uber, DoorDash, and Grubhub, and it only runs on the latest hardware: Google's Pixel 10 series and Samsung's Galaxy S26. The way it works is actually clever — Gemini runs the third-party app in a secure virtual window on your phone, navigates it as if it were you, and can't access anything outside that contained window. You can watch the whole thing happen in real time and stop it if something goes wrong.</p>
+      <p>This is what the AI industry calls "agentic" AI — the idea that instead of just chatting, the AI takes action in the world on your behalf. It's something every major AI company has been working toward. Amazon's Alexa, Apple's Siri, and OpenAI's Operator product are all trying to do versions of the same thing. Google just shipped a real version of it for Android. The limitation is significant — it only works on two phone models right now — but the direction is clear: the AI on your phone is becoming something that acts, not just talks.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you have a Pixel 10 or Galaxy S26, you can now ask your phone to order your lunch or book a ride without touching it. If you don't have one of those phones, this doesn't affect you yet — but it's coming to more devices. The bigger picture: AI assistants are crossing the line from "answering questions" to "doing things." That's a significant shift in what your phone is capable of, and it's going to keep expanding.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Google's implementation is worth studying from an architecture perspective. The "secure virtual window" sandbox approach — where Gemini runs apps in isolation and can't access the broader device — is a sensible security model for agentic AI. The Android Developers Blog post on making AI agents helpful for Android apps outlines how third-party developers can integrate with this framework. If you build Android apps, especially in food delivery, ride-sharing, or productivity, you'll want to understand the integration APIs being exposed here.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">The idea of AI that acts on your behalf — rather than just answering questions — raises new classroom dynamics. Students with these phones could theoretically ask Gemini to handle tasks that go beyond homework help. More broadly, teaching students how to work with agentic AI (AI that does things, not just tells you things) is becoming a relevant digital literacy skill. What does appropriate vs. inappropriate delegation of tasks to AI look like? That's a real conversation to have.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Agentic AI on phones has real healthcare applications on the horizon — imagine an AI that can navigate your insurance portal, schedule a follow-up appointment, or reorder a prescription while you're on shift. Today's version is limited to food and rides on the latest Android phones, but the underlying capability — AI that navigates apps autonomously — is what matters. As this expands to more apps and devices, the clinical workflow implications will be significant for patient care coordination.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Agentic AI on mobile is the beginning of the "AI doing transactions" era — and that has real implications for consumer spending, app engagement, and fintech. If Gemini can order DoorDash autonomously, the next obvious step is executing trades, paying bills, or making purchases on your behalf. For fintech companies, this is both an opportunity and a risk. Payment rails and authentication systems weren't designed for AI agents acting as users. Regulatory frameworks are lagging well behind the technology.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">An AI agent that completes transactions on your behalf raises questions about authorization, liability, and consumer protection that existing frameworks don't cleanly address. If Gemini books the wrong Uber, orders the wrong food, or makes an unintended purchase, who's responsible — the user, Google, or the app? The "explicit command required" design helps, but as these systems get more autonomous, the legal questions get harder. Contract lawyers should think about what "user authorization" means when the user is watching an AI navigate apps on their behalf.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The practical business impact is limited today — it only works on two specific Android phones for food and ride apps. But the capability is directionally important. If your business relies on app-based ordering (restaurants, delivery, transportation), your customers can now delegate that interaction to an AI. Think about what that means for how customers engage with your product: they're less likely to browse, discover, or change their mind when an AI is executing their "usual." Loyalty and habit become more powerful. New customer acquisition through browsing gets harder.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Agentic AI changes the consumer journey in ways that marketers need to start preparing for. When an AI books the ride, orders the food, or makes the purchase, there's no browsing moment, no banner ad, no recommendation to intercept. The customer's AI just executes the usual. Brand discovery and switching happen less naturally. Your marketing needs to work at the moment of first intent formation — the moment a person tells their AI what they want — rather than the moment of transaction.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">If you have a Pixel 10 or Galaxy S26, this feature is genuinely useful — you can order food or a ride hands-free. More importantly, understanding what "agentic AI" means is valuable for anyone studying computer science, product design, or business. The model of AI that does things rather than just says things is the next major frontier, and it's arriving now. The job implications are significant: tasks that require navigating software — scheduling, booking, form-filling — are increasingly automatable.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">If you've got a Pixel 10 or the latest Samsung, you can now tell your phone to order lunch while you're on the job site — hands free. The feature is limited for now, but it points to AI that could eventually manage your schedule, order materials, or handle quotes on your behalf. That kind of automation matters in trades work where your hands are often busy and your phone is hard to operate mid-job. It's worth watching how quickly this expands to more apps.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The practical application to first responders is limited for now — ordering DoorDash through Gemini isn't exactly mission-critical. But the concept of AI that navigates apps and executes tasks autonomously is worth understanding. As this capability matures, it could be applied to CAD (computer-aided dispatch) systems, resource requests, or incident reporting. The security model Google is using — isolated virtual windows — is the right approach for high-stakes environments. Expect this architecture to appear in public safety software within a few years.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Agentic AI on mobile is the next wave after chatbots, and your clients need to understand the implications. For consumer-facing businesses: AI agents will increasingly execute purchases and bookings, bypassing the discovery and browsing layers of the customer journey. For enterprise clients: the same architecture that lets Gemini navigate DoorDash can navigate enterprise software. Workflow automation via AI agents — not just chatbots, but actual software navigation — is the near-term productivity opportunity to position around.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The direct impact on your creative work is minimal today — Gemini booking an Uber for you doesn't change what you make. But the broader shift matters: AI that acts as an agent on your behalf will eventually be applied to creative platforms too. Imagine an AI that schedules your social posts, negotiates licensing deals, or manages your online store. The line between "tool you control" and "agent that acts for you" is one you'll need to think carefully about as these systems become more capable.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/">Read this &rarr; TechCrunch full report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">1.5M</span>
+      <span class="num-label">People who've signed pledges or canceled ChatGPT subscriptions in the QuitGPT boycott over OpenAI's Pentagon deal</span>
+      <span class="num-src"><a href="https://cybernews.com/ai-news/quitgpt-openai-boycott/">CyberNews</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">#1</span>
+      <span class="num-label">Where Claude ranked in the U.S. App Store on Saturday — the first time it's overtaken ChatGPT</span>
+      <span class="num-src"><a href="https://www.axios.com/2026/03/01/anthropic-claude-chatgpt-app-downloads-pentagon">Axios</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">3×</span>
+      <span class="num-label">How much Anthropic's daily sign-ups have grown since November — the company says it's breaking records every day this week</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/03/01/anthropics-claude-rises-to-no-2-in-the-app-store-following-pentagon-dispute/">TechCrunch</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Nvidia GTC Is Two Weeks Away — Jensen Huang Says There's a Chip "That Will Surprise the World"</h3>
+      <p>Nvidia's annual GTC conference kicks off March 16 in San Jose, and CEO Jensen Huang has been teasing "several new chips the world has never seen before," including one mystery chip he says will surprise everyone. Reports suggest the Feynman architecture — using TSMC's newest 1.6nm process, the most advanced chip manufacturing in existence — could make its debut. Samsung and SK Hynix will also be there showing off HBM4 memory. Given that Nvidia just posted $68 billion in quarterly revenue last week, the stakes for this conference are enormous. Every AI company on earth will be watching.</p>
+      <div class="watch-src"><a href="https://www.tomsguide.com/computing/jensen-huang-says-nvidia-will-surprise-the-world-with-a-mystery-chip-heres-what-to-expect">Tom's Guide</a> · <a href="https://videocardz.com/newz/nvidia-gtc-2026-keynote-is-now-scheduled-for-march-16">VideoCardz</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>HONOR's "Robot Phone" Makes Its Debut at MWC — A Phone Whose Camera Nods Its Head at You</h3>
+      <p>Chinese phone maker HONOR unveiled what it's calling the world's first "Robot Phone" at the Mobile World Congress trade show in Barcelona this weekend. The phone has a motorized camera that physically moves — it can track faces and objects as they move, and it responds to voice commands with actual nods and head shakes. The demo involved a camera module with a 200-megapixel sensor that rotates and tilts on a gimbal system. HONOR also teased a full humanoid robot as part of its AI hardware vision. It's conceptually wild — whether it's a gimmick or the beginning of AI hardware that actually has physical presence is the open question.</p>
+      <div class="watch-src"><a href="https://technode.com/2026/03/02/mwc-2026-honor-unveils-robot-phone-with-embodied-ai-features/">TechNode</a> · <a href="https://www.pocket-lint.com/honor-unveils-robot-phone-and-humanoid-robot-mwc-2026/">Pocket-lint</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>The OpenAI Contract: Read the Actual Language Before Deciding Who's Right</h3>
+      <p>Bloomberg's Dave Lee published a piece this morning arguing that despite Sam Altman's public claims, OpenAI's Pentagon agreement doesn't actually contain the same hard limits Anthropic insisted on — it uses softer language that could give the military significant flexibility. OpenAI published its own summary of the deal on its website. If you want to form an opinion on whether OpenAI drew the same lines as Anthropic or quietly crossed them, reading both documents side by side is worth your time. This story will keep developing throughout the week as legal experts and journalists parse the actual language.</p>
+      <div class="watch-src"><a href="https://www.bloomberg.com/opinion/articles/2026-03-02/openai-steps-over-a-red-line-anthropic-refused-to-cross">Bloomberg</a> · <a href="https://openai.com/index/our-agreement-with-the-department-of-war/">OpenAI</a> · <a href="https://techcrunch.com/2026/03/01/openai-shares-more-details-about-its-agreement-with-the-pentagon/">TechCrunch</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">#CancelChatGPT</span>
+      <span class="sentiment-tag buzz">DeepSeek V4</span>
+      <span class="sentiment-tag cool">Claude #1</span>
+      <span class="sentiment-tag split">OpenAI Red Lines</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Dave Lee <span class="tweet-handle">Bloomberg Opinion, March 2, 2026</span></div>
+      <div class="tweet-text">"Whether through naivete or disregard, Altman has quickly leaped over the ethical and practical red lines that his company's rival, Anthropic, wasn't prepared to cross. Altman's victory announcement deserves closer scrutiny."</div>
+      <div class="tweet-meta">Via <a href="https://www.bloomberg.com/opinion/articles/2026-03-02/openai-steps-over-a-red-line-anthropic-refused-to-cross">Bloomberg</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">QuitGPT Movement <span class="tweet-handle">quitgpt.org, March 2, 2026</span></div>
+      <div class="tweet-text">"Over 1.5 million people have taken action. Protest today at OpenAI HQ, 11 a.m.: No killer robots, no AI surveillance. ChatGPT took Trump's killer robot deal. Claude refused. You choose."</div>
+      <div class="tweet-meta">Via <a href="https://cybernews.com/ai-news/quitgpt-openai-boycott/">CyberNews</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Mission Local <span class="tweet-handle">San Francisco, March 2, 2026</span></div>
+      <div class="tweet-text">"Chalk Wars: It's OpenAI vs. Anthropic on San Francisco's sidewalks. Overnight, someone chalked 'Anthropic said no' outside OpenAI's offices in big red letters. By morning, OpenAI supporters had responded with their own messages. The tech neighborhood has become a kind of message board."</div>
+      <div class="tweet-meta">Via <a href="https://missionlocal.org/2026/03/sf-openai-anthropic-ai-pentagon-deal-trump-sidewalk-chalk/">Mission Local</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> #CancelChatGPT and #QuitGPT are trending this morning. The split is familiar: one side sees the boycott as principled and important; the other sees it as performative tech-world politics that won't change anything. Sam Altman has been quiet since his weekend acknowledgment that the deal was "rushed." The Bloomberg piece claiming OpenAI actually crossed the red lines is getting enormous amplification from AI researchers and ethicists who felt Altman's claims were too convenient.</p>
+
+      <p><strong>Hacker News:</strong> The DeepSeek V4 anticipation thread is the top technical story — engineers are discussing whether a multimodal DeepSeek model running on Huawei chips would actually be competitive with Nvidia-trained models, or whether the hardware gap would show up in benchmark scores. The consensus seems to be: it depends entirely on the benchmarks, and we should wait and see. Gemini's agentic Android feature is getting skeptical but curious discussion — people want to know how it handles errors and what the failure modes look like.</p>
+
+      <p><strong>Reddit:</strong> r/technology is consumed by the ChatGPT boycott, with users sharing screenshots of cancellation confirmations. The most upvoted comment: "I was going to cancel anyway after the price increase. This just made the decision easier." r/Android is excited about Gemini's agentic features but frustrated that it's limited to Pixel 10 and Galaxy S26 for now. r/ChatGPT users are more defensive of OpenAI, with many arguing the military deal isn't as bad as the boycotters say and that the "red lines" were actually protected in the contract.</p>
+
+      <div class="comm-src">Sources: <a href="https://www.euronews.com/next/2026/03/02/cancel-chatgpt-ai-boycott-surges-after-openai-pentagon-military-deal">Euronews</a> · <a href="https://www.bloomberg.com/opinion/articles/2026-03-02/openai-steps-over-a-red-line-anthropic-refused-to-cross">Bloomberg</a> · <a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a> · <a href="https://techcrunch.com/2026/02/25/gemini-can-now-automate-some-multi-step-tasks-on-android/">TechCrunch</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">A million and a half people are canceling ChatGPT, a protest hits OpenAI's front door this morning, and Claude is number one in the App Store. Meanwhile, DeepSeek could drop a new multimodal model any day, and your Android phone just learned to order your lunch for you. It's Monday. The AI industry never sleeps, and apparently neither does the drama. You're caught up — go have a great week.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=1.5%20million%20people%20are%20canceling%20ChatGPT%20%E2%80%94%20and%20a%20protest%20hits%20OpenAI%27s%20HQ%20this%20morning.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-02-morning.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

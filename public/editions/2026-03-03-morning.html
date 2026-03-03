@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Morning Edition — Mar 03, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Morning Edition — March 03, 2026">
+  <meta property="og:description" content="Sam Altman just called his own Pentagon deal 'opportunistic and sloppy' and rewrote it overnight — but the boycott isn't stopping.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-03-morning.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Morning Edition — March 03, 2026">
+  <meta name="twitter:description" content="Sam Altman just called his own Pentagon deal 'opportunistic and sloppy' and rewrote it overnight — but the boycott isn't stopping.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="Sam Altman just called his own Pentagon deal 'opportunistic and sloppy' and rewrote it overnight — but the boycott isn't stopping.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Tuesday, March 3, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Morning Edition</span>
+    <div class="tagline">Your morning briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good morning. Yesterday's big story got bigger overnight. Sam Altman came out and called his own Pentagon deal "opportunistic and sloppy" — and then quietly rewrote it. Meanwhile, Jack Dorsey just told the world he cut nearly half of Block's workforce because of AI, and predicted most companies will do the same within a year. Over 200 Google employees are now demanding their own company draw military AI limits. And DeepSeek V4 — which could reshape the AI cost landscape — could drop any moment. A lot moved overnight. Here's what you need to know. <span class="share-link"><a id="sms-share" href="sms:?&body=Sam%20Altman%20called%20his%20own%20Pentagon%20deal%20%22sloppy%22%20and%20rewrote%20it%20overnight%20%E2%80%94%20the%20full%20story%20is%20in%20this%20morning%27s%20AI%20Brief%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-03-morning.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Morning's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Altman calls OpenAI's Pentagon deal "opportunistic and sloppy" — then rewrites it overnight to explicitly ban domestic surveillance <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Jack Dorsey's Block fires nearly 4,000 people — nearly half the company — and says AI did it. "Most companies will reach the same conclusion within a year." <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/02/26/jack-dorsey-block-layoffs-4000-halved-employees-your-company-is-next/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">200+ Google employees sign letter demanding limits on military AI use — the worker rebellion is spreading beyond OpenAI <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.cnbc.com/2026/03/03/anthropic-fallout-iran-war-tech-military-ai.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">DeepSeek V4 could drop any day — China's trillion-parameter multimodal AI is expected before parliamentary meetings start tomorrow <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Apple partners with Google to power a smarter Siri — uses Google's Gemini AI model running inside Apple's own privacy-protected cloud <span class="headline-tag update">Update</span> <span class="src"><a href="https://startupnews.fyi/2026/03/03/apple-might-use-google-servers-to-store-data-for-its-upgraded-ai-siri/">Startup News</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">London's largest-ever anti-AI protest marches through the city's tech hub — hundreds demand a pause on AI development <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.technologyreview.com/2026/03/02/1133814/i-checked-out-londons-biggest-ever-anti-ai-protest/">MIT Tech Review</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>Altman Admits His Pentagon Deal Was "Sloppy" — Then Rewrites It Overnight</h2>
+    <div class="byline">Sources: <a href="https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html">CNBC</a> · <a href="https://fortune.com/2026/03/03/sam-altman-openai-pentagon-renegotiating-deal-anthropic/">Fortune</a> · <a href="https://www.axios.com/2026/03/03/openai-pentagon-ai-surveillance">Axios</a> · <a href="https://gizmodo.com/facing-backlash-openai-amends-pentagon-deal-to-add-more-anti-surveillance-verbiage-2000728644">Gizmodo</a></div>
+
+    <p>If you've been following this story: on Friday, the Trump administration banned Anthropic's AI from all government use after Anthropic refused to give the military unrestricted access to its technology. Hours later, OpenAI swooped in with its own Pentagon deal, claiming it had drawn the same ethical lines. Critics spent the weekend arguing that it hadn't — that OpenAI's contract language was vague enough to quietly allow exactly what Anthropic refused. A Bloomberg opinion piece said Altman had "leaped over the ethical red lines" his competitor refused to cross.</p>
+
+    <p>Overnight, Sam Altman conceded. In an internal memo that leaked to social media, he called the original deal "opportunistic and sloppy" — his words — and said the company "shouldn't have rushed" to get it out. He acknowledged it "looked" bad. He then went further: OpenAI and the Pentagon amended the contract to add explicit, written language stating that the AI system "shall not be intentionally used for domestic surveillance of U.S. persons and nationals," citing the Fourth Amendment and the Foreign Intelligence Surveillance Act by name.</p>
+
+    <div class="pull-quote">"We were genuinely trying to de-escalate things and avoid a much worse outcome, but I think it just looked opportunistic and sloppy." — Sam Altman, in an internal memo shared on X</div>
+
+    <p>Altman also said he told the Pentagon in his conversations over the weekend that Anthropic should not be labeled a national security supply chain risk — the designation that got Anthropic banned in the first place — and that he hopes the government offers Anthropic the same terms OpenAI agreed to. That's a striking statement: the company that just signed the deal is publicly lobbying for its banned competitor to be let back in.</p>
+
+    <p>But here's the complication: the boycott isn't stopping. The QuitGPT movement isn't primarily about the exact contract language — it's about whether OpenAI signed any deal at all. The amended wording may satisfy lawyers, but many of the people who canceled their subscriptions weren't reading the contract. They were reacting to the headline. And protests were still going ahead Tuesday morning at OpenAI's San Francisco office. Adding anti-surveillance language to a government deal doesn't un-sign it.</p>
+
+    <p>The question now is whether Altman's apology — and the amendment — is enough to stop the bleeding. Claude is still at or near the top of the App Store. Anthropic is still breaking sign-up records. And the workers inside Google and OpenAI are signing letters demanding their own companies draw the same lines Anthropic drew. The story that started Friday isn't close to over.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">OpenAI rewrote its military deal overnight to explicitly say it can't be used to spy on Americans — that's a real change. But whether that matters to you depends on why you were concerned in the first place. If the issue was contract language, this helps. If the issue was that OpenAI signed any military deal at all, a rewrite doesn't change that. If you've already switched to Claude, you probably don't need to switch back. If you stayed with ChatGPT, the tool itself is unchanged and the new language is more protective than before.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">The amended contract language — explicitly citing the Fourth Amendment and FISA — is more legally robust than what was in the original agreement. If your team uses OpenAI's API and you've been fielding questions about the military deal from leadership or clients, this amendment gives you clearer talking points. The more practically urgent question: what does the amended contract mean for how OpenAI classifies "military" vs. "civilian" government clients? The intelligence agency carve-out Altman mentioned on X is the part worth reading carefully.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">The fact that Altman apologized publicly and rewrote the deal is actually a teachable moment about how pressure campaigns work in the real world. A CEO signed a contract, people pushed back loudly, and he changed course. You can discuss with students whether the amendment is meaningful or cosmetic — and whether the boycott achieved what it set out to do. The underlying question — who should decide what AI is used for in the military? — remains an open one worth exploring in the classroom.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">The amended language prohibiting domestic surveillance doesn't directly affect clinical AI tools, but it sets a precedent that's relevant to your field: AI vendors can be pressured to add explicit contractual limits on how their technology is used. If your hospital or health system is evaluating AI vendors, the lesson here is to push for written commitments — not just public statements — about exactly what the vendor has agreed to with other clients, including government ones. Altman's admission that the original language was sloppy should make you more willing to demand specificity in your own vendor contracts.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">Altman's "sloppy" admission is a materiality question for OpenAI investors and analysts. The company moved fast to grab a government contract, got publicly embarrassed, and had to rewrite it within 48 hours. That's a reputational management failure, not just a comms mishap. The more interesting financial signal: despite the crisis, OpenAI's usage numbers aren't cratering — Claude is gaining users, but that's largely additive market growth, not pure churn. Watch the next disclosure. The stock reaction to ChatGPT subscription data over the coming weeks will tell you whether this actually changed user behavior at scale.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">This is a case study in the gap between press-release commitments and contractual reality — and what happens when that gap gets exposed. The original OpenAI-Pentagon contract apparently lacked the specificity that would have made the same protections Anthropic demanded legally enforceable. The amended language — citing specific statutes by name and prohibiting "deliberate tracking, surveillance, or monitoring" — is meaningfully stronger. If you're reviewing AI vendor agreements for clients, this week's events are a concrete argument for why "we share your values" in a side letter is not a substitute for explicit contractual limitations.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">The practical lesson here for business owners: Altman's "we rushed it" admission is a reminder that speed often creates more problems than it solves when the stakes are high. OpenAI spent Monday doing damage control that a few more days of drafting would have avoided. For your own business decisions involving AI vendors or contracts: taking a beat to make sure the language matches your actual intentions is worth it. The amended OpenAI contract now protects users better than the original. The damage to the brand didn't have to happen — it was a self-inflicted wound.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">This is a master class in crisis communication — and in what not to do. OpenAI's original response was defensive and slow. Altman's "sloppy" admission 48 hours later, while admirable in its honesty, came after the brand had already been damaged. The amended language is probably the right move, but the narrative was already set. For your own crisis playbook: when you've made a mistake that's clearly legible to the public, a fast, clear, specific admission of exactly what went wrong — before the criticism compounds — is almost always more effective than waiting to see if it blows over.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">Altman's public admission that his company made a mistake and then visibly corrected it is actually pretty unusual in corporate America — and worth noting. It's also a real-world example of how public pressure can force accountability from powerful companies. For your studies: the legal specificity of the amended language (citing the Fourth Amendment, FISA) versus the vagueness of the original is a great example of the difference between a public commitment and a contractual one. One is a press release; the other is enforceable. That distinction matters enormously in law, business, and policy.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">The short version: OpenAI got criticized for a government deal, the CEO admitted it was handled badly, and they rewrote it to make it clearer. Your day-to-day use of ChatGPT or Claude is completely unaffected — this is about government contracts, not the consumer apps you use. If you'd already switched to Claude during the boycott wave, you don't need to switch back. If you stayed with ChatGPT, the tool works the same as always. This story is more about Washington politics and tech company ethics than anything that changes what these tools do for you.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">The amended Pentagon contract language — explicitly prohibiting domestic surveillance under FISA and the Fourth Amendment — is directly relevant to public safety AI applications. If AI systems are deployed in law enforcement or emergency services, the question of whether those systems are subject to the same constitutional constraints as other government surveillance tools is not settled. Altman's amendment signals that even commercial AI companies are now being asked to write those constraints into their contracts. Departments adopting AI should be paying close attention to how this precedent develops.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Three things your clients need to hear from this story: First, public pressure works — Altman rewrote a government contract in 48 hours because users threatened to leave. Second, the difference between a press release commitment and contractual language is enormous — and Altman's admission that the original was "sloppy" is a gift you can use in any engagement about AI governance. Third, Anthropic's brand is winning even though it has no government contract, which is an unexpected outcome that challenges the usual assumption that government relationships are always net positive. The reputational calculus around AI ethics is more complicated than most clients assume.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">Altman's willingness to publicly admit fault and rewrite the contract — under user pressure — is meaningful because it confirms something important: OpenAI cares about its consumer relationships more than it lets on. That's leverage you have as a user. The creative community has had its own disputes with OpenAI about training data, copyright, and how artists' work is used. The lesson from this week is that organized, visible pressure can actually move these companies. The QuitGPT boycott changed a government contract. That's a template worth paying attention to for future creative rights disputes.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html">Read this &rarr; CNBC's full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Jack Dorsey Just Fired Half of Block — and Said Your Company Will Do the Same Within a Year</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/02/26/jack-dorsey-block-layoffs-4000-halved-employees-your-company-is-next/">TechCrunch</a> · <a href="https://www.cnn.com/2026/02/26/business/block-layoffs-ai-jack-dorsey">CNN</a> · <a href="https://fortune.com/2026/02/27/block-jack-dorsey-ceo-xyz-stock-square-4000-ai-layoffs/">Fortune</a> · <a href="https://www.bloomberg.com/news/articles/2026-03-01/jack-dorsey-s-4-000-job-cuts-at-block-arouse-suspicions-of-ai-washing">Bloomberg</a></div>
+      <p>Jack Dorsey — the co-founder of Twitter and the CEO of Block, the payments company behind Square and Cash App — cut nearly 4,000 jobs last week. That's almost half the company's entire workforce, dropping from over 10,000 employees to just under 6,000. And unlike most corporate layoffs, which come with carefully worded statements about "organizational restructuring," Dorsey was unusually blunt about the reason: AI.</p>
+      <p>In a post on X, Dorsey wrote that the cuts weren't happening because the business was struggling — in fact, he said it wasn't. He said AI tools had fundamentally changed "what it means to build and run a company," and that Block had reached a point where it could do more with fewer people. Then he went further: "Within the next year, I believe the majority of companies will reach the same conclusion and make similar structural changes. I'd rather get there honestly and on our own terms than be forced into it reactively." In other words: this isn't a Block story. This is a preview of what he thinks every company is about to do.</p>
+      <p>Block's stock surged 20% on the news, which tells you a lot about how Wall Street is thinking about AI-driven headcount reduction right now. But critics pushed back. Bloomberg's analysis noted that Block had 3,835 employees at the end of 2019 — meaning the layoffs were essentially reversing the pandemic-era hiring surge that nearly tripled the company's size. Some analysts called it "AI-washing" — using AI as a convenient explanation for cutting back pandemic overhiring that was always going to unwind. CNN reported that similar patterns are playing out at Amazon, Meta, and Salesforce. The real question: where does the pandemic overhiring story end and the genuine AI displacement story begin? Nobody agrees yet. But Dorsey's "your company is next" prediction is one executives across every industry will be thinking about this week.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">Jack Dorsey cut half his company's jobs and said AI made it possible — and he predicted most companies will do the same within a year. That's a big claim, and experts are split on whether he's right or whether this is mostly reversing pandemic-era overhiring. But whether it happens exactly as he described or not, the direction is clear: companies are looking at their workforces and asking which jobs can now be done by AI. The honest answer is: some of them can. The uncomfortable question — whether yours is one of them — is worth thinking about sooner rather than later.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Dorsey's prediction is specifically about software engineering productivity. Block cut roles across functions, but the subtext of "AI changed what it means to build a company" is that engineering teams can now be smaller. If you're already using AI coding tools, you've seen this firsthand. The uncomfortable follow-on: as AI assistants handle more routine development tasks, the value premium will shift toward engineers who can define architecture, manage complex systems, and direct AI tools productively — not toward those who execute well-defined tickets. This week is a good moment to honestly assess which category your current work falls into.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Dorsey's announcement is a concrete example you can use in the classroom to discuss automation and employment — and importantly, it's not hypothetical. A real company cut half its workforce and explicitly cited AI. The nuance worth teaching: analysts aren't sure how much of this is actually AI-driven versus reversing pandemic overhiring. That uncertainty is itself instructive. How do we evaluate claims about technology and employment? What's the difference between "AI made this possible" and "AI was a convenient excuse"? These are exactly the critical thinking questions students need to be asking.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Healthcare organizations tend to move more slowly on workforce changes than tech companies, and clinical roles have genuine regulatory and safety constraints that make direct AI replacement harder. But administrative and back-office healthcare roles — billing, scheduling, prior authorization, documentation — are increasingly being handled by AI tools. Dorsey's prediction isn't aimed at nurses, but it almost certainly applies to some of the administrative staff that healthcare systems employ. Worth monitoring how hospital systems respond to the same cost pressure logic over the next 12 months.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Block's stock surged 20% on the layoff announcement — the market's clearest signal yet that AI-driven headcount reduction is being rewarded, not penalized. That creates a direct incentive for every public company CEO to pursue the same math. For your portfolio analysis: look at companies with high employee-to-revenue ratios in functions that AI can plausibly automate — customer support, data processing, content review, software development. The "AI efficiency" argument is becoming a standard pitch to institutional investors, regardless of whether the AI is actually driving the cuts. Watch for guidance language on headcount and productivity in Q1 earnings calls.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Dorsey's "your company is next" prediction has real employment law implications if it comes true. Mass layoffs at U.S. companies require WARN Act notices for workforce reductions over certain thresholds — but if companies are doing ongoing attrition rather than large-scale RIFs, they may avoid those requirements. The emerging "AI-washing" critique — using AI as legal cover for cutting workers who were never going to be permanent — could eventually generate litigation. If you advise corporate clients on employment matters, this week is a good moment to revisit how they're characterizing AI in any communications about workforce changes.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Dorsey's public framing — "AI changed what it means to build a company, and your company will reach the same conclusion within a year" — is either a genuine warning or a very convenient narrative for companies that overhired during the pandemic. For small business owners, the practical question is more immediate: are you already using AI to do work that used to require an employee? If yes, you've seen this firsthand. If you're still paying for headcount doing routine tasks that AI can now handle, you're going to face that question eventually. The honest move is to audit your operations now rather than reactively.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Block's cuts reportedly hit a range of functions — and marketing and content operations are among the job categories most visibly affected by AI tools across the industry. If you work in marketing, you've probably already seen this: AI writes first drafts, AI generates social content, AI builds email flows. The question Dorsey's announcement raises is whether the teams doing that work need to be as large as they were two years ago. The honest answer, in many organizations, is no. The smarter question is: what does the marketing work that's still genuinely human-dependent look like, and are you doing more of it?</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is the most concrete AI-jobs story to emerge in a while — a real company, a real number (4,000 jobs), and a CEO publicly saying "your company will do this too." The "AI-washing" critique is worth understanding: some analysts think Block is using AI as cover for reversing pandemic overhiring that was always going to unwind. That's a real possibility. But the broader trend is clear: companies are using AI to stay leaner. As someone entering the workforce, the jobs with the most long-term stability are those that are hardest to automate — ones requiring judgment, creativity, relationships, and physical presence. Choosing where to build skills accordingly matters more now than it did five years ago.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">Dorsey's cuts were at a tech/finance company — the kind of desk jobs and software development work that AI can most directly replace. Electricians, plumbers, HVAC techs, and other skilled trades are in a fundamentally different category: the work requires physical presence, on-site judgment, and hands that can actually hold tools. That's why trades are consistently showing up as among the most AI-resilient careers in labor forecasts. Dorsey's "your company is next" prediction almost certainly doesn't apply to a journeyman electrician. But it does apply to the office job you might be thinking about for someone on your team.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The job categories that Dorsey cut are largely knowledge-worker and software roles — not first responder work. AI isn't replacing firefighters, paramedics, or police officers in the field anytime soon. But the administrative and dispatch layers around public safety — scheduling, reporting, data analysis, resource allocation — are exactly the kinds of functions that AI tools are starting to handle. Departments that pay attention to how this plays out in the private sector will be better positioned when the technology arrives in public safety applications. And Dorsey's prediction that most organizations will make this shift within a year means the timeline may be shorter than people assume.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Dorsey's "your company is next" prediction is client bait — and you should be ready to use it. Every CEO who saw that headline is now quietly asking whether their org chart needs the same rethink. Your job this week is to get ahead of that conversation: don't wait for clients to ask. Bring a structured framework for evaluating which functions in their organization are most AI-automatable, and what the realistic timeline and workforce implications look like. The "AI-washing" critique is a useful nuance to raise — the honest answer about what's genuinely AI-driven versus what's opportunistic headcount reduction matters enormously for trust and morale if the cuts come.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Dorsey's cuts hit workers across many functions, but AI's impact on creative roles is more complicated than on data processing or software development. The jobs most at risk are routine creative production — social media graphics, basic copywriting, stock image creation, templated design work. The work that's most defensible is original, taste-driven, relationship-based, and irreplaceable by a prompt. That distinction was always true; AI just makes it more urgent to be clear about which side of it you're on. If your practice is commodity creative work, the pressure Dorsey is describing will reach your industry too. If it's genuinely original, you have more runway than most.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/02/26/jack-dorsey-block-layoffs-4000-halved-employees-your-company-is-next/">Read this &rarr; TechCrunch's full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Over 200 Google Employees Sign a Letter Demanding Military AI Limits — The Worker Revolt Is Spreading</h3>
+      <div class="story-source"><a href="https://www.cnbc.com/2026/03/03/anthropic-fallout-iran-war-tech-military-ai.html">CNBC</a> · <a href="https://techcrunch.com/2026/02/27/employees-at-google-and-openai-support-anthropics-pentagon-stand-in-open-letter/">TechCrunch</a> · <a href="https://www.axios.com/2026/02/27/google-openai-workers-push-for-military-ai-limits">Axios</a></div>
+      <p>The employee backlash over military AI isn't just happening outside OpenAI's front door. More than 200 Google employees have now signed an open letter to company leadership demanding that Google prohibit the U.S. military from using its Gemini AI product for domestic surveillance or autonomous weapons systems — meaning weapons that can select and attack targets without a human making the final decision. A parallel letter signed by roughly 100 OpenAI employees makes similar demands of its own leadership.</p>
+      <p>The letters were sparked by the Pentagon's decision to ban Anthropic's AI tools from government use after Anthropic refused to remove those exact limits. The employees aren't just supportive of Anthropic — they're drawing the same line for their own employers. One public letter, titled "We Will Not Be Divided," grew from a few hundred signatures on Friday to nearly 900 by Monday, including employees from both companies. The letter argues that AI workers across the industry should present a unified front against unrestricted military use of the technology they build.</p>
+      <p>The wider backdrop adds urgency: CNBC reports that tensions escalated further after the U.S. conducted airstrikes in Iran over the weekend, which sparked concern among tech workers about whether AI systems could be involved in military targeting decisions. Google has historically had a complicated relationship with military contracts — in 2018, it declined to renew a Pentagon contract called Project Maven after employee protests, then later signed different defense agreements. Whether this new letter moves the needle at Google or OpenAI remains to be seen, but the fact that employees at the two largest AI companies in the world are now publicly aligning with Anthropic's position is a significant development in this story.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">Hundreds of the engineers and researchers who actually build the AI you use every day are demanding their employers draw lines around how military customers can use it. That matters because these are the people who understand the technology best — and who have the most credibility when they say certain uses are dangerous. Whether or not their employers listen, the fact that this conversation is happening publicly signals that the AI industry is going to keep wrestling with these questions. The outcome will shape what these tools can and can't be used for, including far beyond the military.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you work at a company with government or defense contracts, this week's letters are a preview of conversations that may be coming at your workplace. The employees signing these letters aren't fringe activists — they're senior researchers and engineers at leading AI labs. The argument they're making — that there should be contractually enforceable limits on autonomous weapons and surveillance — is technically grounded, not just moral posturing. Understanding what "human-in-the-loop" requirements actually mean in AI system design, and what constitutes "fully autonomous" weapons use, is increasingly relevant to how you think about the work you build.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">The "We Will Not Be Divided" letter is a great primary source for classroom discussions about professional ethics in technology. These are people with real skills the military wants, choosing to use their leverage to demand limits. You can discuss it alongside historical examples — the Manhattan Project scientists who later advocated for arms control, Google's Project Maven protests in 2018. The question for students: do workers have a responsibility to set limits on how the products they build are used? And what happens when their employers disagree?</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The concerns these employees are raising — autonomous weapons, surveillance without human oversight — may seem distant from healthcare, but the underlying principle is directly relevant: should AI systems be allowed to make high-stakes decisions affecting human life without a human in the decision loop? That question is live in clinical AI right now — diagnostic systems, triage algorithms, medication dosing tools. The emerging consensus in the AI industry that "human-in-the-loop" is a baseline requirement for consequential decisions applies just as much to healthcare as to weapons. Watch how these debates resolve in the military context; the same frameworks will come to clinical AI.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Employee letter campaigns at major tech companies are typically noise — they rarely change corporate strategy. But the Google Project Maven example in 2018 is a counterexample worth remembering: employee protest over a Pentagon AI contract led Google to decline renewal. The current situation is more complex — there are more companies involved, more government pressure, and more money at stake. For investors: monitor whether Google's leadership responds publicly to the letter. A non-response that gets amplified into a larger story is a reputational risk. A substantive response that draws contractual limits could actually be a competitive advantage — as Anthropic's experience this week demonstrates.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The employees' letters are demanding something specific and legally meaningful: contractual prohibitions on certain uses of AI by military clients, not just policy statements. If Google or OpenAI respond by actually writing those limits into their government agreements, the legal precedent matters — it would establish that AI vendors can contractually restrict how military customers use their technology, and that those restrictions are enforceable. The alternative — companies ignoring the letters and maintaining vague agreements — will likely generate more pressure, and potentially legislation, as more AI systems are deployed in military contexts.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The employee revolt at AI companies is a talent management story as much as a geopolitics story. The engineers and researchers signing these letters are the same people these companies are competing to recruit and retain. If a company's stance on military AI becomes a factor in whether top AI talent wants to work there, that's a material business risk — not just a PR issue. If you're a business owner thinking about hiring AI talent, understanding where your potential hires stand on these questions may be more relevant than it sounds. Values alignment around how AI is used is increasingly part of how top technical candidates evaluate employers.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The "We Will Not Be Divided" letter is a compelling case study in grassroots brand protection. The employees aren't trying to harm their companies — they're trying to protect them from decisions that they believe will damage the brand long-term. From a marketing perspective, the instinct is right: the most durable brand asset a tech company has is trust among its users and the broader public. Actions that erode that trust — like opaque military contracts — create costs that show up in user acquisition, retention, and top-tier hiring. These employees are essentially making the same argument a brand strategist would.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This story is a live example of workers using their collective voice to push back on corporate decisions they disagree with — and doing it publicly, with their names attached. That takes real courage at companies where retaliation risk is real. For students studying technology, ethics, or management: the key question is whether this kind of organized employee pressure actually changes anything. Google's Project Maven history suggests it can. The current situation is more complex. Either way, this is exactly the kind of professional ethics question you'll face in your own career — what do you do when your employer does something you think is wrong?</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">The fights happening inside Google and OpenAI about military AI are mostly distant from your day-to-day work. But the big-picture question — whether AI systems should be allowed to make life-and-death decisions without a human in the loop — eventually applies to more than just weapons systems. Autonomous vehicles, automated safety systems, AI-guided equipment in hazardous environments: these all raise versions of the same question. The norms being set in these military AI debates will eventually influence how automation is regulated in other high-stakes industries, including construction and other trades.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The employees demanding "human-in-the-loop" requirements for consequential AI decisions are raising the exact right question for public safety AI. If AI is used in dispatch, threat assessment, or resource allocation — who makes the final call when the AI's recommendation is wrong? The military debate is further along than the public safety debate, but they're converging on the same design question. Departments piloting AI tools should be building explicit human review requirements into every high-stakes decision the AI touches, not as bureaucratic overhead, but as the design principle that makes the AI trustworthy.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The employee letter campaign is now a three-company story — Anthropic, OpenAI, and Google are all entangled. That means the "military AI ethics" question is no longer a niche concern for one company's stakeholders; it's an industry-wide issue that will show up in client conversations about AI strategy, talent, and governance. Prepare a concise briefing for clients that frames the three companies' different positions, the employee sentiment, and the emerging consensus around "human-in-the-loop" requirements. Clients who have their own government business need to understand how this shapes the AI vendor landscape they're navigating.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The employees demanding limits on military AI use are the same people whose decisions also shape how AI treats creative work — training data policies, copyright positions, the rules around what AI can and can't generate. The fact that they're willing to push back publicly on their employers over military contracts suggests that worker pressure at these companies can actually move the needle on policy. That's relevant to the creative community's ongoing disputes with AI companies over how artists' work is used. The lesson: organized, public, named pressure from within and outside these companies gets attention. Scattered individual complaints mostly don't.</span>
+      </div>
+      <div class="read-this"><a href="https://www.cnbc.com/2026/03/03/anthropic-fallout-iran-war-tech-military-ai.html">Read this &rarr; CNBC's full report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">4,000</span>
+      <span class="num-label">Jobs cut at Block by Jack Dorsey, who called it AI-driven and predicted most companies will follow within a year</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/02/26/jack-dorsey-block-layoffs-4000-halved-employees-your-company-is-next/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">900</span>
+      <span class="num-label">AI employees from Google and OpenAI who've signed open letters demanding military AI limits — the number was still growing Monday</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/02/27/employees-at-google-and-openai-support-anthropics-pentagon-stand-in-open-letter/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">48 hrs</span>
+      <span class="num-label">How long it took from OpenAI's Pentagon deal going live to Altman calling it "sloppy" and rewriting it with explicit anti-surveillance language</span>
+      <span class="num-src"><a href="https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html">CNBC</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>DeepSeek V4 Is About to Drop — A Trillion-Parameter AI Trained Without Nvidia Chips</h3>
+      <p>China's DeepSeek lab is expected to release V4 any day now — likely before China's annual parliamentary meetings begin tomorrow, March 4. V4 is a genuinely significant leap: it's a "multimodal" model, meaning it can understand and generate text, images, and video — not just text like most previous models. It reportedly has a trillion total parameters (roughly, the "knobs" the model uses to make decisions) while only actively using about 32 billion of them at a time, which makes it faster and cheaper to run. It was built and optimized for Huawei and Cambricon chips rather than Nvidia's GPUs, which is a direct response to U.S. export controls. If V4 benchmarks anywhere near GPT-4o or Gemini 1.5 Pro, it will rattle markets and reshape AI pricing almost immediately.</p>
+      <div class="watch-src"><a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a> · <a href="https://evolink.ai/blog/deepseek-v4-release-window-prep">Evolink</a> · <a href="https://www.pymnts.com/artificial-intelligence-2/2026/deepseek-poised-to-unveil-latest-ai-model/">PYMNTS</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Apple Is Bringing Google's AI Into Siri — While Keeping Your Data on Apple's Own Servers</h3>
+      <p>Apple has reportedly asked Google to help power a significantly smarter version of Siri, targeted for the iOS 26.4 update expected later this month. The arrangement is unusual: Apple wants to use Google's Gemini AI — one of the most powerful models available — but run it on Apple's own privacy-protected cloud infrastructure (what Apple calls "Private Cloud Compute") rather than sending your data to Google's servers. Apple reportedly considered both Anthropic and OpenAI before settling on Google for this partnership. If this ships as described, Siri would get a major capability upgrade without the privacy trade-offs that typically come with connecting to a third-party AI service.</p>
+      <div class="watch-src"><a href="https://startupnews.fyi/2026/03/03/apple-might-use-google-servers-to-store-data-for-its-upgraded-ai-siri/">Startup News</a> · <a href="https://www.pymnts.com/artificial-intelligence-2/2026/apple-considered-anthropic-and-openai-before-partnering-with-google-on-ai/">PYMNTS</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>London Just Had Its Biggest-Ever Anti-AI Protest — Hundreds Marched Through the City's Tech Hub</h3>
+      <p>Hundreds of protesters marched through London's King's Cross neighborhood — home to Google's UK headquarters and a cluster of major tech offices — in what organizers from the groups Pause AI and Pull the Plug called the largest anti-AI protest yet held in the city. The march called for an immediate pause on development of advanced AI systems and for governments to hold AI companies more accountable. MIT Technology Review sent a reporter to cover the event. The protest happened the same day as the planned demonstration outside OpenAI's San Francisco office, suggesting that opposition to AI development is becoming more organized and more visible on both sides of the Atlantic.</p>
+      <div class="watch-src"><a href="https://www.technologyreview.com/2026/03/02/1133814/i-checked-out-londons-biggest-ever-anti-ai-protest/">MIT Technology Review</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">#SorryWasntEnough</span>
+      <span class="sentiment-tag buzz">Block Layoffs</span>
+      <span class="sentiment-tag developing">DeepSeek V4</span>
+      <span class="sentiment-tag split">AI-Washing Debate</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Sam Altman <span class="tweet-handle">Internal memo shared on X, March 3, 2026</span></div>
+      <div class="tweet-text">"We were genuinely trying to de-escalate things and avoid a much worse outcome, but I think it just looked opportunistic and sloppy. We shouldn't have rushed. The issues are super complex, and demand clear communication."</div>
+      <div class="tweet-meta">Via <a href="https://fortune.com/2026/03/03/sam-altman-openai-pentagon-renegotiating-deal-anthropic/">Fortune</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Jack Dorsey <span class="tweet-handle">on X, February 26, 2026</span></div>
+      <div class="tweet-text">"Our business is strong… gross profit continues to grow. AI has changed what it means to build and run a company. Within the next year, I believe the majority of companies will reach the same conclusion and make similar structural changes. I'd rather get there honestly and on our own terms than be forced into it reactively."</div>
+      <div class="tweet-meta">Via <a href="https://www.cnn.com/2026/02/26/business/block-layoffs-ai-jack-dorsey">CNN</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Google &amp; OpenAI employees <span class="tweet-handle">"We Will Not Be Divided" open letter, March 2026</span></div>
+      <div class="tweet-text">"We call on our companies to make explicit, binding commitments: no AI for autonomous weapons systems, no AI for domestic surveillance. These are not political positions. They are the baseline ethical requirements of building technology that the public can trust."</div>
+      <div class="tweet-meta">Via <a href="https://techcrunch.com/2026/02/27/employees-at-google-and-openai-support-anthropics-pentagon-stand-in-open-letter/">TechCrunch</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> Altman's memo admission is everywhere. The consensus reaction is somewhere between "this is what accountability looks like" and "this is damage control, and the boycott should continue." The amended contract language is being parsed in detail by legal and policy accounts — several arguing it's meaningful but incomplete because it doesn't address intelligence agencies explicitly. Jack Dorsey's "your company is next" prediction is generating anxious replies from people in every profession asking whether their job is on the list.</p>
+
+      <p><strong>Hacker News:</strong> The Block layoff thread is among the highest-voted stories of the week, with engineers debating whether Dorsey's AI claims hold up or whether this is post-hoc justification for overhiring cleanup. The deeper question — how many of those 4,000 roles were actually automatable by current AI tools? — is generating specific, technical pushback. The DeepSeek V4 anticipation thread is active; engineers are particularly curious about the model's performance on long-context coding tasks, which sources say it excels at.</p>
+
+      <p><strong>Reddit:</strong> r/technology and r/antiwork are both active on the Block layoffs, with the AI-washing framing getting significant traction — users pointing out that Block hired from ~3,800 to ~10,000 during the pandemic and is now cutting back to ~6,000, which looks less like AI and more like a pandemic hiring correction. r/ChatGPT is divided on whether Altman's apology and contract amendment are sufficient — the top comment as of this morning: "The apology is nice, but I already switched to Claude and honestly I like it more anyway."</p>
+
+      <div class="comm-src">Sources: <a href="https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html">CNBC</a> · <a href="https://techcrunch.com/2026/02/26/jack-dorsey-block-layoffs-4000-halved-employees-your-company-is-next/">TechCrunch</a> · <a href="https://www.cnbc.com/2026/03/03/anthropic-fallout-iran-war-tech-military-ai.html">CNBC</a> · <a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Sam Altman admitted his Pentagon deal was sloppy and rewrote it overnight. Jack Dorsey fired half his company and said yours is next. Two hundred Google employees signed a letter demanding their employer draw the same lines Anthropic drew. And DeepSeek V4 could drop any moment and reshape the whole competitive landscape. Tuesday. The AI industry doesn't rest, and neither does the fallout. You're caught up — go have a good one.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=Sam%20Altman%20called%20his%20own%20Pentagon%20deal%20%22sloppy%22%20and%20rewrote%20it%20overnight%20%E2%80%94%20the%20full%20story%20is%20in%20this%20morning%27s%20AI%20Brief%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-03-morning.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
