@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Mar 04, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Evening Edition — March 04, 2026">
+  <meta property="og:description" content="Seven of the biggest tech companies just promised Trump they'll pay for their own power — here's what that actually means for your electric bill.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-04-evening.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Evening Edition — March 04, 2026">
+  <meta name="twitter:description" content="Seven of the biggest tech companies just promised Trump they'll pay for their own power — here's what that actually means for your electric bill.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="Seven of the biggest tech companies just promised Trump they'll pay for their own power — here's what that actually means for your electric bill.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Wednesday, March 4, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">Your evening briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening. Big day. Seven of the biggest tech companies in the world just walked into the White House and signed a pledge promising to pay for the massive amounts of electricity their AI data centers consume — instead of passing those costs to you. Apple launched a $599 Mac powered by an iPhone chip. OpenAI is quietly building its own version of GitHub. And the tech lead behind one of China's most important AI projects just walked out the door, one day after launching a new model. Here's your rundown. <span class="share-link"><a id="sms-share" href="sms:?&body=Big%20Tech%20just%20signed%20a%20pledge%20at%20the%20White%20House%20promising%20to%20pay%20for%20their%20own%20AI%20data%20center%20power%20%E2%80%94%20tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-04-evening.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Evening's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Google, Microsoft, Meta, Amazon, OpenAI, Oracle, and xAI sign White House pledge to pay for their own data center power — promising not to raise your electric bill <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.cnn.com/2026/03/04/politics/electric-bill-costs-trump-pledge">CNN</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Apple launches the $599 MacBook Neo — the first Mac powered by an iPhone chip — alongside new M5 MacBook Air and Pro models <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://9to5mac.com/2026/03/04/macbook-neo-is-now-official/">9to5Mac</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">OpenAI is quietly building its own code-hosting platform to rival Microsoft's GitHub, motivated by repeated outages <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-plans-create-github-alternative/">PYMNTS</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">Alibaba's Qwen AI tech lead abruptly steps down — one day after launching Qwen 3.5 — and two colleagues leave with him <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/03/03/alibabas-qwen-tech-lead-steps-down-after-major-ai-push/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">OpenAI is eyeing a contract to deploy AI on NATO's unclassified networks — days after its Pentagon deal controversy <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.nbcnews.com/tech/tech-news/openai-alters-deal-pentagon-critics-sound-alarm-surveillance-rcna261357">NBC News</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">AI companies are spending $125 million to defeat a pro-regulation candidate for Congress — Anthropic is spending $20 million to support him <span class="headline-tag update">Update</span> <span class="src"><a href="https://techcrunch.com/2026/03/03/ai-companies-are-spending-millions-to-thwart-this-former-tech-execs-congressional-bid/">TechCrunch</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>Big Tech Just Promised Trump It'll Pay for Its Own Power. Here's What That Actually Means.</h2>
+    <div class="byline">Sources: <a href="https://www.cnn.com/2026/03/04/politics/electric-bill-costs-trump-pledge">CNN</a> · <a href="https://www.washingtonpost.com/politics/2026/03/04/trump-data-centers-energy-costs/">Washington Post</a> · <a href="https://www.cnbc.com/2026/03/04/trump-faces-an-ai-data-center-power-dilemma-ahead-of-midterms.html">CNBC</a> · <a href="https://finance.yahoo.com/news/trump-lays-out-a-new-ground-rule-for-big-techs-ai-build-out-bring-your-own-power-161403379.html">Yahoo Finance</a></div>
+
+    <p>Here's the problem this deal is trying to solve: AI data centers use enormous amounts of electricity. Like, entire-small-city amounts. And as companies race to build more of them, the power has to come from somewhere — which in many parts of the country means the same electrical grid that powers your home. Residents in several states have already seen their utility bills rise, and with midterm elections approaching, it's become a political headache for the White House.</p>
+
+    <p>So today, President Trump brought the CEOs and representatives from seven major tech companies — Google, Microsoft, Meta, Amazon, OpenAI, Oracle, and Elon Musk's xAI — to the White House to sign what they're calling the "Ratepayer Protection Pledge." The core idea: these companies promise to build, bring, or buy their own power for new data centers, pay for any upgrades to the electrical grid that their facilities require, and negotiate separate rate agreements with local utilities so that regular customers aren't subsidizing their energy use.</p>
+
+    <div class="pull-quote">"Build, bring, or buy all of the energy needed for building and operating data centers, paying the full cost of their energy and infrastructure, no matter what." — White House Ratepayer Protection Pledge</div>
+
+    <p>The companies also committed to hiring and training workers from the communities where they build, and offered to sell any excess power they generate back to utilities for public use. On paper, it sounds like a clean solution.</p>
+
+    <p>But here's the catch that experts are already pointing out: the pledge is voluntary. It's not a regulation, not a law, and almost certainly not enforceable at the federal level. The Washington Post reported that affordability has become a top voter concern, and this pledge is as much a political signal as a policy one. CNBC noted that the underlying tension — AI companies need more power than the grid can comfortably supply — doesn't go away because seven companies signed a document in the Oval Office. The real test will be what happens in specific communities where data centers are being built, where local utility commissions will still have to approve rate structures, and where residents will still see (or not see) the impact on their monthly bills.</p>
+
+    <p>It's a meaningful gesture — these companies publicly committing to self-funded power is a big deal and gives communities something concrete to point to. But whether it changes anyone's electric bill depends entirely on whether the commitments hold up in the places that matter most.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">The basic promise is simple: the tech companies building AI data centers say they won't make you pay for the electricity those data centers use. That's genuinely good news if it holds. But the pledge is voluntary — nobody can force them to follow through. Your electric bill is still set by your local utility, not the White House. The thing to watch: if a data center gets built in your area, does your utility rate actually stay flat? That's the test that matters.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">If you work in cloud infrastructure, this pledge directly affects where and how data centers get built. The "bring your own power" requirement means future data center sites will increasingly be co-located with dedicated power generation — solar, nuclear, natural gas — rather than relying on grid connections. For your architecture decisions, this could mean more geographically distributed compute with latency trade-offs, as data centers chase power sources rather than population centers. It also means the cost of compute isn't going down anytime soon, even if the pledge keeps residential rates stable.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">This is a great real-world example for teaching students about the gap between a promise and a law. The pledge is voluntary — the companies aren't legally required to follow through. You can use it to discuss how political agreements work, what "enforceable" means, and why voters care about energy costs. It's also a concrete way to teach about the physical infrastructure behind AI — students often don't realize that ChatGPT and similar tools run on servers that use as much electricity as a small city.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">Hospitals and healthcare facilities are major energy consumers themselves, and you've likely already seen utility costs rise. The pledge's promise to keep data center power costs separate from residential and commercial rates could benefit healthcare facilities if it actually works. But "voluntary" is the key word — if a data center goes up near your hospital and the local grid gets strained, your facility's energy costs could still climb regardless of what was signed in Washington today.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">The pledge is a net positive for Big Tech stocks in the short term — it removes the political risk of an executive order or regulation forcing companies to pay even more, or restricting where data centers can be built. But the capital expenditure implications are significant: "build, bring, or buy" your own power generation is enormously expensive. Watch for revised capex guidance in upcoming earnings calls from Google, Microsoft, and Meta. The companies that already have power purchase agreements in place (Microsoft's nuclear deals, for example) are better positioned than those still relying on grid power.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">A voluntary pledge signed at the White House is not a contract, not a regulation, and not enforceable in court. But it does create a political record that could be used against companies that fail to honor it. For lawyers advising tech clients on data center siting: the real legal action will happen at the state and local level, where utility commissions approve rate structures and where residents can challenge development. The pledge may actually increase the legal complexity — companies now have a public commitment that local advocates can cite in rate hearings and zoning disputes.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If you run a business that depends on electricity — a restaurant, a shop, a warehouse — rising energy costs are a real threat to your margins. The pledge is supposed to protect you by keeping data center energy use separate from the rates you pay. But it's voluntary, and your electric bill is determined locally, not federally. The practical step: if you hear about a data center being planned in your area, pay attention to your utility commission's rate hearings. That's where the decisions that affect your bill will actually be made.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">The pledge signing was a carefully staged event — and worth studying as a communications exercise. Both the White House and the tech companies got what they wanted: Trump gets to say he's protecting consumers from Big Tech's energy appetite, and the companies get a public framework they can point to when critics say data centers are raising electricity costs. The messaging was disciplined: "build, bring, or buy" is a clean three-word framework that's easy to repeat. Whether the substance matches the messaging is the longer-term question, but the communications execution was effective.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">Here's a fact that surprises most people: training a single large AI model can use as much electricity as powering hundreds of homes for a year. That's why this pledge exists. The tech companies building these AI systems are using so much power that it's starting to affect everyone else's electric bills. The promise to pay for their own energy is a step in the right direction — but it's voluntary, meaning nobody can force them to keep it. Whether voluntary corporate commitments actually work is a question worth exploring in any economics, policy, or ethics class.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">This pledge includes a commitment from tech companies to hire and train workers from the communities where they build data centers. If you're an electrician, that's potentially good news — data centers require massive electrical infrastructure, from high-voltage distribution to backup generator systems. The construction and ongoing maintenance of these facilities creates real demand for skilled electrical work. Keep an eye on data center projects in your region; the hiring commitment in this pledge gives you extra leverage when these projects come to town.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">Data centers are fire hazards with unique challenges — lithium battery banks, high-voltage electrical systems, diesel backup generators. As more of these facilities get built in communities across the country, fire departments and first responders need specialized training for the risks they present. The pledge's commitment to hire locally and invest in communities should, in theory, include funding for the emergency services that will protect these facilities. If a data center is being planned in your jurisdiction, this is the moment to make sure emergency preparedness is part of the community investment conversation.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Three takeaways for client conversations. First, "voluntary pledge" is a political tool, not a compliance framework — don't let clients treat it as settled policy. Second, the real regulatory action is happening at the state and local level, where utility commissions set rates and where companies will face binding requirements. Third, the pledge creates a useful benchmark: clients building or expanding data centers can now point to it as an industry standard, but they also need to demonstrate compliance or risk political backlash. Build this into your energy strategy and site selection frameworks.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">Every image you generate with AI, every song you produce with AI tools, every design you iterate on — it all runs on servers that consume enormous amounts of electricity. This pledge is trying to make sure that energy use doesn't get passed on to everyone else. As an artist who may rely on these tools, it's worth understanding the environmental cost of the technology you use. The pledge is a step toward accountability, but the deeper question — whether the AI industry's energy appetite is sustainable at all — is still open and worth caring about.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.cnn.com/2026/03/04/politics/electric-bill-costs-trump-pledge">Read this &rarr; CNN's full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Apple Just Launched a $599 Mac With an iPhone Chip Inside — and It Might Be the Most Important Mac in Years</h3>
+      <div class="story-source"><a href="https://9to5mac.com/2026/03/04/macbook-neo-is-now-official/">9to5Mac</a> · <a href="https://www.macrumors.com/2026/03/04/apple-announces-low-cost-macbook-neo-with-a18-pro-chip/">MacRumors</a> · <a href="https://www.apple.com/newsroom/2026/03/say-hello-to-macbook-neo/">Apple Newsroom</a></div>
+      <p>Apple today unveiled the MacBook Neo — a brand-new, $599 laptop that's the first Mac ever powered by an iPhone chip. It uses the A18 Pro, the same processor that debuted in the iPhone 16 Pro in 2024. That might sound like a downgrade from Apple's usual M-series chips, but Apple says it's still up to 50% faster than the bestselling Intel PC and three times faster at AI tasks. It has a 13-inch screen, comes in four colors (Silver, Indigo, Blush, and Citrus), and has 8GB of RAM.</p>
+      <p>The bigger picture: Apple also announced new MacBook Air and MacBook Pro models with the M5 chip, which Apple says is up to four times faster at AI tasks than last year's M4 — and up to 3.9 times faster at processing prompts for large language models (the technology behind ChatGPT and similar AI tools). The new MacBook Pro with M5 Max can process AI image generation nearly eight times faster than the M1 models from 2021.</p>
+      <p>Why the Neo matters most, though, is the price. At $599, Apple is making a direct play for students, budget-conscious buyers, and people in markets where a $999 MacBook Air is out of reach. It's available for pre-order today and ships March 11.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you've ever wanted a Mac but thought they were too expensive, $599 is the cheapest one Apple has ever made. It won't be as powerful as the MacBook Air or Pro, but for browsing, email, writing, and running AI-powered apps, Apple says it's more than capable. If you already have a recent Mac, the M5 upgrades are impressive but not urgent unless you're doing heavy AI or creative work.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The M5 Pro and M5 Max numbers are the ones to watch: up to 3.9x faster LLM prompt processing than M4 Pro means local model inference is becoming genuinely practical on a laptop. If you're evaluating whether to run smaller models locally versus hitting an API, the new MacBook Pros meaningfully change that calculation. The MacBook Neo at $599 with an A18 Pro is interesting for CI runners and lightweight development but probably not your primary machine — 8GB with no upgrade option is the hard limit.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">A $599 Mac is a game-changer for schools and students. Previously the cheapest Mac laptop was the MacBook Air at $999. The Neo cuts that nearly in half, which could make 1:1 Mac programs feasible for more school districts. It's also Apple's most AI-capable cheap device, meaning students can run AI-powered learning tools locally without needing an internet connection. If your school is evaluating device purchases, the Neo deserves a serious look.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The MacBook Neo at $599 could be a practical option for clinical documentation, telehealth, and point-of-care reference tools. The AI performance claims are relevant: if health apps increasingly use on-device AI for things like note summarization or drug interaction checking, a cheaper device that can handle those tasks matters. The 8GB RAM limit means it won't handle heavy multitasking, but for single-purpose clinical use, it could be more than enough.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">The MacBook Neo is Apple's most aggressive pricing move in the laptop market in years — $599 directly targets Chromebook and low-end Windows territory. For Apple's revenue mix, watch how this affects average selling prices versus volume growth. The M5 lineup's AI performance claims (4x faster than M4) are more interesting for Apple's services narrative: if on-device AI performance becomes a selling point for Apple Intelligence features, the hardware upgrade cycle accelerates. The Neo also opens a new price tier that could drive installed-base growth in emerging markets.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">For law firms evaluating hardware, the M5 MacBook Pro's local AI processing capabilities are noteworthy. Running AI models locally — rather than sending sensitive client data to cloud services — has obvious confidentiality advantages. If your firm uses AI for document review, contract analysis, or research, a machine that can handle those tasks without an internet connection is a meaningful security improvement. The Neo is too limited for heavy legal work, but the M5 Pro could be the sweet spot for associates and paralegals.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The $599 MacBook Neo could change your equipment math. If you're outfitting a team with laptops for basic office work — email, documents, web-based tools — the Neo undercuts most business-class Windows laptops while running macOS. The catch is 8GB RAM with no upgrade option, so power users need the Air or Pro. But for reception desks, point-of-sale setups, or employee laptops where you'd otherwise buy a Chromebook, it's worth pricing out.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The Neo is Apple's play for market segments it's never seriously competed in before — budget laptops for students, first-time buyers, and emerging markets. The marketing campaign (four fun colors, "Neo" branding that evokes something fresh) is aimed squarely at younger buyers. For your own work, the M5 MacBook Pro's AI performance improvements are more relevant: faster local AI processing means tools like AI-assisted video editing, image generation, and content creation get meaningfully snappier. If you do creative production work, the M5 Pro upgrade is worth evaluating.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">A $599 Mac is the most affordable one Apple has ever made — and it comes in fun colors. If you need a laptop for school, this is now the cheapest way to get into the Apple ecosystem. It runs the same macOS and the same apps as more expensive MacBooks. The main trade-off is 8GB of RAM and an iPhone chip instead of the full M-series — so if you're a computer science student doing heavy development or an art student doing video editing, you'll want the MacBook Air at minimum. But for note-taking, research, writing papers, and running AI study tools, the Neo should handle everything you need.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">Unless you're in the market for a new laptop, this one doesn't affect your day-to-day work much. But if you do need a personal computer — for invoicing, email, ordering materials, or managing your business — a $599 Mac is the cheapest it's ever been to get an Apple laptop. It's not a powerhouse, but for basic business and personal tasks, it's a solid option that will probably last years. The four color options are a nice touch, too.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The MacBook Neo at $599 could be a practical option for departments that need lightweight laptops for administrative work, reporting, or station use. At that price point, it competes with the Chromebooks and low-end PCs that many departments currently use. The on-device AI capabilities — even at the iPhone chip level — could be useful for future AI-powered tools like automated report writing or incident analysis. For departments on tight budgets, it's worth looking at when your current equipment is up for replacement.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Two angles for client discussions. First, the Neo at $599 changes enterprise hardware procurement math — for roles that don't need heavy compute, it undercuts most business Windows laptops while offering macOS security and management advantages. Second, the M5's local AI processing numbers (4x faster than M4) make on-device AI inference a realistic option for client organizations concerned about data privacy — running AI models locally instead of in the cloud eliminates a whole category of data governance risk. Both are worth working into your technology strategy recommendations.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The M5 MacBook Pro numbers are the ones that matter for you: up to 7.8x faster AI image generation than M1 Pro, and up to 3.7x faster than M4 Pro. If you use AI tools for visual art — Stable Diffusion, Midjourney's local mode, or Apple's own image generation features — the new machines will meaningfully speed up your workflow. The Neo at $599 is probably too limited for serious creative work (8GB RAM, no upgrade option), but the M5 Air and Pro are genuine upgrades for artists who work with AI-assisted tools.</span>
+      </div>
+      <div class="read-this"><a href="https://9to5mac.com/2026/03/04/macbook-neo-is-now-official/">Read this &rarr; 9to5Mac's full coverage</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>OpenAI Is Quietly Building a Rival to GitHub — The Platform Most Developers Use to Store and Share Code</h3>
+      <div class="story-source"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-plans-create-github-alternative/">PYMNTS</a> · <a href="https://developers.slashdot.org/story/26/03/04/0039214/openai-is-developing-an-alternative-to-github">Slashdot</a> · <a href="https://www.techspot.com/news/111560-after-github-outages-openai-begins-building-rival-code.html">TechSpot</a></div>
+      <p>OpenAI is developing its own code-hosting platform — think of it as a home base where developers store, manage, and collaborate on software projects — that could eventually compete with GitHub, which is owned by Microsoft. The project started because OpenAI's own engineers kept running into GitHub outages that disrupted their work. When the place where you store your code goes down, your whole team grinds to a halt.</p>
+      <p>The project is still in early stages and could take months to complete. But here's where it gets interesting: OpenAI employees have discussed the possibility of offering the platform to outside customers, not just using it internally. That would put OpenAI in direct competition with Microsoft's GitHub — which is notable because Microsoft is OpenAI's largest investor and closest partner. It's the kind of move that could reshape the relationship between the two companies, or at least create some awkward conversations.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">Most people don't use GitHub directly, but it's the platform that stores the code behind a huge number of apps and services you use every day. OpenAI building a competitor is mainly an industry story — but if it eventually offers AI-powered coding features baked into the platform, it could change how software gets built, which would affect the apps and tools you rely on.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">This is the story that matters most to you today. If OpenAI ships an AI-native code-hosting platform — with deep integration into its models for code review, automated testing, and intelligent merging — it could offer a fundamentally different workflow than GitHub + Copilot. The question is whether OpenAI's version control and collaboration features can match GitHub's maturity, or whether this becomes another "we built our own" project that never catches up on basics. Worth watching, but don't migrate anything until there's a stable product with enterprise-grade reliability.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">If you teach computer science or software development, GitHub is probably a tool your students already use. OpenAI building a competitor could eventually give students another option — potentially one with more AI assistance built in. It's also a good case study in how companies that start as partners (OpenAI and Microsoft) can gradually become competitors when their products start to overlap.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">This one is mostly an industry story that won't directly affect your clinical work. The indirect impact: if competition between code-hosting platforms leads to better AI-powered development tools, the health tech applications you use could get built faster and more reliably. Competition in developer infrastructure tends to benefit everyone downstream.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">The strategic tension here is material: OpenAI building a GitHub competitor directly challenges Microsoft, its largest investor and partner. GitHub generates over $2 billion in annual recurring revenue for Microsoft. If OpenAI commercializes this platform, it could strain the OpenAI-Microsoft relationship — which is already showing signs of friction. Watch for how Microsoft responds, and whether this accelerates Microsoft's own efforts to diversify beyond OpenAI for AI capabilities.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The OpenAI-Microsoft partnership is governed by a complex investment and licensing agreement. OpenAI building a product that competes with a major Microsoft revenue stream (GitHub) raises obvious questions about the terms of that agreement — whether there are non-compete or exclusivity provisions, and whether this kind of product development was contemplated when the deal was structured. If you advise tech companies, this is a case study in how strategic partnerships can create unexpected competitive dynamics.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your business has a development team that uses GitHub, this story is worth tracking — but don't make any changes yet. The project is months away from being usable. The thing to watch: if OpenAI builds AI-powered features into its code platform that make developers significantly more productive, it could change the build-versus-buy equation for software projects. More competition in developer tools generally leads to lower prices and better features for everyone.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">This is primarily a developer tools story, but there's a brand narrative worth noting: OpenAI positioning itself as a full-stack platform company — not just an AI model provider — is a significant strategic shift. Building your own infrastructure to avoid dependency on a partner's product (even when that partner is your biggest investor) is a bold move. The messaging challenge for OpenAI: how do you publicly compete with Microsoft while still depending on Microsoft's cloud for everything else?</span>
+        <span class="so-what-text" data-profession="student" style="display:none">If you're learning to code, you probably already use GitHub. OpenAI building a competitor could eventually give you a platform with better AI coding assistance built right in — imagine a system that doesn't just store your code but actively helps you write, review, and debug it. That said, it's months away at best. Keep using GitHub for now, but this is worth watching if you're interested in how AI is changing software development.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one's mostly for the software developers in the world — it's about the tools they use to build and store code. Not much impact on your work unless you're also building software on the side. The bigger picture: the fact that OpenAI and Microsoft (who are supposed to be close partners) are starting to compete with each other tells you something about how fast and unpredictable the AI industry is right now.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This is primarily a software developer story that won't directly affect your operations. The indirect connection: many of the tools and apps used in emergency services — dispatch systems, mapping tools, communication platforms — are built by developers who use GitHub. More competition in developer tools could lead to better, more reliable software for everyone, including public safety applications.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The strategic implication for your clients: the OpenAI-Microsoft alliance, which has been one of the most important partnerships in tech, is showing cracks. OpenAI building products that compete with Microsoft's revenue streams creates uncertainty about the long-term stability of the partnership. If your clients have made strategic bets based on the assumption that OpenAI and Microsoft will remain tightly integrated, this is a signal to start thinking about contingencies. Also relevant for clients evaluating developer platforms — the market is about to get more competitive.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Unless you also write code, this story doesn't directly affect your creative work. But here's the broader point: OpenAI is trying to become a platform company that controls more of the technology stack, not just the AI models. The more control OpenAI has over how software gets built, the more influence it has over the tools and platforms — including creative tools — that developers build on top of it. That's a longer-term trend worth watching.</span>
+      </div>
+      <div class="read-this"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-plans-create-github-alternative/">Read this &rarr; PYMNTS' full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>The Tech Lead Behind China's Best Open-Source AI Just Walked Out — One Day After Launching a New Model</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/03/03/alibabas-qwen-tech-lead-steps-down-after-major-ai-push/">TechCrunch</a> · <a href="https://venturebeat.com/technology/did-alibaba-just-kneecap-its-powerful-qwen-ai-team-key-figures-depart-in">VentureBeat</a> · <a href="https://technode.com/2026/03/04/qwen-technical-lead-lin-junyang-leaves-alibaba-sources-say/">TechNode</a></div>
+      <p>Junyang Lin — the technical leader behind Alibaba's Qwen AI project, which is one of the most widely used open-source AI models in the world — abruptly stepped down on Tuesday. What makes the timing so striking: Alibaba had just launched Qwen 3.5, its newest model, literally the day before. Two of his colleagues left with him.</p>
+      <p>In one of his last public appearances as Qwen's leader, Lin had said something unusually candid for a Chinese tech executive: that Chinese AI companies were "unlikely to leapfrog" companies like OpenAI and Anthropic in fundamental AI breakthroughs over the next three to five years, because Western labs had vastly more computing power dedicated to next-generation research while Chinese labs were "stretched thin." Alibaba's stock dropped as much as 5.3% in Hong Kong on the news — its biggest single-day loss since October.</p>
+      <p>The departure matters beyond Alibaba because Qwen models are used by developers around the world as free, open alternatives to closed systems like ChatGPT. If the team behind those models loses its key leaders, it could slow down one of the most important open-source AI projects on the planet — right as DeepSeek V4 is expected to launch and the competition among Chinese AI labs is intensifying.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you've never heard of Qwen, it's one of the most popular free AI models in the world — the kind that developers use to build apps and tools without paying for expensive AI services from OpenAI or Google. Losing its technical leader could slow down updates and improvements to those models. The practical effect for you: the free AI tools and apps built on Qwen may not improve as quickly, which means the paid alternatives stay ahead for longer.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you use Qwen models in your stack — or you've been evaluating them as alternatives to GPT or Claude APIs — this leadership change is worth monitoring. Lin was the technical visionary behind the architecture decisions that made Qwen competitive. His departure, plus two colleagues, could mean a strategic pivot, slower iteration, or both. It doesn't mean Qwen dies overnight — Alibaba still has enormous resources — but the direction and pace of development may shift. If you're building on Qwen, make sure you have a fallback evaluation of DeepSeek V4 or Llama in progress.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This story is a good example of how a single person's departure can affect an entire technology ecosystem. Lin's public admission that Chinese AI labs couldn't keep up with American ones on fundamental research is a rare moment of candor worth discussing. The broader lesson for students: in technology, the people who build things matter as much as the companies that fund them. When key talent leaves, projects can stall even when the money is still flowing.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Qwen is used by some health tech developers as a low-cost AI backbone for clinical tools — especially in markets where licensing fees for OpenAI or Google models are prohibitive. If Qwen development slows, those tools may fall behind their competitors. It's a reminder that the AI models powering your clinical tools have supply chains of their own, and disruptions at the foundation level can ripple up to the tools you use every day.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Alibaba dropped 5.3% on this news — its biggest intraday loss since October — which tells you how much the market was pricing in Qwen as a growth driver. The departure also has implications for the broader Chinese AI sector: if Lin's candid assessment that Chinese labs can't match Western compute capacity is widely shared within the industry, it could dampen investment sentiment across the sector. For portfolio positioning: this increases risk for China-heavy AI bets and potentially benefits Western AI companies that compete for the same enterprise customers.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Key-person departures at AI companies raise questions about intellectual property, non-compete agreements, and trade secret protection — especially when the departing individual was a technical leader with deep knowledge of proprietary architecture. Chinese employment law handles these issues differently than U.S. law. If you advise clients with AI partnerships or dependencies involving Chinese companies, this is a useful illustration of the key-person risks that should be addressed in vendor agreements and due diligence.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your business uses tools or services built on Qwen models — which is more common than you might think, since many AI apps use open-source models under the hood — this leadership change could affect the quality and pace of updates. Ask your AI vendors whether they depend on Qwen. If they do, understand what their fallback plan is. The good news: there are strong alternatives (DeepSeek, Meta's Llama), so the open-source AI ecosystem is bigger than any one team.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The brand implications of Lin's departure are significant for Alibaba — Qwen has been central to Alibaba's narrative as a global AI leader, and losing the face of the project undermines that positioning. Lin's candid public comments about Chinese AI falling behind American labs make the departure harder to spin as routine. For marketers in the AI space: this is a case study in how key-person brand risk works. When your product's credibility is tied to a specific leader, their departure is a brand event, not just an HR event.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This story is worth knowing about because Qwen is one of the AI models you're most likely to encounter in the real world — it's free, open-source, and widely used. The departure of its lead developer shows something important about how AI development works: even with billions of dollars behind a project, losing the right person can change everything. Lin's public admission that Chinese AI companies can't match American ones on computing power is also a fascinating window into the geopolitics of AI research.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one is mostly inside-baseball AI industry news. The short version: a top researcher at a big Chinese tech company quit, and investors got nervous. It doesn't affect the AI tools you might use day-to-day, but it's part of the bigger picture of how the U.S. and China are competing on AI technology — a competition that could eventually affect everything from manufacturing to trade policy.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This is primarily an industry story that won't directly affect your work. The broader context matters: the competition between U.S. and Chinese AI labs determines which models and tools are available worldwide. If open-source Chinese models slow down, the AI tools that eventually make their way into public safety applications may increasingly come from American companies — with different pricing, availability, and support models.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Key takeaway for clients: the open-source AI ecosystem is not a monolith, and key-person risk applies to open-source projects just as much as to proprietary ones. If clients have built strategies around Qwen's continued development — as many cost-conscious AI deployments have — they need to reassess. Lin's candid assessment that Chinese labs are "stretched thin" compared to Western compute capacity is worth citing in strategy presentations about the global AI competitive landscape. It's one of the most honest public admissions from a Chinese tech leader in recent memory.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Qwen powers some of the free AI tools that artists and creators use — including text-to-image and text-to-video models that have been built on top of the Qwen architecture. If the team behind Qwen loses momentum, those free tools may not improve as quickly. The paid alternatives from OpenAI, Google, and others will keep advancing, which could widen the gap between what's available for free and what costs money. If you rely on free open-source AI tools for your creative work, it's worth keeping an eye on whether Qwen's pace of development changes.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/03/03/alibabas-qwen-tech-lead-steps-down-after-major-ai-push/">Read this &rarr; TechCrunch's full report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">7</span>
+      <span class="num-label">Tech companies that signed Trump's Ratepayer Protection Pledge, committing to self-funded power for AI data centers</span>
+      <span class="num-src"><a href="https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-advances-energy-affordability-with-the-ratepayer-protection-pledge/">White House</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">$599</span>
+      <span class="num-label">Starting price of Apple's MacBook Neo — the cheapest Mac laptop ever made, powered by an iPhone chip</span>
+      <span class="num-src"><a href="https://9to5mac.com/2026/03/04/macbook-neo-is-now-official/">9to5Mac</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">5.3%</span>
+      <span class="num-label">Alibaba's Hong Kong stock drop after its Qwen AI tech lead resigned — the biggest intraday loss since October</span>
+      <span class="num-src"><a href="https://finance.yahoo.com/news/alibaba-ai-wizard-warned-us-062724430.html">Yahoo Finance</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>OpenAI Is Now Eyeing a NATO Contract — Days After the Pentagon Deal Backlash</h3>
+      <p>Just days after the controversy over its Pentagon deal — which Sam Altman called "sloppy" and rewrote overnight — OpenAI is reportedly exploring a contract to deploy AI on NATO's unclassified networks. Altman initially told staff the company was looking at NATO's classified systems, but an OpenAI spokesperson clarified that was a mistake and the opportunity is only for unclassified networks. The 32-member military alliance hasn't commented. Whether this goes anywhere remains to be seen, but the timing — moving deeper into defense while the QuitGPT boycott is still active — is noteworthy.</p>
+      <div class="watch-src"><a href="https://www.nbcnews.com/tech/tech-news/openai-alters-deal-pentagon-critics-sound-alarm-surveillance-rcna261357">NBC News</a> · <a href="https://gizmodo.com/altman-reportedly-tells-staff-openai-wants-another-classified-contract-this-time-with-nato-2000729253">Gizmodo</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>AI Companies Are Spending $125 Million to Defeat a Pro-Regulation Congressional Candidate</h3>
+      <p>A super PAC called Leading the Future — backed by Palantir co-founder Joe Lonsdale, OpenAI president Greg Brockman, Andreessen Horowitz, and the AI search company Perplexity — is spending $125 million to defeat candidates who support stricter AI regulation. Their main target: New York's Alex Bores, a former tech executive turned state lawmaker who's been one of the most active voices pushing for AI transparency and accountability. On the other side, Anthropic announced it's donating $20 million to support pro-regulation candidates through a group called Public First Action. AI regulation is no longer just a policy fight — it's an electoral one.</p>
+      <div class="watch-src"><a href="https://techcrunch.com/2026/03/03/ai-companies-are-spending-millions-to-thwart-this-former-tech-execs-congressional-bid/">TechCrunch</a> · <a href="https://www.nbcnews.com/politics/2026-election/ads-ai-industry-are-flooding-2026-election-artificial-intelligence-rcna260782">NBC News</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>DeepSeek V4 Still Expected Any Day — China's Biggest AI Launch of the Year</h3>
+      <p>We flagged this in yesterday's morning edition: China's DeepSeek lab is expected to release V4, a trillion-parameter model that can handle text, images, and video. It was optimized for Chinese-made Huawei and Cambricon chips rather than Nvidia's — a direct response to U.S. export controls. Leaked benchmarks suggest it could rival Claude and ChatGPT on coding tasks. China's parliamentary "Two Sessions" meetings started today, and DeepSeek has been positioning the launch as a national showcase. No release yet, but it could come any hour.</p>
+      <div class="watch-src"><a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a> · <a href="https://www.pymnts.com/artificial-intelligence-2/2026/deepseek-poised-to-unveil-latest-ai-model/">PYMNTS</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Ratepayer Pledge</span>
+      <span class="sentiment-tag buzz">MacBook Neo</span>
+      <span class="sentiment-tag cool">OpenAI vs GitHub</span>
+      <span class="sentiment-tag split">Qwen Leadership Shakeup</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">White House <span class="tweet-handle">Ratepayer Protection Pledge, March 4, 2026</span></div>
+      <div class="tweet-text">"Build, bring, or buy all of the energy needed for building and operating data centers, paying the full cost of their energy and infrastructure, no matter what."</div>
+      <div class="tweet-meta">Via <a href="https://www.whitehouse.gov/articles/2026/03/ratepayer-protection-pledge/">White House</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Wenting Zhao <span class="tweet-handle">Qwen research scientist, on X, March 4, 2026</span></div>
+      <div class="tweet-text">"The end of an era. Thank you, Justin, for everything you've done for Qwen, for open source AI, and for the engineering culture you built. The models will carry your fingerprints for a long time."</div>
+      <div class="tweet-meta">Via <a href="https://techcrunch.com/2026/03/03/alibabas-qwen-tech-lead-steps-down-after-major-ai-push/">TechCrunch</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Junyang Lin <span class="tweet-handle">Former Qwen tech lead, on X, January 2026</span></div>
+      <div class="tweet-text">"A massive amount of OpenAI's compute is dedicated to next-generation research, whereas we are stretched thin. Chinese companies are unlikely to leapfrog the likes of OpenAI and Anthropic with fundamental breakthroughs in AI over the next three to five years."</div>
+      <div class="tweet-meta">Via <a href="https://finance.yahoo.com/news/alibaba-ai-wizard-warned-us-062724430.html">Yahoo Finance</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The Ratepayer Protection Pledge is getting a mixed reception. Supporters say it's a smart, business-friendly solution — let the companies pay for their own power. Critics point out it's voluntary and unenforceable. The most retweeted takes are questioning what happens to communities that already have data centers and are already seeing higher bills. The MacBook Neo announcement is trending with a mix of excitement ("a Mac for $599!") and skepticism ("8GB RAM in 2026?").</p>
+
+      <p><strong>Hacker News:</strong> The OpenAI GitHub rival story is the top thread, with developers debating whether OpenAI can actually build a viable competitor to a platform with decades of developer ecosystem lock-in. The consensus: if OpenAI ships deep AI integration (automated code review, intelligent merge conflict resolution, AI-native CI/CD), it could carve a niche — but the basics of version control are table stakes, not competitive advantages. The Qwen departure thread is active, with several developers expressing concern about the future of one of their favorite open-source models.</p>
+
+      <p><strong>Reddit:</strong> r/apple is overwhelmed with MacBook Neo posts — the $599 price point is generating genuine enthusiasm, though the 8GB RAM limit is the most common criticism. r/technology is focused on the ratepayer pledge, with the top-voted comment: "So they signed a promise to do the right thing. Cool. Wake me up when it's a law." The AI election spending story is getting attention in r/politics, with users noting the irony of AI companies spending millions on elections while arguing they should self-regulate.</p>
+
+      <div class="comm-src">Sources: <a href="https://www.cnn.com/2026/03/04/politics/electric-bill-costs-trump-pledge">CNN</a> · <a href="https://9to5mac.com/2026/03/04/macbook-neo-is-now-official/">9to5Mac</a> · <a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-plans-create-github-alternative/">PYMNTS</a> · <a href="https://techcrunch.com/2026/03/03/alibabas-qwen-tech-lead-steps-down-after-major-ai-push/">TechCrunch</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Big Tech signed a promise at the White House. Apple made a $599 Mac. OpenAI is building a GitHub competitor while chasing NATO contracts. And one of China's most important AI researchers just walked away. Wednesday was a lot. You're caught up — enjoy the rest of your evening.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=Big%20Tech%20just%20signed%20a%20pledge%20at%20the%20White%20House%20promising%20to%20pay%20for%20their%20own%20AI%20data%20center%20power%20%E2%80%94%20tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-04-evening.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
