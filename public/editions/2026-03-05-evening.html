@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Mar 05, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Evening Edition — March 05, 2026">
+  <meta property="og:description" content="The Pentagon just labeled Anthropic a national security risk — the first time it's ever done that to an American company.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-05-evening.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Evening Edition — March 05, 2026">
+  <meta name="twitter:description" content="The Pentagon just labeled Anthropic a national security risk — the first time it's ever done that to an American company.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="The Pentagon just labeled Anthropic a national security risk — the first time it's ever done that to an American company.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Thursday, March 5, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">Your evening briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening. Today got intense. The Pentagon formally labeled Anthropic &mdash; the company behind Claude &mdash; a supply-chain risk to national security. That's a designation usually reserved for foreign adversaries like Huawei, not American startups. Meanwhile, Nvidia quietly killed its China-bound AI chip line and shifted production to next-gen hardware. The Trump administration is drafting rules that would make every AI chip sale on the planet require U.S. approval. And China just released a five-year plan that mentions AI more than 50 times. Here's your rundown. <span class="share-link"><a id="sms-share" href="sms:?&body=The%20Pentagon%20just%20labeled%20Anthropic%20a%20national%20security%20risk%20%E2%80%94%20the%20same%20designation%20it%20uses%20for%20Huawei.%20Tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-05-evening.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Evening's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Pentagon formally labels Anthropic a &ldquo;supply-chain risk to national security&rdquo; &mdash; the first time it&rsquo;s ever used that designation against an American company <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/03/05/its-official-the-pentagon-has-labeled-anthropic-a-supply-chain-risk/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Nvidia halts all H200 chip production for China and shifts manufacturing to its next-generation Vera Rubin platform <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://finance.yahoo.com/news/nvidia-halts-china-bound-h200-120248594.html">Yahoo Finance</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Trump administration drafts sweeping new rules that would require U.S. approval for nearly every AI chip sale on the planet <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/03/05/us-reportedly-considering-sweeping-new-chip-export-controls/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">China&rsquo;s new Five-Year Plan mentions AI more than 50 times &mdash; calls for &ldquo;hyper-scale&rdquo; computing clusters and an &ldquo;AI+ action plan&rdquo; across every industry <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://thequantuminsider.com/2026/03/05/chinas-new-five-year-plan-specifically-targets-quantum-leadership-and-ai-expansion/">The Quantum Insider</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Anthropic CEO Dario Amodei reopens talks with the Pentagon even as the ban takes effect &mdash; a resolution is still possible <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://techcrunch.com/2026/03/05/anthropic-ceo-dario-amodei-could-still-be-trying-to-make-a-deal-with-pentagon/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">06</span>
+      <span class="headline-text">Jensen Huang says Nvidia&rsquo;s investments in OpenAI and Anthropic are likely its last &mdash; both companies expected to go public later this year <span class="headline-tag update">Update</span> <span class="src"><a href="https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/">TechCrunch</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>The Pentagon Just Treated Anthropic the Way It Treats Huawei. That&rsquo;s Never Happened to an American Company Before.</h2>
+    <div class="byline">Sources: <a href="https://techcrunch.com/2026/03/05/its-official-the-pentagon-has-labeled-anthropic-a-supply-chain-risk/">TechCrunch</a> &middot; <a href="https://www.nbcnews.com/tech/tech-news/anthropic-says-pentagon-declared-national-security-risk-rcna262013">NBC News</a> &middot; <a href="https://www.cnbc.com/2026/03/05/5-big-questions-anthropic-pentagon-ai-war.html">CNBC</a> &middot; <a href="https://edition.cnn.com/2026/03/05/tech/pentagon-anthropic-supply-chain-risk">CNN</a></div>
+
+    <p>Here&rsquo;s what happened: The Department of Defense officially notified Anthropic today that it has been designated a &ldquo;supply-chain risk to national security.&rdquo; In plain English, the Pentagon is saying Anthropic&rsquo;s AI products are a threat to the military&rsquo;s supply chain &mdash; and it&rsquo;s banning the Department of Defense and its contractors from using them. President Trump directed federal agencies to &ldquo;immediately cease&rdquo; all use of Anthropic&rsquo;s technology, with a six-month phaseout period.</p>
+
+    <p>Why this matters: until today, this designation had only ever been used against companies from adversary nations &mdash; most famously Huawei, the Chinese telecom giant. It has never been applied to an American company. Anthropic is a San Francisco-based AI startup that makes Claude, one of the most widely used AI assistants in the world.</p>
+
+    <div class="pull-quote">&ldquo;It is the first time a U.S. company has received such a designation, which until now was reserved for firms from adversary countries.&rdquo; &mdash; CNBC</div>
+
+    <p>The backstory: this dispute has been building for weeks. The Pentagon wanted full, unrestricted access to Anthropic&rsquo;s AI models for any lawful military purpose. Anthropic pushed back, insisting on guardrails &mdash; specifically, assurances that its technology wouldn&rsquo;t be used for fully autonomous weapons (weapons that can select and engage targets without a human in the loop) or for mass surveillance of American citizens. The two sides couldn&rsquo;t reach an agreement, and the relationship deteriorated from there.</p>
+
+    <p>The immediate fallout has been dramatic. Government agencies including the State Department, Treasury, and HHS are replacing Anthropic&rsquo;s products with OpenAI&rsquo;s GPT-4.1 and Google&rsquo;s Gemini. Defense contractors like Lockheed Martin are cutting ties. But here&rsquo;s the twist: even as the ban took effect, Bloomberg reported that Anthropic CEO Dario Amodei has reopened negotiations with the Pentagon, suggesting a deal could still be reached.</p>
+
+    <p>Meanwhile, the public has picked a side. Anthropic&rsquo;s Claude app has surged to the top of Apple&rsquo;s App Store download charts, driven by users who support the company&rsquo;s stance. And nearly 900 employees across Google, OpenAI, and other AI companies have signed an open letter calling for clearer limits on how their employers work with the military.</p>
+
+    <p>This story is far from over. The question at the center of it &mdash; should AI companies be able to set conditions on how the military uses their technology, or does the government get final say? &mdash; is one that will shape the AI industry for years to come.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">This is a fight about who gets to decide how powerful AI is used. Anthropic said it wouldn't let the military use its AI for autonomous weapons or mass surveillance without guardrails. The Pentagon responded by essentially blacklisting the company. Whether you think Anthropic was right to push back or wrong to defy the government, the outcome will set a precedent for how much control AI companies have over their own technology &mdash; and whether "responsible AI" means anything when the government comes knocking.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">If you use Claude APIs in your work, check whether your employer has any government contracts or defense subcontracts. The supply-chain risk designation means contractors can't use Anthropic products for defense work, and the ripple effects could extend to companies that do business with contractors. On the product side, this accelerates the migration to OpenAI and Google for government-adjacent projects. If you're building anything that might touch federal workflows, you need to plan for a multi-model strategy that doesn't depend solely on any one provider.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">This is one of the most important case studies in AI ethics happening in real time. An AI company refused to give the military unlimited access to its technology, and the government responded by treating it like a foreign adversary. You can use this story to teach about the tension between national security and corporate responsibility, the difference between voluntary guidelines and government mandates, and what happens when a company's values collide with political power. Students will have strong opinions &mdash; lean into that.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">If your hospital or health system uses Claude for any administrative or clinical support tools, this won't directly affect your access &mdash; the ban only applies to federal defense work. But it's a signal worth watching. If the government is willing to blacklist an American AI company over a policy disagreement, the regulatory environment for AI in all sectors, including healthcare, is less predictable than it seemed a week ago. Make sure your organization isn't overcommitted to any single AI vendor.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">The supply-chain risk designation creates immediate uncertainty around Anthropic's valuation ahead of its expected IPO later this year. Losing the entire federal defense market &mdash; and potentially spooking commercial customers who do business with the government &mdash; is material. On the flip side, the App Store surge and public support could strengthen the consumer brand. For portfolio positioning, this is a binary event: if talks succeed, Anthropic rebounds strongly. If they fail, the IPO timeline and valuation both take a hit. Watch the Bloomberg reporting on Amodei's negotiations closely.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">This designation raises serious legal questions. The supply-chain risk label has historically been used under authorities designed for foreign adversaries &mdash; applying it to a domestic company is legally unprecedented. Expect Anthropic's lawyers to challenge the scope and authority behind the designation. If you advise tech companies, this is a wake-up call: the government has more tools to pressure domestic tech firms than most corporate counsels have planned for. Review your clients' government contracting exposure and their AI vendor agreements for force majeure and regulatory compliance provisions.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If you use Claude or Anthropic's API for your business, don't panic &mdash; the ban only applies to defense-related work. But think about whether any of your customers are government contractors, because they may need to stop using tools built on Anthropic's technology. More broadly, this is a reminder to avoid putting all your AI eggs in one basket. If one policy decision can cut a company off from the government market overnight, you want to make sure your business can switch AI providers if needed.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">This is a brand story as much as a policy story. Anthropic took a principled stand and got punished for it by the government &mdash; but rewarded for it by the public, with Claude surging to the top of the App Store. That tension is a masterclass in values-based branding. The risk: if the dispute drags on, "principled" can start to look like "difficult to work with." The opportunity: Anthropic now owns the "responsible AI" positioning in a way no competitor can credibly challenge. Watch how they message the reopened negotiations &mdash; that's where the brand story gets complicated.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">This is one of those moments where a textbook case study is happening in real time. The question is simple: if you build an AI tool, do you get to decide how it's used? Anthropic said yes &mdash; we won't let our AI be used for autonomous weapons or mass surveillance without safeguards. The government said: that's not your call to make. This debate will shape AI policy for the rest of your career. It's worth understanding both sides deeply, regardless of where you land.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">This story is mostly about the military and big tech companies, so it won't affect your day-to-day work. But the bigger picture matters: the government just showed that it can effectively shut an AI company out of an entire market with one designation. That kind of power over the tech industry could eventually affect the AI tools that trickle down to every profession &mdash; including the ones you use for estimates, scheduling, or managing your business.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">If your department uses any AI tools powered by Anthropic's Claude, this ban doesn't directly apply to you &mdash; it's targeted at defense and military contracts. But it does signal that AI companies and the government are in a tug-of-war over how AI can be used by public agencies. If that fight expands beyond the military to all federal and state agencies, it could eventually affect the AI tools available for emergency services, dispatch, and public safety applications.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Three things for client conversations. First, any client with government or defense contracting exposure needs to audit their AI vendor dependencies immediately &mdash; the supply-chain risk designation has teeth. Second, the fact that this designation was used against a domestic company for the first time creates a new category of regulatory risk that should be incorporated into AI strategy assessments. Third, the 900-employee petition across Google, OpenAI, and others signals growing internal resistance to military AI work &mdash; factor that into workforce and talent strategy recommendations for AI companies.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">This fight might seem far from your studio, but it's about a fundamental question: who controls AI? If the government can force AI companies to remove safety guardrails for military use, that same pressure could eventually be applied to the creative tools you use. Anthropic stood up for the idea that the people who build AI should have a say in how it's used. Whether that principle survives this fight will tell you a lot about the future of the AI tools you depend on.</span>
+    </div>
+
+    <div class="read-this"><a href="https://techcrunch.com/2026/03/05/its-official-the-pentagon-has-labeled-anthropic-a-supply-chain-risk/">Read this &rarr; TechCrunch's full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Nvidia Just Killed Its China AI Chip Line and Bet Everything on Next-Gen Hardware</h3>
+      <div class="story-source"><a href="https://finance.yahoo.com/news/nvidia-halts-china-bound-h200-120248594.html">Yahoo Finance</a> &middot; <a href="https://www.techi.com/nvidia-halts-h200-shipments-china-redirects-tsmc-capacity-vera-rubin-chips/">Techi</a> &middot; <a href="https://money.usnews.com/investing/news/articles/2026-03-05/nvidia-refocuses-tsmc-capacity-as-export-controls-stall-china-sales-ft-reports">U.S. News</a></div>
+      <p>Nvidia has halted all production of its H200 AI chips &mdash; the ones it designed specifically to sell to China under U.S. export rules &mdash; and is redirecting that manufacturing capacity at TSMC (the Taiwanese factory that makes most of the world&rsquo;s advanced chips) toward its next-generation Vera Rubin platform instead.</p>
+      <p>The backstory makes this decision understandable: even though the U.S. government issued Nvidia a license last week to ship &ldquo;small amounts&rdquo; of H200 chips to China, not a single one has actually been sold. Beijing never formally approved the imports on its end. So Nvidia had chips it was allowed to sell but no buyers &mdash; and meanwhile, demand for its newest hardware from Western customers is through the roof. Rather than keep building chips that are sitting in a warehouse, Nvidia chose to use that factory time for products people are actually buying.</p>
+      <p>This is a major signal. Nvidia isn&rsquo;t just pausing China sales &mdash; it&rsquo;s shutting down the production line entirely. That suggests the company doesn&rsquo;t expect meaningful business with China anytime soon, regardless of what the export rules allow.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">This won't change your daily life, but it's a big shift in the global tech landscape. The world's most important AI chip company just stopped making chips for China. That means the AI gap between the U.S. and China is likely to widen, which could affect everything from the apps you use to geopolitical tensions. The silver lining: Nvidia is putting all its manufacturing muscle into the newest, most powerful chips, which should eventually make AI products faster and cheaper for everyone in Western markets.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you're waiting on Nvidia's next-gen Vera Rubin hardware, this is good news &mdash; more TSMC capacity means faster availability. For cloud capacity planning, expect the major providers (AWS, Azure, GCP) to get Vera Rubin instances sooner than expected. On the China side, this accelerates the transition to Huawei Ascend and Cambricon chips for Chinese AI workloads, which means the two tech ecosystems are diverging even faster. If you maintain any China-facing AI infrastructure, plan for a fully separate hardware stack.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a strong example for teaching students about how trade policy, technology, and geopolitics intersect. Nvidia designed a chip specifically to comply with export rules, got a license to sell it, but still couldn't close a single sale because China wouldn't approve imports on its end. The lesson: technology trade isn't just about what companies want to sell &mdash; it's about what governments on both sides allow. It's also a concrete way to explain supply chain decisions and opportunity cost.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">This is primarily a tech industry story, but there's an indirect connection worth noting. AI chips are the hardware that powers the AI models used in medical imaging, drug discovery, and clinical decision support. More manufacturing capacity going to next-gen chips means the AI systems that support healthcare will get faster and more capable, at least in Western markets. If your health system is evaluating AI tools, the underlying hardware is getting better &mdash; which means the tools built on it will too.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Nvidia's decision to kill the H200 China line has immediate implications. First, write off any remaining China revenue expectations for this chip generation. Second, the reallocation to Vera Rubin accelerates Nvidia's product transition timeline, which could boost margins and average selling prices. Third, this deepens the U.S.-China tech bifurcation, which is net positive for Nvidia's Western business but creates long-term strategic risk as China builds alternative supply chains. Watch for revised China revenue guidance in Nvidia's next earnings call &mdash; it's going to zero for this product line.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">This story highlights the complexity of dual-jurisdiction export controls. Nvidia had a U.S. license to sell H200 chips to China, but Beijing never approved the imports &mdash; effectively blocking the trade from the other side. If you advise clients on international trade compliance, this is a clear example of how approval from one government doesn't guarantee approval from the other. It also illustrates how export control regimes can make entire product lines commercially unviable, even without an outright ban.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Unless you're in the semiconductor or AI infrastructure business, this won't directly affect your operations. But here's the bigger picture: Nvidia choosing to abandon an entire market (China) rather than keep building chips that aren't selling tells you how seriously the U.S.-China tech split is playing out. If your business depends on AI tools or cloud services, the good news is that more manufacturing capacity is going to the hardware that powers those tools in Western markets.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The messaging from Nvidia is worth studying. They're framing this as a business decision (shifting capacity to where demand is) rather than a geopolitical one (giving up on China). That's a smart way to manage the narrative &mdash; it avoids antagonizing either government and keeps the focus on customer demand. For marketers in any industry affected by trade policy, this is a model for how to communicate about politically sensitive supply chain decisions without taking sides.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is a fascinating case study in how trade policy shapes business strategy. Nvidia built a chip specifically designed to comply with export rules, got government permission to sell it, and still couldn't make a single sale because China wouldn't approve imports. So instead of waiting, Nvidia shut down the line and moved on. It's a real-world example of opportunity cost, regulatory risk, and how companies adapt when government policy makes their products unsellable.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This story is mostly about the chip industry and trade with China, so it won't affect your work directly. The short version: the company that makes the most important AI chips in the world just stopped making them for China and is putting all that factory time into building better chips for everyone else. That should eventually mean the AI tools and apps you use keep getting faster and better.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This is primarily an industry and trade policy story. The indirect relevance: the AI hardware that will eventually power next-generation emergency response tools &mdash; things like real-time incident analysis, predictive dispatch, and drone coordination &mdash; is getting more manufacturing capacity. That means those tools should become available and affordable faster as Nvidia focuses its production on the Western market.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Two key angles for client work. First, any client with significant China operations or partnerships needs to factor in the accelerating U.S.-China tech decoupling &mdash; this isn't a temporary blip, it's a structural shift. Nvidia abandoning an entire product line for the China market tells you how far this has gone. Second, the capacity reallocation to Vera Rubin means next-gen AI hardware availability may improve faster than current forecasts suggest. Update your AI infrastructure timelines accordingly, especially for clients planning large-scale compute deployments.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">AI chips are the engines that power every AI tool you use, from image generators to video editors. More manufacturing going to Nvidia's newest, most powerful chips means the creative AI tools available in Western markets should keep getting faster and more capable. If you work with AI-generated art, video, or music, the hardware powering those tools is about to get a boost &mdash; even if the geopolitics behind it are complicated.</span>
+      </div>
+      <div class="read-this"><a href="https://finance.yahoo.com/news/nvidia-halts-china-bound-h200-120248594.html">Read this &rarr; Yahoo Finance's full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>The Trump Administration Wants to Approve Every AI Chip Sale on Earth. Yes, Every One.</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/03/05/us-reportedly-considering-sweeping-new-chip-export-controls/">TechCrunch</a> &middot; <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/us-govt-preps-sweeping-export-controls-for-nvidia-amd-ai-hardware-worldwide-licensing-system-would-give-trump-admin-broad-authority-to-block-global-sales">Tom's Hardware</a> &middot; <a href="https://finance.yahoo.com/news/us-mulls-requiring-permits-global-174126617.html">Yahoo Finance</a></div>
+      <p>The U.S. Commerce Department has drafted regulations that would set up a global licensing system for AI chip sales. Any company wanting to buy advanced AI chips made by American companies like Nvidia or AMD &mdash; anywhere in the world &mdash; would need some form of U.S. government approval first.</p>
+      <p>The system would work in tiers. Small orders (up to about 1,000 of Nvidia&rsquo;s latest chips) would go through a relatively simple review. Bigger orders &mdash; up to 100,000 chips &mdash; would require government-to-government assurances and security promises from the buyer. And the largest shipments (hundreds of thousands of chips, the kind needed to train the most powerful AI models) would only go to U.S. allies whose governments agree to site visits, security conditions, and investments in American AI infrastructure.</p>
+      <p>The draft isn&rsquo;t final &mdash; it&rsquo;s still being reviewed across federal agencies and could change significantly or be shelved entirely. But the ambition is clear: the U.S. wants to be the gatekeeper for global AI development, using its dominance in chip design as leverage.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">This won't change anything for you right now &mdash; it's a draft, and it may never become law. But the idea behind it is enormous: the U.S. government wants to control who in the world gets to build powerful AI systems. Since American companies design the most advanced AI chips, that gives the U.S. real leverage. If these rules do take effect, they could slow down AI development in countries that aren't close U.S. allies &mdash; which could affect everything from the AI apps available globally to international relations.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you work for a company that buys AI hardware or runs AI workloads, this could add weeks or months to your hardware procurement timeline. The tiered approval system means even routine GPU orders might need government review. For companies building AI products for international markets, the rules could create compliance overhead similar to what the defense industry already deals with. Start thinking about how to document your chip usage and end-use cases &mdash; that's what the approval process will require.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a real-time example of how economic power translates into geopolitical leverage. The U.S. designs the chips that make AI possible, and now it's proposing to use that position to control who can build AI and under what conditions. It's a rich topic for discussions about trade policy, technology governance, and how countries compete for technological advantage. The tiered system is also a good teaching tool for explaining how export controls work in practice.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">These rules are aimed at international chip sales and shouldn't directly affect healthcare AI tools in the U.S. But if the regulations slow down AI development globally, it could affect international health technology collaborations and the availability of AI-powered medical tools in developing countries. For your day-to-day clinical work, there's no immediate impact &mdash; but the regulatory environment for AI is clearly getting more complex.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">These draft rules are a significant overhang for Nvidia and AMD. A global licensing system creates regulatory friction on every international sale, which could slow revenue growth and create forecast uncertainty. Markets hate uncertainty, and this draft &mdash; even before it's finalized &mdash; gives analysts one more variable to model. On the positive side, the tiered system actually protects the U.S. AI hardware duopoly by making it harder for foreign competitors to gain traction. Watch semiconductor stocks for the next few days as the market digests the implications.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">If this draft becomes law, it would create the most comprehensive technology export control regime in history. Every international AI chip sale would require some level of government review, which means a massive expansion in export compliance work. For lawyers advising tech companies, this creates both risk and opportunity. Your clients will need export compliance programs that go far beyond current requirements. The tiered system will require careful analysis of customer relationships, end-use certifications, and government-to-government agreements. Start building expertise here now.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your business buys AI hardware directly (GPU servers, AI workstations), you may eventually need to go through a government approval process. For most small and medium businesses buying standard quantities, the review would be relatively simple. But if you're planning a large AI infrastructure investment, the timeline could get longer and more complicated. This is still a draft and may never take effect &mdash; but it's worth tracking if AI hardware is a significant part of your technology budget.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The framing around this story is worth noting: "global gatekeeper" and "worldwide licensing system" are powerful phrases that position the U.S. as the ultimate authority on who gets to build AI. For marketers in the AI space, the regulatory narrative is becoming as important as the product narrative. If you're marketing AI products or services internationally, export control compliance may become part of your go-to-market messaging &mdash; especially for enterprise customers who need to demonstrate they can actually get the hardware their AI runs on.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is one of the most ambitious technology control proposals in history. The U.S. is essentially saying: we design the most important chips, so we get to decide who uses them. Think about what that means for global competition, innovation, and access to AI technology. It's a great topic for papers or discussions about technology policy, and it connects to bigger questions about whether any one country should have this kind of control over a general-purpose technology.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one is mainly about international trade and chip manufacturing, so it won't affect your work directly. The short version: the U.S. government wants to approve every sale of the special computer chips that power AI, anywhere in the world. It's a power play that's more about geopolitics than anything that touches your day-to-day, but it shows how seriously the government is taking control of AI technology.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This is an international trade policy story that won't affect your operations. The domestic supply of AI hardware and the AI tools built on it would continue normally under these rules. The controls are aimed at international sales, particularly to countries the U.S. considers strategic competitors. Your department's access to AI-powered tools for dispatch, analysis, and operations wouldn't be affected.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Major implications for any client with international AI operations. First, the global licensing system would create compliance requirements comparable to defense industry export controls &mdash; most tech companies aren't staffed for that. Second, the tiered system creates a new strategic variable for companies planning large-scale AI infrastructure: location, government relationships, and diplomatic status of the host country all become factors in hardware procurement. Build this into your AI strategy and site selection frameworks. Third, the draft status means there's a window for industry input &mdash; advise clients to engage with the Commerce Department comment process.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">This story is about who gets to have AI technology and who doesn't. If the U.S. controls which countries can buy AI chips, it could affect which AI tools are available where. For artists in the U.S. and allied countries, there's no immediate impact. But the broader question &mdash; whether AI should be controlled as tightly as military technology &mdash; could shape what kinds of creative AI tools are developed and who has access to them globally.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/03/05/us-reportedly-considering-sweeping-new-chip-export-controls/">Read this &rarr; TechCrunch's full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>China Just Released a Five-Year Plan That Mentions AI More Than 50 Times</h3>
+      <div class="story-source"><a href="https://thequantuminsider.com/2026/03/05/chinas-new-five-year-plan-specifically-targets-quantum-leadership-and-ai-expansion/">The Quantum Insider</a> &middot; <a href="https://www.bworldonline.com/world/2026/03/05/734429/chinas-new-five-year-plan-calls-for-ai-throughout-its-economy-tech-breakthroughs/">BusinessWorld</a> &middot; <a href="https://www.dailysabah.com/business/economy/china-unveils-five-year-plan-to-dominate-ai-tech-race">Daily Sabah</a></div>
+      <p>China released its 15th Five-Year Plan today &mdash; the blueprint that sets the country&rsquo;s economic and technology priorities for 2026 through 2030 &mdash; and artificial intelligence is absolutely everywhere in it. The document mentions AI more than 50 times and includes an &ldquo;AI+ action plan&rdquo; designed to weave AI into every sector of the Chinese economy, from manufacturing to healthcare to finance.</p>
+      <p>The specific commitments are ambitious: &ldquo;hyper-scale&rdquo; computing clusters (think massive data centers dedicated to AI training), investment in scalable quantum computers, an integrated space-to-earth quantum communication network, and support for building open-source AI communities. The plan also calls for advances in humanoid robotics, 6G networks, brain-machine interfaces, and nuclear fusion.</p>
+      <p>The timing is deliberate. The plan was released as China&rsquo;s annual &ldquo;Two Sessions&rdquo; parliamentary meetings are underway &mdash; and just hours after the U.S. announced draft rules to control global AI chip sales. China is sending a clear message: it intends to build its AI capabilities with or without American chips.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">China is telling the world that AI is at the center of its economic strategy for the next five years. That means more AI-powered products and services coming from Chinese companies, more competition with American AI firms, and a tech rivalry that's only going to intensify. For you, the practical effect is that the AI tools available worldwide &mdash; both free and paid &mdash; will keep getting better as the U.S. and China compete to build the most capable systems.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The plan's emphasis on Huawei Ascend chips and open-source AI communities confirms what we've been seeing: China is building a parallel AI stack that doesn't depend on Nvidia or American technology. If you work with Chinese partners or deploy to Chinese markets, expect to see Huawei-optimized models and frameworks become the standard. The "AI+ action plan" also signals massive demand for AI engineering talent in China, which could affect global hiring competition for ML engineers.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a rich primary source for teaching about industrial policy, government planning, and how countries compete in technology. China's Five-Year Plans are one of the clearest examples of state-directed economic strategy in the modern world. Comparing this plan's AI priorities with U.S. policy (which is more market-driven and, as of today, focused on export controls) gives students a concrete way to understand different approaches to technology development.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The plan specifically calls for AI integration across healthcare, which means China is investing heavily in AI-powered diagnostics, drug discovery, and clinical tools. For the global healthcare community, this could accelerate the development of AI medical tools &mdash; but also raise questions about data privacy, since Chinese AI development often involves large-scale government data access that wouldn't be permissible under U.S. or European health privacy laws.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">The Five-Year Plan confirms the Chinese government's commitment to AI as a national strategic priority, which is bullish for Chinese AI companies (Baidu, Alibaba, ByteDance) and their domestic chip partners (Huawei, Cambricon). The "hyper-scale" computing investment and open-source support commitments suggest significant government capital flowing into AI infrastructure. For portfolio positioning, this accelerates the bifurcation thesis: Western AI and Chinese AI are becoming separate investment categories with different risk profiles and growth drivers.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">China's AI action plan will create its own regulatory framework for AI development and deployment, which will likely diverge further from Western standards. If you advise clients with cross-border AI operations, expect growing complexity in compliance. Data residency, model governance, and export controls will all become more complicated as the U.S. and China build separate AI ecosystems with separate rules. The plan also signals continued investment in surveillance technology, which creates liability risk for any Western company with exposure to Chinese AI partnerships.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Competition between the U.S. and China on AI is good news for businesses. When two superpowers race to build the best AI, the tools get better and cheaper faster. In the near term, you'll continue to see strong AI products from both American and Chinese companies. The thing to watch: if your business operates in both markets, the technology stacks may start to diverge, meaning you might eventually need different AI tools for different markets.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">China's plan to integrate AI across every industry means the Chinese market for AI-powered marketing tools is about to explode. If you work for a global brand, expect Chinese competitors to increasingly offer AI-powered marketing automation, content generation, and customer analytics that rival or exceed Western tools. The "AI+" framing is also worth noting &mdash; it's a clean, memorable way to communicate that AI isn't a separate category but an enhancement to everything.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">China just committed to making AI the foundation of its entire economy for the next five years. If you're studying computer science, business, or international relations, this is required reading. The plan lays out specific investments in quantum computing, robotics, and AI infrastructure that will shape the global technology landscape. Understanding how China approaches AI development &mdash; state-directed, massively funded, strategically focused &mdash; is essential for anyone who wants to work in tech.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">China's plan includes a big push for AI in manufacturing, which could speed up automation in factories around the world. For the trades, the more immediate question is whether these same technologies eventually show up in construction, electrical work, and plumbing. For now, skilled trades are one of the most automation-resistant industries &mdash; but it's worth keeping an eye on how AI-powered robotics evolves over the next five years.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">China's plan includes investment in AI-powered emergency response and disaster management systems. While those tools are being developed for the Chinese market, the underlying technology often influences products worldwide. The competition between U.S. and Chinese AI companies could accelerate the development of tools that first responders everywhere eventually benefit from &mdash; things like AI-powered incident prediction, resource allocation, and real-time situational awareness.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The Five-Year Plan is essential reading for any client with China exposure or global AI strategy. Key takeaways: China is building AI infrastructure that doesn't depend on American chips, investing in open-source as a strategic tool, and integrating AI into every sector of the economy. For consulting frameworks, the plan confirms the "two-stack" model &mdash; Western AI and Chinese AI are diverging into separate ecosystems. Clients need strategies that account for both, especially those with operations or customers in both markets.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">China's AI push includes investment in creative AI tools &mdash; image generation, video production, and content creation. The competition between Chinese and American AI companies has already produced some of the best free creative AI tools available today (many open-source models come from Chinese labs like Alibaba and ByteDance). More Chinese investment in AI means more competition, which generally means better and cheaper tools for artists everywhere.</span>
+      </div>
+      <div class="read-this"><a href="https://thequantuminsider.com/2026/03/05/chinas-new-five-year-plan-specifically-targets-quantum-leadership-and-ai-expansion/">Read this &rarr; The Quantum Insider's full report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">1st</span>
+      <span class="num-label">Time the Pentagon has used a "supply-chain risk" designation against an American company &mdash; a label previously reserved for foreign adversaries</span>
+      <span class="num-src"><a href="https://www.cnbc.com/2026/03/05/5-big-questions-anthropic-pentagon-ai-war.html">CNBC</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">0</span>
+      <span class="num-label">H200 chips Nvidia actually sold to China &mdash; despite having a U.S. license to sell them. Beijing never approved the imports.</span>
+      <span class="num-src"><a href="https://finance.yahoo.com/news/nvidia-halts-china-bound-h200-120248594.html">Yahoo Finance</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">50+</span>
+      <span class="num-label">Times AI is mentioned in China's new Five-Year Plan for 2026&ndash;2030, making it the most AI-focused national plan in the country's history</span>
+      <span class="num-src"><a href="https://thequantuminsider.com/2026/03/05/chinas-new-five-year-plan-specifically-targets-quantum-leadership-and-ai-expansion/">The Quantum Insider</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Jensen Huang Says Nvidia Is Done Investing in OpenAI and Anthropic &mdash; Both Expected to IPO This Year</h3>
+      <p>At the Morgan Stanley Tech Conference yesterday, Nvidia CEO Jensen Huang said the company&rsquo;s recent $30 billion investment in OpenAI and $10 billion in Anthropic are &ldquo;probably the last&rdquo; private investments it makes in either company. The reason: both are expected to go public later this year, which would close the window for private deals. Huang also said the originally reported $100 billion OpenAI infrastructure deal is &ldquo;probably not in the cards.&rdquo; Translation: the era of Nvidia as a behind-the-scenes investor in AI startups is ending. When OpenAI and Anthropic IPO, their relationship with Nvidia shifts from partnership to pure customer.</p>
+      <div class="watch-src"><a href="https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/">TechCrunch</a> &middot; <a href="https://www.cnbc.com/2026/03/04/nvidia-huang-openai-investment.html">CNBC</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>DeepSeek V4 Is Still Expected Any Moment &mdash; and China's Five-Year Plan Makes It Even More Significant</h3>
+      <p>We&rsquo;ve been tracking this all week: China&rsquo;s DeepSeek lab is expected to release V4, a trillion-parameter AI model that can handle text, images, and video. It was built to run on Chinese-made chips (Huawei and Cambricon) rather than Nvidia&rsquo;s &mdash; a direct response to U.S. export controls. Leaked benchmarks suggest it could rival the best Western models on coding tasks. With China's Five-Year Plan now officially making AI a national priority, this launch carries extra weight as a demonstration of China&rsquo;s ability to compete without American hardware. No release yet, but it could drop any hour.</p>
+      <div class="watch-src"><a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a> &middot; <a href="https://www.pymnts.com/artificial-intelligence-2/2026/deepseek-poised-to-unveil-latest-ai-model/">PYMNTS</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Nearly 900 Tech Workers Have Signed a Letter Calling for Military AI Limits</h3>
+      <p>An open letter circulating among employees at Google, OpenAI, and other AI companies is calling for clearer limits on how their employers work with the military. The letter grew from a few hundred signatures on Friday to nearly 900 by Monday, fueled by the Anthropic-Pentagon dispute and U.S. military strikes on Iran. The letter doesn&rsquo;t demand companies refuse all military work &mdash; but it asks for transparent policies about what use cases are acceptable and which aren&rsquo;t. It&rsquo;s the most significant employee AI-ethics action since Google&rsquo;s Project Maven protests in 2018.</p>
+      <div class="watch-src"><a href="https://www.cnbc.com/2026/03/03/anthropic-fallout-iran-war-tech-military-ai.html">CNBC</a> &middot; <a href="https://www.axios.com/2026/03/03/ai-race-safety-guardrail">Axios</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Anthropic vs Pentagon</span>
+      <span class="sentiment-tag buzz">Chip Export Controls</span>
+      <span class="sentiment-tag split">Nvidia Quits China H200</span>
+      <span class="sentiment-tag cool">China Five-Year Plan</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">CNBC <span class="tweet-handle">March 5, 2026</span></div>
+      <div class="tweet-text">"It is the first time a U.S. company has received such a designation, which until now was reserved for firms from adversary countries, such as China's Huawei."</div>
+      <div class="tweet-meta">Via <a href="https://www.cnbc.com/2026/03/05/5-big-questions-anthropic-pentagon-ai-war.html">CNBC</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Fortune <span class="tweet-handle">March 5, 2026</span></div>
+      <div class="tweet-text">"The Anthropic&ndash;OpenAI feud and their Pentagon dispute expose a deeper problem with AI safety: the companies that talk the most about responsible AI are the ones being forced to choose between their principles and their access to power."</div>
+      <div class="tweet-meta">Via <a href="https://fortune.com/2026/03/05/anthropic-openai-feud-pentagon-dispute-ai-safety-dilemma-personalities/">Fortune</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Jensen Huang <span class="tweet-handle">Nvidia CEO, Morgan Stanley TMT Conference, March 4, 2026</span></div>
+      <div class="tweet-text">"Our $30 billion investment in OpenAI might be the last time. The reason for that is because they're going to go public."</div>
+      <div class="tweet-meta">Via <a href="https://www.cnbc.com/2026/03/04/nvidia-huang-openai-investment.html">CNBC</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The Anthropic supply-chain designation is dominating the conversation. The most-shared takes fall into two camps: people calling Anthropic brave for standing up to the Pentagon on AI safety principles, and people calling them reckless for picking a fight with the Defense Department. Claude's App Store surge is being widely cited as proof that the public supports Anthropic's stance. The chip export control story is generating anxiety among AI researchers who worry about the U.S. government controlling who gets to build AI.</p>
+
+      <p><strong>Hacker News:</strong> The Anthropic story has the top three threads. Developers are debating whether a company should have the right to restrict how the government uses technology it paid for. The most-upvoted comment: "Anthropic did the thing everyone says AI companies should do, and the government punished them for it." The chip export control thread is active, with many commenters comparing it to Cold War-era COCOM technology export restrictions. The China Five-Year Plan thread is generating discussion about whether China can actually build competitive AI infrastructure without Nvidia chips.</p>
+
+      <p><strong>Reddit:</strong> r/technology is overwhelmed with the Anthropic-Pentagon story. The top post has 12K+ upvotes and the consensus in the comments is strongly pro-Anthropic. In r/investing, the focus is on Nvidia &mdash; both the H200 halt and the AI chip export control draft, with investors trying to figure out the revenue impact. The China Five-Year Plan is getting thoughtful discussion in r/geopolitics, with users noting the irony of the U.S. restricting chip sales on the same day China announced it&rsquo;s building an AI ecosystem that doesn&rsquo;t need those chips.</p>
+
+      <div class="comm-src">Sources: <a href="https://techcrunch.com/2026/03/05/its-official-the-pentagon-has-labeled-anthropic-a-supply-chain-risk/">TechCrunch</a> &middot; <a href="https://www.cnbc.com/2026/03/05/5-big-questions-anthropic-pentagon-ai-war.html">CNBC</a> &middot; <a href="https://finance.yahoo.com/news/nvidia-halts-china-bound-h200-120248594.html">Yahoo Finance</a> &middot; <a href="https://thequantuminsider.com/2026/03/05/chinas-new-five-year-plan-specifically-targets-quantum-leadership-and-ai-expansion/">The Quantum Insider</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">The Pentagon treated an American AI company like a foreign adversary. Nvidia abandoned its China chip line. The U.S. wants to approve every AI chip sale on the planet. And China just made AI the centerpiece of its national strategy. Thursday was a big one. You're caught up &mdash; enjoy the rest of your evening.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=The%20Pentagon%20just%20labeled%20Anthropic%20a%20national%20security%20risk%20%E2%80%94%20the%20same%20designation%20it%20uses%20for%20Huawei.%20Tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-05-evening.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
