@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Morning Edition — Mar 08, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Morning Edition — March 08, 2026">
+  <meta property="og:description" content="OpenAI's head of robotics just quit over the company's Pentagon deal, saying surveillance and autonomous weapons 'deserved more deliberation than they got.'">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-08-morning.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Morning Edition — March 08, 2026">
+  <meta name="twitter:description" content="OpenAI's head of robotics just quit over the company's Pentagon deal, saying surveillance and autonomous weapons 'deserved more deliberation than they got.'">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="OpenAI's head of robotics just quit over the company's Pentagon deal, saying surveillance and autonomous weapons 'deserved more deliberation than they got.'">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Sunday, March 8, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Morning Edition</span>
+    <div class="tagline">Your morning briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good morning. The cracks inside OpenAI are now impossible to ignore. Yesterday, the company&rsquo;s head of robotics walked out the door over the Pentagon deal, saying the rush to sign left no room for real guardrails on surveillance or autonomous weapons. Meanwhile, the Pentagon&rsquo;s tech chief went on a podcast and called Anthropic&rsquo;s CEO a liar with a &ldquo;God complex.&rdquo; Claude just hit a million new signups a day. And a coalition that includes Steve Bannon and Ralph Nader &mdash; yes, those two &mdash; just released a joint declaration demanding humans stay in charge of AI. Let&rsquo;s get into it. <span class="share-link"><a id="sms-share" href="sms:?&body=OpenAI%27s%20head%20of%20robotics%20just%20quit%20over%20the%20Pentagon%20deal%2C%20saying%20surveillance%20and%20autonomous%20weapons%20%22deserved%20more%20deliberation%20than%20they%20got.%22%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-08-morning.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Morning's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">OpenAI&rsquo;s head of robotics resigns over Pentagon deal, says surveillance and autonomous weapons &ldquo;deserved more deliberation than they got&rdquo; <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/03/07/openai-robotics-lead-caitlin-kalinowski-quits-in-response-to-pentagon-deal/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Pentagon tech chief calls Anthropic CEO Dario Amodei a &ldquo;liar&rdquo; with a &ldquo;God complex&rdquo; on the All-In podcast &mdash; says he needs a partner who &ldquo;won&rsquo;t wig out&rdquo; <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://fortune.com/2026/03/07/pentagon-emil-michael-anthropic-claude-defense-ai-openai-iran-war-palantir/">Fortune</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Claude hits one million new signups per day, overtakes ChatGPT on both the App Store and Google Play <span class="headline-tag update">Update</span> <span class="src"><a href="https://techcrunch.com/2026/03/06/claudes-consumer-growth-surge-continues-after-pentagon-deal-debacle/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">A bipartisan coalition from Steve Bannon to Ralph Nader releases the &ldquo;Pro-Human AI Declaration&rdquo; calling for a ban on superintelligence and mandatory kill switches <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://techcrunch.com/2026/03/07/a-roadmap-for-ai-if-anyone-will-listen/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">DeepSeek V4 &mdash; a trillion-parameter open-source model built on Chinese chips &mdash; appears to have quietly launched, with benchmarks rivaling the best Western models <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://particula.tech/blog/deepseek-v4-qwen-open-source-ai-disruption">Particula</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>OpenAI&rsquo;s Head of Robotics Walked Out Over the Pentagon Deal. Here&rsquo;s Why That Matters.</h2>
+    <div class="byline">Sources: <a href="https://techcrunch.com/2026/03/07/openai-robotics-lead-caitlin-kalinowski-quits-in-response-to-pentagon-deal/">TechCrunch</a> &middot; <a href="https://fortune.com/2026/03/07/openai-robotics-leader-caitlin-kalinowski-resignation-pentagon-surveillance-autonomous-weapons-anthropic/">Fortune</a> &middot; <a href="https://www.engadget.com/ai/openais-head-of-robotics-resigns-following-deal-with-the-department-of-defense-195918777.html">Engadget</a> &middot; <a href="https://sfstandard.com/2026/03/07/openai-robotics-head-quits-military-deal-concerns/">SF Standard</a></div>
+
+    <p>Yesterday, Caitlin Kalinowski &mdash; the executive who ran OpenAI&rsquo;s robotics division &mdash; resigned in protest over the company&rsquo;s new agreement with the Pentagon. She&rsquo;d been at OpenAI since November 2024, having previously led the team building augmented reality glasses at Meta.</p>
+
+    <p>In her resignation post on X and LinkedIn, Kalinowski didn&rsquo;t mince words: she supports AI playing a role in national security, but said the deal was rushed through without proper safeguards on two critical issues &mdash; surveillance of Americans without a judge&rsquo;s approval, and weapons that can kill without a human making the final call.</p>
+
+    <div class="pull-quote">&ldquo;Surveillance of Americans without judicial oversight and lethal autonomy without human authorization are lines that deserved more deliberation than they got.&rdquo; &mdash; Caitlin Kalinowski</div>
+
+    <p>In a follow-up post, she clarified that her concern wasn&rsquo;t with working with the military at all &mdash; it was a governance problem. The announcement was rushed, the guardrails weren&rsquo;t defined, and these were decisions too important to skip the deliberation on. &ldquo;This was about principle, not people,&rdquo; she wrote, while saying she still has deep respect for Sam Altman and the OpenAI team.</p>
+
+    <p>Here&rsquo;s the context: OpenAI signed a deal to deploy its AI models on a classified Pentagon network. On paper, the agreement includes red lines &mdash; no domestic mass surveillance, no directing autonomous weapons. But critics, including the Electronic Frontier Foundation, say the language is full of wiggle room. The contract bans &ldquo;intentional&rdquo; use for domestic surveillance of U.S. persons, but doesn&rsquo;t define what counts as &ldquo;intentional&rdquo; or how violations would be enforced. Even Altman himself admitted the deal &ldquo;looked opportunistic and sloppy.&rdquo;</p>
+
+    <p>Why this matters beyond OpenAI: Kalinowski is the first senior executive at a major AI company to resign specifically over a military contract. She&rsquo;s not some random employee signing a petition &mdash; she ran a major division. Her departure comes on top of the nearly 900 workers across Google, OpenAI, and other companies who&rsquo;ve signed open letters calling for limits on military AI work. The message from inside these companies is getting louder: the people building this technology are not comfortable with how fast it&rsquo;s being handed to the military.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">When the person who runs the robotics division at the world's most prominent AI company quits because she thinks the military deal was rushed, that's a signal worth paying attention to. The question at the center of all of this is straightforward: should AI be allowed to surveil Americans or make life-and-death decisions without a human involved? The people actually building these systems are saying "slow down." Whether anyone listens will shape how AI is used in ways that could affect all of us.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">This is now the highest-profile resignation over an AI military contract in the industry's history. If you work at an AI company, the Pentagon-AI pipeline is no longer theoretical &mdash; it's a factor in retention and recruiting. For engineers considering roles at OpenAI, Anthropic, Google, or any company with government contracts, asking "what are your red lines on military use?" is now a reasonable interview question. On the technical side, Kalinowski's concern about governance mirrors a familiar engineering problem: the guardrails weren't defined before the system went live.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">This is a perfect case study for teaching ethics in technology. A senior executive agreed that AI should play a role in national security &mdash; but resigned because the process was rushed and the safeguards were vague. That nuance is important: this isn't an anti-military story, it's a governance story. You can use it to teach students about the difference between opposing a policy and opposing the process behind it. It also connects to broader lessons about whistleblowing, professional ethics, and the responsibilities of engineers.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">The healthcare connection here is indirect but real. If AI companies are rushing military deals without clear safeguards, it raises questions about how carefully those same companies define boundaries for healthcare AI. When an AI model can be deployed on a classified military network with vague restrictions on surveillance, you should ask: how carefully are the boundaries defined when that same company's AI is used in clinical decision support or patient data analysis? Governance matters across every domain.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">Kalinowski's departure is the kind of executive resignation that would normally rattle markets &mdash; except OpenAI isn't public yet. But it matters for the IPO timeline. A high-profile resignation over ethics, on top of the ongoing Anthropic-Pentagon saga, signals that the military-AI relationship is a source of both revenue and risk. For investors evaluating the coming OpenAI and Anthropic IPOs, the question of how these companies navigate government contracts is now a material factor. It affects talent retention, public perception, and regulatory exposure.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">The legal issues here are significant. Kalinowski's complaint is essentially a governance argument: the contract language around surveillance and autonomous weapons is too vague to be enforceable. The EFF agrees, noting that banning "intentional" surveillance without defining the term creates an enormous loophole. If you advise tech companies, this situation highlights the need for precise, enforceable contract language when deploying AI in high-stakes government contexts. Vague red lines are worse than no red lines, because they create the illusion of accountability.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">For most business owners, this story is about talent and reputation. The AI companies you depend on for tools and services are losing senior people over military contracts. That's a signal that the industry's talent pool is fracturing along ethical lines. If you're choosing between AI vendors, it's worth understanding their military relationships &mdash; not because they're inherently bad, but because they affect the stability and focus of the companies building your tools.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">Brand risk is the marketing angle here. OpenAI now has a senior resignation over ethics, vague contract language that critics are tearing apart, and a CEO who admits the deal "looked opportunistic and sloppy." Compare that to Anthropic, whose refusal to sign a similar deal turned into a consumer brand boost (Claude just hit #1 on the App Store). The lesson: in AI, your stance on military contracts is now a brand differentiator, and consumers are paying attention.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">This is one of the most important questions you'll face if you go into tech: what do you do when your employer does something you believe is wrong? Kalinowski didn't just complain &mdash; she resigned and explained exactly why, in public, while still expressing respect for her colleagues. Study how she framed it: she wasn't against military AI, she was against rushing the process. That kind of principled, specific criticism is far more effective than a blanket objection. It's a skill worth learning.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">This story won't affect your daily work, but the principle behind it matters. The person who built robots at OpenAI quit because she felt the company was handing its technology to the military without enough safeguards. As AI starts showing up in more industries &mdash; including construction, manufacturing, and the trades &mdash; the question of who controls these tools and what limits exist on their use will eventually matter for everyone, not just tech executives.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">The debate over military AI guardrails has a direct parallel in public safety. If AI tools are deployed for military surveillance without clear rules, similar pressure could eventually extend to domestic law enforcement and emergency response. Kalinowski's core concern &mdash; that surveillance of Americans shouldn't happen without judicial oversight &mdash; is the same principle that governs how your department handles search warrants and evidence. These AI policy decisions will eventually shape the tools available to first responders, and the rules around using them.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Three takeaways for client work. First, senior AI talent is now making career decisions based on military contract ethics &mdash; factor this into talent strategy and retention risk assessments for AI companies. Second, the vague contract language Kalinowski cited is a governance failure pattern you should watch for in any client deploying AI in regulated or sensitive contexts. Third, the growing employee activism (900+ signatories, a VP-level resignation) signals that internal pressure on AI ethics is now a material operational risk, not just a PR concern. Build it into your risk frameworks.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">This story is about a fundamental question: do the people who build AI tools get a say in how they're used? Kalinowski said yes &mdash; and quit when she felt the answer was being ignored. For artists, who are already navigating AI's role in creative work, this matters. The same governance questions about military AI apply to how AI tools handle your work: who decides the boundaries, and how much say do you have? When even the people building these systems are walking away over governance failures, it's clear the rules aren't keeping up.</span>
+    </div>
+
+    <div class="read-this"><a href="https://techcrunch.com/2026/03/07/openai-robotics-lead-caitlin-kalinowski-quits-in-response-to-pentagon-deal/">Read this &rarr; TechCrunch's full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>The Pentagon&rsquo;s Tech Chief Just Called Anthropic&rsquo;s CEO a Liar on a Podcast. Things Are Getting Personal.</h3>
+      <div class="story-source"><a href="https://fortune.com/2026/03/07/pentagon-emil-michael-anthropic-claude-defense-ai-openai-iran-war-palantir/">Fortune</a> &middot; <a href="https://www.benzinga.com/markets/tech/26/03/51115116/pentagon-tech-chief-emil-michael-slams-anthropic-as-ai-weapons-and-drone-autonomy-fight-escalates-need-someone-whos-not-going-to-wig-out">Benzinga</a> &middot; <a href="https://finance.yahoo.com/news/pentagon-turns-ex-uber-executive-143002697.html">Yahoo Finance</a></div>
+      <p>Emil Michael &mdash; the Pentagon&rsquo;s undersecretary of defense for research and engineering, and its chief technology officer &mdash; went on the All-In podcast on Friday and didn&rsquo;t hold back. He called Anthropic CEO Dario Amodei a &ldquo;liar&rdquo; with a &ldquo;God complex,&rdquo; and said the military needs &ldquo;a reliable, steady partner&rdquo; who &ldquo;won&rsquo;t wig out in the middle.&rdquo;</p>
+      <p>Michael also revealed a detail that helps explain why things escalated so fast. After the U.S. military&rsquo;s raid on Venezuela earlier this year, Anthropic reached out to Palantir &mdash; whose software runs on military systems that use Anthropic&rsquo;s AI &mdash; to ask whether Claude had been used in the operation. Anthropic says that was a routine inquiry. The Pentagon and Palantir saw it as a threat.</p>
+      <p>The backstory is worth knowing: Michael isn&rsquo;t a career military official. He&rsquo;s the former chief business officer of Uber, brought in by the Trump administration to modernize defense technology. His style is corporate and confrontational &mdash; not the careful diplomatic language you typically hear from Pentagon officials. The fact that a senior defense official is personally attacking an American tech CEO on a podcast tells you how far this relationship has broken down.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">When a Pentagon official goes on a popular podcast to call a tech CEO a liar, the dispute has moved from a policy disagreement to a personal fight. That matters because personal feuds are harder to resolve than policy ones. The government is now publicly pressuring AI companies to comply with military demands, and the people on both sides are burning bridges. How this plays out will determine whether AI companies can set any conditions on military use of their technology &mdash; or whether the government gets whatever it wants, no questions asked.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The Venezuela revelation is the most technically interesting detail. Anthropic asked Palantir if Claude was used in a military operation &mdash; which means Anthropic may not have full visibility into how its models are being used once they're deployed through third-party platforms. If you build AI systems that are integrated into other products, this is a cautionary tale about losing control of your technology once it's deployed through partner platforms. Audit rights and usage monitoring should be non-negotiable in your integration contracts.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a vivid example for classroom discussions about how institutions communicate during a crisis. A Pentagon official using language like "God complex" and "wig out" on a podcast is a deliberate choice &mdash; it's designed to undermine Anthropic's credibility. You can use this to teach students about rhetoric, institutional power dynamics, and the difference between public discourse and formal negotiation. It also raises questions about whether government officials should use entertainment media to attack private companies.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The Venezuela detail is relevant to healthcare AI. Anthropic asked a partner company whether its AI was used in a specific context &mdash; and the partner treated that question as a threat. In healthcare, AI vendors need the right to ask how their tools are being used, especially when patient safety is involved. If asking "was my technology used for X?" is considered hostile in military contexts, that attitude could bleed into healthcare AI relationships. Protect your right to audit how AI tools are used in your facility.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Michael's public attacks on Amodei significantly reduce the probability of a near-term Anthropic-Pentagon resolution. For investors, this personalizes a dispute that was already complex, making compromise harder for either side. The Anthropic IPO timeline, which was expected for later this year, may need to be reassessed depending on how the supply-chain risk designation plays out. On the positive side, the consumer momentum (one million daily signups for Claude) gives Anthropic a revenue story that doesn't depend on government contracts.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Michael's public statements on the All-In podcast are potentially relevant to any future litigation over the supply-chain risk designation. Calling Amodei a "liar" with a "God complex" on a public forum, while simultaneously being the official who imposed the designation, could be cited as evidence of personal animus rather than objective national security judgment. If Anthropic challenges the designation legally, these statements will be exhibit A for arguing the decision was retaliatory rather than security-based.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The tone of this dispute should concern any business that depends on AI tools. When the government and AI companies are in a personal fight, the collateral damage hits commercial customers. If you use Anthropic's Claude for your business, the supply-chain risk designation doesn't directly affect you &mdash; but the uncertainty around Anthropic's future government relationships could affect the company's stability and product roadmap. Keep an eye on this and make sure you have a backup AI provider ready.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The messaging dynamics here are fascinating. Michael is using a podcast &mdash; not a press conference, not a formal statement &mdash; to attack Amodei personally. That's a deliberate media strategy: reach the tech-savvy audience directly, bypass traditional media filters, and set the narrative in a more casual, persuasive format. For marketers, it's a masterclass in how institutional players are now using creator-economy channels to shape public opinion on policy disputes.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">Pay attention to the venue here: a Pentagon official chose the All-In podcast &mdash; one of the most popular tech podcasts &mdash; to publicly attack a CEO. That's not normal. Government officials typically use formal channels and careful language. The fact that Michael chose an informal, personality-driven platform tells you something about how power operates in 2026: the lines between government communication, media, and entertainment are blurring. This is worth studying if you're interested in politics, media, or technology.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This story is mostly inside baseball between the government and tech companies, but the takeaway is simple: the people making decisions about AI at the highest levels of government are in a personal fight with the people building it. That kind of dysfunction at the top tends to slow things down and create uncertainty for everyone else. It won't change your work today, but it's worth knowing that the people in charge of AI policy are not exactly working together smoothly.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The revelation that Anthropic asked whether its AI was used in a military operation is significant for public safety. It shows that AI companies don't always know how their technology is being deployed once it's handed off to integrators like Palantir. For first responders, this raises a question: if your department uses AI tools through a third-party vendor, does the AI company know how it's being used? And do you know which AI is actually powering the tools you rely on? Those are worth asking about.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Two important angles. First, Michael's comments make a near-term Anthropic-Pentagon deal significantly less likely, which means the supply-chain risk designation will persist and potentially expand. Update client risk assessments accordingly, especially for any firm with defense contracting exposure using Anthropic products. Second, the Venezuela audit detail reveals a critical gap in AI supply chain visibility: Anthropic couldn't independently verify how its model was being used on partner platforms. For any client deploying AI through integrators, recommend contractual audit rights and real-time usage monitoring as non-negotiable terms.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">This might seem far from the art world, but the underlying dynamic matters. A government official is publicly trying to bully a tech company into compliance by attacking its CEO personally. If that kind of pressure works on a company worth tens of billions, imagine how it could work on smaller companies &mdash; including the ones that make the creative AI tools you use. The power dynamic between government and AI companies affects everyone who depends on those tools.</span>
+      </div>
+      <div class="read-this"><a href="https://fortune.com/2026/03/07/pentagon-emil-michael-anthropic-claude-defense-ai-openai-iran-war-palantir/">Read this &rarr; Fortune's full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>A Million People a Day Are Now Signing Up for Claude. Anthropic&rsquo;s Punishment Is Turning Into a Growth Story.</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/03/06/claudes-consumer-growth-surge-continues-after-pentagon-deal-debacle/">TechCrunch</a> &middot; <a href="https://9to5google.com/2026/03/06/claude-daily-signups-pass-one-million/">9to5Google</a> &middot; <a href="https://www.techradar.com/ai-platforms-assistants/claude/more-than-a-million-users-a-day-are-signing-up-for-claude-as-anthropic-hits-out-at-its-legally-unsound-us-government-ban">TechRadar</a></div>
+      <p>Anthropic&rsquo;s Claude app is now seeing more than one million new signups every single day. It has overtaken ChatGPT in download rankings on both Apple&rsquo;s App Store and Google Play in the United States. Daily active users hit 11.3 million on March 2 &mdash; up 183% from the start of the year, when it had about 4 million.</p>
+      <p>To be clear: ChatGPT still has a massive lead in total users &mdash; about 250 million daily active users versus Claude&rsquo;s 11 million. But the trend lines are what matter here. Claude was growing steadily before the Pentagon dispute, and the controversy supercharged it. People are downloading the app specifically because Anthropic stood up to the military on AI safety principles.</p>
+      <p>Anthropic&rsquo;s projected annual revenue has also reportedly nearly doubled to $20 billion. So while the company lost the government market, it&rsquo;s gaining something potentially more valuable: a consumer brand built on trust. That&rsquo;s an unusual position for an AI company &mdash; most of them are known for what their technology can do, not for what they refused to do.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you haven't tried Claude yet, now you know why millions of people suddenly are. Anthropic refused to let the military use its AI without guardrails, the government punished them for it, and the public responded by downloading the app in record numbers. Whether this changes your AI assistant of choice is up to you &mdash; but it's the first time an AI company has gained users by saying "no" to something rather than by releasing a flashy new feature.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">A million daily signups is an impressive growth rate, but the technical question is whether Anthropic's infrastructure can scale to match it. If you're building on Claude's API, watch for rate limit changes and capacity constraints over the next few weeks. On the business side, $20 billion in projected revenue without government contracts suggests the commercial and consumer market is more than enough to sustain the company. That's good news for API reliability and continued model development.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">More students are about to start using Claude. The app is now the most downloaded AI assistant in the country, and students follow download trends. This is a good time to revisit your classroom AI policy and make sure it covers Claude alongside ChatGPT and other tools. The silver lining: Anthropic's emphasis on safety and responsible AI use could make Claude a better fit for educational settings than some alternatives.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Claude's growth surge is driven by trust &mdash; people are choosing it because they believe Anthropic takes safety seriously. That same trust signal matters in healthcare. If you're evaluating AI tools for clinical or administrative use, Anthropic's willingness to sacrifice government revenue to maintain safety principles is a data point worth considering. A company that says no to the Pentagon on safety grounds is more likely to take patient safety seriously too.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">The numbers tell a compelling story for Anthropic's IPO. A million daily signups, 183% growth in daily active users, and projected revenue nearly doubling to $20 billion &mdash; all while losing the government market. That's a rare combination: growth acceleration during a crisis. The bear case is that the momentum is event-driven and could fade. The bull case is that Anthropic has discovered something no AI company has had before: a consumer brand with genuine emotional loyalty. Watch the retention numbers over the next 30 days to see which thesis holds.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Anthropic's growth despite the government ban has an interesting legal dimension. The company has publicly called the supply-chain risk designation "legally unsound." If they challenge it in court, the consumer growth data strengthens their position &mdash; it's harder for the government to argue the company poses a security risk when millions of Americans are voluntarily choosing its product. This growth could also factor into damages calculations if Anthropic pursues legal action for lost government revenue.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Anthropic just proved something that most business textbooks say is impossible: losing your biggest institutional customer and growing faster because of it. The lesson isn't "pick fights with the government" &mdash; it's that authentic brand values can drive consumer adoption in ways that marketing budgets can't. If your business faces a similar choice between a lucrative partnership and your principles, Anthropic's experience shows there's a scenario where standing firm actually pays off.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">This is the most important brand case study of 2026 so far. Anthropic didn't run an ad campaign, didn't offer a promotion, didn't launch a new feature. They took a principled stand, got punished for it by the most powerful institution in the world, and gained a million new users a day. That's not marketing &mdash; it's values-driven brand building at a scale that money can't buy. Study how Anthropic communicates its position: specific, principled, and clear about what it does and doesn't oppose. That's the template.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">Claude just became the most downloaded AI app in the country. If you haven't used it, you probably will soon &mdash; your classmates certainly are. The more interesting question: Anthropic gained these users not by building something new, but by refusing to compromise on its principles. That's an unusual business strategy, and it's worth studying whether it's sustainable or just a one-time boost from a news cycle.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">If you use AI tools for estimates, scheduling, or business management, Claude is now the most popular AI app download in the country. It might be worth trying if you haven't already. The company behind it got in trouble with the government for refusing to let its AI be used without safety guardrails &mdash; which, if you're using it for your business, actually sounds like a good thing.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">Claude is now the most downloaded AI app in the U.S. That means more of the people you serve &mdash; and potentially more of your colleagues &mdash; are using it daily. The app isn't designed for emergency response, but the underlying AI could eventually power tools that are. The company behind it has a strong reputation for safety, which is exactly what you'd want in any AI system that might someday assist with dispatch, incident analysis, or resource management.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Anthropic's growth data is remarkable and should reshape how you advise AI clients. The company lost the entire government market and accelerated growth. Key metrics: 1M daily signups, 183% DAU growth, projected revenue nearly doubling. This validates a thesis that consumer trust is becoming the dominant competitive advantage in AI. For clients choosing between AI platforms, "which company do users trust most?" is now as important as "which model benchmarks highest?" Incorporate brand trust metrics into your AI vendor evaluation frameworks.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">More people are using Claude than ever before, and they're choosing it specifically because the company behind it took a stand on how AI should be used. For artists who care about how AI companies handle ethical questions &mdash; including questions about creative work, copyright, and consent &mdash; Anthropic's track record of saying "no" to powerful interests is a meaningful signal. It doesn't solve every concern, but it suggests a company culture that takes these questions seriously.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/03/06/claudes-consumer-growth-surge-continues-after-pentagon-deal-debacle/">Read this &rarr; TechCrunch's full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Steve Bannon and Ralph Nader Agree on Something: Humans Should Stay in Charge of AI</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/03/07/a-roadmap-for-ai-if-anyone-will-listen/">TechCrunch</a> &middot; <a href="https://www.nbcnews.com/tech/tech-news/-human-ai-declaration-brings-together-unlikely-group-calling-trustwort-rcna261594">NBC News</a> &middot; <a href="https://humanstatement.org/">Pro-Human AI Declaration</a></div>
+      <p>Here&rsquo;s something you don&rsquo;t see every day: a political document signed by both Steve Bannon and Ralph Nader, Glenn Beck and Susan Rice, labor unions and religious organizations, all agreeing on the same thing. The &ldquo;Pro-Human AI Declaration,&rdquo; released Friday with more than 40 organizations and hundreds of individual signatories, lays out five principles for how AI should be governed.</p>
+      <p>The principles are: keep humans in charge of AI at all times; prevent any single company or government from concentrating too much AI power; protect the human experience from being replaced by synthetic content; preserve individual liberty; and hold AI companies legally accountable for harm their products cause.</p>
+      <p>The most muscular provision: an outright ban on developing superintelligence &mdash; AI that surpasses human intelligence across the board &mdash; until there&rsquo;s scientific consensus it can be done safely and genuine democratic buy-in from the public. The declaration also calls for mandatory &ldquo;kill switches&rdquo; on powerful AI systems, pre-deployment safety testing (especially for chatbots and companion apps aimed at young people), and a ban on AI architectures that can self-replicate or autonomously improve themselves.</p>
+      <p>Polling cited in the declaration says 95% of Americans oppose an unregulated race to superintelligence. Whether Congress acts on any of this is another question entirely &mdash; but the bipartisan support makes it harder to dismiss as a fringe concern.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">When people from completely opposite ends of the political spectrum agree that AI needs rules, it's worth taking seriously. The declaration's core message is simple: AI should help people, not replace them, and no company or government should have unchecked power over it. The 95% polling number is striking &mdash; almost everyone agrees AI shouldn't be developed without guardrails. Whether this translates into actual laws remains to be seen, but it's the strongest consensus on AI governance we've seen yet.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The ban on self-replicating and autonomously self-improving architectures is the most technically specific provision in the declaration. If you work on AI systems, it's worth reading the full text to understand what architectural constraints they're proposing. The kill switch mandate would also require significant engineering work &mdash; building reliable shutdown mechanisms for distributed AI systems isn't trivial. Whether or not this becomes law, these requirements could show up in enterprise procurement standards or platform policies.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">The declaration specifically calls for pre-deployment safety testing of chatbots aimed at younger users, including testing for increased suicidal ideation, mental health harm, and emotional manipulation. If you teach students who use AI chatbots, this is directly relevant. The declaration validates concerns that many teachers have raised about student-AI interactions, and it could eventually lead to regulations that require AI companies to test their products for safety before making them available to young people.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The declaration calls for holding AI companies legally accountable for harm their products cause. In healthcare, that could mean companies that build AI diagnostic tools or clinical decision support systems would face real legal consequences if their products produce harmful recommendations. That's potentially a major shift from the current environment, where AI companies often disclaim liability. If this principle becomes law, it could improve the quality and safety of healthcare AI by making companies take accountability seriously.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">The declaration's most market-moving provision is the superintelligence moratorium. If enacted, it would cap the scope of AI development in ways that directly affect the growth trajectory of frontier AI companies. The legal accountability provision could also create new liability exposure for AI companies across every sector, including financial services. For now, this is a declaration, not a law. But the bipartisan support makes it more likely than previous proposals to influence actual legislation. Monitor this closely if you hold positions in AI-heavy companies.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The legal accountability pillar is the most significant provision for the legal profession. The declaration calls for holding AI companies accountable for harm caused by their products &mdash; not just for negligence in development, but for the outcomes their AI produces. If this becomes law, it would create a new category of product liability for AI systems that doesn't currently exist in most jurisdictions. It would also generate enormous demand for lawyers who understand both AI technology and liability frameworks. Start building expertise here.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The declaration calls for preventing any single company from concentrating too much AI power. For small and medium businesses, that's actually a positive signal &mdash; it means the policy conversation is moving toward ensuring competition in the AI market, not letting a handful of tech giants control everything. If these principles become law, you're more likely to have choices among AI vendors and less likely to be locked into a single provider.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The declaration includes a provision about protecting the "human experience" from being replaced by synthetic content. That's directly relevant to marketing, where AI-generated copy, images, and video are increasingly common. If regulations require transparency about what's AI-generated, your content strategy may need to adapt. The broader opportunity: brands that emphasize authentic, human-created content could use these regulations as a differentiator. "Made by humans" could become a marketing asset, not just a nice-to-have.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">The bipartisan nature of this declaration is the most interesting part. In a political environment where people can't agree on anything, Steve Bannon and Ralph Nader signed the same document about AI. That tells you AI governance isn't a left-right issue &mdash; it's a question that cuts across traditional political lines. If you're studying policy, technology, or political science, this is one of the rare issues where coalition-building actually happened. Understand how and why.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">The declaration's simplest point matters most: humans should stay in charge of AI. That means AI should be a tool you use, not a system that makes decisions for you. For the trades, where skilled human judgment is essential to safety and quality, this principle aligns with how you already work. The declaration also says no single company should have too much control over AI &mdash; which means you're more likely to have a choice of affordable AI tools rather than being locked into one expensive option.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The declaration's call for mandatory kill switches on powerful AI systems resonates with emergency response. Any AI system used in public safety should have a reliable way to shut it down immediately if something goes wrong. The provision about keeping humans in the decision-making loop is equally important &mdash; AI should assist your judgment, never replace it. If these principles become regulations, they'd ensure that any AI tools adopted by fire departments and EMS are designed with human override as a core requirement.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The Pro-Human Declaration is the most credible AI governance framework to emerge in 2026, primarily because of its bipartisan backing. For client advisory work, it signals the direction of future regulation: accountability, kill switches, anti-concentration provisions, and a superintelligence moratorium. Advise clients to evaluate their AI strategies against these five pillars now, because they're likely to influence procurement standards and regulatory requirements within 12-18 months. The 95% polling number on opposing unregulated AI development gives these provisions significant political viability.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The declaration specifically calls for protecting the "human experience" from being replaced by synthetic content. That's a direct endorsement of the concerns artists have been raising for years. It also calls for legal accountability for AI companies &mdash; which could eventually include accountability for how AI models are trained on creative work without permission. The bipartisan support gives these ideas political weight they haven't had before. It's not a law yet, but it's the most artist-friendly AI policy document to come from a major coalition.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/03/07/a-roadmap-for-ai-if-anyone-will-listen/">Read this &rarr; TechCrunch's full report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">1M+</span>
+      <span class="num-label">New Claude signups per day &mdash; overtaking ChatGPT in download rankings on both the App Store and Google Play</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/03/06/claudes-consumer-growth-surge-continues-after-pentagon-deal-debacle/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">183%</span>
+      <span class="num-label">Growth in Claude's daily active users since the start of 2026 &mdash; from 4 million to 11.3 million</span>
+      <span class="num-src"><a href="https://9to5google.com/2026/03/06/claude-daily-signups-pass-one-million/">9to5Google</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">95%</span>
+      <span class="num-label">Of Americans who oppose an unregulated race to superintelligence, according to polling cited in the Pro-Human AI Declaration</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/03/07/a-roadmap-for-ai-if-anyone-will-listen/">TechCrunch</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>DeepSeek V4 Appears to Have Quietly Launched &mdash; and It Was Built Without Nvidia Chips</h3>
+      <p>China&rsquo;s DeepSeek lab has released V4, a trillion-parameter AI model that can handle text, images, and video. The most significant detail: it was built from the ground up on Chinese-made chips from Huawei and Cambricon, not Nvidia hardware. Early benchmarks suggest it rivals the best Western models on coding tasks, with a HumanEval score around 90% and SWE-bench results above 80%. The model is open-source under a permissive license, meaning anyone can download and use it for free. If the benchmarks hold up under independent testing, DeepSeek V4 is the clearest proof yet that U.S. chip export controls aren&rsquo;t stopping China from building competitive AI.</p>
+      <div class="watch-src"><a href="https://particula.tech/blog/deepseek-v4-qwen-open-source-ai-disruption">Particula</a> &middot; <a href="https://technode.com/2026/03/02/deepseek-plans-v4-multimodal-model-release-this-week-sources-say/">TechNode</a> &middot; <a href="https://www.pymnts.com/artificial-intelligence-2/2026/deepseek-poised-to-unveil-latest-ai-model/">PYMNTS</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Anthropic&rsquo;s Revenue Has Nearly Doubled to $20 Billion &mdash; Despite the Government Ban</h3>
+      <p>Quartz reports that Anthropic&rsquo;s projected revenue has nearly doubled since the start of the year, reaching an estimated $20 billion annualized. The company is also reportedly preparing for an IPO later in 2026. Losing the Pentagon and federal agency market &mdash; a significant blow &mdash; has been more than offset by the consumer and enterprise surge. If these numbers hold, Anthropic would go public as one of the fastest-growing companies in tech history, with a brand story built on principled refusal rather than unchecked growth.</p>
+      <div class="watch-src"><a href="https://qz.com/anthropic-claude-ai-business-revenue-pentagon-openai-chatgpt">Quartz</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Apple&rsquo;s AI-Powered Siri Revamp Is Running Into Testing Snags &mdash; Some Features Delayed</h3>
+      <p>Apple&rsquo;s long-awaited smart Siri upgrade &mdash; which would give the assistant the ability to understand what&rsquo;s on your screen, pull information from your notes and emails, and control apps by voice &mdash; was supposed to ship with iOS 26.4 in March. Bloomberg reports that internal testing has hit snags, and some features may be pushed to May (iOS 26.5) or even September (iOS 27). The revamped Siri is powered in part by Google&rsquo;s Gemini AI model under a deal reportedly worth $1 billion a year. Apple says the smarter Siri is still coming in 2026 &mdash; just maybe not as soon as they hoped.</p>
+      <div class="watch-src"><a href="https://techcrunch.com/2026/02/11/apples-siri-revamp-reportedly-delayed-again/">TechCrunch</a> &middot; <a href="https://www.macrumors.com/2026/02/12/siri-ios-26-launch-confirmed-apple/">MacRumors</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Kalinowski Resignation</span>
+      <span class="sentiment-tag buzz">Claude Growth Surge</span>
+      <span class="sentiment-tag split">Emil Michael vs Amodei</span>
+      <span class="sentiment-tag cool">Pro-Human Declaration</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Caitlin Kalinowski <span class="tweet-handle">former OpenAI Head of Robotics, March 7, 2026</span></div>
+      <div class="tweet-text">&ldquo;I resigned from OpenAI. I care deeply about the Robotics team and the work we built together. This wasn&rsquo;t an easy call. AI has an important role in national security. But surveillance of Americans without judicial oversight and lethal autonomy without human authorization are lines that deserved more deliberation than they got.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://techcrunch.com/2026/03/07/openai-robotics-lead-caitlin-kalinowski-quits-in-response-to-pentagon-deal/">TechCrunch</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Emil Michael <span class="tweet-handle">Pentagon Undersecretary of Defense, All-In Podcast, March 7, 2026</span></div>
+      <div class="tweet-text">&ldquo;I need a reliable, steady partner that gives me something that&rsquo;ll work with me on autonomous. I need someone who&rsquo;s not going to wig out in the middle.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://fortune.com/2026/03/07/pentagon-emil-michael-anthropic-claude-defense-ai-openai-iran-war-palantir/">Fortune</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Sam Altman <span class="tweet-handle">OpenAI CEO, March 3, 2026</span></div>
+      <div class="tweet-text">&ldquo;I understand the announcement looked opportunistic and sloppy. We should have had the guardrails defined before we announced. That&rsquo;s on me.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.cnbc.com/2026/03/03/openai-sam-altman-pentagon-deal-amended-surveillance-limits.html">CNBC</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> Kalinowski&rsquo;s resignation is the top story across AI and tech circles. The phrase &ldquo;deserved more deliberation&rdquo; is being quoted everywhere &mdash; it landed because it&rsquo;s specific, principled, and hard to dismiss. The contrast between her measured tone and Emil Michael&rsquo;s combative podcast appearance is generating a lot of commentary. Some users are pointing out the irony: the person who built robots at OpenAI is leaving over concerns about autonomous weapons, while the Pentagon says it needs AI companies that &ldquo;won&rsquo;t wig out.&rdquo;</p>
+
+      <p><strong>Hacker News:</strong> The top thread is about Kalinowski&rsquo;s resignation, with developers debating whether OpenAI&rsquo;s contract language actually prevents surveillance or is just &ldquo;security theater.&rdquo; The EFF&rsquo;s analysis &mdash; which argues the contract&rsquo;s restrictions are full of loopholes &mdash; is being widely cited. The Pro-Human Declaration thread is surprisingly popular, with commenters noting that a bipartisan document calling for kill switches and a superintelligence ban would have been unthinkable a year ago.</p>
+
+      <p><strong>Reddit:</strong> r/technology has the Kalinowski story at the top with 15K+ upvotes. The sentiment is overwhelmingly sympathetic to her position. In r/artificial, the DeepSeek V4 discussion is active, with users running early benchmarks and debating whether the model truly matches Claude and GPT on coding tasks. The Pro-Human Declaration is generating discussion in r/politics, where users are marveling at the Bannon-Nader alliance.</p>
+
+      <div class="comm-src">Sources: <a href="https://techcrunch.com/2026/03/07/openai-robotics-lead-caitlin-kalinowski-quits-in-response-to-pentagon-deal/">TechCrunch</a> &middot; <a href="https://fortune.com/2026/03/07/pentagon-emil-michael-anthropic-claude-defense-ai-openai-iran-war-palantir/">Fortune</a> &middot; <a href="https://techcrunch.com/2026/03/06/claudes-consumer-growth-surge-continues-after-pentagon-deal-debacle/">TechCrunch</a> &middot; <a href="https://techcrunch.com/2026/03/07/a-roadmap-for-ai-if-anyone-will-listen/">TechCrunch</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">The people building AI are pushing back against the people deploying it. A robotics chief quit. A Pentagon official is on podcasts calling CEOs liars. A million people a day are choosing the AI company that said &ldquo;no.&rdquo; And the most unlikely political coalition of the year just agreed: humans should stay in charge. Big weekend. You&rsquo;re caught up &mdash; enjoy your Sunday.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=OpenAI%27s%20head%20of%20robotics%20just%20quit%20over%20the%20Pentagon%20deal%2C%20saying%20surveillance%20and%20autonomous%20weapons%20%22deserved%20more%20deliberation%20than%20they%20got.%22%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-08-morning.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
