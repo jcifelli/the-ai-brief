@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Mar 09, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Evening Edition — March 09, 2026">
+  <meta property="og:description" content="Anthropic just sued the Trump administration over the Pentagon's 'supply chain risk' label — and 37 rival employees from OpenAI and Google filed a brief backing them up.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-09-evening.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Evening Edition — March 09, 2026">
+  <meta name="twitter:description" content="Anthropic just sued the Trump administration over the Pentagon's 'supply chain risk' label — and 37 rival employees from OpenAI and Google filed a brief backing them up.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="Anthropic just sued the Trump administration over the Pentagon's 'supply chain risk' label — and 37 rival employees from OpenAI and Google filed a brief backing them up.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Monday, March 9, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">Your evening briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening. Anthropic pulled the trigger today. The company filed two federal lawsuits against the Trump administration, calling the Pentagon&rsquo;s &ldquo;supply chain risk&rdquo; label &ldquo;unprecedented and unlawful.&rdquo; Then something remarkable happened: 37 employees from OpenAI and Google &mdash; Anthropic&rsquo;s direct competitors &mdash; filed a court brief backing them up, including Google DeepMind&rsquo;s chief scientist Jeff Dean. Meanwhile, Anthropic released a new study tracking which jobs are most exposed to AI right now (programmers top the list at 75%), Europe&rsquo;s biggest-ever startup round just closed at $2 billion for an AI infrastructure company, and Nvidia is teasing &ldquo;chips the world has never seen&rdquo; ahead of next week&rsquo;s GTC conference. Let&rsquo;s get into it. <span class="share-link"><a id="sms-share" href="sms:?&body=Anthropic%20just%20sued%20the%20Trump%20administration%20over%20the%20Pentagon%27s%20%22supply%20chain%20risk%22%20label%20%E2%80%94%20and%2037%20rival%20employees%20from%20OpenAI%20and%20Google%20filed%20a%20brief%20backing%20them%20up.%20Tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-09-evening.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">Tonight's Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Anthropic sues the Trump administration in two federal courts, calling the Pentagon&rsquo;s &ldquo;supply chain risk&rdquo; designation &ldquo;unprecedented and unlawful&rdquo; <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.washingtonpost.com/technology/2026/03/09/anthropic-lawsuit-pentagon/">Washington Post</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">37 OpenAI and Google employees &mdash; including DeepMind chief scientist Jeff Dean &mdash; file an amicus brief supporting Anthropic&rsquo;s lawsuit <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/03/09/openai-and-google-employees-rush-to-anthropics-defense-in-dod-lawsuit/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Anthropic publishes new research tracking which jobs AI is actually replacing right now &mdash; programmers top the list at 75% exposure <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.cbsnews.com/news/anthropic-ai-jobs-most-exposed-risk/">CBS News</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">European AI infrastructure startup Nscale raises $2 billion &mdash; the largest Series C in European history &mdash; with Sheryl Sandberg and Nick Clegg joining the board <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.nscale.com/press-releases/nscale-series-c">Nscale</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Nvidia teases &ldquo;chips the world has never seen&rdquo; ahead of GTC 2026, with the Feynman and Rubin architectures expected next week <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.fool.com/coverage/stock-market-today/2026/03/09/stock-market-today-march-9-nvidia-rises-ahead-of-gtc-as-investors-watch-for-ai-chip-announcements/">Motley Fool</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>Anthropic Sues the Government. Its Rivals&rsquo; Own Employees Are Backing Them Up.</h2>
+    <div class="byline">Sources: <a href="https://www.washingtonpost.com/technology/2026/03/09/anthropic-lawsuit-pentagon/">Washington Post</a> &middot; <a href="https://www.cnn.com/2026/03/09/tech/anthropic-sues-pentagon">CNN</a> &middot; <a href="https://www.npr.org/2026/03/09/nx-s1-5742548/anthropic-pentagon-lawsuit-amodai-hegseth">NPR</a> &middot; <a href="https://techcrunch.com/2026/03/09/openai-and-google-employees-rush-to-anthropics-defense-in-dod-lawsuit/">TechCrunch</a></div>
+
+    <p>Anthropic filed two federal lawsuits today &mdash; one in California and one in Washington, D.C. &mdash; challenging the Trump administration&rsquo;s decision to label the company a &ldquo;supply chain risk.&rdquo; That designation, which has historically been reserved for foreign adversaries like Chinese telecom companies, was imposed after Anthropic refused to let the Pentagon use its AI model Claude without restrictions on mass surveillance and autonomous weapons.</p>
+
+    <p>In a 48-page complaint, Anthropic argued that the government&rsquo;s actions are &ldquo;unprecedented and unlawful&rdquo; and amount to punishment for protected speech. The company says the Constitution doesn&rsquo;t allow the government to use its power to retaliate against a company for speaking out about how its technology should be used.</p>
+
+    <div class="pull-quote">&ldquo;The Constitution does not allow the government to wield its enormous power to punish a company for its protected speech. Anthropic turns to the judiciary as a last resort to vindicate its rights and halt the Executive&rsquo;s unlawful campaign of retaliation.&rdquo; &mdash; Anthropic&rsquo;s lawsuit filing</div>
+
+    <p>Here&rsquo;s the backstory: Anthropic had a contract with the Pentagon. When it came time to renew, Anthropic asked for two conditions &mdash; that Claude wouldn&rsquo;t be used for mass surveillance of Americans or for weapons that can kill without a human making the final decision. The Pentagon said no &mdash; they wanted Claude available for &ldquo;all lawful purposes.&rdquo; When Anthropic held firm, Defense Secretary Pete Hegseth threatened to designate them a supply chain risk, then followed through on February 27. Federal agencies now have six months to stop using Anthropic&rsquo;s products entirely.</p>
+
+    <p>But the most striking development today didn&rsquo;t come from Anthropic. It came from their competitors. Thirty-seven employees from OpenAI and Google &mdash; including Jeff Dean, arguably the most respected AI scientist in the world and Google DeepMind&rsquo;s chief scientist &mdash; filed an amicus brief (a &ldquo;friend of the court&rdquo; document) supporting Anthropic&rsquo;s case. They signed in their personal capacity, not on behalf of their companies, but the message is unmistakable: the people building AI at every major lab think the government went too far.</p>
+
+    <p>The brief argues that blacklisting Anthropic &ldquo;introduces an unpredictability in our industry that undermines American innovation and competitiveness&rdquo; and &ldquo;chills professional debate on the benefits and risks of frontier AI systems.&rdquo; Their point is straightforward: if the government can punish an AI company for setting safety boundaries, no company will ever set them again.</p>
+
+    <p>This comes on top of the &ldquo;We Will Not Be Divided&rdquo; open letter, which has now grown to nearly 900 signatures from current OpenAI and Google employees. The AI industry is doing something almost unheard of in tech: competitors are publicly standing together against a government that&rsquo;s trying to divide them.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">This is now a constitutional question, not just a tech industry dispute. A major American company is telling the courts that the government punished it for speaking up about how its technology should be used. If Anthropic wins, it sets a precedent that AI companies can set safety limits on military use. If it loses, the message to every tech company is clear: give the government what it wants, or face retaliation. Either way, the outcome will shape how AI is used in national security &mdash; and how much say the companies building it get in the matter.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">The amicus brief is the story within the story. Jeff Dean &mdash; who helped build the technical foundations of modern deep learning at Google &mdash; is putting his name on a court filing that says blacklisting Anthropic "chills professional debate" on AI safety. If you work in AI, this validates something many engineers have felt privately: you should be able to voice concerns about how your work is deployed without fearing retaliation against your employer. The brief also makes a practical point &mdash; if the government can blacklist an AI company for setting safety conditions, no company will ever negotiate safety terms again. That affects every engineer's leverage.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">This is a case study in real time. A company said "we won't let our technology be used for surveillance or autonomous weapons," the government retaliated, and now the courts will decide whether that retaliation was legal. You can use this to teach civics, constitutional law, corporate ethics, and the relationship between technology companies and government power. The amicus brief from competitors adds a remarkable element: even rivals agreed the government went too far. That's a lesson in how principled stands can transcend competitive interests.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">The legal principle at stake matters directly for healthcare. Anthropic is arguing that a tech company has the right to set safety conditions on how its AI is used &mdash; even when the customer is the government. If that right is upheld, it strengthens the position of every AI vendor that sets safety conditions for healthcare applications. If it's struck down, it weakens the ability of AI companies to refuse dangerous uses of their technology in any domain, including medicine. Pay attention to this case.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">Anthropic's lawsuit puts concrete numbers on the financial damage: the company says the designation could jeopardize "hundreds of millions of dollars" in revenue. For investors tracking the Anthropic IPO timeline, legal uncertainty is a complicating factor &mdash; but the consumer growth story (a million daily signups) provides a counterweight. The broader market signal: the amicus brief from Google and OpenAI employees suggests the industry sees the blacklisting as a systemic risk, not just an Anthropic problem. That means this case could affect valuations across the AI sector.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">Two lawsuits in two jurisdictions &mdash; California federal court and the D.C. Circuit. The constitutional claims are the most interesting: Anthropic is arguing the designation amounts to government retaliation for protected speech. The First Amendment angle is novel in the context of supply chain risk designations, which were designed for foreign adversary companies, not domestic tech firms exercising their right to set contract terms. The amicus brief from competitors strengthens the argument that the designation was retaliatory rather than security-based. This could be a landmark case for tech company speech rights.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">Here's the bottom line for business owners: if the government can blacklist an AI company for setting safety conditions, it creates uncertainty for every business that depends on AI tools. Today it's Anthropic and the Pentagon. Tomorrow it could be any AI vendor that pushes back on any government demand. The amicus brief from OpenAI and Google employees is a good sign &mdash; it means the industry is united in pushing back &mdash; but the legal outcome is uncertain. If you use Anthropic products, this lawsuit is directly relevant to the stability of your vendor.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">Anthropic's legal strategy is also a communications strategy. Filing the lawsuit publicly, framing it as a constitutional issue, and getting competitors' employees to back them in court &mdash; that's a brand narrative that writes itself. The "David vs. Goliath" framing (AI safety company vs. the Pentagon) has already driven a million daily signups. This lawsuit will keep Anthropic in the news cycle for weeks or months. For any brand watching, the lesson is: when your values are genuinely under attack, defending them publicly can be more powerful than any campaign.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">This is one of the most important tech law cases you'll study in your career. A company is suing the government for retaliating against its right to set safety conditions on its own product. Competitors are filing briefs supporting them. The constitutional questions &mdash; does a tech company have a free speech right to refuse certain uses of its AI? &mdash; are genuinely new. If you're in law, computer science, policy, or business school, follow this case closely. The arguments being made right now will shape the rules for decades.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">This fight is between an AI company and the Pentagon, but the principle is simple: can the government force a company to hand over its product with no conditions? Anthropic says no. If you're a business owner in the trades and you use AI tools for estimates, scheduling, or customer management, you want the companies making those tools to have the right to set quality and safety standards. That right is what Anthropic is fighting for in court.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">The core question in this lawsuit &mdash; whether AI companies can set limits on how their technology is used by the government &mdash; will eventually affect public safety tools. If Anthropic wins, AI vendors will maintain the right to include safety conditions in government contracts, including those with fire departments and EMS agencies. If it loses, the precedent could allow government agencies to demand AI tools without any safety guardrails. For first responders, you want the companies building your AI tools to have the power to include safety protections.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Three strategic implications. First, the dual-jurisdiction filing (California and D.C.) signals Anthropic's legal team expects a prolonged fight &mdash; advise clients to plan for six-plus months of uncertainty on government AI vendor access. Second, the amicus brief from competitors transforms this from a single-company dispute into an industry-wide issue &mdash; factor this into any AI strategy engagement touching government contracts. Third, Anthropic's constitutional framing (free speech retaliation) is a novel argument that, if successful, would create significant new legal protections for AI companies setting safety boundaries. Update your AI governance advisory frameworks accordingly.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">This case is about whether a tech company can say "no" to the government and survive. If Anthropic wins, it establishes that AI companies have the right to set limits on how their technology is used &mdash; even against the most powerful customer imaginable. That matters for artists because the same principle applies to creative AI: can artists and AI companies set conditions on how AI handles creative work, training data, and copyright? A legal precedent protecting a company's right to set boundaries strengthens everyone's ability to push for responsible AI use.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.washingtonpost.com/technology/2026/03/09/anthropic-lawsuit-pentagon/">Read this &rarr; Washington Post's full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Anthropic Built a Tracker for Which Jobs AI Is Actually Replacing. Programmers Are at the Top.</h3>
+      <div class="story-source"><a href="https://www.cbsnews.com/news/anthropic-ai-jobs-most-exposed-risk/">CBS News</a> &middot; <a href="https://fortune.com/2026/03/06/ai-job-losses-report-anthropic-research-great-recession-for-white-collar-workers/">Fortune</a> &middot; <a href="https://www.axios.com/2026/03/05/anthropic-ai-jobs-claude">Axios</a></div>
+      <p>Anthropic published new research introducing something called &ldquo;observed exposure&rdquo; &mdash; a metric that doesn&rsquo;t just measure what AI could theoretically do to a job, but what it&rsquo;s actually doing right now based on how people use Claude in real workplaces. It&rsquo;s the first time an AI company has used its own usage data to measure real-world job displacement.</p>
+      <p>The ten most exposed professions: computer programmers (75%), customer service reps (70%), data entry keyers (67%), medical record specialists (67%), market research analysts (65%), sales reps (63%), financial and investment analysts (57%), software QA analysts (52%), information security analysts (49%), and computer support specialists (47%). The percentage represents how much of each job&rsquo;s daily work AI is currently handling.</p>
+      <p>One important caveat: &ldquo;exposed&rdquo; doesn&rsquo;t mean &ldquo;replaced.&rdquo; Anthropic found that most of this usage is people using AI to help them work faster, not AI working instead of them. But the research did find &ldquo;suggestive evidence that hiring of younger workers&rdquo; &mdash; especially those aged 22 to 25 &mdash; &ldquo;has slowed in exposed occupations.&rdquo; Companies may be hiring fewer junior people because AI is handling the tasks those roles used to do.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">This is the first time an AI company has looked at its own data and said "here's what our product is actually doing to jobs." The headline number &mdash; 75% of programming tasks &mdash; sounds alarming, but the research makes a key distinction: most people are using AI to work faster, not being replaced by it. The more concerning finding is about entry-level hiring. If companies are already hiring fewer young workers because AI handles beginner tasks, that's a pipeline problem that could affect an entire generation's ability to build careers.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">You already know AI is changing your job &mdash; now there's data. At 75% exposure, programming tops the list. But "exposure" means AI is handling that share of daily tasks, not that 75% of programmers are being replaced. The real concern is the entry-level hiring slowdown. If companies need fewer junior developers because AI handles starter work, the path from bootcamp or CS degree to mid-level engineer gets narrower. If you're senior, your mentorship role matters more than ever. If you're junior, focus on the skills AI can't do yet: system design, ambiguous problem-solving, and cross-team communication.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">The entry-level hiring slowdown is the headline for education. If companies in exposed fields are already hiring fewer 22-to-25-year-olds, that has direct implications for how you prepare students. The jobs most exposed aren't disappearing &mdash; they're changing shape. Students heading into programming, marketing, finance, or customer service need to understand that AI fluency isn't optional anymore. It's not "learn to code or else." It's "learn to work with AI or face a much harder job market."</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Medical record specialists are at 67% exposure &mdash; the fourth most exposed profession on the list. If you work alongside medical records teams, you're already seeing this play out. AI is handling more documentation, coding, and record management. That's good news for reducing paperwork burden, but it also means some administrative roles in healthcare are genuinely shrinking. For nurses, the direct impact is lower &mdash; your hands-on clinical work isn't on this list &mdash; but understanding how AI is reshaping the support roles around you helps you adapt.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Financial and investment analysts are at 57% exposure. That means more than half of the daily tasks in your field are now being handled with AI assistance. The distinction between "assisted" and "replaced" matters &mdash; most analysts are using AI to work faster, not being replaced by it. But the entry-level hiring slowdown is a real signal. If firms need fewer junior analysts because AI handles the research and modeling grunt work, the pipeline from analyst to portfolio manager gets thinner. That's a structural shift worth watching.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Legal work doesn't appear in the top ten, but the methodology Anthropic used &mdash; measuring actual AI usage in real workplaces &mdash; is more important than the rankings. This is the kind of empirical data that will eventually be used in regulatory proceedings, labor disputes, and policy debates about AI's economic impact. If you advise companies on AI deployment, this study provides a framework for assessing workforce impact that's grounded in real data, not speculation. Expect regulators to start asking for similar analyses.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If you employ people in any of the top ten roles &mdash; especially customer service, data entry, marketing, or sales &mdash; this data confirms what you probably already suspect: AI is handling a significant share of that work. The question isn't whether to adopt AI in these roles, it's how to do it without gutting your team. The Anthropic study shows most usage is augmentation, not replacement. That's the right model: use AI to make your people faster, not to eliminate them. The entry-level hiring slowdown is worth considering for your own hiring strategy.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Market research analysts and marketing specialists are at 65% &mdash; the fifth most exposed profession on the list. That means roughly two-thirds of typical marketing tasks are now getting AI assistance. Think research, copy drafts, campaign analysis, audience segmentation. If you're using AI for those tasks, you're in the majority. The strategic takeaway: the value of a marketer is increasingly in judgment, creativity, and strategy &mdash; the work that happens after AI generates the raw material. Make sure that's where you're spending your time.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">The most important finding for you: hiring of workers aged 22 to 25 has slowed in exposed occupations. That's your age group. If you're heading into programming, marketing, finance, or customer service, the entry-level job market is tighter than it was two years ago &mdash; not because those fields are shrinking, but because AI handles the beginner tasks those roles used to do. Your best strategy: don't compete with AI on tasks it's good at. Compete on judgment, communication, and the ability to use AI tools better than anyone else.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">Trade jobs don't appear on this list, and that's actually good news. The most exposed roles are desk-based: programmers, customer service, data entry, marketing analysts. Work that requires physical skill, on-site judgment, and hands-on problem-solving remains largely untouched by AI. That said, the business side of running a trades company &mdash; estimates, scheduling, customer communication &mdash; is exactly the kind of work AI is good at assisting with. Use it for the paperwork, keep your expertise for the work itself.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">First responder jobs aren't on this list, and they're unlikely to appear anytime soon. AI can't run into a burning building or make split-second triage decisions on scene. But the administrative and dispatch side of emergency services &mdash; report writing, resource allocation, incident logging &mdash; sits closer to the exposed categories. If your department is exploring AI for those functions, this study gives you a data-driven framework for understanding which tasks AI can actually help with and which ones still require human judgment.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">This study changes the AI workforce advisory playbook. Anthropic's "observed exposure" metric is the first empirical measure of real-world AI job impact from a major AI company using its own data. It's more credible than previous estimates because it measures actual usage, not theoretical capability. For client engagements: use these exposure percentages as benchmarks when advising on workforce planning. The entry-level hiring slowdown finding is particularly actionable &mdash; recommend that clients audit their junior hiring pipelines in exposed roles and develop AI-augmented career pathways that preserve the training pipeline for future senior talent.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Artists aren't on this list, but the methodology matters. Anthropic measured "observed exposure" &mdash; what AI is actually doing in workplaces, not what it could theoretically do. That distinction is critical for creative fields, where AI capability and AI adoption are very different things. The fact that even at 75% exposure, most usage is augmentation (people using AI to work faster) rather than replacement offers a more nuanced picture than the "AI will replace artists" narrative. The real question for creative work remains: who controls how AI is used, and who benefits?</span>
+      </div>
+      <div class="read-this"><a href="https://www.cbsnews.com/news/anthropic-ai-jobs-most-exposed-risk/">Read this &rarr; CBS News' full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Europe&rsquo;s Biggest Startup Round Ever: Nscale Raises $2 Billion to Build the Physical Backbone of AI</h3>
+      <div class="story-source"><a href="https://www.nscale.com/press-releases/nscale-series-c">Nscale</a> &middot; <a href="https://finance.yahoo.com/news/nvidia-backed-nscale-raises-2-183429220.html">Yahoo Finance</a> &middot; <a href="https://www.itpro.com/infrastructure/uk-infrastructure-firm-nscale-bags-record-breaking-usd2-billion-series-c-investment">IT Pro</a></div>
+      <p>Nscale, a U.K.-based company that builds the data centers and computing infrastructure that AI models run on, just raised $2 billion in its Series C round &mdash; the largest venture investment in European history. The round values the company at $14.6 billion and was backed by Nvidia, Dell, Citadel, Jane Street, and others.</p>
+      <p>Three notable names are joining Nscale&rsquo;s board: Sheryl Sandberg (Meta&rsquo;s former COO), Susan Decker, and Nick Clegg (Meta&rsquo;s former president of global affairs, and before that, the UK&rsquo;s Deputy Prime Minister). The company is also preparing for a possible IPO, with Goldman Sachs and JPMorgan advising.</p>
+      <p>Why this matters: every AI model needs enormous amounts of computing power to both train and run. Nscale builds the physical layer &mdash; the GPU clusters, networking, and data centers &mdash; that makes it all possible. Think of them as the construction company that builds the power plants for the AI industry. The $2 billion raise shows that investors believe the demand for AI computing is just getting started, not slowing down.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">You'll never use Nscale directly, but the company's $2 billion raise tells you something about where AI is headed: the bottleneck is now physical infrastructure, not software. AI companies have built the brains; now they need the buildings to put them in. The fact that investors are pouring record amounts into data centers and chips suggests AI isn't a bubble that's about to pop &mdash; it's an industry that's still scaling up its foundations.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The $14.6 billion valuation for an infrastructure company tells you where the money sees the next bottleneck: compute, not models. If you're building AI applications, the availability and cost of GPU compute will remain the constraint for the foreseeable future. Nscale's "vertically integrated" approach &mdash; from GPU clusters to orchestration software &mdash; means they're competing with AWS, Azure, and GCP on the AI-specific infrastructure layer. Worth watching if you're making infrastructure decisions for AI workloads.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">The $2 billion round is a useful data point for teaching students about the economics of AI. When you explain that AI needs massive data centers and specialized chips to run, you can point to this investment as evidence. It's a reminder that AI isn't just software &mdash; it requires real-world infrastructure, energy, and capital on a scale comparable to building power grids. Good context for lessons on technology, economics, or environmental impact.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Healthcare AI applications &mdash; from medical imaging to clinical decision support &mdash; all depend on computing infrastructure. The $2 billion investment in AI data centers means more capacity for the kind of complex AI processing that healthcare needs. As AI tools in medicine get more sophisticated, the physical infrastructure has to keep up. This investment signals that capacity isn't going to be a bottleneck for healthcare AI adoption.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">A $14.6 billion valuation for an AI infrastructure company preparing for an IPO is a significant data point. Nscale's investor list &mdash; Nvidia, Citadel, Jane Street, Point72 &mdash; reads like a who's who of smart money. The vertical integration play (owning the stack from GPUs to software) mirrors what worked in cloud computing. If you're constructing an AI infrastructure thesis, Nscale's IPO later this year will be a benchmark for the sector. The Sandberg and Clegg board appointments add governance credibility for institutional investors.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The Nscale round has two legal angles worth noting. First, a European company raising $2 billion to build AI infrastructure across Europe, North America, and Asia will navigate multiple regulatory regimes, data sovereignty requirements, and energy permitting processes &mdash; significant legal work across jurisdictions. Second, Nick Clegg joining the board brings deep regulatory expertise from his roles at Meta and in UK government. If you advise tech companies on cross-border infrastructure and data regulation, the Nscale model is one to study.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The AI tools you use for your business all run on infrastructure like what Nscale builds. More investment in this layer means more computing capacity, which means AI services should get cheaper and more available over time. That's good news for any business adopting AI. The fact that Europe's largest-ever startup round is in AI infrastructure, not consumer apps, tells you the industry is maturing &mdash; the foundation is being built for AI to become as reliable and affordable as cloud computing.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Here's why a $2 billion data center investment matters for marketing: the AI tools you use for content generation, audience analysis, and campaign optimization all depend on massive computing power. More infrastructure investment means these tools will get faster, cheaper, and more capable. The Nscale raise also shows that the AI industry's growth story isn't just about flashy consumer apps &mdash; the real money is flowing into the boring-but-essential layer that makes everything else work.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is a great example of how the AI industry actually works. People focus on the chatbots and the models, but behind every AI tool is a massive amount of physical infrastructure &mdash; data centers, specialized chips, networking equipment, and enormous amounts of electricity. Nscale just raised the largest venture round in European history to build that infrastructure. If you're studying business, engineering, or tech policy, the infrastructure layer is where some of the most interesting and well-paying careers in AI will be.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">AI data centers need to be built, wired, cooled, and maintained. Nscale's $2 billion raise means more construction projects, more electrical work, more HVAC installations, and more maintenance contracts for data center facilities across Europe, North America, and Asia. The AI boom is creating real demand for skilled trades. If you're looking for where the next wave of big infrastructure projects is coming from, AI data centers are it.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">AI data centers are being built in communities across the country, and they come with infrastructure demands that affect first responders: power grid capacity, water usage for cooling, and emergency response planning for large industrial facilities. As more companies like Nscale build out AI infrastructure, local fire departments and emergency services may need to plan for these new facilities in their districts. It's worth understanding what's coming to your area.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The Nscale round validates the AI infrastructure thesis and provides several client-relevant data points. The $14.6 billion valuation implies a significant premium on AI-specific compute capacity over generic cloud. The vertical integration strategy (GPUs through orchestration software) is a competitive positioning worth analyzing for enterprise clients choosing between hyperscalers and specialized AI infrastructure providers. For clients with large AI compute needs, Nscale's entry increases competitive pressure on AWS, Azure, and GCP, which should improve pricing and service terms. Factor this into cloud procurement advisory.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Every AI tool that generates images, music, or text runs on infrastructure like what Nscale builds. More investment means more computing power, which means AI creative tools will keep getting more capable and cheaper to use. Whether that's good or bad for artists depends on how the tools are used and who controls them &mdash; but the physical capacity for AI to do creative work is clearly expanding, not contracting.</span>
+      </div>
+      <div class="read-this"><a href="https://www.nscale.com/press-releases/nscale-series-c">Read this &rarr; Nscale's announcement</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>China&rsquo;s New Five-Year Plan Mentions AI Over 50 Times and Aims to Integrate It Into 90% of the Economy by 2030</h3>
+      <div class="story-source"><a href="https://www.scmp.com/news/china/diplomacy/article/3345767/inside-chinas-15th-5-year-plan-ai-fusion-and-defence-drive-next-frontier">South China Morning Post</a> &middot; <a href="https://gizmodo.com/chinas-new-5-year-plan-more-ai-less-us-2000730114">Gizmodo</a> &middot; <a href="https://thequantuminsider.com/2026/03/05/chinas-new-five-year-plan-specifically-targets-quantum-leadership-and-ai-expansion/">The Quantum Insider</a></div>
+      <p>China just released its 15th Five-Year Plan &mdash; the government&rsquo;s master blueprint for the economy through 2030 &mdash; and AI is the centerpiece. The document mentions artificial intelligence more than 50 times and includes something called the &ldquo;AI+ Action Plan,&rdquo; which aims to weave AI into 90% of the Chinese economy by the end of the decade.</p>
+      <p>What that looks like in practice: massive investment in robotics to fill labor shortages, rapid deployment of AI agents (software that can perform tasks on its own), expansion of AI across manufacturing, healthcare, and education, and the development of humanoid robots, 6G networks, and brain-computer interfaces. The plan also calls for &ldquo;technological self-reliance&rdquo; &mdash; meaning China wants to build its own AI chips and infrastructure without depending on the U.S.</p>
+      <p>This plan lands at an interesting moment. The U.S. is busy fighting with its own AI companies over military contracts, while China is directing its AI industry with a single coordinated strategy. DeepSeek V4 &mdash; a Chinese AI model built entirely on Chinese chips &mdash; just showed that the U.S. chip export controls aren&rsquo;t stopping China from building competitive AI. The five-year plan is Beijing&rsquo;s way of saying: we&rsquo;re not just catching up, we&rsquo;re building a comprehensive national AI strategy.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">China just told the world it plans to put AI into almost everything in its economy within four years. That matters for you because the global AI race shapes the tools, prices, and choices available to everyone. More competition between Chinese and American AI generally means better and cheaper products &mdash; but it also means governments will push harder for AI advantage, which can create tension between innovation and safety. The contrast is striking: the U.S. is fighting with its own AI companies while China is coordinating them.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The self-reliance goal is the most technically significant element. China's plan to build AI chips and infrastructure without U.S. technology means a parallel AI ecosystem is being constructed. DeepSeek V4's performance on Chinese-made chips suggests they're further along than many assumed. For engineers, this means the open-source AI landscape will increasingly include high-quality Chinese models built on non-Nvidia hardware. Evaluate these models on their merits &mdash; they may offer real alternatives for cost and capability in your stack.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">China is making AI a national education priority, aiming to integrate it across the education system. That's worth knowing because it adds urgency to the AI literacy conversation in American classrooms. Students competing in a global economy will face peers who were educated in an AI-first environment from an early age. This doesn't mean copying China's approach, but it does mean that ignoring AI in education isn't a viable strategy for preparing students for the world they'll graduate into.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">China's five-year plan specifically targets healthcare AI: diagnostic tools, drug discovery, and administrative automation. As Chinese AI healthcare tools improve, they could become available internationally, increasing competition and potentially lowering costs for AI-assisted diagnostics and treatment planning. For nurses and healthcare workers, this means the global pool of AI healthcare tools is about to get larger and more competitive, which should ultimately benefit patients and clinicians.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">China's "AI+ Action Plan" targeting 90% economic integration by 2030 is the most aggressive national AI strategy ever published. For investors, this signals sustained demand for AI infrastructure, chips, and services from the world's second-largest economy. It also means Chinese AI companies (and their open-source models) will become increasingly competitive with Western alternatives. The investment thesis: the global AI market is bigger than the U.S. market, and China is ensuring its share grows. Factor this into any AI sector allocation.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">China's five-year plan includes provisions for "orderly" AI development &mdash; their term for regulation. As Chinese AI products become more competitive globally, legal questions about cross-border AI regulation, data sovereignty, and intellectual property will intensify. Lawyers advising tech companies operating in both markets will face increasingly complex regulatory environments. The self-reliance goal also raises questions about whether export controls can remain effective when the target country is building parallel capabilities.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">More competition in AI is generally good for small businesses. China's investment in open-source AI models and infrastructure means more free or low-cost AI tools will become available. If Chinese models continue to match Western ones in quality (as DeepSeek V4 suggests), you'll have more choices and better pricing for AI tools in your business. The risk is regulatory &mdash; some governments may restrict the use of Chinese AI products, which could limit your options.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">China's AI push will accelerate the availability of AI marketing tools globally. Chinese companies are already competitive in content generation, translation, and audience analytics. As the five-year plan drives more AI development, expect a wave of new marketing AI tools &mdash; some open-source and free &mdash; from Chinese companies. The opportunity: more tools at lower cost. The challenge: navigating potential data privacy and regulatory concerns around using AI tools from companies subject to Chinese government oversight.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">China just made AI the centerpiece of its national strategy for the next four years. If you're studying anything related to technology, business, policy, or international relations, understanding China's AI strategy is essential. The competition between U.S. and Chinese AI will shape the job market, the tools you use, and the geopolitical landscape for your entire career. The plan's focus on "self-reliance" &mdash; building everything domestically &mdash; is a direct response to U.S. export controls, which makes this a fascinating case study in technology, trade, and national security.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">China's plan specifically calls for massive investment in robotics to fill labor shortages &mdash; a challenge China shares with the U.S. As Chinese-made AI and robotics tools improve, some will eventually reach the global market at competitive prices. For the trades, this could mean more affordable AI-powered tools for job estimation, energy management, or even robotic assistance on job sites. It won't change your work today, but the pipeline of tools coming from China's AI push is worth watching.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">China's AI plan includes investment in smart city infrastructure, autonomous systems, and emergency response technology. As these technologies develop and compete globally, some innovations may become available to U.S. public safety agencies at lower cost. The broader picture is geopolitical: the U.S. and China are in an AI race, and the technology that emerges from it will eventually shape the tools available to first responders worldwide.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">China's five-year plan is the most comprehensive national AI strategy ever released. Three client implications: First, the "AI+ Action Plan" targeting 90% economic integration creates a massive addressable market for any client with China exposure. Second, the self-reliance goal means a parallel AI ecosystem (chips, models, infrastructure) built on Chinese technology &mdash; advise clients to evaluate Chinese AI tools on capability, not just geopolitics. Third, the contrast between China's coordinated strategy and America's adversarial government-industry dynamic is a strategic risk for U.S. AI leadership that should inform any long-term technology strategy engagement.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">China's plan to integrate AI into 90% of its economy includes the creative industries. Chinese AI tools for image generation, music, and video are already competitive. As government investment accelerates, expect more powerful and more accessible creative AI tools from China &mdash; many of them free and open-source. That's a double-edged sword: more tools for artists to use, but also more tools that could be used to generate content without compensating human creators. The global rules for AI and creative work are being shaped right now, and China's plan adds urgency.</span>
+      </div>
+      <div class="read-this"><a href="https://www.scmp.com/news/china/diplomacy/article/3345767/inside-chinas-15th-5-year-plan-ai-fusion-and-defence-drive-next-frontier">Read this &rarr; South China Morning Post's analysis</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">75%</span>
+      <span class="num-label">Of programming tasks now have AI &ldquo;observed exposure&rdquo; &mdash; the highest of any profession in Anthropic&rsquo;s new study</span>
+      <span class="num-src"><a href="https://www.cbsnews.com/news/anthropic-ai-jobs-most-exposed-risk/">CBS News</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">$2B</span>
+      <span class="num-label">Raised by Nscale in the largest Series C round in European history, valued at $14.6 billion</span>
+      <span class="num-src"><a href="https://www.nscale.com/press-releases/nscale-series-c">Nscale</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">37</span>
+      <span class="num-label">OpenAI and Google employees who filed an amicus brief supporting Anthropic&rsquo;s lawsuit against the Pentagon</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/03/09/openai-and-google-employees-rush-to-anthropics-defense-in-dod-lawsuit/">TechCrunch</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Nvidia&rsquo;s GTC Conference Next Week Could Reshape the AI Chip Landscape</h3>
+      <p>Jensen Huang has promised the world will see &ldquo;several new chips that the world has never seen before&rdquo; at next week&rsquo;s GTC conference in San Jose (March 16&ndash;19). The expected reveals include the Feynman architecture for advanced AI workloads, updates to the Rubin AI chip line, and a new CPU for the PC market. More than 30,000 attendees are expected. Nvidia&rsquo;s stock rose Monday as investors positioned ahead of the announcements. Whatever Huang unveils will set expectations for AI computing costs and capabilities for the next two years.</p>
+      <div class="watch-src"><a href="https://www.fool.com/coverage/stock-market-today/2026/03/09/stock-market-today-march-9-nvidia-rises-ahead-of-gtc-as-investors-watch-for-ai-chip-announcements/">Motley Fool</a> &middot; <a href="https://nvidianews.nvidia.com/news/nvidia-ceo-jensen-huang-and-global-technology-leaders-to-showcase-age-of-ai-at-gtc-2026">Nvidia Newsroom</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>42% of Enterprise AI Projects Have Been Abandoned or Paused &mdash; Investors Are Demanding Results</h3>
+      <p>The AI hype-to-reality correction is here. S&amp;P Global reports that nearly 42% of enterprise AI projects have been abandoned or paused, and investors are now demanding proof of return on investment. Gartner expects global AI spending to hit $2.5 trillion in 2026 &mdash; a 44% increase &mdash; but the spending is increasingly concentrated in projects that can show measurable results, not speculative experiments. The &ldquo;Year of Proof&rdquo; is replacing the &ldquo;Year of Promise.&rdquo;</p>
+      <div class="watch-src"><a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-3-9-the-ai-reality-check-why-investors-are-cooling-on-big-techs-trillion-dollar-bet">FinancialContent</a> &middot; <a href="https://www.fool.com/investing/2026/03/04/ai-spending-25-trillion-2026-3-stocks-benefit/">Motley Fool</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Samsung Bets on a Multi-AI Phone Strategy, Adding OpenAI Alongside Google and Perplexity</h3>
+      <p>Samsung is building its Galaxy S26 around the idea that you shouldn&rsquo;t be locked into a single AI assistant. The phone will ship with Google&rsquo;s Gemini, Perplexity (accessible by saying &ldquo;Hey Plex&rdquo;), and a new partnership with OpenAI. Samsung&rsquo;s bet: the future of phone AI isn&rsquo;t one assistant that does everything &mdash; it&rsquo;s a marketplace of specialized AI tools you can switch between. It&rsquo;s the opposite of Apple&rsquo;s approach, which is still trying to build one smart Siri to rule them all.</p>
+      <div class="watch-src"><a href="https://www.engadget.com/ai/samsung-is-adding-perplexity-to-galaxy-ai-for-its-upcoming-s26-series-203729539.html">Engadget</a> &middot; <a href="https://en.sedaily.com/finance/2026/03/09/samsung-to-expand-ai-partnerships-to-challenge-apples/">Seoul Economic Daily</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Anthropic Lawsuit</span>
+      <span class="sentiment-tag buzz">Rival Employees Unite</span>
+      <span class="sentiment-tag split">AI Job Exposure</span>
+      <span class="sentiment-tag cool">Nscale's $2B Round</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Anthropic <span class="tweet-handle">from the lawsuit filing, March 9, 2026</span></div>
+      <div class="tweet-text">&ldquo;The Constitution does not allow the government to wield its enormous power to punish a company for its protected speech. No federal statute authorizes the actions taken here.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.washingtonpost.com/technology/2026/03/09/anthropic-lawsuit-pentagon/">Washington Post</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">OpenAI &amp; Google Amicus Brief <span class="tweet-handle">filed March 9, 2026</span></div>
+      <div class="tweet-text">&ldquo;If allowed to proceed, this effort to punish one of the leading U.S. AI companies will undoubtedly have consequences for the United States&rsquo; industrial and scientific competitiveness in the field of artificial intelligence and beyond.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://techcrunch.com/2026/03/09/openai-and-google-employees-rush-to-anthropics-defense-in-dod-lawsuit/">TechCrunch</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Anthropic Research <span class="tweet-handle">from the labor market study, March 2026</span></div>
+      <div class="tweet-text">&ldquo;We find suggestive evidence that hiring of younger workers, particularly ages 22 to 25, has slowed in exposed occupations.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.anthropic.com/research/labor-market-impacts">Anthropic</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What's Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The Anthropic lawsuit is dominating the conversation. The constitutional framing &mdash; First Amendment retaliation by the government against a tech company &mdash; is landing hard with both the tech and legal communities. But the amicus brief from rival employees is getting almost as much attention. &ldquo;Competitors defending each other against the government&rdquo; is a storyline people are calling unprecedented. The hashtag #WeWillNotBeDivided is trending in tech circles as the open letter continues to collect signatures.</p>
+
+      <p><strong>Hacker News:</strong> Two threads are competing for the top spot: the lawsuit itself and Anthropic&rsquo;s job exposure study. On the lawsuit, developers are closely reading the complaint&rsquo;s arguments about protected speech and supply chain risk designation abuse. On the jobs study, the 75% exposure figure for programmers is generating intense debate, with many commenters pointing out that their experience matches the data &mdash; they use AI constantly but don&rsquo;t feel replaced. The entry-level hiring slowdown finding is being called &ldquo;the most important data point in the report.&rdquo;</p>
+
+      <p><strong>Reddit:</strong> r/technology has the lawsuit at the top with 20K+ upvotes. r/artificial is buzzing about both the job exposure study and the Nscale funding round. In r/law, the dual-jurisdiction filing strategy is being analyzed, with commenters noting the constitutional claims are novel in this context. The overall sentiment is heavily sympathetic to Anthropic, with many users drawing comparisons to previous government overreach against tech companies.</p>
+
+      <div class="comm-src">Sources: <a href="https://www.washingtonpost.com/technology/2026/03/09/anthropic-lawsuit-pentagon/">Washington Post</a> &middot; <a href="https://techcrunch.com/2026/03/09/openai-and-google-employees-rush-to-anthropics-defense-in-dod-lawsuit/">TechCrunch</a> &middot; <a href="https://www.cbsnews.com/news/anthropic-ai-jobs-most-exposed-risk/">CBS News</a> &middot; <a href="https://www.nscale.com/press-releases/nscale-series-c">Nscale</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Today felt like a turning point. Anthropic stopped trying to negotiate and went to court. Its competitors&rsquo; own employees stood beside them in the filing. Meanwhile, the data on which jobs AI is actually changing arrived &mdash; and it&rsquo;s more nuanced than the headlines suggest. The biggest AI infrastructure bet in European history closed. And Nvidia is about to show us the next generation of chips. A lot happened today. You&rsquo;re caught up &mdash; have a good night.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=Anthropic%20just%20sued%20the%20Trump%20administration%20over%20the%20Pentagon%27s%20%22supply%20chain%20risk%22%20label%20%E2%80%94%20and%2037%20rival%20employees%20from%20OpenAI%20and%20Google%20filed%20a%20brief%20backing%20them%20up.%20Tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-09-evening.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
