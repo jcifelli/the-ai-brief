@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Morning Edition — Mar 21, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Morning Edition — March 21, 2026">
+  <meta property="og:description" content="The Trump White House just told Congress to override every state AI law in the country and shield AI companies from lawsuits — the biggest regulatory power grab in AI yet.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-21-morning.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Morning Edition — March 21, 2026">
+  <meta name="twitter:description" content="The Trump White House just told Congress to override every state AI law in the country and shield AI companies from lawsuits — the biggest regulatory power grab in AI yet.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="The Trump White House just told Congress to override every state AI law in the country and shield AI companies from lawsuits — the biggest regulatory power grab in AI yet.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Saturday, March 21, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Morning Edition</span>
+    <div class="tagline">Your morning briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good morning. The White House dropped a big one late yesterday: a national AI framework that basically tells Congress to override every state AI law in America and protect AI companies from most lawsuits. That&rsquo;s the lead story and it&rsquo;s going to shape AI policy for years. Meanwhile, the co-founder of server giant Supermicro was arrested for allegedly running a $2.5 billion scheme to smuggle Nvidia AI chips to China &mdash; using hair dryers to peel off serial numbers. Google quietly made its most powerful personalization feature free for everyone. Nvidia&rsquo;s new Vera Rubin chip platform promises 10x the performance of its predecessor. And Atlassian cut 1,600 jobs, saying AI is reshaping what work its employees do. Let&rsquo;s get into it. <span class="share-link"><a id="sms-share" href="sms:?&body=The%20White%20House%20just%20told%20Congress%20to%20override%20every%20state%20AI%20law%20and%20shield%20AI%20companies%20from%20lawsuits.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-21-morning.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Morning&rsquo;s Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">The White House releases a national AI framework asking Congress to override state AI laws and shield developers from lawsuits <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.nbcnews.com/tech/tech-news/trump-ai-congress-law-framework-legislation-artificial-intelligence-rcna264433">NBC News</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Supermicro co-founder arrested for allegedly smuggling $2.5 billion in Nvidia AI chips to China; stock crashes 33% <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.cnbc.com/2026/03/19/us-tech-execs-smuggled-nvidia-chips-to-china-prosecutors-say.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Google makes its &ldquo;Personal Intelligence&rdquo; feature free for all U.S. users &mdash; Gemini can now read your Gmail, Photos, and more <span class="headline-tag update">Update</span> <span class="src"><a href="https://9to5google.com/2026/03/17/gemini-personal-intelligence-free/">9to5Google</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">Nvidia unveils the Vera Rubin platform at GTC &mdash; seven new chips promising 10x performance per watt, with $1 trillion in expected orders <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform">Nvidia</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Atlassian cuts 1,600 jobs &mdash; 10% of its workforce &mdash; to redirect money into AI, replacing its CTO in the process <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.cnbc.com/2026/03/11/atlassian-slashes-10percent-of-workforce-to-self-fund-investments-in-ai.html">CNBC</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>The White House Wants to Override Every State AI Law in America</h2>
+    <div class="byline">Sources: <a href="https://www.nbcnews.com/tech/tech-news/trump-ai-congress-law-framework-legislation-artificial-intelligence-rcna264433">NBC News</a> &middot; <a href="https://www.cnn.com/2026/03/20/tech/white-house-ai-framework">CNN</a> &middot; <a href="https://www.pbs.org/newshour/nation/white-house-urges-congress-to-take-a-light-touch-on-ai-regulations-in-new-legislative-blueprint">PBS</a> &middot; <a href="https://rollcall.com/2026/03/20/white-house-ai-framework-calls-for-preemption-of-state-laws/">Roll Call</a> &middot; <a href="https://fortune.com/2026/03/20/white-house-ai-legislative-framework-congress/">Fortune</a></div>
+
+    <p>The Trump administration released a sweeping national AI policy framework on Friday that amounts to the most aggressive federal power grab over AI regulation yet. The core message to Congress: pass one national standard for AI rules and block states from writing their own.</p>
+
+    <p>The framework has two big ideas. First, it calls for &ldquo;preemption&rdquo; of state AI laws &mdash; meaning federal rules would override the patchwork of state regulations that have been popping up across the country. States like Colorado, California, and New York have been writing their own AI rules around things like bias audits (independent checks to see if AI systems discriminate), transparency requirements, and liability for AI-caused harms. The White House wants Congress to replace all of that with a single, lighter set of national rules.</p>
+
+    <p>Second, the framework pushes hard to protect AI developers from lawsuits. It specifically says companies that build AI models shouldn&rsquo;t be held legally responsible when someone else uses their product to cause harm. The document rails against &ldquo;open-ended liability&rdquo; and argues that too many lawsuits would slow down American AI innovation.</p>
+
+    <div class="pull-quote">&ldquo;Congress should preempt state AI laws that impose undue burdens to ensure a minimally burdensome national standard consistent with these recommendations, not fifty discordant ones.&rdquo; &mdash; White House National AI Policy Framework</div>
+
+    <p>The framework also touches on children&rsquo;s safety, intellectual property, free speech protections, data center permitting, and workforce development. On kids, it calls for giving parents better tools to manage their children&rsquo;s AI interactions &mdash; but notably puts the burden on parents rather than on AI companies. On intellectual property, it tries to balance the rights of content creators with the AI industry&rsquo;s need to train models on real-world content, though critics say it tilts heavily toward the industry.</p>
+
+    <p>The reaction was immediate and split. AI companies largely welcomed the lighter-touch approach. Consumer advocates and state attorneys general pushed back hard, arguing that preempting state laws would leave Americans with weaker protections. The White House says it will work with Congress to turn the framework into legislation, but many policy experts doubt anything will pass before the midterm elections in November.</p>
+
+    <p>The timing is notable. This framework arrives just two weeks after the administration blacklisted Anthropic for refusing Pentagon demands, and days after Nvidia&rsquo;s GTC conference showed the AI industry is accelerating, not slowing down. The message is clear: the White House wants AI companies to build as fast as possible with as few legal obstacles as possible.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">This is about who gets to write the rules for AI. Right now, if an AI tool discriminates against you in a hiring decision or denies your insurance claim, your state might have laws that protect you. The White House wants to replace those state protections with a single federal standard that&rsquo;s deliberately lighter. Whether that&rsquo;s good or bad depends on your perspective &mdash; fewer regulations could mean faster AI innovation and cheaper tools, but it also means fewer legal options if something goes wrong. Pay attention to what Congress does next.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">If you ship AI products, the compliance landscape could get dramatically simpler. Right now you have to navigate a patchwork of state laws &mdash; Colorado&rsquo;s bias audit requirements, California&rsquo;s transparency rules, New York City&rsquo;s automated decision-making law. If this framework becomes law, one federal standard replaces all of that. The liability shield is also significant: developers wouldn&rsquo;t be on the hook when third parties misuse their models. That changes the risk calculus for open-sourcing models and offering API access. Watch the actual legislative text when it arrives.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">States have been the primary source of AI rules affecting classrooms &mdash; from banning certain AI tools to requiring disclosure when AI grades student work. If the federal government overrides those state laws with a lighter national standard, your school district may lose the specific protections it was relying on. The framework also puts the burden of children&rsquo;s AI safety on parents rather than companies, which could mean more AI tools reaching students with fewer built-in guardrails. That directly affects your classroom policies.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">This matters for healthcare AI in a very specific way: several states have been writing laws about AI in insurance decisions and medical diagnostics. Washington state just passed SB 5395 regulating AI in health insurance decisions. If the federal framework preempts state laws, those healthcare-specific protections could be wiped out and replaced with a lighter national standard. For nurses and healthcare workers, that means the rules governing AI tools in your workplace could change significantly &mdash; and possibly offer less protection for patients.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">The framework is broadly positive for AI company valuations. Preemption of state laws reduces compliance costs and legal uncertainty, and the liability shield reduces litigation risk. If this becomes law, expect a re-rating of AI stocks that have been trading at a discount due to regulatory overhang. The framework also streamlines data center permitting, which benefits the AI infrastructure buildout thesis. The risk factor: this is a framework, not legislation, and passing anything through Congress before the midterms is a long shot. Don&rsquo;t price it in yet.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">This is the most consequential AI regulatory proposal in U.S. history. The preemption clause alone would invalidate or significantly narrow dozens of state AI laws currently on the books or in development. The liability shield for developers &mdash; specifically blocking claims against model developers for third-party misuse &mdash; would reshape the AI litigation landscape overnight. If you advise AI companies, start scenario-planning for a federal-only compliance regime. If you represent plaintiffs, this framework is a direct threat to emerging causes of action under state law. Either way, this is your practice area for the next decade.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If this framework becomes law, it gets much simpler to use AI tools in your business. Instead of worrying about whether your AI hiring tool complies with New York City&rsquo;s law, Colorado&rsquo;s law, and California&rsquo;s law all at the same time, you&rsquo;d have one federal standard. For small businesses that can&rsquo;t afford compliance lawyers, that&rsquo;s a real benefit. The trade-off: a lighter regulatory touch also means less recourse if an AI vendor&rsquo;s product causes you harm. Read the fine print when this turns into actual legislation.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">Marketing is one of the fields most affected by state AI regulations &mdash; think disclosure requirements for AI-generated content, rules about AI in targeted advertising, and data privacy laws that affect personalization. If the federal framework overrides state-level rules, you get a cleaner, simpler compliance picture. That could make it easier to deploy AI marketing tools nationally without worrying about a different legal requirement in each state. But it also means fewer consumer protections around AI-generated marketing, which could eventually create trust issues with audiences.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">This framework will be studied in law schools, policy programs, and business schools for years. It touches on federalism (who gets to make AI rules &mdash; states or the federal government?), Section 230-style liability questions (should AI developers be responsible for how their tools are used?), and intellectual property (can AI companies train on copyrighted content?). If you&rsquo;re studying any of these areas, this is required reading. The framework document itself is available on the White House website &mdash; it&rsquo;s written in accessible language and is worth reading in full.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">AI rules might sound abstract, but they affect the tools you use. If AI-powered estimating software gives a bad quote, or an AI scheduling tool makes a discriminatory hiring decision for your company, state laws might currently protect you. This framework would replace those state protections with lighter federal rules. The upside: simpler regulations mean AI tool makers can innovate faster, which should give you better and cheaper tools over time. The downside: fewer legal protections if those tools cause problems.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">AI tools are increasingly being used in emergency dispatch, resource allocation, and predictive policing &mdash; all areas where state regulations have been providing guardrails. If the federal framework preempts those state laws, the rules governing how AI is used in public safety could get looser. For fire departments and EMS teams, that means AI tools might roll out faster to your agencies, but with fewer mandatory checks on bias, accuracy, and accountability. Whether that&rsquo;s a net positive depends on how responsible the vendors are.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Immediate client advisory required. The framework&rsquo;s preemption clause would collapse the multi-state AI compliance landscape into a single federal regime &mdash; restructure any active AI governance engagements to account for this. The developer liability shield creates a new category of vendor risk: if model developers aren&rsquo;t liable for third-party misuse, the liability shifts to deployers (your clients). Update risk frameworks accordingly. Timeline: the White House says it will work with Congress to draft legislation, but pre-midterm passage is unlikely. Advise clients to plan for both scenarios &mdash; federal preemption and continued state-by-state compliance.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">The intellectual property section is the one to watch. The framework tries to balance creators&rsquo; rights with AI companies&rsquo; need to train models on real-world content &mdash; but critics say it tilts toward the industry. If this framework becomes law, it could set the federal standard for whether AI companies need permission to train on your work. State-level protections that artists have been fighting for could be overridden. This is the moment to pay attention and make your voice heard, because the rules being drafted right now will define the relationship between AI and creative work for years.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.nbcnews.com/tech/tech-news/trump-ai-congress-law-framework-legislation-artificial-intelligence-rcna264433">Read this &rarr; NBC News&rsquo; full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Supermicro&rsquo;s Co-Founder Was Arrested for Allegedly Smuggling Billions in AI Chips to China</h3>
+      <div class="story-source"><a href="https://www.cnbc.com/2026/03/19/us-tech-execs-smuggled-nvidia-chips-to-china-prosecutors-say.html">CNBC</a> &middot; <a href="https://fortune.com/2026/03/19/supermicro-arrested-founder-smuggling-gpu-china/">Fortune</a> &middot; <a href="https://www.nbcnews.com/tech/tech-news/three-men-charged-illegally-smuggling-advanced-ai-chips-china-rcna264371">NBC News</a></div>
+      <p>Federal agents arrested Wally Liaw, who co-founded server giant Super Micro Computer in 1993, on charges that he helped smuggle $2.5 billion worth of AI servers containing banned Nvidia chips to China. Two alleged co-conspirators &mdash; Supermicro&rsquo;s Taiwan general manager Steven Chang (now a fugitive) and a logistics fixer named Willy Sun &mdash; were also charged.</p>
+      <p>The scheme was elaborate: according to the indictment, the three men routed servers through a front company in Southeast Asia, which would repackage them and remove identifying labels &mdash; allegedly using hair dryers to peel off serial numbers &mdash; before shipping them to their real destination in China. About $510 million worth of servers with banned chips made it through.</p>
+      <p>Supermicro&rsquo;s stock cratered 33% on Friday &mdash; its worst single day since 2018. The company itself wasn&rsquo;t charged and says it cooperated with investigators. Each defendant faces up to 20 years in prison for violating export control laws. The case is the most dramatic example yet of what U.S. officials say is a widespread effort to get advanced AI hardware into China despite a ban that&rsquo;s been in place since 2022.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">The U.S. banned selling advanced AI chips to China to keep a technological edge. This case shows people are going to extraordinary lengths to get around that ban &mdash; including a co-founder of one of America&rsquo;s biggest server companies. It matters because the AI chip war between the U.S. and China is one of the most important technology battles in the world right now, and the fact that $510 million in banned chips allegedly made it through suggests the export controls have real holes.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you work with Nvidia hardware or Supermicro servers, the supply chain implications are worth thinking about. Supermicro is one of the largest AI server assemblers in the world, and a 33% stock crash plus a board member departure creates real uncertainty about the company&rsquo;s future. If you rely on Supermicro hardware, evaluate your vendor concentration risk. The broader signal: export controls are clearly being circumvented at scale, which means the gap between U.S. and Chinese AI compute may not be as wide as the policy assumes.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a real-world case that brings together technology, international relations, law, and ethics in a way students can immediately grasp. A co-founder of a major American tech company allegedly used hair dryers to peel off serial numbers and rerouted servers through shell companies to get banned AI chips to China. It&rsquo;s the kind of story that makes export controls and geopolitics tangible for students who might otherwise find those topics abstract.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">This story is one step removed from healthcare, but the underlying issue matters: the U.S. is trying to maintain an edge in AI computing power, which affects the pace and quality of AI tools available in every field, including medical AI. If export controls are being widely circumvented, it means China may have more advanced AI capabilities than expected, which affects the global competitive landscape for healthcare AI development.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">SMCI lost a third of its market cap in a single session. The immediate question is whether the company faces additional legal exposure beyond the individual indictments &mdash; the DOJ didn&rsquo;t charge the company, but that could change. For the broader AI hardware sector, this case highlights supply chain integrity risk that investors have been underpricing. If you hold AI infrastructure names, audit your exposure to companies with significant Asia-Pacific manufacturing operations, particularly those handling export-controlled technology.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">This is an Export Control Reform Act case with a maximum 20-year prison sentence per count. The prosecution strategy &mdash; charging individuals rather than the company &mdash; is notable and may indicate the DOJ is using cooperator leverage. The alleged use of shell companies and relabeling to circumvent export controls creates a complex multi-jurisdictional enforcement challenge. If you advise tech companies with international supply chains, this case is a clear signal that DOJ enforcement on AI chip export violations is intensifying. Review your clients&rsquo; end-user verification procedures.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your business uses Supermicro servers, the company isn&rsquo;t going away tomorrow, but the uncertainty is real. A 33% stock crash, a co-founder arrested, and a board member departure don&rsquo;t inspire confidence in stability. More broadly, this case is a reminder that the AI supply chain has geopolitical risk baked into it. If you depend on AI hardware, having more than one vendor isn&rsquo;t just good practice &mdash; it&rsquo;s essential.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">This is a story about the supply chain behind every AI tool you use. The chips that power your AI marketing platforms are the same ones being smuggled to China. While this won&rsquo;t directly affect your marketing tools today, the AI chip war between the U.S. and China shapes the long-term availability and cost of AI computing &mdash; which eventually affects the price and capability of every AI service you pay for.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This case is a masterclass in export controls, corporate governance, and international technology competition. A co-founder of a $20+ billion company allegedly ran a smuggling ring using shell companies, relabeling, and trans-shipment through Southeast Asia. If you&rsquo;re studying business, law, international relations, or computer science, this case has real material for research papers, case studies, or class discussions about the intersection of technology and national security.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This story is about the global supply chain for AI hardware &mdash; the same chips and servers that eventually power the AI tools used across industries. While it won&rsquo;t change your day-to-day work, the arrest of a major tech company&rsquo;s co-founder for chip smuggling shows how serious the U.S. government is about keeping advanced AI technology out of China. It&rsquo;s a reminder that AI isn&rsquo;t just software &mdash; it&rsquo;s a geopolitical contest over physical hardware.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This one&rsquo;s mostly a national security story, but it underscores how valuable AI hardware has become. The chips being smuggled are the same ones that power the AI systems being developed for emergency response, dispatch optimization, and situational awareness. The fact that people are willing to risk 20 years in prison to move these chips tells you how critical AI computing power has become globally.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Three implications for client advisory. First, supply chain integrity in AI hardware is now a board-level risk &mdash; if Supermicro&rsquo;s co-founder was allegedly running a smuggling operation, your clients need to audit their own hardware procurement chains for export control exposure. Second, the SMCI stock crash (-33%) creates a potential buying opportunity or a red flag depending on whether additional charges follow &mdash; advise financial clients accordingly. Third, the $510 million in chips that allegedly reached China suggests export controls are less effective than assumed &mdash; factor this into any AI competitive analysis that assumes a U.S. compute advantage.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The AI chips being smuggled are the same ones that power image generators, music AI, and video synthesis tools. This story shows the lengths people will go to for AI computing power &mdash; and it&rsquo;s a reminder that behind every AI creative tool is an intense global competition for physical hardware. The availability and cost of those chips ultimately affects what AI creative tools exist and how much they cost to use.</span>
+      </div>
+      <div class="read-this"><a href="https://www.cnbc.com/2026/03/19/us-tech-execs-smuggled-nvidia-chips-to-china-prosecutors-say.html">Read this &rarr; CNBC&rsquo;s full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Google Just Made Its Most Powerful AI Feature Free &mdash; And It Can Read Your Email</h3>
+      <div class="story-source"><a href="https://9to5google.com/2026/03/17/gemini-personal-intelligence-free/">9to5Google</a> &middot; <a href="https://www.engadget.com/ai/google-makes-gemini-personalization-available-to-free-users-160000581.html">Engadget</a> &middot; <a href="https://blog.google/products-and-platforms/products/search/personal-intelligence-expansion/">Google Blog</a></div>
+      <p>Google is rolling out &ldquo;Personal Intelligence&rdquo; to all free U.S. users of Gemini, its AI assistant. The feature, which launched behind a paywall in January, lets Gemini pull information from your Gmail, Google Photos, YouTube history, and other connected Google apps to give you personalized answers. Think of it like giving Gemini permission to know you &mdash; your travel plans, your photos, your email conversations &mdash; so it can answer questions with context instead of guessing.</p>
+      <p>The key detail: Personal Intelligence is off by default. You have to manually turn it on and grant Gemini access to each app individually. You can revoke access at any time. Google is being careful about consent here, likely because &ldquo;AI reads your email&rdquo; is exactly the kind of headline that triggers a privacy backlash.</p>
+      <p>The strategic play is clear. Google has something no AI competitor has: your data. OpenAI and Anthropic can build smarter models, but they don&rsquo;t have your inbox, your photos, or your search history. By making Personal Intelligence free, Google is betting that millions of users will opt in &mdash; and once they do, switching to a competitor&rsquo;s AI assistant means losing all that personalization. It&rsquo;s a classic lock-in move disguised as a generous freebie.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">Google&rsquo;s AI can now read your email, look at your photos, and use your search history to give you personalized answers &mdash; if you let it. That&rsquo;s genuinely useful: imagine asking &ldquo;when does my flight leave?&rdquo; and getting an answer pulled from a confirmation email you forgot about. But it also means giving Google&rsquo;s AI deep access to your personal life. The choice is yours, and the feature is off by default. Think carefully about what you&rsquo;re comfortable sharing before you flip the switch.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">This is Google&rsquo;s data moat play. By making Personal Intelligence free, they&rsquo;re creating a personalization flywheel that competitors can&rsquo;t match without equivalent data access. If you&rsquo;re building AI products, this raises the bar for user experience &mdash; users will increasingly expect AI tools to know their context. The API implications are also worth tracking: if Google opens personal context to third-party developers, it creates a new platform layer. Evaluate whether your products need similar personalization features and what data partnerships could enable them.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Your students now have access to a free AI assistant that can draw on their email, photos, and browsing history for context. That makes AI even more useful for homework and research &mdash; and even harder to detect. The personalization also means every student&rsquo;s AI experience will be different, which complicates any classroom policy that assumes all AI tools work the same way. Consider updating your AI use guidelines to address personalized AI assistants specifically.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">If you use a personal Google account for anything related to health &mdash; appointments, medical information in emails, prescription reminders &mdash; be thoughtful about enabling Personal Intelligence. Gemini could surface that information in responses. It&rsquo;s useful (asking &ldquo;when is my next appointment?&rdquo;) but also raises questions about the privacy of health-related data being processed by an AI. This is a personal Google account feature, not a workplace one, but the line between personal and professional data is often blurry in healthcare.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">This is the most significant competitive move Google has made in the AI assistant race. By making personalization free, they&rsquo;re leveraging their unmatched data advantage over OpenAI and Anthropic. The strategy creates powerful switching costs: once users opt in and build up a personalized context, migrating to a competing AI assistant means starting from scratch. For investment analysis, this strengthens the case for Google&rsquo;s AI moat and explains why Gemini subscribers grew 258% year-over-year. Watch adoption numbers closely.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The privacy and data access implications are significant. Personal Intelligence accesses Gmail, Photos, and other services &mdash; all governed by Google&rsquo;s existing Terms of Service and Privacy Policy. The opt-in model and granular permission controls are clearly designed to preempt regulatory scrutiny, but questions about data retention, secondary use, and third-party access to personalized AI responses are all open. If you advise clients on data privacy, this feature creates new scenarios worth analyzing under both state privacy laws and the evolving federal framework.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If you use Google Workspace, this is worth paying attention to. Personal Intelligence is currently for personal accounts, but if Google brings it to business accounts, your AI assistant could know your calendar, your email threads with clients, and your project documents. That&rsquo;s incredibly useful for productivity &mdash; but it also means trusting Google&rsquo;s AI with your business data. Start thinking about your company&rsquo;s policy on AI data access before the feature arrives in your workspace.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Google just gave its AI the ability to know each user individually &mdash; their interests, their email content, their browsing history. For marketers, this signals where AI-powered advertising is headed: hyper-personalization based on deep personal context, not just demographic targeting. If Google integrates Personal Intelligence insights into its ad platform (and they will), the targeting capabilities will be unprecedented. Start thinking about how your messaging needs to work in a world where the AI delivering it knows the recipient personally.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">You now have a free AI assistant that can pull context from your Gmail, photos, and search history to give you personalized answers. That&rsquo;s powerful for research, scheduling, and organizing your life. But think carefully about what you&rsquo;re giving up: once you let Gemini read your email and browsing history, that data shapes everything it tells you. It&rsquo;s also worth understanding this as a business strategy &mdash; Google is making it free precisely because it creates lock-in. Good case study material for tech strategy courses.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">If you use Gmail for customer communication, scheduling, and estimates, Personal Intelligence could be genuinely useful. Imagine asking Gemini &ldquo;what did that customer email me about last week?&rdquo; or &ldquo;when is my next job?&rdquo; and getting an instant answer pulled from your inbox and calendar. It&rsquo;s free, it&rsquo;s optional, and you control what it can access. Worth trying if you want an AI assistant that actually knows your schedule and your clients.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This is a personal account feature, not a department tool, but the concept matters for your field. AI that can draw on personal context &mdash; your schedule, your messages, your history &mdash; is much more useful than AI that starts from scratch every time. As this kind of personalized AI matures, versions designed for public safety (pulling context from dispatch logs, incident history, and department communications) will eventually follow. This is a preview of where AI assistants are headed.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Google&rsquo;s strategic positioning is the story here. By making Personal Intelligence free, they&rsquo;re converting their unmatched user data advantage into an AI switching cost moat. Advise clients in two ways: first, for consumer-facing clients, the bar for AI-powered user experience just went up &mdash; personalization is now table stakes for AI products. Second, for enterprise clients evaluating AI assistants, Google&rsquo;s data integration advantage is a genuine differentiator if the feature extends to Workspace. Factor this into AI vendor evaluations.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Google&rsquo;s Personal Intelligence can now look at your Google Photos and use that context in conversations. For artists, that means you could ask Gemini questions about your own work &mdash; &ldquo;find the painting I photographed last Tuesday&rdquo; or &ldquo;what color palette did I use in that recent series?&rdquo; It&rsquo;s a genuinely useful creative tool, but it also means Google&rsquo;s AI is analyzing your creative output. Think about what you&rsquo;re comfortable sharing before you opt in, especially if your photos include works in progress or unpublished pieces.</span>
+      </div>
+      <div class="read-this"><a href="https://9to5google.com/2026/03/17/gemini-personal-intelligence-free/">Read this &rarr; 9to5Google&rsquo;s coverage</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Atlassian Cuts 1,600 Jobs to &ldquo;Self-Fund&rdquo; Its AI Bet. More Than Half Were Engineers.</h3>
+      <div class="story-source"><a href="https://www.cnbc.com/2026/03/11/atlassian-slashes-10percent-of-workforce-to-self-fund-investments-in-ai.html">CNBC</a> &middot; <a href="https://techcrunch.com/2026/03/12/atlassian-follows-blocks-footsteps-and-cuts-staff-in-the-name-of-ai/">TechCrunch</a> &middot; <a href="https://www.atlassian.com/blog/announcements/atlassian-team-update-march-2026">Atlassian Blog</a></div>
+      <p>Atlassian, the company behind project management tools like Jira and Confluence, laid off 10% of its workforce &mdash; roughly 1,600 people &mdash; saying it needs the money to invest in AI and enterprise sales. More than 900 of those cuts were in software research and development. The company&rsquo;s CTO is also stepping down at the end of the month.</p>
+      <p>CEO Mike Cannon-Brookes framed the cuts as a strategic shift: the company wants to become &ldquo;AI-first&rdquo; and says it&rsquo;s retaining employees with skills suited for an AI-driven future while cutting those whose roles are being reshaped by the technology. The financial cost: $225&ndash;236 million in restructuring charges, with the majority going to severance packages.</p>
+      <p>Atlassian joins a growing list of tech companies &mdash; including Block, which made similar cuts recently &mdash; that are explicitly citing AI as the reason for layoffs. The pattern is becoming hard to ignore: companies aren&rsquo;t just adding AI tools alongside their existing workforce. They&rsquo;re using AI as the justification to make the workforce smaller. North America took about 40% of the cuts, Australia about 30%, and India about 16%.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">A major tech company just laid off 1,600 people and said the quiet part out loud: AI is changing what work humans need to do. This isn&rsquo;t a company in trouble &mdash; Atlassian is profitable and growing. They&rsquo;re cutting jobs specifically to redirect money toward AI. If a company that makes software for other companies to manage their work is saying AI changes who they need to employ, that signal applies broadly. The age of &ldquo;AI will help workers, not replace them&rdquo; is getting harder to defend when companies keep using AI as the reason for layoffs.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">More than 900 of the 1,600 cuts were in R&amp;D. That&rsquo;s not administrative bloat &mdash; those are engineers. Atlassian is explicitly saying it&rsquo;s keeping people with AI-relevant skills and cutting those whose roles AI is reshaping. If you use Jira or Confluence daily, this also affects your tools: expect more AI features and potentially less human support. The broader pattern &mdash; Block, Atlassian, and others citing AI for layoffs &mdash; is a direct signal about which engineering skills the market values right now. AI fluency isn&rsquo;t a nice-to-have anymore; it&rsquo;s a retention factor.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Atlassian&rsquo;s layoffs are another data point for the &ldquo;AI and jobs&rdquo; conversation you&rsquo;re likely already having with students. This isn&rsquo;t a struggling company cutting costs &mdash; it&rsquo;s a profitable company saying it needs fewer people because AI handles some of their work. The fact that most cuts were in engineering, not just support roles, challenges the narrative that only &ldquo;routine&rdquo; jobs are at risk. Students heading into tech need to understand that even highly skilled roles are being reshaped.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">This is a tech-sector story, but the pattern matters for healthcare. When companies across industries start cutting staff and citing AI as the reason, it eventually affects how hospitals, clinics, and health systems think about their own workforces. Administrative roles in healthcare &mdash; billing, scheduling, records management &mdash; face similar pressure from AI automation. Atlassian&rsquo;s decision is another signal that the &ldquo;AI as co-pilot&rdquo; narrative is shifting toward &ldquo;AI as replacement&rdquo; for certain roles.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Atlassian is spending $225&ndash;236 million on severance to fund what it calls an AI pivot. That&rsquo;s a significant reallocation. The market reaction will tell you whether investors reward the &ldquo;AI-first&rdquo; framing or punish the execution risk. The CTO departure adds uncertainty. For the broader AI workforce thesis, Atlassian joins a growing list of profitable tech companies using AI as the justification for headcount reduction &mdash; which is bullish for AI adoption metrics but creates sector-wide workforce risk that&rsquo;s worth modeling.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">AI-motivated layoffs are creating a new category of employment law questions. When a company says it&rsquo;s cutting 1,600 jobs because &ldquo;AI is reshaping the work,&rdquo; that raises questions about whether the WARN Act&rsquo;s 60-day notice requirement was met, whether age discrimination is a factor in deciding who has &ldquo;AI-relevant skills,&rdquo; and whether the stated reason is pretextual. The multi-country nature of Atlassian&rsquo;s cuts (U.S., Australia, India) also creates cross-jurisdictional labor law complexity. Expect more cases in this emerging area.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If you use Atlassian products like Jira or Confluence, the company&rsquo;s AI pivot may actually benefit you &mdash; more AI features in the tools you already pay for. But the broader lesson is about business models. A profitable company with 16,000 employees decided it needs 1,600 fewer of them because of AI. If you run a business, the same question applies to your team: are there roles AI could handle or significantly reduce? You don&rsquo;t have to follow Atlassian&rsquo;s path, but ignoring the question isn&rsquo;t an option.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Atlassian&rsquo;s cuts hit R&amp;D hardest, but the &ldquo;AI replaces jobs&rdquo; narrative is one marketers need to track. Every time a major company makes layoffs and says &ldquo;AI,&rdquo; it shifts public sentiment. If you market AI products, the growing association between AI and job loss is a brand risk you need to manage. If you work in marketing at a company using AI to boost productivity, the Atlassian precedent suggests that &ldquo;doing more with less&rdquo; may eventually mean fewer people in your department too.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">If you&rsquo;re about to graduate into the tech job market, this story matters. Atlassian cut 900+ engineering roles and said it&rsquo;s keeping people with AI-relevant skills. That&rsquo;s a direct signal: the bar for getting hired in tech is shifting. AI fluency &mdash; knowing how to use, build with, and think critically about AI &mdash; isn&rsquo;t optional for new graduates. It&rsquo;s the skill that determines whether you&rsquo;re in the &ldquo;keep&rdquo; category or the &ldquo;cut&rdquo; category. Take it seriously.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This is a tech company story, and trade jobs aren&rsquo;t affected directly. But it&rsquo;s worth understanding the pattern: companies are increasingly using AI as the reason to cut office-based jobs. That makes skilled trades &mdash; work that requires physical presence, hands-on expertise, and real-world problem-solving &mdash; comparatively more valuable. The jobs AI is replacing are overwhelmingly desk jobs, not jobs that require you to be on-site.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This is a tech industry story that doesn&rsquo;t directly affect emergency services, but the underlying trend does. As companies across industries cut roles that AI can handle, the workforce overall shifts. For fire departments and EMS agencies, the takeaway is that AI-driven efficiency gains will eventually reach public safety &mdash; likely in administrative and dispatch functions first. Understanding how other sectors are navigating AI-driven workforce changes helps you prepare for when it reaches yours.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Atlassian&rsquo;s restructuring is a case study in AI-driven organizational redesign. Three advisory angles: first, the &ldquo;self-funding&rdquo; framing &mdash; cutting headcount to fund AI investment &mdash; is a template other clients will consider. Model the ROI of similar restructuring for relevant engagements. Second, the CTO departure alongside the AI pivot signals a leadership skills mismatch &mdash; advise clients on whether their current technical leadership can execute an AI transformation. Third, the 900+ R&amp;D cuts demonstrate that AI displacement isn&rsquo;t limited to support functions. Update workforce planning frameworks to include technical roles in AI impact assessments.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Atlassian is a software company, not a creative studio, but the pattern it represents matters for artists. When companies across industries start cutting jobs and citing AI, it changes the cultural conversation about the value of human work. Every AI layoff headline makes it a little more acceptable for the next company to do the same thing. For artists, the question isn&rsquo;t whether AI will replace creative work &mdash; it&rsquo;s whether the economic pressure to use AI instead of humans will become irresistible for the companies that commission creative work.</span>
+      </div>
+      <div class="read-this"><a href="https://www.cnbc.com/2026/03/11/atlassian-slashes-10percent-of-workforce-to-self-fund-investments-in-ai.html">Read this &rarr; CNBC&rsquo;s full report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">50</span>
+      <span class="num-label">States whose AI laws the White House wants Congress to override with a single federal standard</span>
+      <span class="num-src"><a href="https://rollcall.com/2026/03/20/white-house-ai-framework-calls-for-preemption-of-state-laws/">Roll Call</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">$2.5B</span>
+      <span class="num-label">Worth of AI servers allegedly smuggled to China by Supermicro&rsquo;s co-founder and two associates</span>
+      <span class="num-src"><a href="https://www.cnbc.com/2026/03/19/us-tech-execs-smuggled-nvidia-chips-to-china-prosecutors-say.html">CNBC</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">10x</span>
+      <span class="num-label">Performance-per-watt improvement of Nvidia&rsquo;s new Vera Rubin platform over its predecessor</span>
+      <span class="num-src"><a href="https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform">Nvidia</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Nvidia&rsquo;s Vera Rubin Platform Is Now Official &mdash; and Jensen Huang Sees $1 Trillion in Orders</h3>
+      <p>At GTC 2026, Nvidia unveiled the Vera Rubin platform: seven new chips designed for everything from massive AI training runs to real-time AI agent applications. The system &mdash; made up of 1.3 million components &mdash; promises 10x better performance per watt than the previous-generation Blackwell chips. CEO Jensen Huang said he expects $1 trillion in combined purchase orders for Blackwell and Vera Rubin through 2027, double the $500 billion forecast from last year. Nvidia also announced computing platforms for orbital data centers &mdash; yes, AI chips in space.</p>
+      <div class="watch-src"><a href="https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform">Nvidia Newsroom</a> &middot; <a href="https://www.cnbc.com/2026/03/16/nvidia-gtc-2026-ceo-jensen-huang-keynote-blackwell-vera-rubin.html">CNBC</a> &middot; <a href="https://www.datacenterknowledge.com/data-center-chips/gtc-2026-nvidia-unveils-vera-rubin-ai-platform-eyes-1t-by-2027">Data Center Knowledge</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Washington State Passes Five AI Bills in a Single Session</h3>
+      <p>While the White House pushes to override state laws, Washington state just passed five AI-related bills: a disclosure requirement for AI-generated content (HB 1170), safety rules for AI chatbots interacting with kids (HB 2225), restrictions on AI use in health insurance decisions (SB 5395), protections against AI-generated deepfake images of minors (SB 5105), and more. These are exactly the kinds of state laws the White House framework wants Congress to preempt. Watch for a collision between state legislatures that are moving fast on AI regulation and a federal government that wants them to stop.</p>
+      <div class="watch-src"><a href="https://www.transparencycoalition.ai/news/ai-legislative-update-march20-2026">Transparency Coalition</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>OpenAI&rsquo;s GPT-5.4 Scores at Expert Level on Economic Tasks</h3>
+      <p>OpenAI&rsquo;s recently released GPT-5.4 &ldquo;Thinking&rdquo; model scored 83% on the GDPVal benchmark, which tests whether an AI can perform tasks that would normally require a paid human expert. It also scored 75% on OSWorld-V, which simulates real desktop productivity work &mdash; navigating software, executing multi-step workflows, and managing files across applications. These aren&rsquo;t abstract benchmarks; they measure whether AI can do the actual work people get paid for. Combined with the Atlassian layoffs, the signal is getting louder.</p>
+      <div class="watch-src"><a href="https://llm-stats.com/llm-updates">LLM Stats</a> &middot; <a href="https://www.crescendo.ai/news/latest-ai-news-and-updates">Crescendo</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">White House AI Framework</span>
+      <span class="sentiment-tag buzz">Supermicro Arrests</span>
+      <span class="sentiment-tag split">Google Personal Intelligence</span>
+      <span class="sentiment-tag cool">Atlassian AI Layoffs</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">White House Framework <span class="tweet-handle">released March 20, 2026</span></div>
+      <div class="tweet-text">&ldquo;Congress should preempt state AI laws that impose undue burdens to ensure a minimally burdensome national standard&hellip; not fifty discordant ones.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.whitehouse.gov/wp-content/uploads/2026/03/03.20.26-National-Policy-Framework-for-Artificial-Intelligence-Legislative-Recommendations.pdf">White House</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">DOJ Indictment <span class="tweet-handle">unsealed March 19, 2026</span></div>
+      <div class="tweet-text">&ldquo;The defendants took extensive measures to conceal their activity&hellip; even using hair dryers to remove labels and serial numbers from the real machines and placing them on dummy machines left behind.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://fortune.com/2026/03/19/supermicro-arrested-founder-smuggling-gpu-china/">Fortune</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Atlassian CEO Mike Cannon-Brookes <span class="tweet-handle">company blog, March 2026</span></div>
+      <div class="tweet-text">&ldquo;We&rsquo;re making the difficult decision to reduce the size of our team by ~10%. This allows us to self-fund further investment in AI and enterprise sales, while strengthening our financial profile.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.atlassian.com/blog/announcements/atlassian-team-update-march-2026">Atlassian Blog</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What&rsquo;s Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The White House AI framework is the dominant story, with sharp disagreement between the tech industry (which broadly welcomes lighter regulation) and consumer advocates (who see it as a corporate giveaway). The &ldquo;preemption of state laws&rdquo; angle is particularly heated &mdash; state attorneys general are already signaling they&rsquo;ll fight it. The Supermicro arrests are generating a mix of shock and dark humor, with the &ldquo;hair dryer&rdquo; detail becoming an instant meme.</p>
+
+      <p><strong>Hacker News:</strong> Two threads are battling for the top spot: the framework&rsquo;s liability shield for AI developers (developers are split between &ldquo;this protects open source&rdquo; and &ldquo;this lets big companies dodge accountability&rdquo;) and Google&rsquo;s Personal Intelligence rollout. The privacy implications of Google&rsquo;s feature are generating the most intense debate, with many commenters saying &ldquo;opt-in today, default-on tomorrow.&rdquo;</p>
+
+      <p><strong>Reddit:</strong> r/technology has the Supermicro arrests at the top with 15K+ upvotes and counting. The hair dryer detail is dominating the comments. r/artificial has an active thread on the White House framework, with the conversation focused on whether preempting state laws is good for innovation or bad for citizens. r/cscareerquestions is processing the Atlassian layoffs, with many engineers noting that 900+ R&amp;D cuts is a worrying signal for the job market.</p>
+
+      <div class="comm-src">Sources: <a href="https://www.nbcnews.com/tech/tech-news/trump-ai-congress-law-framework-legislation-artificial-intelligence-rcna264433">NBC News</a> &middot; <a href="https://www.cnbc.com/2026/03/19/us-tech-execs-smuggled-nvidia-chips-to-china-prosecutors-say.html">CNBC</a> &middot; <a href="https://9to5google.com/2026/03/17/gemini-personal-intelligence-free/">9to5Google</a> &middot; <a href="https://techcrunch.com/2026/03/12/atlassian-follows-blocks-footsteps-and-cuts-staff-in-the-name-of-ai/">TechCrunch</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">There&rsquo;s a thread connecting everything today: the rules are being rewritten. The White House wants to rewrite AI regulation from the top down. Supermicro&rsquo;s case shows people will break the rules to get AI hardware across borders. Google is rewriting what an AI assistant knows about you. Nvidia is rewriting what&rsquo;s physically possible with chips. And Atlassian is rewriting its headcount because AI changes who they need. A lot is shifting. You&rsquo;re caught up &mdash; enjoy the weekend.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=The%20White%20House%20just%20told%20Congress%20to%20override%20every%20state%20AI%20law%20and%20shield%20AI%20companies%20from%20lawsuits.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-21-morning.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
