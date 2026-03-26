@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Morning Edition — Mar 26, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Morning Edition — March 26, 2026">
+  <meta property="og:description" content="OpenAI killed Sora, lost a billion-dollar Disney deal, handed off safety oversight, and teased a mysterious new model called 'Spud' — all in one day.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-26-morning.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Morning Edition — March 26, 2026">
+  <meta name="twitter:description" content="OpenAI killed Sora, lost a billion-dollar Disney deal, handed off safety oversight, and teased a mysterious new model called 'Spud' — all in one day.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="OpenAI killed Sora, lost a billion-dollar Disney deal, handed off safety oversight, and teased a mysterious new model called 'Spud' — all in one day.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Thursday, March 26, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Morning Edition</span>
+    <div class="tagline">Your morning briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good morning. OpenAI had what might be the most eventful single day in its history &mdash; it killed Sora (its AI video tool), lost a billion-dollar Disney deal, had Sam Altman hand off safety oversight, and teased a mysterious new AI model called &ldquo;Spud.&rdquo; Meanwhile, Google quietly dropped a breakthrough that sent memory chip stocks tumbling worldwide, Arm unveiled the first chip it&rsquo;s ever made in 35 years, and Anthropic&rsquo;s standoff with the Pentagon might be nearing a resolution. A lot happened while you were sleeping. Let&rsquo;s get into it. <span class="share-link"><a id="sms-share" href="sms:?&body=OpenAI%20just%20killed%20Sora%2C%20lost%20a%20%241B%20Disney%20deal%2C%20and%20teased%20a%20mystery%20new%20model%20called%20%22Spud%22%20%E2%80%94%20all%20in%20one%20day.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-26-morning.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Morning&rsquo;s Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">OpenAI kills Sora, loses $1B Disney deal, hands off safety oversight, and teases new &ldquo;Spud&rdquo; model &mdash; all in one day <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.tomsguide.com/ai/openai-just-killed-sora-as-company-readies-ipo-and-new-spud-model">Tom&rsquo;s Guide</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Google&rsquo;s TurboQuant breakthrough compresses AI memory by 6x &mdash; memory chip stocks drop worldwide <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.cnbc.com/2026/03/26/google-ai-turboquant-memory-chip-stocks-samsung-micron.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Arm unveils its first-ever chip after 35 years &mdash; a 136-core AI processor with Meta as launch partner, stock jumps 16% <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.cnbc.com/2026/03/25/arm-stock-chip-revenue-agi-cpu.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">Anthropic&rsquo;s Pentagon standoff may be nearing a deal &mdash; Axios reports behind-the-curtain negotiations <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.axios.com/2026/03/26/anthropic-pentagon-ai-deal">Axios</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Anthropic&rsquo;s Claude can now control your Mac remotely &mdash; opening apps, clicking buttons, and finishing tasks while you&rsquo;re away <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.cnbc.com/2026/03/24/anthropic-claude-ai-agent-use-computer-finish-tasks.html">CNBC</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>OpenAI&rsquo;s Wild Tuesday: Sora Killed, Disney Gone, Safety Sidelined, and a Mysterious New Model</h2>
+    <div class="byline">Sources: <a href="https://www.tomsguide.com/ai/openai-just-killed-sora-as-company-readies-ipo-and-new-spud-model">Tom&rsquo;s Guide</a> &middot; <a href="https://deadline.com/2026/03/sora-shut-down-disney-investment-1236764689/">Deadline</a> &middot; <a href="https://variety.com/2026/digital/news/openai-shutting-down-sora-video-disney-1236698277/">Variety</a> &middot; <a href="https://slate.com/technology/2026/03/ai-openai-sam-altman-disney-sora-shutdown.html">Slate</a> &middot; <a href="https://www.techmeme.com/260324/p43">Techmeme</a></div>
+
+    <p>Tuesday was one of the most dramatic days in OpenAI&rsquo;s history. In a single staff meeting, CEO Sam Altman announced the company would shut down Sora &mdash; its AI video generator that turns text descriptions into short videos &mdash; just six months after launching it with fanfare. The iOS app, the website, and the developer tools are all being taken offline.</p>
+
+    <p>The fallout was immediate. Disney, which had signed a deal just three months ago to invest $1 billion in OpenAI and license iconic characters like Mickey Mouse for use in Sora, pulled out entirely. No money had changed hands yet, but the partnership is dead. &ldquo;The deal is not moving forward,&rdquo; a Disney spokesperson confirmed to Deadline.</p>
+
+    <p>But that wasn&rsquo;t all. The same day, The Information reported that Altman has handed off direct oversight of OpenAI&rsquo;s safety and security teams to focus on fundraising, supply chains, and &ldquo;building data centers at unprecedented scale.&rdquo; And he revealed that OpenAI has finished initial development on a new AI model codenamed &ldquo;Spud&rdquo; &mdash; though he offered no details beyond a promise that it would &ldquo;really accelerate the economy.&rdquo;</p>
+
+    <div class="pull-quote">&ldquo;The compute resources and engineering attention the Sora app consumed are now redirected toward enterprise AI, agentic systems, and coding tools.&rdquo; &mdash; OpenAI internal communication, per Tom&rsquo;s Guide</div>
+
+    <p>The strategic picture is clear: OpenAI is making a hard pivot. Instead of flashy consumer products like video generation and AI-powered shopping (ChatGPT&rsquo;s checkout feature also flopped, with Walmart abandoning a pilot last week), the company is going all-in on AI agents &mdash; programs that can complete complex tasks on their own &mdash; and tools for business customers. The company is also preparing for an IPO.</p>
+
+    <p>The safety question is the most sensitive part. Altman stepping away from safety oversight continues a pattern that has alarmed researchers &mdash; OpenAI&rsquo;s original safety team dissolved in 2024, and multiple senior safety researchers have left the company. With an IPO on the horizon and billions in data center spending planned, the worry is that safety is being deprioritized at exactly the moment OpenAI is building its most powerful systems yet.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">If you were using Sora to make AI videos, it&rsquo;s going away. But the bigger story is about where AI is heading: OpenAI is betting that the future isn&rsquo;t fun creative tools for consumers &mdash; it&rsquo;s AI that can do real work for businesses. The safety leadership changes are worth watching, too. When the company building the world&rsquo;s most powerful AI says its CEO is stepping back from safety to focus on fundraising, that affects everyone who uses these tools.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">If you&rsquo;re building on OpenAI&rsquo;s video APIs, start migrating now &mdash; they&rsquo;re shutting down entirely. The broader signal is that OpenAI is redirecting compute toward enterprise AI agents and coding tools, which means better developer-facing products are coming. But the safety team shakeup should give you pause: if you&rsquo;re integrating OpenAI models into production systems, understand that the company is prioritizing speed over safety governance right now.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">Students who&rsquo;ve been using Sora for video projects will need alternatives. More importantly, OpenAI&rsquo;s pivot toward AI agents that can do complex work autonomously is going to accelerate the conversation about what skills students actually need. If AI can handle business tasks independently, the value of teaching critical thinking, creativity, and judgment goes up &mdash; not down.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">The direct impact is minimal &mdash; healthcare wasn&rsquo;t a big Sora user. But OpenAI&rsquo;s pivot to enterprise AI agents and productivity tools signals that healthcare-focused AI assistants (for documentation, scheduling, and clinical workflows) are likely where the company invests next. The safety oversight changes are concerning for any field where AI errors can hurt people.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">This is a significant pre-IPO signal. OpenAI is cutting unprofitable consumer products and pivoting to higher-margin enterprise AI &mdash; classic IPO preparation. The Disney deal collapse wipes out $1B in expected investment. Watch for updated valuation estimates: the bull case (consumer platform) just weakened, but the bear case (enterprise tooling) may actually have better margins. Altman stepping away from safety to focus on capital raises and infrastructure is the clearest signal yet that the IPO timeline is accelerating.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">The Disney deal collapse will generate contract disputes worth watching &mdash; three months of integration work, licensing negotiations, and character IP discussions are now unwound. The safety leadership changes also create a governance question: if OpenAI&rsquo;s CEO isn&rsquo;t overseeing safety and the company goes public, who is accountable when something goes wrong? Expect shareholder and regulatory scrutiny on AI safety governance in the IPO prospectus.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">OpenAI is pivoting hard toward business customers. That means better enterprise AI tools are coming &mdash; AI agents that can handle complex tasks, coding assistants, and workflow automation. If you&rsquo;ve been waiting for OpenAI to focus on real business needs instead of flashy demos, this is the turn. The flip side: they&rsquo;re also demonstrating that AI companies can shut down products fast, so build flexibility into any AI vendor relationship.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">Sora was a promising tool for quick video content creation, and it&rsquo;s being killed. If you&rsquo;ve been relying on it for social or ad content, find alternatives now. The bigger takeaway: AI companies are learning that consumer creative tools don&rsquo;t generate enough revenue. Expect the surviving AI video tools to either raise prices or add enterprise features. Plan your content workflow accordingly.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">If you&rsquo;ve been using Sora for class projects or creative work, it&rsquo;s shutting down. But this is also a great case study: a company valued at hundreds of billions just killed a major product six months after launch because the economics didn&rsquo;t work. Understanding why &mdash; and watching what OpenAI builds next &mdash; is as educational as any business school assignment.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">This one is mostly inside baseball for the tech world, but here&rsquo;s the takeaway: OpenAI is shifting focus from flashy consumer tools to practical AI that helps businesses get work done. That means AI tools designed for things like project estimation, scheduling, and job management are more likely to get built. The practical stuff is coming &mdash; it&rsquo;s just not here yet.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">The direct impact on emergency services is minimal, but the safety governance changes matter in the long run. When the company building the most powerful AI in the world deprioritizes safety oversight, it increases the risk that AI tools deployed in high-stakes environments &mdash; including eventual first-responder applications &mdash; haven&rsquo;t been adequately tested. Keep an eye on how this evolves as AI enters more public safety applications.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Three angles for client work. First, update any AI strategy decks that included Sora or AI video generation as a capability &mdash; the market just shifted. Second, OpenAI&rsquo;s enterprise pivot validates the &ldquo;AI agents for business workflows&rdquo; thesis; accelerate any agentic AI engagements you&rsquo;re scoping. Third, the safety oversight change is a governance red flag for clients considering deep OpenAI integration &mdash; build vendor risk assessments that account for leadership instability on safety.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">Sora&rsquo;s shutdown is mixed news for artists. The tool that was generating AI videos &mdash; raising concerns about replacing human animators and filmmakers &mdash; is going away. But don&rsquo;t celebrate too quickly: OpenAI isn&rsquo;t abandoning AI creativity because they think humans should do it. They&rsquo;re abandoning it because it wasn&rsquo;t profitable enough. The technology still exists, and competitors will fill the gap.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.tomsguide.com/ai/openai-just-killed-sora-as-company-readies-ipo-and-new-spud-model">Read this &rarr; Tom&rsquo;s Guide&rsquo;s full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Google Found a Way to Make AI Use 6x Less Memory &mdash; and Memory Chip Stocks Are Tanking</h3>
+      <div class="story-source"><a href="https://www.cnbc.com/2026/03/26/google-ai-turboquant-memory-chip-stocks-samsung-micron.html">CNBC</a> &middot; <a href="https://techcrunch.com/2026/03/25/google-turboquant-ai-memory-compression-silicon-valley-pied-piper/">TechCrunch</a> &middot; <a href="https://venturebeat.com/infrastructure/googles-new-turboquant-algorithm-speeds-up-ai-memory-8x-cutting-costs-by-50/">VentureBeat</a></div>
+      <p>Google unveiled a new technique called TurboQuant that dramatically reduces how much computer memory AI models need to run. Here&rsquo;s the plain English version: when an AI model processes your request, it stores calculations in a kind of scratchpad so it doesn&rsquo;t have to redo them. That scratchpad eats up a lot of expensive memory chips. TurboQuant compresses that scratchpad to just 3 bits per value, down from the standard 16 &mdash; shrinking it by at least 6x without losing accuracy.</p>
+      <p>The result: AI models can run on Nvidia&rsquo;s H100 chips up to 8x faster for certain tasks, and the cost of running AI could drop by 50% or more. TechCrunch is calling it the &ldquo;Pied Piper moment&rdquo; (a reference to the fictional compression company from Silicon Valley). The internet agrees.</p>
+      <p>Wall Street noticed immediately. Shares of SK Hynix and Samsung &mdash; the world&rsquo;s two biggest memory chipmakers &mdash; fell 6% and 5% respectively on Thursday. If AI needs dramatically less memory to run, demand for memory chips could slow down, and billions of dollars in planned memory chip factories may need rethinking.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">AI tools are about to get cheaper and faster. When the cost of running AI drops by half, that savings eventually flows to you through lower subscription prices, faster responses, and AI features showing up in more of the apps you already use. Think of it like how data compression made streaming video possible &mdash; this does the same thing for AI.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">This is immediately relevant to your infrastructure costs. If TurboQuant delivers on the benchmarks (6x memory reduction, 8x speedup on attention computation), your GPU fleet can serve significantly more concurrent users without hardware upgrades. Start evaluating the technique &mdash; Google is presenting the full paper at ICLR next month. For inference-heavy workloads, this could cut your compute bill in half.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Cheaper, faster AI means AI tools will become even more accessible to students and schools that couldn&rsquo;t afford them before. If running AI gets 50% cheaper, expect more free or low-cost AI tutoring tools, writing assistants, and educational software to emerge. The technology gap between well-funded and under-funded schools could narrow &mdash; or widen, depending on who adopts first.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Lower AI computing costs are great news for healthcare, where budgets are tight and AI adoption has been limited by expense. If running diagnostic AI or documentation assistants costs half as much, smaller clinics and hospitals can finally afford to deploy them. This also means AI models can run on less powerful hardware, potentially enabling more on-site AI that keeps patient data within the facility.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Immediate portfolio implications: memory chip stocks (Samsung, SK Hynix, Micron) are under pressure, and the market is repricing demand assumptions. But think beyond chips &mdash; if inference costs drop 50%, every company running AI at scale sees margin improvement. The beneficiaries are AI application companies (lower COGS) and cloud providers (better unit economics). The losers are pure-play memory and potentially Nvidia, if less hardware is needed per query. Reassess your semiconductor thesis.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Lower AI costs will accelerate adoption across industries, which means more AI-related legal work. Document review, contract analysis, and legal research tools that were too expensive for smaller firms may become affordable. It also means more AI deployment across your clients&rsquo; businesses, generating more questions about liability, compliance, and governance that they&rsquo;ll need your help answering.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Your AI costs are about to drop. If you&rsquo;re paying for AI tools or cloud-based AI services, a 50% reduction in underlying computing costs means you should expect price decreases from your vendors over the next 6&ndash;12 months. If they don&rsquo;t lower prices, you now have leverage to negotiate &mdash; or switch to a competitor who passes the savings along. This is the kind of infrastructure improvement that quietly makes AI practical for small businesses.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Cheaper AI means you can run more experiments for less money. AI-powered personalization, content generation, and audience analysis that used to require expensive enterprise tools are becoming affordable at any budget. If you&rsquo;ve been holding off on AI-driven campaigns because of cost, this is the inflection point where the economics start working for smaller teams.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is a great topic for a paper or presentation: a single compression breakthrough can reshape an entire industry. Understanding TurboQuant at a high level &mdash; how reducing memory requirements by 6x makes AI cheaper and faster &mdash; shows you how infrastructure improvements matter as much as the AI models themselves. It&rsquo;s also making the AI tools you use for studying cheaper to run, which means more free options are coming.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This is the kind of behind-the-scenes improvement that makes AI tools cheaper for everyone. If you&rsquo;re using any AI-powered apps for estimating, scheduling, or customer communication, the costs of those tools should come down over the next year. It&rsquo;s like when better compression made streaming video go from expensive to basically free &mdash; same idea, different technology.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">Cheaper AI computing is good news for resource-constrained public agencies. AI tools for dispatch optimization, incident analysis, and report generation may become affordable enough for departments that couldn&rsquo;t justify the cost before. The ability to run AI on less powerful hardware also matters for field deployments where you can&rsquo;t bring a data center with you.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Update your AI cost models. If inference costs drop 50%, every client&rsquo;s AI business case improves &mdash; projects that were marginal become viable. This also changes the build-vs.-buy calculus: with cheaper compute, building custom AI solutions becomes more economical. For semiconductor clients, this is a disruptive signal that needs immediate strategic assessment. For everyone else, it&rsquo;s an accelerant for AI adoption timelines.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Cheaper AI has a double edge for artists. On one hand, AI creative tools you use will become more affordable and faster. On the other, it also means AI-generated content becomes even cheaper to produce at scale, which increases the volume of AI art competing with your work. The economics of AI creativity just shifted &mdash; more output, lower cost, same questions about value and authenticity.</span>
+      </div>
+      <div class="read-this"><a href="https://www.cnbc.com/2026/03/26/google-ai-turboquant-memory-chip-stocks-samsung-micron.html">Read this &rarr; CNBC&rsquo;s market analysis</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Arm Made Its First Chip Ever &mdash; and It&rsquo;s Designed for the Age of AI Agents</h3>
+      <div class="story-source"><a href="https://www.cnbc.com/2026/03/25/arm-stock-chip-revenue-agi-cpu.html">CNBC</a> &middot; <a href="https://www.tomshardware.com/tech-industry/semiconductors/arm-launches-its-first-data-center-cpu">Tom&rsquo;s Hardware</a> &middot; <a href="https://newsroom.arm.com/blog/introducing-arm-agi-cpu">Arm Newsroom</a></div>
+      <p>For 35 years, Arm has been the company behind the chip designs in basically every smartphone on Earth &mdash; but it never made its own chips. It licensed its designs to other companies (Apple, Qualcomm, Samsung) and collected royalties. That just changed.</p>
+      <p>Arm unveiled the AGI CPU, its first in-house chip: a 136-core, 3-nanometer processor built specifically for running AI in data centers. The chip is designed for &ldquo;inference&rdquo; &mdash; that&rsquo;s the industry term for when an AI model processes your question and generates an answer, as opposed to the training phase where the model learns. Meta is the launch partner, and OpenAI, Cerebras, Cloudflare, and SAP have also signed up.</p>
+      <p>Arm&rsquo;s stock jumped 16% on the news &mdash; the biggest single-day gain in almost a year. The company expects its new chip business to generate $15 billion in revenue by 2031, up from $4 billion total in 2025. It&rsquo;s a direct challenge to Intel and AMD in the data center market, and it signals that the demand for AI processing power is big enough to lure a 35-year-old licensing company into manufacturing.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">More competition in chip-making is good news for you. When more companies build AI chips, the cost of running AI goes down, and the AI tools you use get faster and cheaper. Arm&rsquo;s entry into the market means Nvidia, Intel, and AMD all face more pressure to lower prices and improve performance. You won&rsquo;t notice this directly, but you&rsquo;ll feel it through better, cheaper AI services over the next few years.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you&rsquo;re deploying AI inference workloads, Arm&rsquo;s AGI CPU is worth benchmarking against Nvidia GPUs and AMD&rsquo;s EPYC. A 136-core CPU optimized for inference could offer better price-performance for certain workloads, especially if your models run efficiently on CPUs. With Meta, OpenAI, and Cloudflare as early adopters, expect cloud providers to offer Arm-based inference instances soon. This diversifies your hardware options significantly.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a great real-world example for business, economics, or technology classes: a 35-year-old company that made its fortune licensing designs to others is now competing with its own customers. It raises questions about business strategy, competitive dynamics, and how AI is reshaping entire industries &mdash; even the companies that make the hardware.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">More AI chip competition drives costs down across the board. For healthcare, that means AI-powered diagnostic tools, imaging analysis, and administrative automation become cheaper to run. The timeline for affordable, in-hospital AI systems just moved forward as more chip options enter the market.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Arm&rsquo;s 16% jump reflects the market repricing it from a licensing company to a product company. The $15B revenue target by 2031 is ambitious but signals real conviction. Portfolio implications: this is a new competitive threat to Intel and AMD in data center CPUs, and it diversifies the AI hardware landscape beyond Nvidia GPUs. The meta-trend is that AI inference demand is so large that it&rsquo;s pulling new entrants into chip manufacturing. Reassess your semiconductor allocation.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Arm selling its own chips while continuing to license designs to competitors (Apple, Qualcomm, Samsung) creates interesting antitrust and IP questions. Arm&rsquo;s licensees are now also its competitors. Watch for contract disputes, licensing renegotiations, and potential regulatory scrutiny around whether Arm gives its own chip division preferential access to designs or roadmaps.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">More competition in AI chips means the cost of AI services will continue dropping. You won&rsquo;t be buying Arm chips directly, but your cloud providers and AI vendors will have more hardware options, which puts downward pressure on the prices you pay. This is the kind of behind-the-scenes industry shift that quietly makes AI more affordable for businesses of every size.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The indirect benefit is real: more chip competition means cheaper AI infrastructure, which means the AI tools you use for content creation, analytics, and personalization become more affordable. If you&rsquo;re budgeting for AI tools in 2027, plan for lower costs as competition intensifies across the entire AI hardware stack.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is a textbook case of vertical integration &mdash; a company that licenses designs deciding to compete with its own customers by making its own product. It&rsquo;s the kind of strategic move that shows up on business school exams. Understanding why Arm made this choice (AI demand is too big to sit on the sidelines) teaches you a lot about how technological shifts create new market opportunities.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one is deep in the tech weeds, but the bottom line is simple: more companies making AI chips means the cost of AI tools keeps going down. The apps and services that use AI behind the scenes &mdash; from smart scheduling to voice assistants &mdash; will get cheaper and work better as chip competition heats up.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">More chip competition means cheaper AI hardware, which matters for cash-strapped public agencies. As AI processing costs drop, the barrier to deploying AI for dispatch, resource allocation, and incident analysis gets lower. This isn&rsquo;t an immediate change, but it&rsquo;s the kind of long-term trend that eventually makes AI affordable for public safety departments.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Two advisory angles. First, Arm competing with its licensees is a classic &ldquo;platform becomes competitor&rdquo; scenario &mdash; relevant for any client engagement involving platform strategy or ecosystem dynamics. Second, the AI hardware landscape is diversifying rapidly: Nvidia GPUs, Arm CPUs, Google TPUs, custom ASICs. Update client AI infrastructure recommendations to account for this expanding set of options and the resulting cost reductions.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">More competition in AI hardware means the AI tools you use for creative work &mdash; image generation, music production, video editing &mdash; will get faster and cheaper. If you&rsquo;re using AI as a creative collaborator, better and more affordable hardware means more powerful tools within reach. The downside is the same as always: it gets easier for everyone, which increases the volume of AI-generated creative work.</span>
+      </div>
+      <div class="read-this"><a href="https://www.cnbc.com/2026/03/25/arm-stock-chip-revenue-agi-cpu.html">Read this &rarr; CNBC&rsquo;s coverage</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Anthropic and the Pentagon May Be Close to a Deal &mdash; After Weeks of Very Public Fighting</h3>
+      <div class="story-source"><a href="https://www.axios.com/2026/03/26/anthropic-pentagon-ai-deal">Axios</a> &middot; <a href="https://www.cnbc.com/2026/03/24/anthropic-lawsuit-pentagon-supply-chain-risk-claude.html">CNBC</a> &middot; <a href="https://www.aljazeera.com/economy/2026/3/25/anthropics-case-against-the-pentagon-could-open-space-for-ai-regulation">Al Jazeera</a></div>
+      <p>The drama between Anthropic (maker of Claude) and the Pentagon could be nearing a resolution. Axios reported this morning that the two sides are in private discussions, with Anthropic exploring a compromise on the language governing how the military can use Claude.</p>
+      <p>Here&rsquo;s the backstory: Anthropic refused to let the Pentagon use Claude for autonomous weapons targeting or mass surveillance of Americans, citing safety concerns. The Trump administration retaliated by labeling Anthropic a &ldquo;Supply-Chain Risk to National Security&rdquo; &mdash; effectively blacklisting it from government contracts. Anthropic sued, and a federal judge called the Pentagon&rsquo;s actions &ldquo;troubling,&rdquo; noting the government&rsquo;s reasoning seemed like &ldquo;a pretty low bar.&rdquo;</p>
+      <p>Court filings revealed that the two sides were actually &ldquo;very close&rdquo; to a deal before the public fallout. A Pentagon negotiator had emailed Anthropic saying &ldquo;we are very close here&rdquo; &mdash; just five days before Defense Secretary Pete Hegseth declared the company a national security risk. A ruling from the judge could come any day.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">This fight is about whether there should be limits on how the government uses AI. Anthropic drew a line &mdash; no autonomous killing, no mass surveillance &mdash; and the government pushed back hard. However this resolves, it sets a precedent for what AI companies can say no to when governments come calling. The outcome affects how AI gets used in your name, with your tax dollars.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you work with government contracts or classified systems, this case is setting precedent for what AI companies can and can&rsquo;t restrict when selling to the military. The outcome will shape terms of service, acceptable use policies, and the ethical frameworks that govern AI deployment in defense. If you&rsquo;re building AI systems that could be used by government agencies, pay attention to how the compromise language is structured.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is one of the most important AI ethics cases playing out in real time. A company built its product with ethical boundaries, the government demanded those boundaries be removed, and now they&rsquo;re in court. It&rsquo;s an exceptional case study for any class discussing technology ethics, corporate responsibility, or the relationship between tech companies and government power.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">The precedent here matters for healthcare. If the government can pressure AI companies to remove safety guardrails for military use, the same dynamic could play out in healthcare regulation. The question of who sets the safety boundaries for AI &mdash; the company that builds it, or the government that buys it &mdash; has direct implications for how AI is deployed in hospitals and clinics.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">This case has material implications for Anthropic&rsquo;s valuation and government revenue pipeline. Resolution means access to the largest AI buyer in the world (the U.S. Department of Defense). Continued blacklisting means Anthropic loses government contracts while competitors like OpenAI (which signed a DoD agreement) and Palantir capture that market. Watch the ruling closely &mdash; it&rsquo;s a binary event for Anthropic&rsquo;s government business and competitive positioning.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">This is landmark administrative law meeting AI governance. The judge&rsquo;s comment that the Pentagon&rsquo;s reasoning was &ldquo;a pretty low bar&rdquo; signals potential limits on executive branch authority to label companies as national security risks. The case could establish precedent for how the government can retaliate against tech companies that impose ethical restrictions on their products. Every lawyer working in AI policy should be following this closely.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">This case determines whether AI companies can set ethical limits on their products &mdash; even when the customer is the government. If Anthropic wins, it means AI companies retain more control over how their tools are used, which could affect the terms of service you agree to. If the government prevails, it signals that powerful buyers can override company safety policies, which has implications for any business relationship with an AI vendor.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Anthropic&rsquo;s brand positioning as the &ldquo;safety-first&rdquo; AI company is being tested in the most public way possible. Whether they compromise or hold firm, this case will define their brand identity for years. If you market in tech, this is a case study in how corporate values become competitive positioning &mdash; and what happens when those values get tested by the most powerful customer in the world.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is the kind of real-world case that shows up in law school, business school, and ethics courses. A tech company said no to the military on ethical grounds, and the government punished it for that stance. The questions it raises &mdash; about corporate responsibility, government power, and the ethics of AI in warfare &mdash; are ones you&rsquo;ll be dealing with throughout your career. Follow the ruling closely.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This fight is about whether the government can force an AI company to remove its safety limits. You might not use military AI, but the precedent matters: if the government can override safety restrictions on AI, that attitude could spread to how AI is regulated in other industries, including construction, electrical work, and building inspection tools that increasingly use AI.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This case directly affects how AI gets deployed in government and public safety. If Anthropic&rsquo;s Claude becomes available to the Department of Defense with appropriate safety guardrails, versions designed for law enforcement and emergency management could follow. But the terms of the deal &mdash; especially around surveillance and autonomous action &mdash; will set expectations for how AI tools are used across all government agencies, including yours.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">This case is a must-follow for government and defense practice clients. The resolution will determine which AI vendors can sell to the DoD and on what terms. If Anthropic reaches a deal, it opens a new competitive dynamic in government AI procurement. For commercial clients, the precedent about AI companies setting ethical use restrictions has implications for vendor contracts and acceptable use policies across industries. Build this into governance frameworks now.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">This story might seem far from the art world, but the underlying question &mdash; can AI companies set ethical limits on how their technology is used? &mdash; matters for artists too. If AI companies can resist government pressure to remove safety guardrails, they can also maintain content policies that protect artists&rsquo; work. If they can&rsquo;t, the precedent weakens every ethical boundary an AI company has ever set.</span>
+      </div>
+      <div class="read-this"><a href="https://www.axios.com/2026/03/26/anthropic-pentagon-ai-deal">Read this &rarr; Axios&rsquo; inside report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">6x</span>
+      <span class="num-label">Memory reduction achieved by Google&rsquo;s TurboQuant compression technique for AI models</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/03/25/google-turboquant-ai-memory-compression-silicon-valley-pied-piper/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">$15B</span>
+      <span class="num-label">Revenue Arm expects its new chip business to generate by 2031, up from $4B total in 2025</span>
+      <span class="num-src"><a href="https://www.cnbc.com/2026/03/25/arm-stock-chip-revenue-agi-cpu.html">CNBC</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">$1B</span>
+      <span class="num-label">Disney investment in OpenAI that collapsed after Sora was shut down</span>
+      <span class="num-src"><a href="https://deadline.com/2026/03/sora-shut-down-disney-investment-1236764689/">Deadline</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Claude Can Now Control Your Mac While You&rsquo;re Away</h3>
+      <p>Anthropic launched &ldquo;computer use&rdquo; in Claude Cowork and Claude Code, letting Claude physically control your Mac &mdash; opening apps, clicking buttons, typing text, and completing multi-step tasks on your behalf. Paired with Dispatch (released last week), you can assign Claude work from your iPhone and return to a finished project on your desktop. It&rsquo;s Mac-only for now, available to Pro and Max subscribers, and Claude asks permission before accessing new apps. This is the closest any AI has come to being an actual digital assistant that operates your computer like a human colleague would.</p>
+      <div class="watch-src"><a href="https://www.cnbc.com/2026/03/24/anthropic-claude-ai-agent-use-computer-finish-tasks.html">CNBC</a> &middot; <a href="https://9to5mac.com/2026/03/23/anthropic-is-giving-claude-the-ability-to-use-your-mac-for-you/">9to5Mac</a> &middot; <a href="https://www.engadget.com/ai/claude-code-and-cowork-can-now-use-your-computer-210000126.html">Engadget</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Three People Charged With Smuggling $2.5 Billion in AI Chips to China</h3>
+      <p>The U.S. Department of Justice charged three people associated with AI server maker Super Micro Computer, including its co-founder, with helping smuggle at least $2.5 billion worth of American AI technology to China in violation of export laws. It&rsquo;s one of the largest alleged export control violations in the AI era, and it underscores just how valuable &mdash; and how tightly controlled &mdash; advanced AI hardware has become.</p>
+      <div class="watch-src"><a href="https://www.aljazeera.com/news/2026/3/20/three-charged-in-the-us-with-smuggling-ai-chips-into-china">Al Jazeera</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>The U.S. Government Wants to Make Every American &ldquo;AI-Ready&rdquo;</h3>
+      <p>The National Science Foundation announced a new initiative called AI-Ready America, aimed at expanding AI literacy across the entire workforce. The plan includes establishing AI coordination hubs in every U.S. state, partnering with the Department of Agriculture, Department of Labor, and Small Business Administration. The goal: make sure everyone from small business owners to rural workers can understand and use AI tools, not just Silicon Valley engineers. Funding applications are due in June.</p>
+      <div class="watch-src"><a href="https://www.nsf.gov/news/nsf-initiative-aims-make-every-american-worker-business">NSF</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Sora Shutdown</span>
+      <span class="sentiment-tag buzz">TurboQuant &ldquo;Pied Piper&rdquo;</span>
+      <span class="sentiment-tag split">Anthropic vs. Pentagon</span>
+      <span class="sentiment-tag cool">Arm&rsquo;s First Chip</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Slate <span class="tweet-handle">analysis</span></div>
+      <div class="tweet-text">&ldquo;OpenAI&rsquo;s shock move with Sora should make you very nervous about the economy. The company just proved it will build something, get the world excited, then kill it the moment the economics don&rsquo;t work.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://slate.com/technology/2026/03/ai-openai-sam-altman-disney-sora-shutdown.html">Slate</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">TechCrunch <span class="tweet-handle">on TurboQuant</span></div>
+      <div class="tweet-text">&ldquo;Google unveils TurboQuant, a new AI memory compression algorithm &mdash; and yes, the internet is calling it &lsquo;Pied Piper.&rsquo;&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://techcrunch.com/2026/03/25/google-turboquant-ai-memory-compression-silicon-valley-pied-piper/">TechCrunch</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Federal Judge <span class="tweet-handle">Anthropic v. DOD hearing</span></div>
+      <div class="tweet-text">&ldquo;That seems a pretty low bar&rdquo; &mdash; pressing the Pentagon on why labeling Anthropic a supply-chain risk was justified.</div>
+      <div class="tweet-meta">Via <a href="https://www.cnbc.com/2026/03/24/anthropic-lawsuit-pentagon-supply-chain-risk-claude.html">CNBC</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What&rsquo;s Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The Sora shutdown is dominating the conversation. Developers who built on the Sora API are furious about the sudden timeline. Artists and filmmakers are split &mdash; some are relieved that the AI video tool that threatened their industry is gone, others are pointing out that competitors will just fill the gap. The &ldquo;Spud&rdquo; model name is generating endless potato jokes. Sam Altman stepping away from safety is getting quieter but more worried commentary from AI researchers.</p>
+
+      <p><strong>Hacker News:</strong> TurboQuant is the top thread, with engineers debating whether a 6x memory compression with no accuracy loss is too good to be true (early consensus: it&rsquo;s real, and the benchmarks hold up). The Arm chip announcement has generated extensive discussion about whether dedicated AI inference CPUs will eat into Nvidia&rsquo;s dominance. Sora&rsquo;s shutdown is being treated as vindication for critics who said AI video wasn&rsquo;t ready for commercial products.</p>
+
+      <p><strong>Reddit:</strong> r/technology has the Disney/OpenAI collapse trending as the top story, with commenters calling it &ldquo;the fastest billion-dollar deal to die in tech history.&rdquo; r/MachineLearning is deep in the TurboQuant paper. r/law is following the Anthropic-Pentagon case closely, with lawyers noting the judge&rsquo;s language was unusually pointed for a national security case.</p>
+
+      <div class="comm-src">Sources: <a href="https://slate.com/technology/2026/03/ai-openai-sam-altman-disney-sora-shutdown.html">Slate</a> &middot; <a href="https://techcrunch.com/2026/03/25/google-turboquant-ai-memory-compression-silicon-valley-pied-piper/">TechCrunch</a> &middot; <a href="https://www.axios.com/2026/03/26/anthropic-pentagon-ai-deal">Axios</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">If there&rsquo;s a thread running through today&rsquo;s stories, it&rsquo;s that the AI industry is growing up fast &mdash; and growth is messy. OpenAI killed a product and lost a partner to refocus on what actually makes money. Google found a way to make AI dramatically cheaper, rattling a $200 billion chip industry. Arm bet its entire identity on a new market. And Anthropic is learning that having principles is expensive when your biggest potential customer is the U.S. military. The ground is shifting under everyone&rsquo;s feet, including ours. You&rsquo;re caught up. Have a good Thursday.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=OpenAI%20just%20killed%20Sora%2C%20lost%20a%20%241B%20Disney%20deal%2C%20and%20teased%20a%20mystery%20new%20model%20called%20%22Spud%22%20%E2%80%94%20all%20in%20one%20day.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-26-morning.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
