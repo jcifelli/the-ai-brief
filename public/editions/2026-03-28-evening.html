@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Mar 28, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Evening Edition — March 28, 2026">
+  <meta property="og:description" content="Anthropic accidentally leaked its most powerful AI model ever — and it's so good at hacking that cybersecurity stocks tanked.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-03-28-evening.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Evening Edition — March 28, 2026">
+  <meta name="twitter:description" content="Anthropic accidentally leaked its most powerful AI model ever — and it's so good at hacking that cybersecurity stocks tanked.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="Anthropic accidentally leaked its most powerful AI model ever — and it's so good at hacking that cybersecurity stocks tanked.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Saturday, March 28, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">Your evening briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening. Anthropic had an embarrassing week &mdash; a misconfigured server accidentally exposed nearly 3,000 internal documents, including details about a secret new AI model called &ldquo;Mythos&rdquo; that the company says is so good at finding security flaws that it poses &ldquo;unprecedented cybersecurity risks.&rdquo; Cybersecurity stocks promptly tanked. Meanwhile, Claude&rsquo;s paying user base has more than doubled this year, Google shipped a voice AI model that can see and hear at the same time, Apple leaked its plan to turn Siri into a real AI assistant, and Meta released an AI that can simulate your brain. It&rsquo;s been a lot. Let&rsquo;s unpack it. <span class="share-link"><a id="sms-share" href="sms:?&body=Anthropic%20accidentally%20leaked%20its%20most%20powerful%20AI%20model%20ever%20%E2%80%94%20and%20it%27s%20so%20good%20at%20hacking%20that%20cybersecurity%20stocks%20crashed.%20This%20evening%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-28-evening.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Evening&rsquo;s Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Anthropic accidentally leaks its most powerful AI model ever &mdash; &ldquo;Claude Mythos&rdquo; is so good at hacking that cybersecurity stocks crashed <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/">Fortune</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Claude&rsquo;s paid subscribers have more than doubled in 2026 &mdash; daily signups quadrupled to over 1 million <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Google ships Gemini 3.1 Flash Live &mdash; a voice AI that can see, hear, and act in real time across 200+ countries <span class="headline-tag update">Update</span> <span class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/">Google</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">Apple is building a standalone Siri app with chat history, file uploads, and AI agent capabilities for iOS 27 <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.pymnts.com/apple/2026/apple-readies-introduction-of-ai-agent-like-siri/">PYMNTS</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Meta releases an open-source AI that can predict how your brain responds to anything you see, hear, or read <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.therundown.ai/p/meta-new-open-source-brain-ai">The Rundown</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>Anthropic Accidentally Leaked Its Secret Weapon &mdash; and It&rsquo;s Scaring Wall Street</h2>
+    <div class="byline">Sources: <a href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/">Fortune</a> &middot; <a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/">Fortune</a> &middot; <a href="https://futurism.com/artificial-intelligence/anthropic-step-change-new-model-claude-mythos">Futurism</a> &middot; <a href="https://www.cnbc.com/2026/03/27/anthropic-cybersecurity-stocks-ai-mythos.html">CNBC</a> &middot; <a href="https://the-decoder.com/anthropic-leak-reveals-new-model-claude-mythos-with-dramatically-higher-scores-on-tests-than-any-previous-model/">The Decoder</a></div>
+
+    <p>This week, Anthropic &mdash; the company behind Claude &mdash; accidentally published nearly 3,000 internal documents on an unsecured, publicly searchable server. Among the leaked files: a draft blog post announcing a new AI model called &ldquo;Claude Mythos&rdquo; that Anthropic itself describes as posing &ldquo;unprecedented cybersecurity risks.&rdquo;</p>
+
+    <p>Here&rsquo;s what the documents revealed. Mythos is part of a new tier Anthropic is calling &ldquo;Capybara,&rdquo; and it dramatically outperforms every previous Claude model on tests of coding, academic reasoning, and &mdash; most notably &mdash; cybersecurity. The model is &ldquo;currently far ahead of any other AI model in cyber capabilities,&rdquo; according to the leaked blog post, and Anthropic warns it &ldquo;presages an upcoming wave of models that can exploit vulnerabilities in ways that far outpace the efforts of defenders.&rdquo;</p>
+
+    <p>In plain English: Anthropic built an AI that&rsquo;s extremely good at finding and exploiting security holes in software. That&rsquo;s useful if you&rsquo;re trying to protect systems &mdash; but terrifying if the wrong people get access to it.</p>
+
+    <div class="pull-quote">&ldquo;Compared to our previous best model, Claude Opus 4.6, Capybara gets dramatically higher scores on tests of software coding, academic reasoning, and cybersecurity, among others.&rdquo; &mdash; Anthropic leaked draft blog post, via Fortune</div>
+
+    <p>Wall Street reacted swiftly. The S&amp;P 500 fell 1.74% on the day the cybersecurity details dropped &mdash; the biggest single-day decline in weeks. Cybersecurity stocks were hit particularly hard, with investors worried that an AI this powerful at finding vulnerabilities could upend the entire cybersecurity industry. Software stocks broadly sold off as traders processed the implications of an AI that can find flaws faster than humans can patch them.</p>
+
+    <p>The irony wasn&rsquo;t lost on anyone: the company warning about &ldquo;unprecedented cybersecurity risks&rdquo; revealed the model through its own security mistake &mdash; a misconfigured content management system. Security researchers Roy Paz of LayerX Security and Alexandre Pauwels of the University of Cambridge discovered the exposed data. Anthropic confirmed the model&rsquo;s existence rather than denying it, suggesting a public release is coming soon. The company says it&rsquo;s testing Mythos with a small group of early customers, focusing initially on defensive cybersecurity uses.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">An AI that&rsquo;s great at finding security holes is a double-edged sword. If the good guys get it first, your accounts and data get more secure. If attackers figure out how to use models like this, the software you rely on every day becomes more vulnerable. Anthropic says they&rsquo;re starting with defensive uses, but this is the beginning of an AI-powered arms race in cybersecurity &mdash; and the outcome affects everyone who uses the internet.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">This directly affects your threat model. If Mythos can find exploits faster than human security researchers, then AI-assisted vulnerability scanning is about to become table stakes. Start evaluating AI-powered security tools now, because your adversaries will be using them soon. The flip side: if Anthropic opens this up for defensive use, you may soon have an AI that can audit your codebase for vulnerabilities in minutes instead of weeks.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">This is a perfect real-world case study for classes on technology ethics, cybersecurity, or digital literacy. A company accidentally leaked its own secrets while warning about cybersecurity risks &mdash; the irony writes itself. More broadly, students need to understand that AI is becoming a tool in cyber offense and defense, and that will shape the digital world they grow up in.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">Healthcare is one of the most targeted industries for cyberattacks, and an AI that&rsquo;s exceptionally good at finding software vulnerabilities is both a threat and an opportunity. If hospitals can use tools like Mythos to find and fix security holes before attackers do, patient data gets safer. If they can&rsquo;t, the hackers get smarter faster. Push your IT teams to track developments in AI-powered cybersecurity tools.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">The immediate portfolio impact was clear &mdash; the S&amp;P dropped 1.74% and cybersecurity stocks led the decline. But the second-order effects matter more: if AI can find vulnerabilities faster than defenders can patch them, demand for cybersecurity spending actually increases, not decreases. The sell-off in cybersecurity stocks may be a buying opportunity once the market processes that AI threats drive bigger security budgets, not smaller ones. Reassess your cyber sector thesis.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">This leak raises several legal threads. First, Anthropic&rsquo;s own data breach may trigger liability questions depending on what was in those 3,000 documents. Second, when AI models can find vulnerabilities faster than humans, the standard of care for cybersecurity liability changes &mdash; companies may be held to the standard of what an AI could have caught. Third, the export control implications of a model with advanced cyber-offensive capabilities are significant. Watch for regulatory action.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">Your business faces two sides of this coin. The scary side: AI that finds security flaws faster means the hackers targeting your business are about to get more sophisticated. The helpful side: defensive AI tools will get much better at finding and fixing vulnerabilities in your systems before attackers can exploit them. This is a good time to review your cybersecurity posture with your IT provider and ask specifically about AI-powered security tools.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">The direct marketing angle here is the brand lesson: Anthropic just demonstrated what happens when your company&rsquo;s security doesn&rsquo;t match its messaging. They warned about &ldquo;unprecedented cybersecurity risks&rdquo; via their own security breach. For any brand making claims about data privacy, security, or trust, this is a cautionary tale about making sure your house is in order before making big public claims.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">If you&rsquo;re studying computer science, cybersecurity, or AI, this story is directly relevant to your career. AI-powered security tools are becoming the frontier of the field, and understanding how models like Mythos work will be a highly valuable skill. If you&rsquo;re in any other field, the big takeaway is that AI is changing the rules of cybersecurity, and that affects everyone who stores anything digitally &mdash; which is all of us.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">Cyberattacks increasingly target the systems that control physical infrastructure &mdash; electrical grids, building management, HVAC controls. An AI that&rsquo;s better at finding software vulnerabilities could mean more attacks on the smart systems you install and maintain. Make sure the connected devices and systems you work with are updated and properly secured. Ask your suppliers about their cybersecurity practices.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">Emergency services are prime targets for ransomware and cyberattacks, and an AI that can find vulnerabilities faster makes that threat worse in the short term. On the flip side, defensive AI tools could help protect dispatch systems, communication networks, and records databases from attacks. Flag this to your department&rsquo;s IT team &mdash; AI-powered cyber threats are escalating, and your systems need to keep up.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">Three angles for your practice. First, every client with a cybersecurity strategy needs an update &mdash; the threat landscape just shifted with AI-powered vulnerability discovery. Second, the leaked documents suggest Anthropic&rsquo;s next model tier (&ldquo;Capybara&rdquo;) significantly outperforms current offerings across coding, reasoning, and security tasks &mdash; update your AI capability assessments. Third, the irony of the leak itself is a governance case study: even the most safety-focused AI company can fail at basic data hygiene. Build this into risk frameworks.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">This story is about cybersecurity, not creative AI, so the direct impact on your work is limited. But the broader point matters: AI is getting dramatically more capable across every dimension, including security. If you sell work online, accept payments through your website, or store client information digitally, the evolving cyber threat landscape affects your business. Basic security hygiene &mdash; strong passwords, two-factor authentication &mdash; matters more than ever.</span>
+    </div>
+
+    <div class="read-this"><a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/">Read this &rarr; Fortune&rsquo;s exclusive report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Claude&rsquo;s Paid Users Have More Than Doubled This Year &mdash; and Daily Signups Hit 1 Million</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/">TechCrunch</a> &middot; <a href="https://www.adwaitx.com/claude-ai-now-adds-over-1-million-users-every-day-the-numbers-behind-the-surge/">AdwaitX</a> &middot; <a href="https://backlinko.com/claude-users">Backlinko</a></div>
+      <p>While Anthropic was dealing with its embarrassing data leak, its business was quietly having a record-setting month. An analysis of billions of anonymized credit card transactions from 28 million U.S. consumers, conducted by Indagari for TechCrunch, shows Claude gaining paid subscribers faster than ever. Anthropic confirmed that paid subscriptions have more than doubled this year.</p>
+      <p>The growth is striking: daily signups quadrupled from about 250,000 per day at the start of 2026 to over 1 million by early March. Most new subscribers are signing up for the $20/month Pro plan, not the pricier $100 or $200 tiers. Anthropic&rsquo;s Super Bowl ads &mdash; which poked fun at ChatGPT&rsquo;s decision to show ads &mdash; and the popularity of Claude Code (a developer tool) both fueled the surge.</p>
+      <p>But perspective matters: despite the explosive growth, Claude still trails ChatGPT significantly in total users. OpenAI is still adding paid subscribers at a fast clip and remains the dominant consumer AI platform. Anthropic is winning the growth-rate race, but not yet the market-share race.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">More people paying for Claude means Anthropic has more money to make it better. Competition between Claude and ChatGPT is good for you &mdash; it pushes both companies to improve faster, add more features, and keep prices reasonable. If you&rsquo;ve only tried one AI assistant, this is a sign that it&rsquo;s worth trying the other.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Claude Code is a major growth driver, which tells you something about where Anthropic is investing. If you haven&rsquo;t tried Claude for coding tasks, the subscriber numbers suggest a lot of your peers already have. The doubling in paid subscribers also means Anthropic has more revenue to invest in model improvements &mdash; expect Claude to keep getting better at development tasks throughout 2026.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">A million new signups per day means AI assistants are becoming as common as social media accounts. Your students are almost certainly using Claude, ChatGPT, or both. The competitive landscape &mdash; with two strong options pushing each other &mdash; means the tools are improving quickly. Your AI policies should account for multiple AI services, not just ChatGPT.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Growing competition between AI providers is good for healthcare. As Claude and ChatGPT fight for users, both invest more in accuracy, reliability, and specialized features. That means better AI-powered documentation tools, clinical reference assistants, and patient communication aids are coming faster than they would with only one dominant player.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">These subscriber numbers strengthen Anthropic&rsquo;s position in its next fundraising round and eventual IPO. The doubling of paid subs and 4x daily signup growth are the kind of metrics that justify premium valuations. But most new users are on the cheapest tier ($20/month), so revenue per user is lower than it looks. Compare this to OpenAI, which still dominates absolute numbers. For portfolio purposes, the AI consumer market is clearly growing fast enough to support multiple large players.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">More Claude users means more legal professionals using AI for research, drafting, and analysis &mdash; and more potential exposure to AI-generated errors. As these tools become standard, the question of whether using AI constitutes reasonable practice (or whether not using it constitutes malpractice) becomes more pressing. The growth numbers suggest this conversation is accelerating faster than most bar associations are prepared for.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Competition between Claude and ChatGPT is great for your bottom line. When two well-funded companies fight for users, prices stay low and features improve fast. If you&rsquo;re locked into one AI provider, this is a reminder to evaluate both &mdash; the gap between them is narrowing, and you might find one fits your workflow better than the other.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">A million daily signups tells you that AI assistants are going mass market. If you&rsquo;re not already incorporating AI into your content creation, analytics, or campaign planning, you&rsquo;re falling behind. The duopoly between Claude and ChatGPT also means your audience is split across platforms &mdash; don&rsquo;t optimize your AI-generated content for just one tool.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">The fact that Claude&rsquo;s subscribers doubled while ChatGPT is still growing tells you something important about the AI market: it&rsquo;s not winner-take-all. Both products are thriving because different people prefer different tools. Try both, figure out which one works better for your study habits, and don&rsquo;t assume the most popular option is automatically the best one for you.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">If you haven&rsquo;t tried an AI assistant yet, a million people a day are signing up for Claude alone. These tools are becoming part of everyday work &mdash; from drafting emails to customers, to estimating materials, to troubleshooting problems. At $20 a month, it&rsquo;s worth trying to see if it saves you time on the business side of your work.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The mainstream adoption of AI assistants means the people you serve are increasingly using them &mdash; and your department should be evaluating them too. AI tools for report writing, incident documentation, and training materials are improving rapidly as the competition between Claude and ChatGPT intensifies. If your department hasn&rsquo;t looked at these tools recently, the options have gotten significantly better.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The subscriber data validates the &ldquo;two-horse race&rdquo; thesis in consumer AI. Claude&rsquo;s growth rate is outpacing ChatGPT&rsquo;s, but OpenAI still leads on absolute numbers. For clients, the message is clear: build workflows that are platform-agnostic. Don&rsquo;t lock into one provider when the market is this dynamic. For your own practice, Claude Code&rsquo;s role as a growth driver signals that developer-focused AI tools are where the momentum is.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">More people using AI assistants means more people experimenting with AI for creative work &mdash; writing, brainstorming, editing, and ideation. The competition between Claude and ChatGPT is pushing both to improve their creative capabilities. Whether that&rsquo;s a tool or a threat depends on how you use it, but ignoring it isn&rsquo;t a viable strategy when a million people are signing up every day.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/">Read this &rarr; TechCrunch&rsquo;s full analysis</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Google Shipped a Voice AI That Can See, Hear, and Use Tools &mdash; All at Once, in Real Time</h3>
+      <div class="story-source"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/">Google</a> &middot; <a href="https://www.marktechpost.com/2026/03/26/google-releases-gemini-3-1-flash-live-a-real-time-multimodal-voice-model-for-low-latency-audio-video-and-tool-use-for-ai-agents/">MarkTechPost</a> &middot; <a href="https://www.eweek.com/news/google-gemini-3-1-flash-live-voice-ai-launch/">eWeek</a></div>
+      <p>Google released Gemini 3.1 Flash Live, a new AI model that can process voice, video, and images simultaneously in real time with almost no delay. Think of it like upgrading from a chatbot that reads your texts to an assistant that can see what you&rsquo;re looking at, hear what you&rsquo;re saying, and take actions on your behalf &mdash; all at the same time.</p>
+      <p>The model powers Google&rsquo;s Search Live feature, which is now available in over 200 countries and supports more than 90 languages. You can point your phone camera at a broken appliance and ask for troubleshooting help, or have a real-time conversation with the AI while it watches a video feed. On benchmarks that test the ability to handle complex, multi-step tasks through voice commands, it scored 90.8% &mdash; leading the field.</p>
+      <p>For developers, Google is releasing the model through its Gemini Live API, making it possible to build apps that use real-time voice and vision. The first wave of applications built on this technology is expected within 30 days.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">This is a step toward AI that works less like a text box and more like a person helping you in real time. If you use Google Search, you&rsquo;ll soon be able to hold your phone up to something confusing &mdash; a weird error on your screen, a label in a foreign language, a broken gadget &mdash; and have the AI see it and talk you through a fix. It&rsquo;s available in over 200 countries starting now.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The Gemini Live API opens up real-time multimodal interaction for your apps. If you&rsquo;re building voice interfaces, customer support tools, or anything that needs simultaneous audio-video processing, evaluate this immediately. The 90.8% score on ComplexFuncBench Audio means it handles multi-step tool-calling reliably enough for production use. Expect cloud providers to integrate this within weeks.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">A voice AI that can see and hear simultaneously is going to change how students get help with homework. They can point their camera at a math problem, a science experiment, or a passage in a textbook and have the AI walk them through it in real time. This is powerful &mdash; and it makes your conversations about academic integrity and independent learning even more important.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">A real-time AI that can process voice and images together has obvious healthcare applications &mdash; imagine pointing a camera at a wound, a medication label, or a medical device and getting instant guidance. This is still early (don&rsquo;t replace clinical judgment with Google), but the technology for AI-assisted triage and remote patient support just took a major step forward.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Google is shipping multimodal AI to 200+ countries, which is a significant competitive move against OpenAI&rsquo;s voice features and Apple&rsquo;s upcoming Siri overhaul. The distribution advantage is enormous &mdash; Google Search is already on every phone. For portfolio positioning, this strengthens Google&rsquo;s AI narrative at a time when the market was questioning whether they could keep up with OpenAI and Anthropic. The API availability also opens a new developer ecosystem revenue stream.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Real-time AI that processes video and audio raises new privacy questions. If users are pointing their cameras at documents, medical information, or private spaces and feeding that to Google, the data handling implications are significant. Watch for how Google&rsquo;s terms of service handle the visual and audio data captured during these interactions &mdash; there&rsquo;s almost certainly a wave of privacy regulation coming for multimodal AI.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Imagine showing your AI assistant a broken piece of equipment, a confusing invoice, or a product label &mdash; and having it instantly explain what you&rsquo;re looking at and tell you what to do. That&rsquo;s what this enables. For customer-facing businesses, the API means you could build support tools where customers show their problem on camera and get real-time AI help. This is a meaningful upgrade from chatbots.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Visual search is about to get a lot more powerful. Consumers will be able to point their camera at a product and get instant information, comparisons, and purchase options through Google Search. If your products aren&rsquo;t optimized for visual AI search &mdash; clear labels, distinctive packaging, good product photography &mdash; you&rsquo;re going to be invisible to this new discovery channel.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">You can now point your phone camera at a problem and have Google walk you through it in real time while talking to you. That&rsquo;s a powerful study tool &mdash; but it&rsquo;s also a crutch if you never learn to work through problems on your own. Use it to understand concepts, not just get answers. The ability to learn from AI without becoming dependent on it is a skill worth developing now.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one&rsquo;s practical. You can point your phone camera at a wiring problem, a plumbing issue, or a malfunctioning piece of equipment and have Google&rsquo;s AI see what you&rsquo;re looking at and talk you through a diagnosis or fix in real time. It&rsquo;s like having a second pair of eyes from someone who&rsquo;s read every manual ever written. Available now through Google Search.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">A real-time AI that processes what a camera sees could be useful in the field &mdash; pointing a phone at a hazardous material label for instant identification, at accident damage for documentation, or at an unfamiliar piece of equipment for operating guidance. The 90+ language support is also relevant for communicating with non-English speakers during emergencies. Worth evaluating as a field tool.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Google&rsquo;s real-time multimodal AI is an inflection point for client-facing applications. The API availability means enterprises can build customer support, field service, and training tools where users show the AI their problem through a camera. Update your digital transformation playbooks &mdash; voice-and-vision AI is no longer a demo; it&rsquo;s a shipping product with a developer API.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">A voice AI that can see in real time opens creative possibilities: pointing your camera at a sketch and having the AI brainstorm variations, asking it to describe what it sees in your studio to spark ideas, or using it to identify references and techniques in art you encounter. It&rsquo;s a real-time creative collaborator that can see your work. Whether that excites or concerns you depends on your relationship with AI tools.</span>
+      </div>
+      <div class="read-this"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/">Read this &rarr; Google&rsquo;s announcement</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Apple Is Quietly Building the Siri That Should Have Existed Years Ago</h3>
+      <div class="story-source"><a href="https://www.pymnts.com/apple/2026/apple-readies-introduction-of-ai-agent-like-siri/">PYMNTS</a> &middot; <a href="https://macdailynews.com/2026/03/27/apple-plans-standalone-siri-app-new-ask-siri-feature-chatbot-like-experience/">MacDailyNews</a> &middot; <a href="https://www.business-standard.com/technology/tech-news/apple-s-ai-powered-siri-may-get-a-standalone-iphone-app-what-to-expect-126032500401_1.html">Business Standard</a></div>
+      <p>Bloomberg reported this week that Apple is developing a completely redesigned Siri, codenamed &ldquo;Project Campos,&rdquo; that transforms it from a basic voice assistant into a genuine AI agent. The new Siri will be a standalone app on your iPhone with a chat interface, conversation history you can search, and the ability to upload images or files for analysis &mdash; basically everything ChatGPT and Claude can do, but built into your phone.</p>
+      <p>The bigger deal is what Siri will be able to do under the hood. Apple is designing it to work across all your apps &mdash; reading your messages, notes, and emails to answer questions with personal context, completing tasks within third-party apps, and acting as what Apple is calling a system-wide AI &ldquo;agent&rdquo; that understands what&rsquo;s on your screen. It will support both voice and text at the same time.</p>
+      <p>The unveiling is expected at Apple&rsquo;s developer conference on June 8, as part of iOS 27 and macOS 27. Apple is partnering with Google to use its Gemini model, running on Apple&rsquo;s Private Cloud Compute infrastructure to maintain the company&rsquo;s privacy standards.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you have an iPhone, Siri is about to get dramatically better. Instead of only handling simple voice commands, it will work like ChatGPT &mdash; with a chat interface, memory of past conversations, and the ability to actually do things inside your apps. The timeline is June for the announcement, with the actual release likely in the fall. If Siri&rsquo;s limitations have been frustrating you, help is on the way.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Apple building Siri on Google&rsquo;s Gemini model running on Apple&rsquo;s Private Cloud Compute is an interesting architectural choice &mdash; it suggests Apple couldn&rsquo;t match Gemini&rsquo;s capabilities in-house but wanted to maintain privacy control over the infrastructure. If you build iOS apps, expect new Siri integration APIs at WWDC that let the AI agent interact with your app&rsquo;s features. Start thinking about what cross-app workflows your users would want.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">When Siri can read emails, search notes, and complete tasks across apps, every student with an iPhone will have a personal AI assistant built into their phone &mdash; no separate app or subscription needed. This will be the biggest expansion of student access to AI yet. Start planning now for how this changes classroom dynamics, because it arrives this fall.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">A Siri that understands context across apps and can complete tasks autonomously could be genuinely useful for clinical workflows &mdash; imagine dictating a patient note that Siri routes to the right system, or asking Siri to pull up a patient&rsquo;s recent lab results while your hands are busy. Apple&rsquo;s privacy-first approach (processing on their own secure servers) is important for healthcare, where data protection is non-negotiable.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">This is a significant strategic move for Apple. By building on Google&rsquo;s Gemini rather than developing a competitive model in-house, Apple is acknowledging that the AI model race isn&rsquo;t where they compete &mdash; it&rsquo;s the device integration and privacy layer. For the market, this means Apple&rsquo;s AI story is finally getting real. If the new Siri ships in iOS 27 this fall, it changes the competitive dynamics between Apple, Google, and OpenAI&rsquo;s ChatGPT app on mobile.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">An AI assistant that reads your messages, emails, and notes to answer questions with context raises significant attorney-client privilege concerns. If Siri processes legal communications through Google&rsquo;s Gemini model &mdash; even on Apple&rsquo;s private infrastructure &mdash; there are questions about whether privilege is maintained. Watch the privacy architecture closely at WWDC. You may need to advise clients on whether to enable or disable these features.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If you and your employees use iPhones, a dramatically better Siri means a free AI assistant built into every device. Cross-app task completion &mdash; Siri reading your emails, checking your calendar, and drafting responses &mdash; could save real time on daily administrative work. This won&rsquo;t replace business AI tools, but it lowers the barrier for everyone on your team to start using AI productively.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Siri becoming a real AI agent changes the search and discovery landscape. When people can ask Siri to find, compare, and purchase products using context from their messages and browsing history, traditional search marketing gets disrupted. Start thinking about how your brand shows up in AI-powered assistant recommendations, not just Google search results.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">A free, powerful AI assistant built into every iPhone means you won&rsquo;t need separate subscriptions to ChatGPT or Claude for basic AI help. Siri will be able to search your notes, help with assignments, and analyze images you upload &mdash; all from the phone you already have. That said, the dedicated AI tools will likely remain more powerful for serious academic work. Think of the new Siri as a good starting point, not a replacement.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">A smarter Siri that works across all your iPhone apps is good news for hands-free work. Imagine telling Siri to check your schedule, text a client an update, and order materials from your supplier &mdash; all through voice commands while you&rsquo;re on a job site. Apple is designing it to handle multi-step tasks, which is exactly what you need when your hands are full.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">A Siri that can complete tasks across apps and understand screen context could be genuinely useful in the field &mdash; hands-free report dictation, pulling up building plans or hazmat information, or sending status updates to dispatch while you&rsquo;re working. Apple&rsquo;s privacy approach (keeping data processing on secure servers) is important for departments that handle sensitive information. Watch what Apple announces at WWDC in June.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Apple entering the AI agent race with Siri validates the &ldquo;AI agents as the new interface&rdquo; thesis. For clients in any consumer-facing business, this changes how customers interact with products and services. When Siri can take cross-app actions &mdash; &ldquo;find me a plumber, check their reviews, and book the best one&rdquo; &mdash; brands that aren&rsquo;t integrated into AI agent ecosystems become invisible. Update your digital strategy recommendations accordingly.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">A Siri that can analyze images and files you upload opens creative use cases &mdash; getting feedback on work-in-progress, identifying color palettes or techniques in reference images, or managing the business side of your art practice through voice commands. Apple building this into the iPhone means you don&rsquo;t need a separate app or subscription to experiment with AI as a creative tool.</span>
+      </div>
+      <div class="read-this"><a href="https://www.pymnts.com/apple/2026/apple-readies-introduction-of-ai-agent-like-siri/">Read this &rarr; PYMNTS&rsquo; coverage</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">3,000</span>
+      <span class="num-label">Internal documents Anthropic accidentally exposed through an unsecured server</span>
+      <span class="num-src"><a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/">Fortune</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">1M+</span>
+      <span class="num-label">Daily signups for Claude, up from 250,000 at the start of the year</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">200+</span>
+      <span class="num-label">Countries where Google&rsquo;s real-time voice-and-vision AI is now available</span>
+      <span class="num-src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/">Google</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Meta Built an AI That Simulates How Your Brain Works</h3>
+      <p>Meta released TRIBE v2, an open-source AI model trained on over 1,000 hours of brain scan data from 700+ people. It can predict how your neurons respond to anything you see, hear, or read &mdash; and its predictions are more accurate than most real brain scans, which get muddied by heartbeats, movement, and noise. Meta says it could do for brain research what AlphaFold did for protein science: compress months of lab work into seconds of computation. The model, code, and an interactive demo are all free to use.</p>
+      <div class="watch-src"><a href="https://www.therundown.ai/p/meta-new-open-source-brain-ai">The Rundown</a> &middot; <a href="https://www.biopharmatrend.com/news/meta-open-sources-foundation-model-that-predicts-brain-responses-to-speech-video-and-text-1544/">BioPharma Trend</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Google&rsquo;s Pixel Phones Just Got AI That Can Order Your Groceries</h3>
+      <p>Google&rsquo;s March Pixel Drop introduced &ldquo;Gemini App Actions&rdquo; &mdash; AI features that can execute tasks across third-party apps using natural language. Tell your phone to order groceries, book a ride, or adjust your smart home devices, and the AI handles it end-to-end. It&rsquo;s one of the first real-world examples of AI &ldquo;agents&rdquo; doing useful work on a phone you already own, not just in a demo.</p>
+      <div class="watch-src"><a href="https://www.labla.org/latest-ai-model-releases-past-24-hours/new-ai-model-releases-announcements-last-24-hours-march-27-2026/">Labla</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>U.S. Senators Want a Federal Commission to Study AI&rsquo;s Impact on Jobs</h3>
+      <p>A bipartisan group of U.S. senators introduced legislation to create a federal commission focused on AI&rsquo;s economic and workforce effects. Separately, several Republican-led states are trying to pass their own AI safety laws, but the White House wants them to wait for a federal framework. The tension between state and federal approaches to AI regulation is heating up &mdash; with no clear resolution in sight.</p>
+      <div class="watch-src"><a href="https://www.marketingprofs.com/opinions/2026/54448/ai-update-march-20-2026-ai-news-and-views-from-the-past-week">MarketingProfs</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Mythos Leak</span>
+      <span class="sentiment-tag buzz">Claude Growth</span>
+      <span class="sentiment-tag cool">Gemini Flash Live</span>
+      <span class="sentiment-tag split">Siri Overhaul</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Futurism <span class="tweet-handle">analysis</span></div>
+      <div class="tweet-text">&ldquo;Anthropic Just Leaked Upcoming Model With &lsquo;Unprecedented Cybersecurity Risks&rsquo; in the Most Ironic Way Possible.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://futurism.com/artificial-intelligence/anthropic-step-change-new-model-claude-mythos">Futurism</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Fortune <span class="tweet-handle">exclusive reporting</span></div>
+      <div class="tweet-text">&ldquo;The company believes it poses unprecedented cybersecurity risks &mdash; and it was revealed through the company&rsquo;s own data breach.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/">Fortune</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">TechCrunch <span class="tweet-handle">on Claude growth</span></div>
+      <div class="tweet-text">&ldquo;Claude paid subscriptions have more than doubled this year &mdash; and the company&rsquo;s Super Bowl ads mocking ChatGPT&rsquo;s decision to show ads were funny and effective.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/">TechCrunch</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What&rsquo;s Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The Mythos leak dominated the conversation all week, with security researchers dunking on Anthropic for leaking a model that&rsquo;s supposed to be an expert at cybersecurity. The irony is inescapable. Developers are debating whether the &ldquo;Capybara&rdquo; tier represents a genuine step change or if Anthropic is overhyping its own model. Meanwhile, the Claude subscriber numbers are being parsed for what they mean about the ChatGPT-vs-Claude horse race &mdash; the consensus is that Claude is winning on momentum, but ChatGPT still has the userbase.</p>
+
+      <p><strong>Hacker News:</strong> The Apple Siri redesign leaked via Bloomberg is generating extensive debate about whether Apple can actually execute on an AI agent when it&rsquo;s relying on Google&rsquo;s Gemini model under the hood. Google&rsquo;s Flash Live launch is getting technical praise for the latency improvements, with engineers noting the 90.8% function-calling score is production-ready. Meta&rsquo;s TRIBE v2 brain model has the neuroscience community excited, with multiple researchers calling it &ldquo;AlphaFold for the brain.&rdquo;</p>
+
+      <p><strong>Reddit:</strong> r/technology has the Anthropic leak as the top story, with the most-upvoted comment reading: &ldquo;The company warning about &lsquo;unprecedented cybersecurity risks&rsquo; just got hacked by a misconfigured CMS. You can&rsquo;t make this up.&rdquo; r/apple is cautiously optimistic about the Siri redesign, though the skeptics pointing to years of broken Siri promises are getting plenty of upvotes too. r/MachineLearning is deep in the TRIBE v2 paper.</p>
+
+      <div class="comm-src">Sources: <a href="https://futurism.com/artificial-intelligence/anthropic-step-change-new-model-claude-mythos">Futurism</a> &middot; <a href="https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/">TechCrunch</a> &middot; <a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/">Fortune</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">If there&rsquo;s a theme this week, it&rsquo;s that the biggest AI companies keep tripping over their own feet while sprinting forward. Anthropic built a model so powerful it scares even them &mdash; then leaked it through basic security negligence. Apple is finally building the Siri everyone wanted, but only by partnering with a competitor. Google shipped a genuinely impressive voice-and-vision AI, and it barely made the news because everything else was louder. The irony of Anthropic &mdash; the &ldquo;safety-first&rdquo; company &mdash; revealing its most dangerous model through its own security failure will stick in people&rsquo;s minds for a while. But the substance underneath the spectacle is real: AI is getting dramatically more capable, more accessible, and more integrated into the tools you already use. That&rsquo;s not slowing down. Enjoy your weekend &mdash; you&rsquo;re caught up.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=Anthropic%20accidentally%20leaked%20its%20most%20powerful%20AI%20model%20ever%20%E2%80%94%20and%20it%27s%20so%20good%20at%20hacking%20that%20cybersecurity%20stocks%20crashed.%20This%20evening%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-03-28-evening.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
