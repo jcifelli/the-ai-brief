@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Morning Edition — Apr 02, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Morning Edition — April 02, 2026">
+  <meta property="og:description" content="OpenAI just closed the largest funding round in history — $122 billion — valuing the company at $852 billion and setting the stage for a blockbuster IPO.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-04-02-morning.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Morning Edition — April 02, 2026">
+  <meta name="twitter:description" content="OpenAI just closed the largest funding round in history — $122 billion — valuing the company at $852 billion and setting the stage for a blockbuster IPO.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="OpenAI just closed the largest funding round in history — $122 billion — valuing the company at $852 billion and setting the stage for a blockbuster IPO.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Thursday, April 2, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Morning Edition</span>
+    <div class="tagline">Your morning briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good morning. OpenAI just closed the largest private funding round in history &mdash; $122 billion &mdash; putting the ChatGPT maker&rsquo;s value at $852 billion and all but confirming an IPO is coming. Meanwhile, Anthropic accidentally leaked 500,000 lines of its own source code, then accidentally took down 8,100 innocent GitHub projects trying to clean up the mess. Salesforce is betting the future of workplace chat on AI, cramming 30 new AI features into Slack. And a U.S. congressman is now asking whether the Anthropic leak is a national security risk. Let&rsquo;s get into it. <span class="share-link"><a id="sms-share" href="sms:?&body=OpenAI%20just%20raised%20%24122%20billion%20at%20an%20%24852%20billion%20valuation%20%E2%80%94%20the%20largest%20private%20funding%20round%20in%20history.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-04-02-morning.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Morning&rsquo;s Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">OpenAI closes the largest private funding round in history &mdash; $122 billion at an $852 billion valuation <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round">Bloomberg</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Anthropic accidentally leaks 500,000 lines of its own source code, then takes down 8,100 GitHub repos trying to fix it <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Salesforce gives Slack a massive AI overhaul &mdash; 30 new features turn Slackbot into a full work assistant <span class="headline-tag update">Update</span> <span class="src"><a href="https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">Congressman demands Anthropic explain its source code leak, warns of national security risk <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks">Axios</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Google launches Gemini 3.1 Flash-Lite &mdash; 2.5x faster than its predecessor at a fraction of the cost <span class="headline-tag update">Update</span> <span class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/">Google</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>OpenAI Just Raised $122 Billion &mdash; the Largest Private Funding Round in History</h2>
+    <div class="byline">Sources: <a href="https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round">Bloomberg</a> &middot; <a href="https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html">CNBC</a> &middot; <a href="https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/">TechCrunch</a></div>
+
+    <p>Let&rsquo;s put this number in perspective. OpenAI &mdash; the company behind ChatGPT &mdash; just raised $122 billion in a single funding round. That&rsquo;s more money than the entire GDP of Morocco. It values the company at $852 billion, putting it within striking distance of the trillion-dollar club currently occupied by only a handful of companies like Apple, Microsoft, and Nvidia.</p>
+
+    <p>The investors are the biggest names in tech. Amazon put in $50 billion (though $35 billion of that is conditional on OpenAI actually going public or achieving what the industry calls &ldquo;artificial general intelligence&rdquo; &mdash; AI that can do anything a human can). Nvidia and SoftBank each invested $30 billion. Another $3 billion came from individual retail investors, an unusual move for a private company.</p>
+
+    <div class="pull-quote">&ldquo;We need to be public-company capable.&rdquo; &mdash; OpenAI&rsquo;s CFO, signaling an IPO is coming soon, possibly by late 2026</div>
+
+    <p>The raw numbers behind OpenAI are staggering: $2 billion in revenue every single month, over 900 million weekly users, and more than 50 million paying subscribers. The company is growing revenue four times faster than Google and Facebook did at the same stage in their histories.</p>
+
+    <p>But here&rsquo;s the catch: OpenAI is still not profitable. It&rsquo;s burning through cash on the chips, data centers, and talent it needs to stay ahead. This round is widely viewed as the company&rsquo;s last big private fundraise before it files for an IPO &mdash; the moment it starts selling stock to the public. That IPO would be one of the largest in tech history and would make or break the argument that AI companies are worth the astronomical valuations investors are placing on them.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">This is the clearest sign yet that AI is becoming the most heavily funded technology in history. The company behind ChatGPT is now worth more than almost every corporation on Earth, and it&rsquo;s about to go public. When that happens, everyday investors will be able to buy shares for the first time. Whether you invest or not, the flood of money pouring into AI means these tools will keep getting more powerful and more embedded in your daily life.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">The $122 billion war chest means OpenAI will continue to outbid competitors for top engineering talent and GPU capacity. If you&rsquo;re building on OpenAI&rsquo;s APIs, expect continued aggressive pricing and rapid model improvements &mdash; but also be aware of vendor lock-in risk. With Amazon as a major investor, expect deeper AWS integration. If you&rsquo;re job hunting, OpenAI and its ecosystem companies are hiring aggressively, but salaries across the industry may compress once the IPO hype cools.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">With 900 million weekly users and growing, ChatGPT is almost certainly already in your classroom whether you know it or not. This funding ensures the tool isn&rsquo;t going anywhere &mdash; it&rsquo;s going to keep getting better and more widely used. Now is the time to develop clear classroom policies on AI use and to start teaching students how to use these tools responsibly rather than trying to ban them outright.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">OpenAI has been aggressively expanding into healthcare applications, and $122 billion in new funding will accelerate that push. Expect more AI tools for clinical documentation, patient intake, and diagnostic support to hit the market. If your hospital or practice hasn&rsquo;t evaluated AI-assisted tools yet, it&rsquo;s coming &mdash; likely bundled into the software systems you already use. Make sure you&rsquo;re part of those adoption decisions, not just a recipient of them.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">The $852 billion valuation sets the benchmark for the expected IPO, likely in late 2026. Amazon&rsquo;s $35 billion contingent tranche tied to IPO or AGI milestones is an unusual structure worth studying. At $24 billion annualized revenue and still unprofitable, the company is priced at roughly 35x forward revenue &mdash; aggressive even by AI standards. The key metric to watch: enterprise revenue mix at 40% and climbing. The IPO will be a defining moment for AI sector valuations across your portfolio.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">OpenAI&rsquo;s transition from a nonprofit to a for-profit entity &mdash; and now toward an IPO &mdash; creates a complex web of legal questions around corporate governance, fiduciary duties, and regulatory compliance. If you advise tech companies or work in securities law, this will be one of the most-watched IPO filings in years. The conditional nature of Amazon&rsquo;s $35 billion investment is also a novel deal structure worth understanding.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">This funding round confirms that AI tools like ChatGPT are not a passing trend &mdash; they&rsquo;re backed by the biggest companies on Earth. If you haven&rsquo;t explored how AI can help your business with customer service, content creation, or internal operations, you&rsquo;re falling behind competitors who have. The good news: more funding means more competition, which means prices for AI tools will keep dropping.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">With 900 million weekly users, ChatGPT is now one of the most-used platforms on the internet. That user base is a marketing channel in itself &mdash; people ask ChatGPT for product recommendations, service comparisons, and buying advice every day. If your brand isn&rsquo;t showing up in AI-generated answers, you&rsquo;re invisible to a growing share of your audience. Start thinking about AI search optimization alongside traditional SEO.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">The company behind the tool you probably already use for homework just became one of the most valuable companies on the planet. That means AI skills are about to become as essential on a resume as computer literacy was a generation ago. Whatever you&rsquo;re studying, figure out how AI tools apply to your field. The students who learn to work with AI &mdash; not just copy from it &mdash; are the ones who&rsquo;ll have the biggest advantage when they graduate.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">More AI investment means more data centers, and more data centers means more construction work for electricians, HVAC techs, and plumbers. OpenAI alone is building massive computing facilities across the country. On the tools side, AI-powered diagnostics and project estimation software is getting better and cheaper, which could help you bid jobs more accurately and troubleshoot faster.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">AI tools like ChatGPT are increasingly being tested for emergency dispatch optimization, incident report generation, and training simulations. With this level of funding, those capabilities will accelerate. Your department may already be evaluating AI tools for administrative tasks. If not, expect vendors to start pitching them soon. The key question for your team: which tasks benefit from AI assistance, and which absolutely require human judgment?</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">The $852 billion valuation resets the benchmark for every AI company valuation conversation you&rsquo;ll have with clients. At 35x forward revenue for a pre-profit company, this is either a generational investment or a cautionary tale &mdash; and your clients need frameworks for both scenarios. More practically, the $122 billion in fresh capital means the AI tooling landscape will continue to shift rapidly. Update your technology strategy decks quarterly, not annually.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">OpenAI has faced multiple copyright lawsuits from artists, writers, and musicians whose work was used to train its AI models without permission. An $852 billion valuation makes those legal battles even more consequential &mdash; the company now has nearly unlimited resources to fight in court. If you care about AI and creative rights, pay attention to how these cases develop. The outcome will define whether artists get compensated when AI systems learn from their work.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round">Read this &rarr; Bloomberg&rsquo;s full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Anthropic Leaked Its Own Source Code &mdash; Then Accidentally Took Down 8,100 GitHub Projects Trying to Fix It</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/">TechCrunch</a> &middot; <a href="https://fortune.com/2026/03/31/anthropic-source-code-claude-code-data-leak-second-security-lapse-days-after-accidentally-revealing-mythos/">Fortune</a> &middot; <a href="https://www.axios.com/2026/03/31/anthropic-leaked-source-code-ai">Axios</a></div>
+      <p>Anthropic &mdash; the AI safety company behind Claude &mdash; accidentally published 500,000 lines of its own source code for Claude Code, its popular coding assistant. A debugging file that should have stayed internal was mistakenly bundled into a routine software update and pushed to npm, the public registry where developers download software packages. Within hours, the code had spread across GitHub.</p>
+      <p>Then the cleanup got worse. Anthropic filed copyright takedown notices (called DMCA notices) asking GitHub to remove the leaked code. But because of how GitHub&rsquo;s fork system works &mdash; when one project is copied, all copies are linked together &mdash; the takedown notice accidentally disabled 8,100 repositories, including many that had nothing to do with the leaked code. Developers woke up to find their own projects offline.</p>
+      <p>Boris Cherny, Anthropic&rsquo;s head of Claude Code, called the mass takedown &ldquo;accidental&rdquo; and retracted most of the notices, limiting the final takedown to one repository and 96 forks that actually contained the leaked code. Anthropic said no customer data was exposed and called it a &ldquo;packaging issue caused by human error, not a security breach.&rdquo; But the damage to its reputation as the &ldquo;safety-first&rdquo; AI company is real &mdash; this is the second time in days it has accidentally exposed internal information, after a separate incident revealed details about an upcoming AI model codenamed Mythos.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you use Claude or any AI coding tool, no personal data was leaked &mdash; so you don&rsquo;t need to change any passwords. But the incident is a reminder that even companies that market themselves as the most careful in AI can make serious mistakes. When an AI company says &ldquo;trust us, safety is our top priority,&rdquo; remember that trust has to be earned through actions, not just slogans.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If your GitHub repos were among the 8,100 taken down, they should be restored now. The technical root cause was a source map file accidentally included in the npm package &mdash; a reminder to double-check your own build pipelines and .npmignore files. The leaked code itself revealed Claude Code&rsquo;s architecture and unreleased feature roadmap, which competitors are already studying. If you build developer tools, this is a case study in why production packaging should have automated checks for accidental file inclusion.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a great real-world example for teaching about software supply chains and digital trust. A single file in a software update exposed half a million lines of code, and the attempted fix knocked 8,100 projects offline. If you teach computer science or digital literacy, use this to explain how interconnected modern software is &mdash; one mistake can cascade through an entire ecosystem.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">This leak didn&rsquo;t involve any patient or user data, but it&rsquo;s a cautionary tale about operational security at AI companies whose tools are increasingly being used in healthcare settings. If your organization uses Claude or other AI tools for clinical documentation, ask your IT team about the vendor&rsquo;s security track record. Two security lapses in one week from a company that bills itself as the safest in AI is worth noting.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">This is a governance and operational risk story for a company valued at over $60 billion. Two security incidents in quick succession &mdash; the Mythos model name leak and now the full source code &mdash; raise questions about Anthropic&rsquo;s internal controls. If you hold positions in AI companies or funds, factor operational maturity into your risk assessment. The congressional scrutiny from Rep. Gottheimer adds regulatory risk to the picture.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">The DMCA takedown that hit 8,100 repos raises interesting questions about copyright enforcement in the age of interconnected code repositories. Anthropic retracted most of the notices, but developers whose projects were temporarily taken down may have claims for tortious interference or abuse of the DMCA process. If you advise tech companies on IP protection, this is a case study in how automated takedown tools can backfire.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your team uses Claude Code or any Anthropic product, no action is needed &mdash; customer data wasn&rsquo;t involved. But this incident is a reminder to evaluate any AI vendor&rsquo;s security practices before integrating their tools into your business. Ask about their incident response procedures and what happens if something goes wrong. A company&rsquo;s marketing about safety is worth less than its actual track record.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">Anthropic has built its entire brand around being the &ldquo;safe&rdquo; AI company. Two security incidents in one week is a branding crisis. If you&rsquo;re studying this from a marketing perspective, it&rsquo;s a reminder that brand promises need to be backed by operational reality. When they&rsquo;re not, the gap between claim and reality becomes the story &mdash; and that story spreads fast on developer forums and social media.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is a fascinating case study if you&rsquo;re studying computer science, cybersecurity, or business. A single debugging file left in a software update exposed an entire company&rsquo;s codebase, and the attempted fix caused more damage than the original mistake. It shows how fragile software supply chains are and why &ldquo;DevOps&rdquo; &mdash; the process of safely building and shipping software &mdash; is one of the most in-demand skills in tech.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one doesn&rsquo;t directly affect your day-to-day work, but it&rsquo;s a useful reminder that even the biggest tech companies make basic mistakes. If you use any AI tools for estimating, scheduling, or diagnostics, know that the companies behind them aren&rsquo;t infallible. Keep your own records and don&rsquo;t rely entirely on any one digital tool.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">No immediate impact on your operations, but the broader lesson matters: AI companies that position themselves as the most safety-conscious can still make serious errors. If your department is evaluating AI tools from any vendor, make sure the evaluation includes their security track record and incident response procedures, not just their marketing materials.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Two incidents in one week from the company that coined &ldquo;responsible AI&rdquo; is a significant data point for client advisory. If you&rsquo;re recommending AI vendors to enterprise clients, operational security needs to be a top-tier evaluation criterion. The Gottheimer congressional letter also signals that regulatory scrutiny of AI company security practices is increasing. Factor this into your governance and compliance recommendations.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">The leaked source code reportedly included details about how Claude processes and generates content. For artists concerned about how AI companies handle creative works, this kind of transparency &mdash; even if accidental &mdash; could eventually help researchers and advocates understand how these systems actually work under the hood. It&rsquo;s an unintentional peek behind the curtain.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/">Read this &rarr; TechCrunch&rsquo;s full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Salesforce Just Turned Slack Into an AI Work Assistant &mdash; With 30 New Features</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/">TechCrunch</a> &middot; <a href="https://venturebeat.com/orchestration/slack-adds-30-ai-features-to-slackbot-its-most-ambitious-update-since-the">VentureBeat</a> &middot; <a href="https://siliconangle.com/2026/03/31/salesforce-transforms-slackbot-ultimate-work-assistant-30-new-ai-features/">SiliconANGLE</a></div>
+      <p>Salesforce just announced its most ambitious update to Slack since it bought the company five years ago. The update adds 30 new AI-powered features that transform Slackbot &mdash; the little helper that used to just set reminders &mdash; into a full AI work assistant.</p>
+      <p>The headline feature is &ldquo;reusable AI skills&rdquo; &mdash; you can teach Slackbot to do specific tasks (like formatting a weekly report or summarizing a client call), and once set up, anyone on your team can reuse that skill with one click. Slackbot can now transcribe and summarize meetings, so if you miss a call, you can ask it what happened. It can also pop out of the Slack window and sit on your desktop, taking notes and summarizing video calls in real time.</p>
+      <p>Perhaps the most technically significant change: Slackbot now works with something called the Model Context Protocol (MCP), which means it can connect to outside tools and services &mdash; pulling data from your CRM, updating your project tracker, or kicking off automated workflows without you ever leaving Slack. Starting this summer, every new Salesforce customer will get Slack automatically set up with AI features turned on from day one.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If your workplace uses Slack, it&rsquo;s about to get a lot smarter. The new AI features can summarize meetings you missed, help you draft messages, and automate repetitive tasks. You don&rsquo;t need to be tech-savvy to use them &mdash; think of it as having a digital assistant built right into the app you already chat in at work.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">The MCP integration is the big story here. Slackbot as an MCP client means you can build agentic workflows that bridge Slack, Salesforce&rsquo;s Agentforce, and external services. Reusable AI skills are essentially prompt templates with execution context &mdash; useful for standardizing team workflows around code reviews, incident response, and deployments. If you&rsquo;re building internal tools, this could replace a lot of custom Slack bots.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">If your school or district uses Slack for staff communication, these new AI features could save significant time on meeting notes, committee summaries, and administrative coordination. The meeting transcription feature alone could be valuable for documenting IEP meetings or professional development sessions. Worth bringing up with your IT coordinator.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Many healthcare teams use Slack or similar tools for internal coordination. AI-powered meeting summaries and task automation could streamline shift handoffs and team communication. However, be careful about what patient information flows through these tools &mdash; AI features that transcribe and summarize conversations need to be evaluated for HIPAA compliance before your team starts using them.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Salesforce is bundling Slack with AI features for every new customer, signaling that AI-powered workplace tools are moving from premium add-on to default expectation. This has implications for the enterprise software market and for companies like Microsoft that are making similar bets with Copilot. For your own firm, the MCP integration that connects Slack to CRM and portfolio management tools could streamline your research and client communication workflows.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">AI-powered meeting transcription and summarization in Slack raises data retention and privilege questions. If your firm uses Slack, conversations with clients that are transcribed by AI could create discoverable records you didn&rsquo;t intend to preserve. Review your firm&rsquo;s data retention policies before these features roll out, and clarify whether AI-generated summaries of privileged conversations maintain their protected status.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your business uses Slack, you&rsquo;re about to get a free AI upgrade. Meeting summaries, task automation, and the ability to create reusable AI workflows for your team could save hours of administrative work each week. If you&rsquo;re a Salesforce customer, the tight integration between Slack and your CRM means less time switching between apps. This is worth testing as soon as the features roll out.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The reusable AI skills feature could be a game-changer for marketing teams. Imagine creating an AI skill that automatically formats campaign performance reports from your analytics data, or one that drafts social media copy in your brand voice. The MCP integration also means Slackbot can pull data directly from your CRM and marketing platforms without manual exports. Start thinking about which repetitive workflows you&rsquo;d automate first.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">Even if you don&rsquo;t use Slack now, you probably will at your first job. Understanding how AI-powered workplace tools work &mdash; task automation, meeting summaries, reusable workflows &mdash; gives you a real advantage. If you&rsquo;re studying business or computer science, this is a good case study in how enterprise software companies are integrating AI into products people already use, rather than building standalone AI apps.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">If your contracting business uses any kind of team messaging app, this shows where workplace communication is heading: AI that can automatically log what was discussed on a call, create task lists from conversations, and connect to your other business tools. Even if you don&rsquo;t use Slack specifically, similar features will likely appear in the tools you do use soon.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">AI-powered meeting transcription and automatic task creation could be useful for department meetings, training sessions, and shift briefings. If your department uses any team messaging tools, watch for similar AI features rolling out. The ability to automatically summarize a debrief and create follow-up tasks could save administrative time that&rsquo;s better spent on operations.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Salesforce bundling AI-powered Slack for every new customer is a significant platform play that changes how you should think about workplace productivity recommendations. The reusable AI skills feature essentially lets teams create custom automation without engineering resources &mdash; which is exactly the kind of operational efficiency improvement your clients are asking for. Update your digital workplace assessments to include these capabilities.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">If you collaborate with clients, agencies, or other artists through Slack, the new AI features could help manage the business side of your creative work &mdash; automatically summarizing project discussions, creating task lists from feedback sessions, and keeping track of who agreed to what. Less time on admin means more time for the actual creative work.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/">Read this &rarr; TechCrunch&rsquo;s report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">$852B</span>
+      <span class="num-label">OpenAI&rsquo;s valuation after closing its record $122 billion funding round</span>
+      <span class="num-src"><a href="https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round">Bloomberg</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">8,100</span>
+      <span class="num-label">GitHub repos accidentally taken down by Anthropic&rsquo;s DMCA notices</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">900M</span>
+      <span class="num-label">Weekly active users on ChatGPT &mdash; nearly 3x the population of the U.S.</span>
+      <span class="num-src"><a href="https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html">CNBC</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>A Congressman Is Asking Whether the Anthropic Leak Is a National Security Risk</h3>
+      <p>Rep. Josh Gottheimer (D-NJ), a leading voice on AI and cybersecurity in Congress, sent a letter to Anthropic CEO Dario Amodei demanding an explanation for the source code leak and asking why the company has rolled back certain internal safety protocols. Gottheimer pointed to a previous incident where a Chinese government-linked hacking group targeted Claude, and warned that the leaked code &mdash; combined with Anthropic&rsquo;s upcoming Mythos model &mdash; could enable more sophisticated cyberattacks. It&rsquo;s the first sign that the leak could have political consequences beyond just bad press.</p>
+      <div class="watch-src"><a href="https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks">Axios</a> &middot; <a href="https://thehill.com/policy/technology/5812881-gottheimer-presses-anthropic-ai-safety/">The Hill</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Google Launches Gemini 3.1 Flash-Lite &mdash; Faster and Dramatically Cheaper</h3>
+      <p>Google released Gemini 3.1 Flash-Lite, a stripped-down version of its AI model designed for speed and cost. It runs 2.5 times faster than the previous version and costs just $0.25 per million input tokens (a token is roughly a word &mdash; so processing a million words costs a quarter). It&rsquo;s part of a broader industry shift toward making AI affordable enough for everyday applications like customer support chatbots, automated email responses, and real-time translation &mdash; tasks where speed matters more than raw intelligence.</p>
+      <div class="watch-src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/">Google AI Blog</a> &middot; <a href="https://venturebeat.com/technology/google-releases-gemini-3-1-flash-lite-at-1-8th-the-cost-of-pro">VentureBeat</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>AI VC Funding Hit $297 Billion in Q1 &mdash; Up 150% From Last Year</h3>
+      <p>Venture capital investment in AI startups reached $297 billion in the first quarter of 2026, accounting for 81% of all global VC funding. That&rsquo;s up 150% from the same period a year ago. AI startups are now commanding seed-stage valuations of $40&ndash;45 million &mdash; numbers that would have been Series B territory just two years ago. The money is flowing so fast into AI that some investors worry about a bubble, while others argue the technology is genuinely transformative enough to justify the spending.</p>
+      <div class="watch-src"><a href="https://www.humai.blog/ai-news-trends-april-2026-complete-monthly-digest/">HumAI</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">OpenAI $852B</span>
+      <span class="sentiment-tag buzz">Anthropic Code Leak</span>
+      <span class="sentiment-tag cool">Slack AI Overhaul</span>
+      <span class="sentiment-tag split">AI Bubble Debate</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Bloomberg <span class="tweet-handle">reporting</span></div>
+      <div class="tweet-text">&ldquo;OpenAI valued at $852 billion after completing $122 billion round, with Amazon investing $50 billion and Nvidia and SoftBank each putting in $30 billion.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round">Bloomberg</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">TechCrunch <span class="tweet-handle">on the Anthropic fallout</span></div>
+      <div class="tweet-text">&ldquo;Anthropic took down thousands of GitHub repos trying to yank its leaked source code &mdash; a move the company says was an accident.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/">TechCrunch</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Axios <span class="tweet-handle">exclusive</span></div>
+      <div class="tweet-text">&ldquo;Rep. Gottheimer presses Anthropic CEO on source code leaks and safety protocol rollbacks, warning of potential national security risks.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks">Axios</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What&rsquo;s Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The OpenAI funding round is dominating tech discourse. The number $852 billion is getting compared to the GDP of entire countries, with many pointing out that a company that isn&rsquo;t profitable is now worth more than 95% of the world&rsquo;s economies. The Anthropic code leak is generating a mix of schadenfreude and genuine concern &mdash; developers are debating whether 500,000 lines of leaked code is a competitive threat or an accidental open-sourcing. The &ldquo;safety-first company can&rsquo;t keep its own code safe&rdquo; irony is not lost on anyone.</p>
+
+      <p><strong>Hacker News:</strong> The Anthropic DMCA story is the top thread, with developers sharing stories of their projects being taken offline and debating whether GitHub&rsquo;s fork-based takedown system is fundamentally broken. The source code itself is being analyzed for architectural insights, with several engineers noting that the code reveals a roadmap of unreleased features. The OpenAI thread is more skeptical &mdash; many question whether any company is worth $852 billion pre-IPO, and whether Amazon&rsquo;s conditional investment structure signals doubt about OpenAI&rsquo;s fundamentals.</p>
+
+      <p><strong>Reddit:</strong> r/technology has both the OpenAI and Anthropic stories trending. The most-upvoted comment on the funding round: &ldquo;$852 billion for a company that loses money. We learned nothing from 2000.&rdquo; In r/programming, developers are dissecting the Slack AI update, with mixed reactions &mdash; some excited about the MCP integration, others concerned about yet another workplace surveillance tool dressed up as a productivity feature. r/privacy has the Gottheimer letter as its top discussion, with users connecting the Anthropic leak to broader AI security concerns.</p>
+
+      <div class="comm-src">Sources: <a href="https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round">Bloomberg</a> &middot; <a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/">TechCrunch</a> &middot; <a href="https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks">Axios</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Two stories this morning perfectly capture where AI is right now. On one side, $122 billion in fresh capital flowing into a single company &mdash; the most money ever raised in a private funding round, a bet so large it would be a rounding error in most countries&rsquo; budgets. On the other side, the company that literally invented the concept of &ldquo;AI safety&rdquo; accidentally publishing its own source code and then accidentally knocking thousands of developers offline trying to clean it up. The ambition is enormous. The execution is still very human. Have a good Thursday &mdash; see you this evening.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=OpenAI%20just%20raised%20%24122%20billion%20at%20an%20%24852%20billion%20valuation%20%E2%80%94%20the%20largest%20private%20funding%20round%20in%20history.%20This%20morning%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-04-02-morning.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
