@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Apr 01, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Evening Edition — April 01, 2026">
+  <meta property="og:description" content="Oracle fired up to 30,000 workers with a 6 a.m. email — to free up $10 billion for AI data centers.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-04-01-evening.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Evening Edition — April 01, 2026">
+  <meta name="twitter:description" content="Oracle fired up to 30,000 workers with a 6 a.m. email — to free up $10 billion for AI data centers.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="Oracle fired up to 30,000 workers with a 6 a.m. email — to free up $10 billion for AI data centers.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Wednesday, April 1, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">Your evening briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening. Here&rsquo;s a story that captures the AI economy in a single image: Oracle fired up to 30,000 people this morning with a mass email sent at 6 a.m., then used the savings to fund AI data centers. Elsewhere today, a lawsuit revealed that Perplexity &mdash; the AI search engine that promises privacy &mdash; was secretly sending your conversations to Meta and Google. And Trump is threatening to yank $800 million in broadband funding from any state that tries to regulate AI, and it&rsquo;s already working. Let&rsquo;s get into it. <span class="share-link"><a id="sms-share" href="sms:?&body=Oracle%20just%20fired%2030%2C000%20people%20with%20a%206%20a.m.%20email%20%E2%80%94%20to%20pay%20for%20AI%20data%20centers.%20Tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-04-01-evening.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Evening&rsquo;s Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">Oracle fires up to 30,000 workers with a 6 a.m. email &mdash; to free up $10 billion for AI data centers <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html">CNBC</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">Perplexity AI hit with class-action lawsuit for secretly sharing your private conversations with Meta and Google <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.bloomberg.com/news/articles/2026-04-01/perplexity-ai-machine-accused-of-sharing-data-with-meta-google">Bloomberg</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Trump threatens to pull $800M in broadband funding from states that regulate AI &mdash; Louisiana is already backing down <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://lailluminator.com/2026/04/01/louisiana-scraps-some-but-not-all-ai-proposals-after-trump-threats/">Louisiana Illuminator</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">Federal judge blocks Trump&rsquo;s ban on Anthropic AI in government, calling it &ldquo;Orwellian&rdquo; retaliation <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.npr.org/2026/03/26/nx-s1-5762971/judge-temporarily-blocks-anthropic-ban">NPR</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Eli Lilly powers up pharma&rsquo;s most powerful AI supercomputer &mdash; over 1,000 Nvidia GPUs for drug discovery <span class="headline-tag update">Update</span> <span class="src"><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates">Crescendo AI</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>Oracle Fired 30,000 People With a 6 a.m. Email &mdash; to Pay for AI Data Centers</h2>
+    <div class="byline">Sources: <a href="https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html">CNBC</a> &middot; <a href="https://thenextweb.com/news/oracle-layoffs-march-2026">The Next Web</a> &middot; <a href="https://rollingout.com/2026/03/31/oracle-slashes-30000-jobs-with-a-cold-6/">Rolling Out</a></div>
+
+    <p>Oracle &mdash; one of the world&rsquo;s biggest enterprise software companies &mdash; began what analysts believe is the largest mass layoff in its history yesterday morning. Estimates suggest between 20,000 and 30,000 employees are being cut, roughly 18% of the company&rsquo;s global workforce of about 162,000.</p>
+
+    <p>Here&rsquo;s the part people can&rsquo;t stop talking about: employees across the U.S., India, Canada, and Mexico all received the same termination email at approximately 6 a.m. local time. No warning from HR. No call from a manager. Just an email from &ldquo;Oracle Leadership&rdquo; saying their role was eliminated and today was their last day. Their access to company systems was cut immediately.</p>
+
+    <div class="pull-quote">&ldquo;Today is your last day.&rdquo; &mdash; The 6 a.m. email from &ldquo;Oracle Leadership&rdquo; sent simultaneously to thousands of employees across four countries</div>
+
+    <p>So where&rsquo;s the money going? Straight into AI. Oracle has committed to $156 billion in capital spending on AI data centers &mdash; the giant facilities packed with specialized chips that train and run AI systems. According to investment bank TD Cowen, the layoffs will free up between $8 billion and $10 billion in cash flow to help fund that buildout. Oracle disclosed a $2.1 billion restructuring plan in its most recent SEC filing, with nearly $1 billion already spent.</p>
+
+    <p>Wall Street&rsquo;s reaction? Analysts say the cuts will actually help Oracle&rsquo;s stock by boosting profit margins. The human cost is enormous, but the financial logic is clear: Oracle is betting its future on AI infrastructure, and it&rsquo;s paying for that bet with human jobs.</p>
+
+    <p>This is becoming a pattern in enterprise tech. Companies are cutting traditional roles while pouring money into AI. The question is whether the AI infrastructure they&rsquo;re building will eventually create new jobs to replace the ones being eliminated &mdash; or whether this is a permanent shift toward fewer workers.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">This is one of the starkest examples yet of AI reshaping the job market. A major tech company cut 18% of its workforce in a single morning to fund AI infrastructure. Even if you don&rsquo;t work in tech, it signals a broader trend: companies across industries are reallocating money from human workers to AI systems. The best way to protect yourself is to understand how AI tools work in your field and make yourself the person who knows how to use them.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">If you work at a large enterprise software company, this should get your attention. Oracle cut entire divisions &mdash; not just underperformers &mdash; to redirect budget toward AI infrastructure. Engineers working on legacy systems or non-AI products are the most vulnerable. The flip side: Oracle and companies like it are hiring aggressively for cloud infrastructure, AI ops, and data center engineering. If your skills are in those areas, your job market just got better. If they&rsquo;re not, consider upskilling now.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">This is a powerful real-world case study for any class touching on economics, technology, or ethics. A company fired 30,000 people via email to fund AI data centers, and Wall Street cheered. The ethical questions write themselves: What do companies owe their workers? Is it acceptable to automate away jobs? If you teach career readiness, this is a wake-up call to discuss which skills are most resilient in an AI economy.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">Healthcare systems rely on Oracle for electronic health records, databases, and enterprise software. These layoffs could affect the support and development teams behind tools your hospital uses. If your organization runs Oracle systems, check with your IT department about whether your support contracts or implementation timelines might be affected. More broadly, the pattern of trading human jobs for AI investment is worth watching as it spreads to healthcare.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">The market is pricing these layoffs as a positive &mdash; analysts expect improved margins and accelerated free cash flow. TD Cowen estimates $8&ndash;$10B in annual savings redirected to the $156B AI capex program. Oracle&rsquo;s restructuring charge of $2.1B against estimated savings of 5x that is a clean return profile. The real question is whether Oracle&rsquo;s AI infrastructure bet can generate enough cloud revenue to justify the capital deployed. Watch the next earnings call for cloud ARR growth rate.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">Mass termination via simultaneous email across multiple countries raises serious employment law questions. Were WARN Act requirements met in the U.S.? What about notice obligations in Canada and India? The lack of individual manager communication before termination could create vulnerabilities in wrongful termination claims. If you practice employment law, expect a wave of litigation. If you advise companies, use this as a case study in how not to execute a reduction in force.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If your business uses Oracle products, watch for potential service disruptions or slower support response times as the company loses nearly a fifth of its workforce. More broadly, the message is clear: big tech companies see AI infrastructure as more valuable than human employees. If you&rsquo;re a small business owner wondering whether AI investment is worth it, the biggest companies in the world are answering that question emphatically with their checkbooks.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">Oracle&rsquo;s marketing and sales teams were among those affected by the layoffs. If you&rsquo;re in B2B marketing or use Oracle&rsquo;s marketing cloud products, expect some disruption in account management and support. The bigger picture for marketers: when a company fires 30,000 people via a mass email, the employer brand damage is significant. This is a textbook example of how operational decisions become PR crises &mdash; useful to study for crisis communications planning.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">This is the AI economy in one headline: 30,000 people lost their jobs so a company could build more AI data centers. If you&rsquo;re deciding what to study or what career to pursue, pay attention to where the money is flowing. Cloud computing, AI infrastructure, and data engineering are where Oracle is hiring. Traditional enterprise software roles are where they&rsquo;re cutting. The job market you&rsquo;ll graduate into is being reshaped right now.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">Here&rsquo;s the silver lining for the trades: Oracle is spending $156 billion building AI data centers. Those massive facilities need electricians, HVAC technicians, plumbers, and construction workers. The demand for skilled tradespeople to build and maintain AI infrastructure is growing fast. While 30,000 desk jobs were eliminated, the construction boom they&rsquo;re funding will create real demand for hands-on skilled workers.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">Mass layoffs of this scale create community-level impacts. If Oracle has a significant presence in your area, expect increased calls to mental health crisis lines and possible upticks in domestic disturbances as the stress of sudden job loss ripples through households. On the infrastructure side, new AI data centers being built in your district bring fire safety, hazmat, and emergency access planning considerations. Worth bringing up at your next department planning meeting.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">This is the biggest workforce restructuring story of 2026 so far. For client engagements: the $8&ndash;$10B in labor cost savings redirected to $156B in AI capex is a compelling case study for any enterprise transformation deck. Oracle&rsquo;s approach &mdash; simultaneous, impersonal mass termination &mdash; is a playbook to avoid recommending, but the strategic logic of reallocating human capital costs to AI infrastructure investment is one your C-suite clients are already considering. Frame your recommendations around doing it more humanely, not about whether to do it.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">While this story is mostly about corporate jobs, the underlying pattern matters for artists too. Companies are deciding that AI infrastructure is worth more than human workers. That same logic could eventually reach creative industries, where companies invest in AI content generation instead of hiring illustrators, writers, or designers. It&rsquo;s a reminder to build a creative practice that emphasizes what AI can&rsquo;t replicate: original vision, personal voice, and human connection.</span>
+    </div>
+
+    <div class="read-this"><a href="https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html">Read this &rarr; CNBC&rsquo;s full report</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>Perplexity AI Was Secretly Sending Your Conversations to Meta and Google</h3>
+      <div class="story-source"><a href="https://www.bloomberg.com/news/articles/2026-04-01/perplexity-ai-machine-accused-of-sharing-data-with-meta-google">Bloomberg</a> &middot; <a href="https://www.benzinga.com/markets/private-markets/26/04/51615214/perplexity-ai-under-fire-in-lawsuit-alleging-privacy-violations">Benzinga</a> &middot; <a href="https://the-decoder.com/perplexity-ai-sued-over-alleged-data-sharing-with-meta-and-google/">The Decoder</a></div>
+      <p>A class-action lawsuit filed in San Francisco federal court accuses Perplexity AI &mdash; the AI-powered search engine that has positioned itself as a privacy-friendly alternative to Google &mdash; of secretly embedding tracking software in its code that sends your conversations to Meta (Facebook&rsquo;s parent company) and Google.</p>
+      <p>According to the complaint, as soon as you log into Perplexity&rsquo;s home page, trackers are downloaded onto your device, giving Meta and Google full access to your conversations with the AI search engine. This happens even when users turn on Perplexity&rsquo;s &ldquo;Incognito&rdquo; mode, which is supposed to keep searches private.</p>
+      <p>The plaintiff, a Utah man identified as John Doe, said he shared personal information about his taxes, investments, and family finances with the AI chatbot, believing those conversations were private. The lawsuit calls the tracking &ldquo;undetectable&rdquo; and says it violated California privacy laws. Perplexity said it hasn&rsquo;t been served the lawsuit and can&rsquo;t verify the claims. Meta pointed to its rules saying advertisers shouldn&rsquo;t send it sensitive data.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you use Perplexity, you may have been sharing more than you realized. The lawsuit claims that everything you type into the AI search engine &mdash; personal questions, financial details, health concerns &mdash; was being passed along to Meta and Google through hidden tracking software. Even &ldquo;Incognito&rdquo; mode didn&rsquo;t stop it. Until this is resolved, treat any AI chatbot the same way you&rsquo;d treat a public conversation: don&rsquo;t share anything you wouldn&rsquo;t want a stranger to see.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you&rsquo;ve pasted code, API keys, or technical architecture details into Perplexity, those conversations may have been shared with third-party ad platforms. Check your browser&rsquo;s network tab when loading Perplexity &mdash; look for requests to Facebook&rsquo;s pixel or Google&rsquo;s tag manager. More broadly, this is a reminder to audit the third-party scripts in your own products. If you ship analytics or ad tracking, make sure your privacy policy actually matches what your code does.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">If you or your students use Perplexity for research, be aware that those conversations may not have been private. This is a great teaching moment about digital privacy: just because a product says &ldquo;Incognito&rdquo; doesn&rsquo;t mean it&rsquo;s private. Help students understand that AI chatbots are products built by companies that make money, and their business model determines how your data is treated.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">If any healthcare workers have used Perplexity to look up patient-related questions, symptoms, or treatment information, those queries may have been shared with advertising companies. That creates potential HIPAA concerns, even if the queries didn&rsquo;t include patient names. Remind your team: never type patient-identifiable information into any AI tool, and treat all AI search tools as potentially non-private until your compliance team approves them.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">This lawsuit exposes a fundamental business model conflict: Perplexity positions itself as a privacy-focused search alternative while allegedly embedding advertising trackers that share user data with Meta and Google. If Perplexity&rsquo;s privacy claims are proven false, it creates liability exposure and undermines its competitive positioning. For portfolio companies in the AI search space, this is a warning about the gap between marketing claims and actual data practices. Due diligence should include technical audits of tracking code.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">This case &mdash; Doe v. Perplexity AI Inc., N.D. Cal. &mdash; could set important precedent for AI privacy law. The core question is whether embedding ad-tracking pixels that transmit AI conversation data to third parties violates California privacy statutes, particularly when the product offers an &ldquo;Incognito&rdquo; mode that doesn&rsquo;t actually prevent tracking. If you advise tech companies, this is a reminder to audit the gap between privacy marketing claims and actual data flows. The class-action potential here is significant given Perplexity&rsquo;s user base.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">If your team uses Perplexity for business research, competitive analysis, or client work, those conversations may have been shared with advertising companies. That&rsquo;s a confidentiality risk worth taking seriously. Review which AI tools your employees are using and what data they&rsquo;re putting into them. This story is a reminder that &ldquo;free&rdquo; AI tools usually make their money from your data.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The irony here is thick: the trackers allegedly embedded in Perplexity are the same Meta Pixel and Google tracking tools that marketers use every day. The difference is that users expected their AI conversations to be private. This case will likely accelerate regulation around tracking in AI products. If your campaigns rely on third-party tracking data, pay attention &mdash; the rules about where that data can come from are about to get much stricter.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">If you&rsquo;ve used Perplexity for homework, research, or personal questions, those conversations may have been sent to Meta and Google through hidden tracking code. It&rsquo;s a good lesson in digital literacy: &ldquo;Incognito&rdquo; mode and privacy promises don&rsquo;t always mean what they say. Before you type something personal into any AI tool, ask yourself: how does this company make money? If the answer isn&rsquo;t clear, your data is probably the product.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">If you&rsquo;ve used Perplexity to look up technical specs, pricing, or business questions, those searches may have been shared with advertising companies. It&rsquo;s a good reminder that &ldquo;free&rdquo; AI tools aren&rsquo;t really free &mdash; they often make money by selling information about what you search for. Going forward, be careful about typing sensitive business or financial information into any AI chatbot.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">If anyone in your department has used Perplexity to research incidents, look up procedures, or search for information related to cases, be aware that those queries may have been shared with third-party advertising companies. For departments handling sensitive information, this is a reminder to establish clear policies about which AI tools are approved for work-related searches and which are not.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">This is a competitive intelligence and client advisory issue. If your team uses Perplexity for research &mdash; client-related or otherwise &mdash; those conversations may have been exposed to ad tracking platforms. More strategically, this lawsuit validates the growing demand for enterprise AI tools with verifiable privacy guarantees. For clients evaluating AI search tools, data governance should be a first-order requirement, not an afterthought. Update your vendor assessment frameworks to include third-party tracking audits.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">If you&rsquo;ve used Perplexity to research art techniques, pricing, or personal topics, those conversations may have been sent to advertising companies. The lesson applies to all AI tools: before you type something personal or sensitive, remember that the company behind the tool may be sharing your data in ways you don&rsquo;t expect. Stick to well-known tools with clear privacy policies for anything you wouldn&rsquo;t want advertisers to know about.</span>
+      </div>
+      <div class="read-this"><a href="https://www.bloomberg.com/news/articles/2026-04-01/perplexity-ai-machine-accused-of-sharing-data-with-meta-google">Read this &rarr; Bloomberg&rsquo;s exclusive</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Trump Is Threatening to Pull Broadband Funding From States That Regulate AI &mdash; and It&rsquo;s Working</h3>
+      <div class="story-source"><a href="https://lailluminator.com/2026/04/01/louisiana-scraps-some-but-not-all-ai-proposals-after-trump-threats/">Louisiana Illuminator</a> &middot; <a href="https://www.npr.org/2026/03/28/nx-s1-5755062/trump-wants-a-deadlocked-congress-to-move-on-ai-frustrated-states-say-they-already-have">NPR</a> &middot; <a href="https://broadbandbreakfast.com/louisiana-ai-bills-halted-after-trump-white-house-threatens-bead-funding/">Broadband Breakfast</a></div>
+      <p>President Trump issued an executive order directing the government to withhold federal broadband expansion money &mdash; up to $800 million in some states &mdash; from any state that passes AI regulations his administration considers &ldquo;burdensome.&rdquo; He also directed the Department of Justice to challenge state AI laws in court.</p>
+      <p>It&rsquo;s already having an effect. In Louisiana, at least seven out of nearly 20 proposed AI bills have been quietly shelved in the past week. Legislators from both parties confirmed they&rsquo;re pulling their bills. The scrapped proposals would have: limited AI in health insurance decisions, required consent before AI records doctor-patient conversations, mandated disclosure when AI is used in hiring, banned AI from recreating someone&rsquo;s identity without permission, and restricted &ldquo;mental health chatbots.&rdquo;</p>
+      <p>But not everyone is backing down. A handful of bipartisan proposals remain alive, including measures requiring disclosure of AI use and restricting AI in political advertising. The situation highlights a growing tension: Congress is deadlocked on AI regulation, states are trying to fill the gap, and the White House is using federal funding as leverage to stop them.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">The rules that protect you from AI misuse &mdash; like requiring companies to tell you when AI is making decisions about your health insurance, your job application, or your identity &mdash; are being blocked before they can take effect. Whether you think AI regulation is a good idea or not, the practical result is that companies will have fewer legal obligations to tell you when AI is being used on you, and fewer restrictions on how they use it.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Fewer state regulations means less compliance complexity for AI products you build &mdash; no patchwork of state laws to navigate. But it also means less legal clarity about responsible AI practices. If you&rsquo;re building products that use AI for hiring, insurance, or healthcare decisions, the absence of regulation doesn&rsquo;t mean the absence of liability. Build responsible safeguards anyway &mdash; the lawsuits will come whether the regulations exist or not.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Several of the killed bills would have directly affected education &mdash; including requirements to disclose when AI is used in decisions that affect people and restrictions on AI chatbots marketed for mental health. If your students are using AI mental health tools or your school district is deploying AI in administrative decisions, there will now be fewer state-level protections. Keep pushing for clear AI policies at the school and district level.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Two of the shelved Louisiana bills were directly relevant to healthcare: one would have limited AI in health insurance coverage decisions, and another would have required patient consent before AI records and transcribes doctor-patient conversations. Without these protections, insurers and healthcare companies have fewer legal obligations around AI transparency. If your state was considering similar protections, they may also be at risk. Advocate for clear AI policies within your own institution.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">A deregulatory approach to AI is generally positive for AI company valuations &mdash; fewer compliance costs, faster deployment, wider market access. But the mechanism here &mdash; using broadband funding as leverage &mdash; creates political uncertainty. If the administration changes, the regulatory pendulum could swing hard in the other direction. For portfolio positioning, the lack of state-level regulation creates short-term tailwinds for AI companies but increases the risk of eventual federal overcorrection.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">This is a federalism battle with significant legal implications. The executive order directing DOJ to challenge state AI laws, combined with the funding threat, creates a chilling effect on state legislation. The legal question of whether the federal government can condition broadband BEAD funding on AI regulatory compliance will likely be litigated. If you advise state legislatures, clients need to understand the funding risks before advancing AI bills. If you advise AI companies, the regulatory landscape just got simpler in the short term but potentially more volatile long-term.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">Fewer AI regulations means fewer compliance requirements for your business &mdash; at least for now. You can deploy AI tools for hiring, customer service, and operations with less legal complexity. But be careful: the absence of regulation doesn&rsquo;t mean the absence of risk. If your AI systems make biased decisions, customers and employees can still sue. Build fair practices into your AI use regardless of what the law requires.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The killed bills included requirements to disclose when AI is used in phone calls and automated outreach &mdash; which directly affects marketing operations. Without those disclosure requirements, AI-powered marketing campaigns face fewer transparency obligations. But consumer trust in AI is already low (only 21% trust AI results, per this week&rsquo;s Quinnipiac poll), so voluntary transparency might be the smarter brand strategy even without legal requirements.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is a live case study in how technology, politics, and regulation intersect. A president is using federal funding as leverage to prevent states from regulating AI, and it&rsquo;s working. If you&rsquo;re studying political science, law, or technology policy, this is essential reading. The debate over who gets to set the rules for AI &mdash; federal government, states, or no one &mdash; will define the technology landscape you graduate into.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">The broadband funding at stake is the same money that brings internet access to rural and underserved areas &mdash; including many communities where tradespeople live and work. If your state loses that funding because it tried to regulate AI, it could delay internet expansion projects that also create construction and electrical work. It&rsquo;s a complicated trade-off: less AI regulation, but potentially less infrastructure spending too.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The broadband funding at risk directly affects emergency communications infrastructure in rural areas. If states lose BEAD funding over AI regulation disputes, it could delay the expansion of reliable internet service that supports 911 systems, dispatch communications, and emergency coordination. Additionally, killed bills that would have restricted AI chatbots providing mental health support could affect crisis intervention referral systems your team relies on.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">The regulatory landscape just simplified in the near term. For enterprise clients deploying AI, the patchwork state regulation risk has decreased significantly. Update your regulatory risk sections in strategy decks: the federal posture is clearly deregulatory, and states are backing down. However, frame this as a timing opportunity, not a permanent shift. Political cycles change, and the pendulum will eventually swing. Clients should deploy quickly under current conditions while building governance frameworks that can adapt to future regulation.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">One of the killed Louisiana bills would have prohibited AI from recreating someone&rsquo;s identity and artistic material without permission. That&rsquo;s a bill that directly protects artists from having their work or likeness used by AI without consent. Its elimination means fewer legal protections against AI-generated knockoffs of your style, voice, or image. If you care about AI and artists&rsquo; rights, pay attention to what&rsquo;s happening at the state level &mdash; protections are being pulled back before they even take effect.</span>
+      </div>
+      <div class="read-this"><a href="https://lailluminator.com/2026/04/01/louisiana-scraps-some-but-not-all-ai-proposals-after-trump-threats/">Read this &rarr; Louisiana Illuminator&rsquo;s reporting</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">30,000</span>
+      <span class="num-label">Oracle employees fired via mass email &mdash; the largest layoff in the company&rsquo;s history</span>
+      <span class="num-src"><a href="https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html">CNBC</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">$156B</span>
+      <span class="num-label">Oracle&rsquo;s total committed spending on AI data center infrastructure</span>
+      <span class="num-src"><a href="https://thenextweb.com/news/oracle-layoffs-march-2026">The Next Web</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">7 of 20</span>
+      <span class="num-label">Louisiana AI bills scrapped after Trump&rsquo;s broadband funding threat</span>
+      <span class="num-src"><a href="https://lailluminator.com/2026/04/01/louisiana-scraps-some-but-not-all-ai-proposals-after-trump-threats/">Louisiana Illuminator</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>A Federal Judge Just Called Trump&rsquo;s Anthropic Ban &ldquo;Orwellian&rdquo;</h3>
+      <p>U.S. District Judge Rita Lin blocked the Trump administration from banning Anthropic&rsquo;s AI tools across all federal agencies. The dispute started when Anthropic pushed back against allowing the military to use its AI model Claude for domestic surveillance or fully autonomous weapons. In response, Trump ordered every federal agency to &ldquo;immediately cease&rdquo; using Anthropic&rsquo;s technology and the Pentagon labeled the company a &ldquo;supply chain risk.&rdquo; Judge Lin called these actions &ldquo;Orwellian&rdquo; and ruled they constituted illegal retaliation against Anthropic&rsquo;s First Amendment-protected speech. The injunction takes effect in seven days.</p>
+      <div class="watch-src"><a href="https://www.npr.org/2026/03/26/nx-s1-5762971/judge-temporarily-blocks-anthropic-ban">NPR</a> &middot; <a href="https://www.cbsnews.com/news/anthropic-ruling-judge-trump-pentagon-ai/">CBS News</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-03-26/anthropic-wins-court-order-blocking-trump-ban-on-use-of-ai-tool">Bloomberg</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Eli Lilly Just Built Pharma&rsquo;s Most Powerful AI Supercomputer</h3>
+      <p>Eli Lilly inaugurated &ldquo;LillyPod&rdquo; &mdash; the pharmaceutical industry&rsquo;s most powerful AI supercomputer. Built on Nvidia&rsquo;s latest hardware, it packs over 1,000 of Nvidia&rsquo;s Blackwell Ultra GPUs, delivering more than 9,000 petaflops of computing power (a petaflop is one quadrillion calculations per second). Lilly plans to use it to accelerate drug discovery &mdash; simulating how molecules interact, predicting which drug candidates will work, and shortening the years-long process of developing new treatments. It&rsquo;s the clearest sign yet that AI in healthcare is moving beyond chatbots and into the core work of developing medicine.</p>
+      <div class="watch-src"><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates">Crescendo AI</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Apple Is Rebuilding Siri With Google&rsquo;s AI</h3>
+      <p>Apple has officially confirmed that its reimagined Siri will be powered in part by Google&rsquo;s Gemini AI model &mdash; a system with 1.2 trillion parameters (the internal settings that determine how an AI processes language). The new Siri will be &ldquo;context-aware,&rdquo; meaning it can see what&rsquo;s on your screen and work seamlessly across apps instead of only responding to isolated voice commands. It&rsquo;s the biggest admission yet that Apple&rsquo;s in-house AI couldn&rsquo;t keep up, and an unusual move for a company that famously prefers to build everything itself.</p>
+      <div class="watch-src"><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates">Crescendo AI</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">Oracle Layoffs</span>
+      <span class="sentiment-tag buzz">Perplexity Lawsuit</span>
+      <span class="sentiment-tag split">AI Regulation Fight</span>
+      <span class="sentiment-tag cool">Anthropic Court Win</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">CNBC <span class="tweet-handle">reporting</span></div>
+      <div class="tweet-text">&ldquo;Oracle is cutting up to 30,000 employees to pay for AI data centers. Analysts say the layoffs will free up $8 to $10 billion in cash flow.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html">CNBC</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Bloomberg <span class="tweet-handle">exclusive</span></div>
+      <div class="tweet-text">&ldquo;Perplexity AI accused of surreptitiously sharing users&rsquo; personal information with Meta and Google in violation of California privacy laws.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.bloomberg.com/news/articles/2026-04-01/perplexity-ai-machine-accused-of-sharing-data-with-meta-google">Bloomberg</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">NPR <span class="tweet-handle">on the Anthropic ruling</span></div>
+      <div class="tweet-text">&ldquo;The judge called the administration&rsquo;s moves &lsquo;Orwellian&rsquo; and said punishing Anthropic for bringing public scrutiny to government contracting is &lsquo;classic illegal First Amendment retaliation.&rsquo;&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.npr.org/2026/03/26/nx-s1-5762971/judge-temporarily-blocks-anthropic-ban">NPR</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What&rsquo;s Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> The Oracle layoffs are the dominant tech story tonight. The detail about 30,000 people receiving identical termination emails at 6 a.m. has become a symbol of corporate coldness in the AI era. Developers and tech workers are sharing the story as a warning: even at a company worth over $300 billion, your job can disappear in a single email. The Perplexity lawsuit is generating outrage from privacy advocates who feel vindicated &mdash; many had suspected the &ldquo;privacy-first&rdquo; branding was too good to be true.</p>
+
+      <p><strong>Hacker News:</strong> The Perplexity tracking story is the top thread, with engineers deconstructing how Meta Pixel and Google Tag Manager ended up embedded in an AI search product that markets itself on privacy. Several users report confirming the tracking code in their browser&rsquo;s network inspector. The Oracle layoff thread is debating whether the $156 billion AI infrastructure bet will pay off or become the biggest white elephant in tech history. The Louisiana AI regulation story is sparking heated discussion about whether federal preemption of state AI laws is good or terrible policy.</p>
+
+      <p><strong>Reddit:</strong> r/technology has the Oracle email story trending with thousands of upvotes. The most-shared comment: &ldquo;They fired 30,000 people via email so they could build computers. That&rsquo;s the AI economy in one sentence.&rdquo; r/privacy has the Perplexity lawsuit as its top story, with users sharing instructions on how to check for tracking code in AI tools. r/law is closely following the Anthropic federal court ruling, with extensive analysis of the First Amendment retaliation framework the judge used.</p>
+
+      <div class="comm-src">Sources: <a href="https://www.cnbc.com/2026/03/31/oracle-layoffs-ai-spending.html">CNBC</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-04-01/perplexity-ai-machine-accused-of-sharing-data-with-meta-google">Bloomberg</a> &middot; <a href="https://lailluminator.com/2026/04/01/louisiana-scraps-some-but-not-all-ai-proposals-after-trump-threats/">Louisiana Illuminator</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Today painted a vivid picture of the trade-offs in the AI economy. Thirty thousand people woke up to an email that ended their careers &mdash; so a company could build more computers. An AI search engine that promised privacy was quietly feeding your conversations to advertising giants. And state lawmakers who tried to set basic rules for AI found themselves threatened with losing internet funding for their constituents. The technology keeps getting more powerful, but the institutions around it &mdash; corporate, legal, political &mdash; are struggling to keep up. That gap is where the real story is. Have a good night &mdash; see you tomorrow morning.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=Oracle%20just%20fired%2030%2C000%20people%20with%20a%206%20a.m.%20email%20%E2%80%94%20to%20pay%20for%20AI%20data%20centers.%20Tonight%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-04-01-evening.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
