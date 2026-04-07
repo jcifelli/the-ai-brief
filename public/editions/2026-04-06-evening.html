@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief — Evening Edition — Apr 06, 2026</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Open Graph / SMS Rich Preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The AI Brief — Evening Edition — April 06, 2026">
+  <meta property="og:description" content="OpenAI just released a 13-page blueprint for what America should do when superintelligent AI arrives — including robot taxes, a public wealth fund, and a 32-hour workweek.">
+  <meta property="og:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://the-ai-brief-lilac.vercel.app/editions/2026-04-06-evening.html">
+  <meta property="og:site_name" content="The AI Brief">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Brief — Evening Edition — April 06, 2026">
+  <meta name="twitter:description" content="OpenAI just released a 13-page blueprint for what America should do when superintelligent AI arrives — including robot taxes, a public wealth fund, and a 32-hour workweek.">
+  <meta name="twitter:image" content="https://the-ai-brief-lilac.vercel.app/og-image.png">
+  <meta name="description" content="OpenAI just released a 13-page blueprint for what America should do when superintelligent AI arrives — including robot taxes, a public wealth fund, and a 32-hour workweek.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', 'Libre Baskerville', Georgia, serif;
+    background: #f5f0eb;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: #8b0000; }
+
+  .container {
+    max-width: 760px;
+    margin: 20px auto;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  /* === BACK NAV === */
+  .back-nav {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 1px solid #e8e0d4;
+    background: #f9f6f1;
+  }
+  .back-nav a { color: #8b0000; border-bottom: none; }
+  .back-nav a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === MASTHEAD === */
+  .masthead {
+    text-align: center;
+    padding: 32px 40px 20px;
+    border-bottom: 4px double #1a1a1a;
+  }
+  .masthead-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .masthead .edition-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #1a1a1a;
+    color: #fffdf8;
+    padding: 3px 12px;
+    margin-top: 8px;
+  }
+  .masthead .tagline {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+  }
+
+  /* === GREETING BAR === */
+  .greeting-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    color: #555;
+  }
+  .greeting-bar strong { color: #1a1a1a; }
+
+  /* === TLDR CARD === */
+  .tldr-card {
+    margin: 0;
+    padding: 16px 40px;
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .tldr-card .tldr-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .tldr-card .tldr-item {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid #d4c9b8;
+    margin-bottom: 6px;
+  }
+  .tldr-card .tldr-item:last-child { margin-bottom: 0; }
+  .tldr-card .tldr-item strong { color: #1a1a1a; }
+
+  /* === HEADLINE STATUS TAGS === */
+  .headline-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  .headline-tag.breaking { background: #fef2f2; color: #991b1b; }
+  .headline-tag.update { background: #fffbeb; color: #92400e; }
+  .headline-tag.developing { background: #f0fdf4; color: #166534; }
+
+  /* === HEADLINES BLOCK === */
+  .headlines-block {
+    padding: 28px 40px 24px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .headlines-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+  .headline-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .headline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .headline-num {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    color: #8b0000;
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .headline-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+  }
+  .headline-text .src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+  }
+
+  /* === SECTION HEADER === */
+  .section-header {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8b0000;
+    padding: 20px 40px 0;
+    margin-bottom: 2px;
+  }
+  .section-rule {
+    height: 2px;
+    background: #1a1a1a;
+    margin: 0 40px 20px;
+  }
+  .section-rule-thin {
+    height: 1px;
+    background: #d4c9b8;
+    margin: 0 40px;
+  }
+
+  /* === LEAD STORY === */
+  .lead-story {
+    padding: 0 40px 28px;
+  }
+  .lead-story h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .lead-story .byline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .lead-story .byline a { color: #8b0000; }
+  .lead-story p {
+    font-size: 16.5px;
+    color: #2a2a2a;
+    margin-bottom: 14px;
+  }
+  .lead-story .pull-quote {
+    border-left: 3px solid #8b0000;
+    padding: 8px 0 8px 20px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.5;
+  }
+  .read-this {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  .read-this a {
+    color: #fffdf8;
+    background: #8b0000;
+    padding: 4px 12px;
+    border-radius: 3px;
+    border-bottom: none;
+  }
+  .read-this a:hover {
+    background: #6b0000;
+    border-bottom: none;
+  }
+
+  /* === STORIES GRID === */
+  .stories-section {
+    padding: 0 40px 28px;
+  }
+  .story-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #e8e0d4;
+  }
+  .story-block:last-child { border-bottom: none; }
+  .story-block h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .story-block .story-source {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .story-block .story-source a { color: #8b0000; border-bottom: none; }
+  .story-block p {
+    font-size: 15.5px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .lead-story .so-what,
+  .story-block .so-what {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8b0000;
+    background: #fdf6f0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 6px;
+  }
+  .lead-story .so-what .so-what-label,
+  .story-block .so-what .so-what-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    margin-bottom: 4px;
+  }
+  .profession-badge {
+    display: inline-block;
+    background: #f5ebe0;
+    color: #6b4c3b;
+    padding: 1px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    border: 1px solid #d4c0a8;
+  }
+  .so-what-text { display: block; }
+
+  /* === PERSONALIZE BAR === */
+  .personalize-bar {
+    background: #f9f6f1;
+    border-bottom: 1px solid #e8e0d4;
+    padding: 14px 40px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  .personalize-bar .personalize-prompt {
+    display: inline;
+  }
+  .profession-select {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    background: #fffdf8;
+    border: 1px solid #d4c9b8;
+    padding: 3px 28px 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    vertical-align: baseline;
+  }
+  .profession-select:hover { border-color: #8b0000; }
+  .profession-select:focus { outline: none; border-color: #8b0000; box-shadow: 0 0 0 2px rgba(139,0,0,0.1); }
+
+  /* === SHARE LINK (in greeting bar) === */
+  .share-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .share-link a {
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-link a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === SMS SHARE (footer) === */
+  .share-sms { text-align: center; }
+  .share-sms a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    border-bottom: none;
+  }
+  .share-sms a:hover { border-bottom: 1px solid #8b0000; }
+
+  /* === NUMBERS BAR === */
+  .numbers-bar {
+    background: #1a1a1a;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .num-item { text-align: center; flex: 1; }
+  .num-item .big-num {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fffdf8;
+    display: block;
+    line-height: 1.1;
+  }
+  .num-item .num-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+    line-height: 1.4;
+  }
+  .num-item .num-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    display: block;
+  }
+  .num-item .num-src a { color: #777; border-bottom: none; }
+
+  /* === WATCH LIST === */
+  .watchlist-section {
+    padding: 0 40px 28px;
+  }
+  .watch-item {
+    padding: 14px 0;
+    border-bottom: 1px dotted #d4c9b8;
+  }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-item h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .watch-item p {
+    font-size: 14.5px;
+    color: #444;
+  }
+  .watch-item .watch-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .watch-item .watch-src a { color: #8b0000; }
+
+  /* === SOCIAL PULSE === */
+  .social-pulse {
+    padding: 0 40px 28px;
+  }
+  .pulse-sentiment {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-tag {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .sentiment-tag.hot { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .sentiment-tag.buzz { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+  .sentiment-tag.cool { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  .sentiment-tag.split { background: #faf5ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+
+  .tweet-block {
+    background: #fafaf9;
+    border: 1px solid #e8e0d4;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .tweet-block .tweet-author {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .tweet-block .tweet-handle {
+    font-weight: 400;
+    color: #888;
+  }
+  .tweet-block .tweet-text {
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tweet-block .tweet-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .tweet-block .tweet-meta a { color: #8b0000; border-bottom: none; }
+
+  .commentary-block {
+    margin-top: 18px;
+  }
+  .commentary-block h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .commentary-block p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  .commentary-block .comm-src {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #999;
+  }
+  .commentary-block .comm-src a { color: #8b0000; }
+
+  /* === FOOTER === */
+  .footer {
+    border-top: 4px double #1a1a1a;
+    padding: 24px 40px;
+    text-align: center;
+  }
+  .footer .signoff {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .footer .meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 600px) {
+    .container {
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .back-nav { padding: 10px 20px; }
+    .masthead { padding: 24px 20px 16px; }
+    .masthead h1 { font-size: 36px; }
+    .masthead .edition-tag { font-size: 10px; }
+    .greeting-bar { padding: 12px 20px; font-size: 14px; }
+    .personalize-bar { padding: 12px 20px; font-size: 13px; }
+    .profession-select { font-size: 13px; }
+    .tldr-card { padding: 14px 20px; }
+    .tldr-card .tldr-item { font-size: 12.5px; }
+    .headlines-block { padding: 20px 20px 18px; }
+    .headline-text { font-size: 15px; }
+    .section-header { padding: 16px 20px 0; }
+    .section-rule, .section-rule-thin { margin-left: 20px; margin-right: 20px; }
+    .lead-story { padding: 0 20px 24px; }
+    .lead-story h2 { font-size: 24px; }
+    .lead-story p { font-size: 15px; }
+    .lead-story .pull-quote { font-size: 16px; padding-left: 14px; }
+    .stories-section { padding: 0 20px 24px; }
+    .story-block h3 { font-size: 18px; }
+    .story-block p { font-size: 14.5px; }
+    .numbers-bar { padding: 20px; gap: 12px; flex-direction: column; }
+    .num-item { display: flex; align-items: baseline; gap: 10px; text-align: left; }
+    .num-item .big-num { font-size: 26px; min-width: 80px; }
+    .num-item .num-label { margin-top: 0; }
+    .watchlist-section { padding: 0 20px 24px; }
+    .social-pulse { padding: 0 20px 24px; }
+    .pulse-sentiment { gap: 8px; }
+    .tweet-block { padding: 14px 16px; }
+    .footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- BACK NAV -->
+  <div class="back-nav"><a href="/">&larr; All Editions</a></div>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-date">Monday, April 6, 2026</div>
+    <h1>The AI Brief</h1>
+    <span class="edition-tag">Evening Edition</span>
+    <div class="tagline">Your evening briefing on artificial intelligence</div>
+  </div>
+
+  <!-- GREETING -->
+  <div class="greeting-bar">
+    Good evening. Sam Altman just dropped a 13-page blueprint for what America should do when superintelligent AI arrives &mdash; and it includes some ideas that would have been unthinkable from a tech CEO even a year ago: taxes on robot labor, a government-managed wealth fund for every citizen, and a four-day workweek. Meanwhile, OpenAI, Anthropic, and Google are teaming up against Chinese labs they say are copying their AI models. Anthropic made its first-ever acquisition &mdash; a drug discovery startup &mdash; for $400 million. And OpenAI is reshuffling its leadership after two top executives stepped away for health reasons. Let&rsquo;s get into it. <span class="share-link"><a id="sms-share" href="sms:?&body=OpenAI%20just%20proposed%20robot%20taxes%2C%20a%20public%20wealth%20fund%2C%20and%20a%2032-hour%20workweek%20to%20prepare%20America%20for%20superintelligent%20AI.%20This%20evening%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-04-06-evening.html">Share this edition &rarr;</a></span>
+  </div>
+
+  <!-- PERSONALIZE -->
+  <div class="personalize-bar">
+    <span class="personalize-prompt">I'm a</span>
+    <select id="profession-select" class="profession-select">
+      <option value="general">general reader</option>
+      <option value="engineer">software engineer</option>
+      <option value="teacher">teacher</option>
+      <option value="healthcare">nurse</option>
+      <option value="finance">investment manager</option>
+      <option value="legal">lawyer</option>
+      <option value="business">business owner</option>
+      <option value="marketing">marketer</option>
+      <option value="student">student</option>
+      <option value="trades">electrician</option>
+      <option value="firstresponder">firefighter</option>
+      <option value="consultant">management consultant</option>
+      <option value="artist">artist</option>
+    </select>
+    <span class="personalize-prompt">— show me why each story matters for my field.</span>
+  </div>
+
+  <!-- HEADLINES -->
+  <div class="headlines-block">
+    <div class="headlines-label">This Evening&rsquo;s Headlines</div>
+
+    <div class="headline-item">
+      <span class="headline-num">01</span>
+      <span class="headline-text">OpenAI proposes robot taxes, a public wealth fund, and a 32-hour workweek to prepare for superintelligent AI <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://openai.com/index/industrial-policy-for-the-intelligence-age/">OpenAI</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">02</span>
+      <span class="headline-text">OpenAI, Anthropic, and Google unite to stop Chinese labs from copying their AI models <span class="headline-tag breaking">Breaking</span> <span class="src"><a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china">Bloomberg</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">03</span>
+      <span class="headline-text">Anthropic makes its first acquisition &mdash; drug discovery startup Coefficient Bio for $400 million <span class="headline-tag update">Update</span> <span class="src"><a href="https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">04</span>
+      <span class="headline-text">OpenAI reshuffles leadership as two top executives step away for health reasons <span class="headline-tag developing">Developing</span> <span class="src"><a href="https://techcrunch.com/2026/04/03/openai-executive-shuffle-new-roles-coo-brad-lightcap-fidji-simo-kate-rouch/">TechCrunch</a></span></span>
+    </div>
+    <div class="headline-item">
+      <span class="headline-num">05</span>
+      <span class="headline-text">Foxconn posts record revenue as AI server demand drives a 30% surge <span class="headline-tag update">Update</span> <span class="src"><a href="https://asia.nikkei.com/business/technology/foxconn-posts-29.7-q1-revenue-surge-on-strong-ai-demand">Nikkei Asia</a></span></span>
+    </div>
+  </div>
+
+  <!-- LEAD STORY -->
+  <div class="section-header">The Big Story</div>
+  <div class="section-rule"></div>
+  <div class="lead-story">
+    <h2>OpenAI Says America Needs Robot Taxes, a Wealth Fund, and a 32-Hour Workweek to Survive Superintelligent AI</h2>
+    <div class="byline">Sources: <a href="https://openai.com/index/industrial-policy-for-the-intelligence-age/">OpenAI</a> &middot; <a href="https://www.axios.com/2026/04/06/behind-the-curtain-sams-superintelligence-new-deal">Axios</a> &middot; <a href="https://fortune.com/2026/04/06/sam-altman-says-ai-superintelligence-is-so-big-that-we-need-a-new-deal-critics-say-openais-policy-ideas-are-a-cover-for-regulatory-nihilism/">Fortune</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-advocates-electric-grid-safety-net-spending-for-new-ai-era">Bloomberg</a></div>
+
+    <p>OpenAI &mdash; the company that makes ChatGPT &mdash; released a 13-page document today titled &ldquo;Industrial Policy for the Intelligence Age.&rdquo; It&rsquo;s essentially a blueprint for how the U.S. government should prepare for AI that&rsquo;s smarter than humans. And the proposals are surprisingly bold coming from the company that would be most affected by them.</p>
+
+    <p>The headline ideas: First, OpenAI is calling for new taxes on automated labor. As AI replaces jobs that humans used to do, the payroll taxes that fund Social Security and Medicare dry up. OpenAI wants to replace that lost revenue by taxing the companies that use AI to do the work instead. Second, they want the government to create a nationally managed public wealth fund &mdash; seeded in part by AI companies themselves &mdash; that would give every American a direct financial stake in AI-driven economic growth. Think of it as a national investment account where the gains from AI get shared, not just concentrated among tech company shareholders.</p>
+
+    <div class="pull-quote">&ldquo;AI superintelligence is so close, so mind-bending, so disruptive that America needs a new social contract &mdash; on the scale of the Progressive Era and the New Deal.&rdquo; &mdash; Sam Altman to Axios</div>
+
+    <p>Third, OpenAI is proposing pilot programs for a 32-hour workweek at full pay, framing it as an &ldquo;efficiency dividend&rdquo; &mdash; the idea being that if AI makes workers significantly more productive, they should work fewer hours rather than just generate more profit for employers. The document also includes a section on &ldquo;containment playbooks&rdquo; for dangerous AI systems that become autonomous and can&rsquo;t be easily shut down, proposing government coordination as the response.</p>
+
+    <p>Not everyone is buying it. Critics, including several AI policy researchers quoted by Fortune, say the proposals are deliberately vague and amount to &ldquo;regulatory nihilism&rdquo; &mdash; bold-sounding ideas designed to look like leadership while avoiding any specific regulation of OpenAI itself. The document says nothing about slowing down AI development, and some see it as a way for OpenAI to position itself as the responsible adult in the room while racing ahead at full speed.</p>
+
+    <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+      <span class="so-what-text" data-profession="general">This is a tech company telling the government that AI is coming for jobs and the economy needs a safety net. Whether you agree with OpenAI&rsquo;s specific ideas or not, the fact that the biggest AI company in the world is publicly saying &ldquo;this technology will displace workers and the government needs to act&rdquo; is significant. The proposals &mdash; robot taxes, a national wealth fund, a shorter workweek &mdash; could take years to become law, if they ever do. But the conversation about how AI&rsquo;s economic benefits get shared just got a lot louder.</span>
+      <span class="so-what-text" data-profession="engineer" style="display:none">The 32-hour workweek proposal is directly relevant to your world. If AI coding tools keep improving &mdash; and OpenAI clearly believes they will &mdash; the argument that engineers should work fewer hours for the same pay will gain traction. More immediately, the &ldquo;containment playbooks&rdquo; section suggests OpenAI is building systems it considers potentially autonomous. If you work on AI infrastructure, safety engineering is becoming a mandatory skill, not an optional specialization.</span>
+      <span class="so-what-text" data-profession="teacher" style="display:none">The public wealth fund and robot tax proposals would directly affect education funding if they ever become law, since schools are largely funded by payroll and property taxes. If payroll tax revenue drops as AI replaces jobs, schools need an alternative funding source. More broadly, if a 32-hour workweek becomes reality, the entire structure of the school day and after-school care would need to be rethought. This is worth following even if it feels far off.</span>
+      <span class="so-what-text" data-profession="healthcare" style="display:none">Healthcare is one of the sectors most likely to be affected by AI automation &mdash; not by replacing nurses, but by changing how documentation, triage, and scheduling work. If robot taxes fund Medicare in the future, that changes the financial model for hospitals and clinics. The shorter workweek proposal is also interesting for a profession already dealing with burnout and staffing shortages. Whether AI tools can actually reduce your workload enough to make a 32-hour week feasible is the real question.</span>
+      <span class="so-what-text" data-profession="finance" style="display:none">This document is the opening bid in a policy negotiation that will directly affect corporate margins, labor costs, and tax structures across every sector. A robot tax would reduce the ROI of AI automation investments. A public wealth fund seeded by AI companies would dilute shareholder returns. The 32-hour workweek at full pay would raise labor costs per hour by 25%. Whether these proposals gain legislative traction or not, they signal the political risks that AI-heavy portfolios need to price in.</span>
+      <span class="so-what-text" data-profession="legal" style="display:none">This document is a preview of the legislative and regulatory battles ahead. Robot taxes, a national wealth fund, and mandatory workweek changes would each require major new legislation with complex legal frameworks. If you practice employment, tax, or corporate law, start familiarizing yourself with the policy arguments now. The &ldquo;containment playbook&rdquo; language also raises novel questions about liability when AI systems act autonomously &mdash; territory that existing product liability law doesn&rsquo;t cover well.</span>
+      <span class="so-what-text" data-profession="business" style="display:none">If you use AI tools in your business, this proposal is a warning flag and an opportunity. A robot tax would add cost to AI automation &mdash; but it&rsquo;s not law yet, and may never be. The more immediate takeaway: the biggest AI company in the world just said publicly that AI will displace jobs. If you&rsquo;re planning to use AI to replace roles in your business, think about retraining and transition plans now, before regulations force you to.</span>
+      <span class="so-what-text" data-profession="marketing" style="display:none">Marketing is one of the fields where AI is already replacing certain roles &mdash; copywriting, image generation, ad targeting. If a robot tax becomes reality, the cost savings from AI-powered marketing tools would shrink. More practically, OpenAI&rsquo;s framing of this as a &ldquo;new social contract&rdquo; is a masterclass in corporate positioning. They&rsquo;re getting ahead of the backlash against AI job displacement by proposing the solution themselves. That&rsquo;s a communications strategy worth studying.</span>
+      <span class="so-what-text" data-profession="student" style="display:none">This is required reading if you&rsquo;re studying economics, public policy, computer science, or really anything. The company that builds the most powerful AI in the world is telling the government that the economy needs to be restructured around it. The 32-hour workweek proposal is especially relevant to you &mdash; it&rsquo;s a bet that by the time you&rsquo;re mid-career, AI will have changed what a &ldquo;full-time job&rdquo; looks like. Plan your career around working with AI, not competing against it.</span>
+      <span class="so-what-text" data-profession="trades" style="display:none">Trades are among the hardest jobs for AI to automate &mdash; you can&rsquo;t send a chatbot to wire a house. But the ripple effects matter. If a robot tax funds new infrastructure spending, that means more construction work. If a 32-hour workweek becomes standard in office jobs, demand for tradespeople who still work traditional hours could shift. And the massive data centers that AI companies are building? They need electricians. A lot of them.</span>
+      <span class="so-what-text" data-profession="firstresponder" style="display:none">First responder jobs are hard to automate, but the funding that pays your salary isn&rsquo;t. If payroll taxes decline as AI replaces office jobs, the tax base that funds fire departments and EMS shrinks. OpenAI&rsquo;s robot tax proposal is one way to fill that gap. It&rsquo;s also worth noting that the &ldquo;containment playbook&rdquo; language &mdash; plans for when AI systems go rogue &mdash; could eventually create new emergency response protocols that involve your teams.</span>
+      <span class="so-what-text" data-profession="consultant" style="display:none">This document gives you a new framework for every conversation with clients about AI strategy. OpenAI is explicitly saying the economic model is going to change &mdash; robot taxes, shorter workweeks, public wealth redistribution. Even if none of these proposals become law soon, the direction is clear. Your clients need scenario planning that accounts for a world where AI automation gets taxed, not subsidized. Update your strategic frameworks accordingly.</span>
+      <span class="so-what-text" data-profession="artist" style="display:none">Notice what&rsquo;s not in the document: any mention of compensating artists whose work trained these AI systems. OpenAI is proposing a wealth fund for citizens affected by AI, but it&rsquo;s silent on the copyright question. If you&rsquo;re an artist whose work was used to train AI models without permission, this proposal doesn&rsquo;t help you directly. But the broader conversation about who benefits from AI &mdash; and who gets left behind &mdash; is one where artists should have a loud voice.</span>
+    </div>
+
+    <div class="read-this"><a href="https://openai.com/index/industrial-policy-for-the-intelligence-age/">Read this &rarr; OpenAI&rsquo;s full proposal</a></div>
+  </div>
+
+  <div class="section-rule-thin"></div>
+
+  <!-- MORE STORIES -->
+  <div class="section-header">What Else Happened</div>
+  <div class="section-rule"></div>
+  <div class="stories-section">
+
+    <div class="story-block">
+      <h3>OpenAI, Anthropic, and Google Are Teaming Up to Stop Chinese Labs From Copying Their AI</h3>
+      <div class="story-source"><a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china">Bloomberg</a> &middot; <a href="https://www.japantimes.co.jp/business/2026/04/07/tech/openai-anthropic-google-china-copy/">Japan Times</a></div>
+      <p>Three of the biggest rivals in AI &mdash; OpenAI, Anthropic, and Google &mdash; have started sharing intelligence with each other to catch Chinese companies that are copying their models. They&rsquo;re doing it through the Frontier Model Forum, an industry group they co-founded with Microsoft back in 2023.</p>
+      <p>The technique they&rsquo;re trying to stop is called &ldquo;adversarial distillation&rdquo; &mdash; essentially, someone uses a powerful AI model like ChatGPT or Claude millions of times, feeds the responses into their own system, and trains a cheaper copycat that behaves almost identically. Anthropic previously accused three Chinese labs &mdash; DeepSeek, Moonshot, and MiniMax &mdash; of doing exactly this, claiming they ran over 16 million queries through 24,000 fake accounts. The big concern isn&rsquo;t just business competition: when someone clones an AI model this way, they typically strip out the safety features that prevent it from being used for harmful purposes.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">When rivals like OpenAI, Anthropic, and Google set aside their competition to work together, it tells you the problem is serious. Chinese labs are allegedly building copycat AI tools by extracting knowledge from American ones &mdash; and those copies often don&rsquo;t include the safety guardrails. If you use any AI tool, the good news is that the companies behind them are actively trying to prevent their technology from being stolen and misused.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">If you use APIs from OpenAI, Anthropic, or Google, expect stricter rate limiting, usage monitoring, and terms of service enforcement. The anti-distillation measures will likely include fingerprinting techniques in model outputs and behavioral analysis of API usage patterns. If you&rsquo;re building with these APIs at scale, make sure your usage patterns don&rsquo;t look like distillation attacks, or you may get flagged. On the flip side, if you&rsquo;re evaluating open-source alternatives, DeepSeek V4 is the model to watch.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">This is a real-world lesson in intellectual property in the digital age. The idea that you can &ldquo;copy&rdquo; an AI by asking it enough questions is counterintuitive and fascinating. If you teach computer science, economics, or even ethics, this is great material. It also shows students that the AI race is genuinely geopolitical &mdash; it&rsquo;s not just companies competing, it&rsquo;s countries.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Copied AI models that strip out safety features are especially dangerous in healthcare settings. If a cloned model gives confident medical advice without the guardrails that prevent hallucination or harmful recommendations, patients could be at risk. This is a good reminder to only use AI tools from vendors whose safety practices you can verify, not free alternatives of unknown origin.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">This collaboration signals that the major AI companies view model theft as an existential competitive risk. If Chinese labs can replicate frontier model capabilities at a fraction of the training cost, it compresses the moat that justifies trillion-dollar valuations. Watch how effective the anti-distillation measures actually are &mdash; if they fail, the pricing power of U.S. AI companies is weaker than current valuations assume.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Adversarial distillation sits in a murky legal area. Is it a terms of service violation? Copyright infringement? Trade secret theft? The answer depends on jurisdiction, and enforcement across borders is extremely difficult. If you advise tech clients, this collaboration through the Frontier Model Forum could become a model for industry-wide IP protection strategies. It also raises questions about whether API terms of service can legally prohibit certain types of downstream use.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">This story matters for you because it affects the AI tools you might be paying for. If Chinese labs can successfully clone the best AI models and offer them cheaply (or free), you&rsquo;ll eventually have access to cheaper alternatives. But those cheaper models may lack safety features that matter when you&rsquo;re using AI for customer-facing applications. For now, stick with established vendors whose models have proper safety testing.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The AI tools you use for content creation, ad copy, and market research are built on models that cost billions to develop. If those models get cloned and offered cheaply, the cost of AI-powered marketing tools could drop significantly. But cheap doesn&rsquo;t always mean safe &mdash; a cloned model without proper guardrails could generate content that gets your brand in trouble. Vet your AI tools carefully.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This is a fascinating intersection of technology, geopolitics, and intellectual property law. How do you &ldquo;steal&rdquo; an AI model that you can&rsquo;t physically take? By asking it millions of questions and using the answers to train your own. It&rsquo;s like studying someone&rsquo;s teaching style so thoroughly that you can replicate it. If you&rsquo;re studying international relations, tech policy, or AI, this is one of the defining conflicts of the field.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one is mostly a behind-the-scenes tech rivalry, but it has one practical implication: the data centers being built to train and run these AI models require enormous amounts of skilled trade work. The fact that AI companies are fighting this hard to protect their models tells you just how valuable this technology is &mdash; and how much they&rsquo;ll invest in the infrastructure to keep building it.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">The main risk here is that copied AI models with stripped safety features could be used to plan attacks or create dangerous materials. The fact that the three biggest AI companies are cooperating on this signals that they take the misuse risk seriously. For emergency planning purposes, it&rsquo;s worth knowing that AI safety guardrails are actively being circumvented by bad actors &mdash; something your department&rsquo;s threat assessments should account for.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">This collaboration is a strong signal for any client conversation about AI vendor selection and geopolitical risk. If frontier model capabilities can be distilled cheaply, the competitive advantage of paying for premium AI APIs is less durable than assumed. For clients making large AI infrastructure investments, factor in the possibility that today&rsquo;s proprietary advantage could be replicated within months by a foreign competitor.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">There&rsquo;s an irony here: AI companies are outraged that their models are being copied without permission, while many artists feel exactly the same way about their work being used to train those models in the first place. Whether AI companies will apply the same &ldquo;you can&rsquo;t just take someone&rsquo;s work&rdquo; principle to the artists whose creations fuel their systems remains an open and deeply important question.</span>
+      </div>
+      <div class="read-this"><a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china">Read this &rarr; Bloomberg&rsquo;s full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>Anthropic Just Made Its First Acquisition &mdash; a Drug Discovery Startup for $400 Million</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/">TechCrunch</a> &middot; <a href="https://www.biospace.com/business/ai-giant-anthropic-leans-into-life-sciences-with-400m-coefficient-bio-catch">BioSpace</a> &middot; <a href="https://www.theinformation.com/articles/anthropic-acquires-startup-coefficient-bio-400-million">The Information</a></div>
+      <p>Anthropic &mdash; the company behind Claude &mdash; just spent $400 million to acquire Coefficient Bio, a startup that uses AI to speed up drug discovery. It&rsquo;s Anthropic&rsquo;s first-ever acquisition, and it signals a major bet that AI can do more than write code and answer questions &mdash; it can help discover new medicines.</p>
+      <p>Coefficient Bio was founded just eight months ago by two researchers from Genentech who specialize in building AI models specifically designed for biology, not general-purpose AI models repurposed for science. That distinction matters: Anthropic didn&rsquo;t just buy a team that knows how to prompt Claude with biology questions. They bought people who build the kind of AI that understands proteins, drug interactions, and molecular structures from the ground up. The team will join Anthropic&rsquo;s life sciences group and integrate their work into Claude for Life Sciences, a tool launched last October for scientific researchers.</p>
+      <p>The deal comes amid a gold rush in AI-powered drug discovery. Eli Lilly signed a $2.75 billion deal with AI drug company Insilico Medicine in March, and Google DeepMind&rsquo;s Isomorphic Labs is preparing human clinical trials. The bet across the industry is that AI can dramatically shorten the decade-plus timeline it usually takes to bring a new drug to market.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">The short version: AI companies are now trying to help discover new medicines faster. Today it takes about 10-15 years and over a billion dollars to bring a new drug from lab to pharmacy. If AI can cut that timeline significantly, it means treatments for diseases could reach patients years sooner than they would otherwise. It&rsquo;s early days, but this is one of the most promising real-world applications of AI.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Anthropic paid $400 million for an eight-month-old startup with no revenue. What they bought was the team&rsquo;s expertise in biology-specific model architectures &mdash; not general-purpose LLMs applied to bio data. If you work on ML infrastructure or model design, the signal is clear: domain-specific architectures are extremely valuable. This is also a case study in how acqui-hires work at the frontier of AI &mdash; Anthropic is paying for capability they can&rsquo;t build internally fast enough.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">AI in drug discovery is one of the most concrete, easy-to-explain applications of the technology. If you teach biology or chemistry, this is a great way to show students how AI is being used in the real world &mdash; not just chatbots, but systems that can model how molecules interact and help scientists find new treatments faster. It makes the case that AI literacy matters across every scientific discipline.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">This is directly relevant to your field. AI-powered drug discovery could accelerate the development of new treatments for the patients you care for. If companies like Anthropic, Google, and Eli Lilly are all investing billions in this space, expect to start seeing AI-discovered drugs entering clinical trials in the next few years. Ask your pharmacists and continuing education providers about what&rsquo;s in the pipeline &mdash; the landscape is changing fast.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Anthropic paying $400 million for a pre-revenue, eight-month-old startup is an aggressive valuation that reflects the premium on specialized AI talent in life sciences. Combined with Eli Lilly&rsquo;s $2.75 billion Insilico deal, the AI drug discovery sector is seeing massive capital inflows. If you manage biotech or healthcare allocations, the convergence of AI and drug development is a theme that&rsquo;s clearly accelerating. Watch for Anthropic&rsquo;s IPO filing &mdash; this acquisition will factor heavily into their growth narrative.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">A $400 million all-stock deal for a pre-revenue startup raises interesting questions about deal structure, earn-out provisions, and IP assignment. If you work in M&amp;A or tech law, Anthropic&rsquo;s first acquisition is worth studying. There are also emerging regulatory questions about AI-discovered drugs &mdash; specifically, whether existing FDA approval processes are adequate for treatments where the discovery process was driven by AI rather than traditional research methods.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">This acquisition shows that AI companies are expanding far beyond chatbots into specialized industries like healthcare and drug development. If you run a business in any industry, the lesson is clear: AI is coming to your sector, and the companies that build specialized AI tools for specific industries will be the ones that reshape those industries. Think about what AI tools might exist for your industry in 2&ndash;3 years.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">While this story isn&rsquo;t directly about marketing, it&rsquo;s a clear example of how AI companies are building narratives beyond &ldquo;we make chatbots.&rdquo; Anthropic is positioning itself as a company that uses AI to save lives, not just answer questions. That&rsquo;s a powerful brand story. If you work in tech marketing or healthcare communications, watch how Anthropic frames this acquisition in the lead-up to their expected IPO.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">If you&rsquo;re studying biology, chemistry, medicine, or data science, this is one of the most exciting career intersections emerging right now. The people Anthropic just acquired built biology-specific AI from the ground up &mdash; and that skillset is so rare it&rsquo;s worth $400 million. The message is clear: learning both AI and a scientific domain puts you in an incredibly valuable position in the job market.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one is mostly about the pharmaceutical industry, but the broader pattern matters: AI companies are moving into every sector of the economy, not just tech. As AI expands into healthcare, manufacturing, and other industries, the physical infrastructure those industries need &mdash; labs, data centers, specialized facilities &mdash; still needs to be built and maintained by skilled tradespeople.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">Faster drug discovery could eventually mean better treatments available sooner for the patients you transport and triage. If AI can cut the drug development timeline from 15 years to 5, medications for stroke, cardiac arrest, and trauma recovery could advance more quickly. It&rsquo;s a long-term benefit, but it&rsquo;s one of the most tangible ways AI could improve outcomes in emergency medicine.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">This is a case study in vertical AI strategy. Anthropic didn&rsquo;t acquire general AI talent &mdash; it acquired domain-specific expertise in computational biology. For clients evaluating build-vs-buy decisions in AI, this signals that specialized AI capabilities are commanding massive premiums. If your clients are in healthcare, pharma, or biotech, the AI+drug discovery convergence is now an unavoidable strategic planning topic.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">This story is a reminder that AI isn&rsquo;t just about generating images or text &mdash; it&rsquo;s being used to discover new medicines. It&rsquo;s a useful counter-narrative when discussions about AI focus only on creative displacement. The same underlying technology has the potential to save lives, which makes the broader conversation about how AI should be developed and regulated more nuanced than it sometimes appears.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/">Read this &rarr; TechCrunch&rsquo;s full report</a></div>
+    </div>
+
+    <div class="story-block">
+      <h3>OpenAI Is Reshuffling Its Leadership After Two Executives Step Away for Health Reasons</h3>
+      <div class="story-source"><a href="https://techcrunch.com/2026/04/03/openai-executive-shuffle-new-roles-coo-brad-lightcap-fidji-simo-kate-rouch/">TechCrunch</a> &middot; <a href="https://www.cnbc.com/2026/04/03/openai-fidji-simo-medical-leave-executive-changes.html">CNBC</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-04-03/openai-coo-shifts-out-of-role-agi-ceo-taking-medical-leave">Bloomberg</a></div>
+      <p>OpenAI announced a wave of leadership changes this week, triggered in part by two executives needing to step away for medical reasons. Fidji Simo, who left her role as CEO of Instacart to lead OpenAI&rsquo;s AGI division, is taking medical leave after a flare-up of POTS &mdash; a condition that causes dizziness and fatigue. Chief marketing officer Kate Rouch is also stepping back to continue her cancer recovery.</p>
+      <p>To fill the gaps, OpenAI co-founder Greg Brockman is taking over product responsibilities during Simo&rsquo;s absence. COO Brad Lightcap is moving to a new &ldquo;special projects&rdquo; role focused on high-stakes deals and partnerships, reporting directly to Sam Altman. Denise Dresser, the former CEO of Slack who recently joined as chief revenue officer, is picking up Lightcap&rsquo;s commercial duties. Former Meta CMO Gary Briggs is stepping in on an interim basis for Rouch.</p>
+      <p>Three executive changes in one week at the world&rsquo;s most valuable private company is notable, but OpenAI appears to have planned the transitions carefully. The company is racing to prepare for a potential IPO later this year while managing $2 billion a month in revenue and over 900 million weekly users.</p>
+      <div class="so-what"><span class="so-what-label">What does it mean for me?</span>
+        <span class="so-what-text" data-profession="general">If you use ChatGPT, nothing changes for you right now. This is a behind-the-scenes reshuffling at a company preparing to go public. But it&rsquo;s worth paying attention to because OpenAI is one of the most important companies in the world, and leadership stability matters when a company is growing this fast. The fact that they had backup plans in place is a good sign.</span>
+        <span class="so-what-text" data-profession="engineer" style="display:none">Brockman taking over product during Simo&rsquo;s absence could shift priorities toward more technical, developer-focused features in the short term. Lightcap moving to special projects focused on enterprise deals signals that OpenAI is going to be pushing hard on B2B partnerships. If you&rsquo;re building on OpenAI&rsquo;s platform, watch for new enterprise API features and partnership announcements in the coming months.</span>
+        <span class="so-what-text" data-profession="teacher" style="display:none">Leadership changes at OpenAI don&rsquo;t directly affect your classroom, but they signal how the company behind ChatGPT is evolving. The fact that they hired the former CEO of Slack to run commercial operations suggests they&rsquo;re thinking seriously about selling AI tools to organizations &mdash; including schools and universities. Expect more education-focused products and pricing from OpenAI in the coming months.</span>
+        <span class="so-what-text" data-profession="healthcare" style="display:none">Two executives stepping away for health reasons is a human story, not a tech story. POTS and cancer recovery are real medical challenges, and it&rsquo;s notable that a major tech company is being transparent about its leaders&rsquo; health needs. For the healthcare industry, the more relevant signal is that OpenAI is actively building enterprise sales and partnership capabilities &mdash; meaning more aggressive pushes into healthcare settings.</span>
+        <span class="so-what-text" data-profession="finance" style="display:none">Three C-suite changes in one week at a company pursuing an IPO is a red flag that deserves monitoring, not panic. Lightcap&rsquo;s move to special projects &mdash; focused on enterprise deals and a joint venture with private equity firms &mdash; suggests OpenAI is building the commercial infrastructure needed for a successful public listing. If you&rsquo;re tracking the IPO timeline, watch whether these transitions create any visible execution gaps in Q2 results.</span>
+        <span class="so-what-text" data-profession="legal" style="display:none">Leadership transitions at a pre-IPO company this valuable raise governance questions. How are interim responsibilities allocated? What are the disclosure obligations? If you work in securities or corporate governance law, this is worth tracking &mdash; especially since OpenAI&rsquo;s nonprofit-to-for-profit conversion is already under legal scrutiny. Any leadership instability could complicate the IPO process.</span>
+        <span class="so-what-text" data-profession="business" style="display:none">The key hire to watch is Denise Dresser, the former CEO of Slack, who is now running OpenAI&rsquo;s commercial operations. Her background in enterprise workplace tools suggests OpenAI is going to push hard to sell AI directly to businesses like yours. Expect new pricing tiers, team features, and enterprise-focused products in the coming months. If you&rsquo;ve been evaluating AI tools for your business, the options are about to get better.</span>
+        <span class="so-what-text" data-profession="marketing" style="display:none">The appointment of former Meta CMO Gary Briggs as interim CMO signals that OpenAI is taking brand and marketing seriously as it approaches an IPO. If you work in marketing, watch OpenAI&rsquo;s brand strategy over the next few months &mdash; they&rsquo;re likely to invest heavily in public perception and brand positioning. It&rsquo;s also a reminder that CMO roles at the biggest tech companies are high-stakes positions worth aspiring to.</span>
+        <span class="so-what-text" data-profession="student" style="display:none">This story is a good case study in corporate governance and leadership succession. When a company this important loses three executives at once, how it handles the transition tells you a lot about its organizational maturity. If you&rsquo;re studying business or management, analyze how OpenAI distributed responsibilities &mdash; it&rsquo;s a textbook example of contingency planning at scale.</span>
+        <span class="so-what-text" data-profession="trades" style="display:none">This one is mostly corporate news, but the takeaway is that OpenAI is focused on growing its enterprise business. That means more AI tools being sold to large companies, which means more demand for the data centers and infrastructure that power them. The construction boom driven by AI isn&rsquo;t slowing down.</span>
+        <span class="so-what-text" data-profession="firstresponder" style="display:none">This is primarily a corporate leadership story with limited direct impact on your work. The broader signal is that OpenAI is stable enough to handle multiple executive transitions without disrupting its products. If your department uses ChatGPT or is evaluating AI tools, service continuity shouldn&rsquo;t be a concern based on these changes.</span>
+        <span class="so-what-text" data-profession="consultant" style="display:none">Three C-suite changes at a pre-IPO company worth $852 billion is significant for your advisory work. Clients considering OpenAI as a strategic AI partner should understand the leadership landscape. Lightcap&rsquo;s move to special projects focused on PE joint ventures suggests new partnership models are coming &mdash; potentially relevant for clients evaluating AI platform commitments. Dresser&rsquo;s appointment from Slack signals a serious push on enterprise go-to-market.</span>
+        <span class="so-what-text" data-profession="artist" style="display:none">Leadership changes at OpenAI don&rsquo;t directly affect the copyright and compensation questions that matter most to artists. But personnel shifts can change a company&rsquo;s priorities and tone. If new leaders are more commercially focused and less concerned about public perception, it could affect how OpenAI engages with the creative community on issues like fair use and training data compensation.</span>
+      </div>
+      <div class="read-this"><a href="https://techcrunch.com/2026/04/03/openai-executive-shuffle-new-roles-coo-brad-lightcap-fidji-simo-kate-rouch/">Read this &rarr; TechCrunch&rsquo;s full report</a></div>
+    </div>
+
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="numbers-bar">
+    <div class="num-item">
+      <span class="big-num">32 hrs</span>
+      <span class="num-label">OpenAI&rsquo;s proposed workweek &mdash; at full pay &mdash; as an &ldquo;efficiency dividend&rdquo; from AI</span>
+      <span class="num-src"><a href="https://openai.com/index/industrial-policy-for-the-intelligence-age/">OpenAI</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">$400M</span>
+      <span class="num-label">Anthropic&rsquo;s price for Coefficient Bio &mdash; an 8-month-old startup with no revenue</span>
+      <span class="num-src"><a href="https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/">TechCrunch</a></span>
+    </div>
+    <div class="num-item">
+      <span class="big-num">29.7%</span>
+      <span class="num-label">Foxconn&rsquo;s Q1 revenue growth, driven by AI server demand hitting record highs</span>
+      <span class="num-src"><a href="https://asia.nikkei.com/business/technology/foxconn-posts-29.7-q1-revenue-surge-on-strong-ai-demand">Nikkei Asia</a></span>
+    </div>
+  </div>
+
+  <!-- WATCH LIST -->
+  <div class="section-header">On the Radar</div>
+  <div class="section-rule"></div>
+  <div class="watchlist-section">
+
+    <div class="watch-item">
+      <h3>Foxconn Posts Record Revenue as AI Server Demand Explodes</h3>
+      <p>Foxconn &mdash; the company best known for manufacturing iPhones &mdash; just reported a 29.7% jump in first-quarter revenue to $66.6 billion, driven largely by surging demand for AI servers. March alone was the company&rsquo;s best month ever, with revenue up 45.6% year-over-year. Foxconn is Nvidia&rsquo;s largest server manufacturer, and the numbers confirm what the entire industry is signaling: companies are spending enormous sums to build the physical infrastructure that AI requires. Foxconn gave 2026 its highest internal growth rating ever &mdash; the first time it&rsquo;s used the &ldquo;strong growth&rdquo; designation.</p>
+      <div class="watch-src"><a href="https://asia.nikkei.com/business/technology/foxconn-posts-29.7-q1-revenue-surge-on-strong-ai-demand">Nikkei Asia</a> &middot; <a href="https://invezz.com/news/2026/04/05/foxconn-q1-revenue-jumps-29-7-on-ai-demand/">Invezz</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Anthropic Launches a Political Action Committee to Shape AI Regulation</h3>
+      <p>Anthropic officially registered &ldquo;AnthroPAC&rdquo; with the Federal Election Commission, making it one of the first major AI companies to directly enter electoral politics. The PAC will be funded by voluntary employee contributions capped at $5,000 per person, with a bipartisan board overseeing donations to lawmakers active on AI policy. The AI industry has already poured roughly $185 million into the 2026 midterm races. Anthropic says it wants to ensure AI regulation is &ldquo;informed by expertise and a commitment to safety&rdquo; &mdash; though critics see it as another tech company buying political influence.</p>
+      <div class="watch-src"><a href="https://techcrunch.com/2026/04/03/anthropic-ramps-up-its-political-activities-with-a-new-pac/">TechCrunch</a> &middot; <a href="https://www.cointribune.com/en/ai-anthropic-launches-a-political-committee-amid-tension-with-the-trump-administration/">CoinTribune</a></div>
+    </div>
+
+    <div class="watch-item">
+      <h3>Utah Expands Its First-in-the-Nation AI Prescription Program to Psychiatric Medications</h3>
+      <p>Utah &mdash; the only state that allows AI to autonomously renew drug prescriptions &mdash; just approved a second pilot program, this time for psychiatric medications. The new pilot lets an AI system renew 15 lower-risk psychiatric drugs that a patient is already taking, though it can&rsquo;t write new prescriptions, change doses, or handle controlled substances. The original program, launched in January, covers 190 common chronic-condition medications like diabetes and blood pressure drugs. It&rsquo;s the furthest any state has gone in letting AI make direct decisions in patient care.</p>
+      <div class="watch-src"><a href="https://winbuzzer.com/2026/04/04/utah-tests-a-tightly-limited-ai-path-for-psychiatric-refills-xcxwbn/">WinBuzzer</a> &middot; <a href="https://www.axios.com/local/salt-lake-city/2026/01/07/utah-ai-drug-prescriptions-doctronic">Axios</a></div>
+    </div>
+
+  </div>
+
+  <!-- SOCIAL PULSE -->
+  <div class="section-header">Social Pulse</div>
+  <div class="section-rule"></div>
+  <div class="social-pulse">
+
+    <div class="pulse-sentiment">
+      <span class="sentiment-tag hot">OpenAI&rsquo;s &ldquo;New Deal&rdquo;</span>
+      <span class="sentiment-tag buzz">Anti-Distillation Alliance</span>
+      <span class="sentiment-tag cool">Anthropic &rarr; Biotech</span>
+      <span class="sentiment-tag split">Robot Tax Debate</span>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Axios <span class="tweet-handle">exclusive</span></div>
+      <div class="tweet-text">&ldquo;Sam Altman told us AI superintelligence is so close, so mind-bending, so disruptive that America needs a new social contract &mdash; on the scale of the Progressive Era and the New Deal.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.axios.com/2026/04/06/behind-the-curtain-sams-superintelligence-new-deal">Axios</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Fortune <span class="tweet-handle">analysis</span></div>
+      <div class="tweet-text">&ldquo;Critics say OpenAI&rsquo;s policy ideas are a cover for &lsquo;regulatory nihilism&rsquo; &mdash; bold-sounding proposals that avoid any specific regulation of OpenAI itself.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://fortune.com/2026/04/06/sam-altman-says-ai-superintelligence-is-so-big-that-we-need-a-new-deal-critics-say-openais-policy-ideas-are-a-cover-for-regulatory-nihilism/">Fortune</a></div>
+    </div>
+
+    <div class="tweet-block">
+      <div class="tweet-author">Bloomberg <span class="tweet-handle">reporting</span></div>
+      <div class="tweet-text">&ldquo;OpenAI, Anthropic, and Google have begun working together to clamp down on Chinese competitors extracting results from cutting-edge U.S. AI models.&rdquo;</div>
+      <div class="tweet-meta">Via <a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china">Bloomberg</a></div>
+    </div>
+
+    <div class="commentary-block">
+      <h4>What&rsquo;s Driving the Conversation</h4>
+
+      <p><strong>X / Twitter:</strong> OpenAI&rsquo;s policy document is splitting tech Twitter right down the middle. One camp sees it as a genuinely thoughtful attempt by a tech company to get ahead of the economic disruption its own products will cause. The other camp sees it as a PR play &mdash; a company worth $852 billion proposing vague solutions to problems it&rsquo;s actively creating. The phrase &ldquo;robot tax&rdquo; is trending, with reactions ranging from &ldquo;finally, a tech CEO says the obvious&rdquo; to &ldquo;this is just a distraction from real regulation.&rdquo;</p>
+
+      <p><strong>Hacker News:</strong> The top thread is a deep analysis of the policy document, with engineers debating whether OpenAI&rsquo;s &ldquo;containment playbooks&rdquo; for autonomous AI are prudent foresight or fear-mongering designed to justify less regulation. The anti-distillation alliance with Anthropic and Google is being dissected in a separate thread, with many arguing that the real lesson of adversarial distillation is that closed models are fundamentally indefensible and open-source is the only sustainable approach. The Coefficient Bio acquisition is drawing comparisons to Google&rsquo;s DeepMind acquiring science-focused talent.</p>
+
+      <p><strong>Reddit:</strong> r/technology has the OpenAI policy document as its top post, with the 32-hour workweek proposal generating the most engagement. The most-upvoted comment: &ldquo;The company that wants to replace my job is now proposing I only work 4 days a week. How generous.&rdquo; In r/medicine, the Utah AI prescription expansion is being hotly debated, with nurses and physicians splitting on whether it&rsquo;s responsible innovation or a dangerous experiment. r/geopolitics has a lively thread on the Frontier Model Forum anti-distillation effort, framing it as the latest front in the U.S.-China tech cold war.</p>
+
+      <div class="comm-src">Sources: <a href="https://openai.com/index/industrial-policy-for-the-intelligence-age/">OpenAI</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china">Bloomberg</a> &middot; <a href="https://fortune.com/2026/04/06/sam-altman-says-ai-superintelligence-is-so-big-that-we-need-a-new-deal-critics-say-openais-policy-ideas-are-a-cover-for-regulatory-nihilism/">Fortune</a></div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="signoff">Today gave us something rare: the company building the most powerful AI in the world publicly admitting that the government needs to prepare for a world where those tools displace huge numbers of jobs. Whether you see OpenAI&rsquo;s proposals as genuine foresight or self-serving PR probably depends on how much you trust a company to regulate the consequences of its own products. Either way, the Overton window just moved &mdash; robot taxes and four-day workweeks are now part of the mainstream AI conversation. That alone is worth paying attention to. Have a good week ahead &mdash; see you tomorrow morning.</div>
+    <div class="share-sms" style="margin-top: 12px; margin-bottom: 12px;">
+      <a href="sms:?&body=OpenAI%20just%20proposed%20robot%20taxes%2C%20a%20public%20wealth%20fund%2C%20and%20a%2032-hour%20workweek%20to%20prepare%20America%20for%20superintelligent%20AI.%20This%20evening%27s%20AI%20Brief%20has%20the%20full%20story%3A%20https%3A%2F%2Fthe-ai-brief-lilac.vercel.app%2Feditions%2F2026-04-06-evening.html">Share this edition &rarr;</a>
+    </div>
+    <div class="meta">The AI Brief &middot; Updated twice daily &middot; All sources linked</div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var profWords = {
+    general: 'me',
+    engineer: 'software engineers',
+    teacher: 'teachers',
+    healthcare: 'nurses',
+    finance: 'investment managers',
+    legal: 'lawyers',
+    business: 'business owners',
+    marketing: 'marketers',
+    student: 'students',
+    trades: 'electricians',
+    firstresponder: 'firefighters',
+    consultant: 'consultants',
+    artist: 'artists'
+  };
+
+  var select = document.getElementById('profession-select');
+  var allText = document.querySelectorAll('.so-what-text');
+  var allLabels = document.querySelectorAll('.so-what-label');
+  var saved = localStorage.getItem('ai-brief-profession') || 'general';
+
+  function setProfession(prof) {
+    var word = profWords[prof] || profWords.general;
+    allText.forEach(function(el) {
+      el.style.display = el.dataset.profession === prof ? '' : 'none';
+    });
+    allLabels.forEach(function(el) {
+      el.innerHTML = 'What does it mean for <span class="profession-badge">' + word + '</span>?';
+    });
+    select.value = prof;
+    localStorage.setItem('ai-brief-profession', prof);
+  }
+
+  setProfession(saved);
+
+  select.addEventListener('change', function() {
+    setProfession(select.value);
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
